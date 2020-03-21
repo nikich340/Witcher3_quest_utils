@@ -1,0 +1,340 @@
+#
+# quest structure root segment
+# 
+# (version: 85, saved: 2020-03-21 21:23:51)
+#
+---
+structure:
+  quest:
+    blocks:
+      start:
+        ".editor": [ 100.0, 150.0 ]
+        next:
+          - script.new_logmsg
+          - changelayers.hide_layerss
+          - journal.initial: Activate
+          - changelayers.show_invlayer
+      
+      waituntil.if_not_secret:
+        factdb: [ illusoryquest_secret, "!=", 1 ]
+        ".editor":
+          pos: [ 2700.0, 125.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - waituntil.wait_until_entered_exit
+          - script.log_on_loot
+          - spawn.Spawn_wraith
+          - addfact.fact_not_secret
+      
+      waituntil.if_secret:
+        factdb: [ illusoryquest_secret, "!=", -1 ]
+        ".editor":
+          pos: [ 2100.0, 250.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - objective.Find_exit: Failure
+          - journal.journal_secret_success: Activate
+          - addfact.fact_secret
+          - waituntil.wait_until_left_secret_area
+          - objective.secret_exit: Success
+      
+      waituntil.wait_until_entered_exit:
+        entered: [ prologue/exitarea, PLAYER ]
+        ".editor":
+          pos: [ 2900.0, -25.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - journal.journal_success: Activate
+          - objective.Find_exit: Success
+          - objective.secret_exit: Failure
+          - changelayers.hide_layer
+      
+      waituntil.wait_until_entered_secretexit:
+        entered: [ prologue/secret_exit, PLAYER ]
+        ".editor":
+          pos: [ 1900.0, 250.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - waituntil.if_secret
+      
+      waituntil.wait_until_inside_areaspawn:
+        inside: [ prologue/areaspawn, PLAYER ]
+        ".editor":
+          pos: [ 1072.7434082031, 382.1133728027 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - objective.inv_corpse: Success
+          - changelayers.show_layer_1
+          - journal.journal_trap: Activate
+      
+      waituntil.wait_until_inside_invarea:
+        inside: [ prologue/new_area, PLAYER ]
+        ".editor":
+          pos: [ 512.7434082031, 252.7016601562 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - changelayers.show_layer
+          - objective.explore_area: Success
+      
+      waituntil.wait_until_left_secret_area:
+        left: [ prologue/secret_exit, PLAYER ]
+        ".editor":
+          pos: [ 2300.0, 25.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - changelayers.hide_layer
+      
+      waituntil.wait_until_looted_chest:
+        looted: prologue/chest
+        ".editor":
+          pos: [ 2500.0, 125.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - waituntil.if_not_secret
+      
+      script.Block_door_1:
+        ".editor":
+          pos: [ 1500.0, 250.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: RadishDoorChangeState
+        parameter:
+          - tag: cname_grate_door1
+          - newState: EDQS_Lock
+          - keyItemName: cname_illusionaryquest_misc_prison_key
+          - removeKeyOnUse: "true"
+          - smoooth: "true"
+          - dontBlockInCombat: "false"
+        next:
+          - objective.Find_exit: Activate
+          - objective.secret_exit: Activate
+      
+      script.Block_door_2:
+        ".editor":
+          pos: [ 1500.0, 350.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: RadishDoorChangeState
+        parameter:
+          - tag: cname_grate_door2
+          - newState: EDQS_Lock
+        next: ".done"
+      
+      script.log_on_loot:
+        ".editor":
+          pos: [ 2900.0, 75.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: radLog
+        parameter:
+          - logChannel: cname_illusionaryQUEST
+          - msg: Chest looted
+        next: ".done"
+      
+      script.new_logmsg:
+        ".editor":
+          pos: [ 300.0, 100.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: radLog
+        parameter:
+          - logChannel: cname_illusionaryQUEST
+          - msg: In block
+        next: ".done"
+      
+      script.voice_stormy:
+        ".editor":
+          pos: [ 1509.7668457031, 482.9049072266 ]
+          in: [ In ]
+          out: [ Out ]
+        function: PlayVoicesetQuest
+        parameter:
+          - tag: cname_PLAYER
+          - voiceSet: WeatherStormy
+          - oneRandomActor: true
+        next: ".done"
+      
+      changelayers.hide_corpse_layer:
+        ".editor":
+          pos: [ 3319.8620605469, 25.8296813965 ]
+          hint: hide-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: prologue
+        hide:
+          - invlayer
+        next: ".done"
+      
+      changelayers.hide_layer:
+        ".editor":
+          pos: [ 3100.0, -75.0 ]
+          hint: hide-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: prologue
+        hide:
+          - traplayer1
+        next: ".done"
+      
+      changelayers.hide_layerss:
+        ".editor":
+          pos: [ 300.0, 0.0 ]
+          hint: hide-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: prologue
+        hide:
+          - traplayer1
+          - shownlayer
+        next: ".done"
+      
+      changelayers.show_invlayer:
+        ".editor":
+          pos: [ 300.0, 300.0 ]
+          hint: show-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: prologue
+        show:
+          - invlayer
+        next:
+          - objective.explore_area: Activate
+          - waituntil.wait_until_inside_invarea
+      
+      changelayers.show_layer:
+        ".editor":
+          pos: [ 900.0, 300.0 ]
+          hint: show-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: prologue
+        show:
+          - shownlayer
+        next:
+          - waituntil.wait_until_inside_areaspawn
+          - objective.inv_corpse: Activate
+      
+      changelayers.show_layer_1:
+        ".editor":
+          pos: [ 1300.0, 300.0 ]
+          hint: show-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: prologue
+        show:
+          - traplayer1
+        next:
+          - script.Block_door_1
+          - script.Block_door_2
+          - script.voice_stormy
+      
+      spawn.Spawn_wraith:
+        ".editor":
+          pos: [ 2900.0, 175.0 ]
+          hint: spawn-only
+          in: []
+          out: []
+        phase: default
+        spawnsets:
+          - communitytest
+        next: ".done"
+      
+      journal.initial:
+        ".editor": [ 300.0, 200.0 ]
+        entry: quests/illusionaryquest/initial
+        notify: true
+        activate_root: true
+        next: ".done"
+      
+      journal.journal_secret_success:
+        ".editor": [ 2300.0, 375.0 ]
+        entry: quests/illusionaryquest/success2
+        notify: true
+        next:
+          - questoutcome.finish: Success
+      
+      journal.journal_success:
+        ".editor": [ 3100.0, 25.0 ]
+        entry: quests/illusionaryquest/success1
+        notify: true
+        next:
+          - questoutcome.finish: Success
+          - changelayers.hide_corpse_layer
+      
+      journal.journal_trap:
+        ".editor": [ 1300.0, 400.0 ]
+        entry: quests/illusionaryquest/trap
+        notify: true
+        next: ".done"
+      
+      objective.Find_exit:
+        ".editor": [ 2300.0, 125.0 ]
+        objective: illusionaryquest/find_exit/exit
+        notify: true
+        track: true
+        next:
+          - waituntil.wait_until_looted_chest
+      
+      objective.explore_area:
+        ".editor": [ 522.7777709961, 363.3333129883 ]
+        objective: illusionaryquest/check/explore
+        notify: true
+        track: false
+        next: ".done"
+      
+      objective.inv_corpse:
+        ".editor": [ 1300.0, 200.0 ]
+        objective: illusionaryquest/check/investigate
+        notify: true
+        track: true
+        next: ".done"
+      
+      objective.secret_exit:
+        ".editor": [ 1700.0, 250.0 ]
+        objective: illusionaryquest/find_exit/secret_exit
+        notify: true
+        track: true
+        next:
+          - waituntil.wait_until_entered_secretexit
+      
+      questoutcome.finish:
+        ".editor": [ 3300.0, 375.0 ]
+        quest: illusionaryquest
+        notify: true
+        next:
+          - end
+      
+      addfact.fact_not_secret:
+        ".editor": [ 2900.0, 275.0 ]
+        value: [ illusoryquest_secret, -1 ]
+        next: ".done"
+      
+      addfact.fact_secret:
+        ".editor": [ 2300.0, 475.0 ]
+        value: [ illusoryquest_secret, 1 ]
+        next: ".done"
+      
+      end:
+        ".editor": [ 3500.0, 375.0 ]
+        next: ".done"
+      

@@ -1,0 +1,33 @@
+journals:
+  quests:
+    illusionaryquest:
+      title: "Illusory Quest"
+      type: "MonsterHunt"
+      world: prologue                      # optional, if empty every objective requires world
+      description:
+        - initial: Geralt found out about a strange place where people disappear without a trace. As experienced witcher he decides to check it.<br/>
+        - trap: After arriving at the right place Geralt was trapped in a prison...<br/>
+        - success1: Finally ghost was defeated and illusory prison dissapear. The troubles of the locals stopped.
+        - success2: Geralt was able to get out from prison and it dissapeared. But the mystery of this place was not unraveled - the locals continued to disappear, and frightened, were forced to move to another place.
+      instructions:
+        check:
+          - explore:
+              caption: "Investigate a strange place"
+              mappins: 
+                - [ invpin, 16 ]
+              
+          - investigate:
+              #world: prologue
+              caption: "Investigate a corpse"
+              mappins: initpin
+              
+        find_exit:
+          - secret_exit:
+              caption: "Find a secret exit"
+              
+          - exit:
+              #world: prologue
+              caption: "Find a way to open grate"
+              mappins: 
+                - [ exitpin, 2 ]          
+                

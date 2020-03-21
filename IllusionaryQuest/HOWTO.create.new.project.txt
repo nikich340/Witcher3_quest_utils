@@ -1,0 +1,24 @@
+HOWTO create a new empty project
+---------------------------------
+
+0. copy the content of the template.project folder into a new directory
+
+1. rename _settings_.bat-template to _settings_.bat
+
+2. adjust the MODNAME, idspace and DIR_* settings in the _settings_.bat
+
+3. run _createLinks_.bat ONCE to connect project with modkit r4data
+
+4. create a new empty project with questgraph editor and save it in the
+   definition.quest folder
+
+5. manually adjust the production settings in the created
+   prod.quest-newquestproject.yml (in definition.quest folder) to match the
+   ones in _settings_.bat
+
+6. (optional) rename prod.quest-newquestproject.yml according to your chosen MODNAME
+
+7. (optional) rename the MODNAME.speech.csv.template custom voiceline strings file
+   in speech folder to "mod<MODNAME>.speech.csv" according to your MODNAME setting.
+   This will ensure these strings will also be included automatically into the
+   encoded strings file.

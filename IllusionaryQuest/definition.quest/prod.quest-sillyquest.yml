@@ -1,0 +1,16 @@
+#
+# production settings
+# 
+# (version: 85, saved: 2020-03-21 21:23:51)
+#
+---
+production:
+  settings:
+    id: illusionaryquest
+    caption: illusionary Quest
+    menuvisibile: true
+    enabled: true
+    storesdata: true
+    strings-idspace: 9999
+    strings-idstart: 0
+    version: 85

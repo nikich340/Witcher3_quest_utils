@@ -1,0 +1,417 @@
+##General#Overview
+---------------------------------------
+
+The Questeditor is a GUI to create and edit the questgraph of quests for The Witcher 3 - The Wild Hunt created with the radish modding tools. It does not allow to modify vanilla quests nor does it allow to edit community created quests without having the appropriate source of the quest definition.
+
+A full radish modding tools quest definition is more than a questgraph: it contains definitions for multiple, different game aspects (e.g. layers, communities, journals, etc.). But the questgraph is (arguably) the most important part of a quest definition as it ties all these aspects together by controlling when and what asset is used in the player's quest progress.
+
+Therefore before creating a questgraph it is crucial to understand some of the basics for the assets usable in the questgraph. The following sections will give a brief introduction and some background information about some of these aspects.
+
+##General#Important note!
+---------------------------------------
+
+Before continuing with background information there is one fundamental challenge/problem every user of the editor has to be aware of:
+
+the editor supports the questgraph creation by providing context sensitive lists of appropriate options to select from. These options are extracted from the quest definition and ensure only existing references are usable in the editor.
+
+Since these asset definitions (e.g. layers) can only be manually added/adjusted *outside* of this quest editor it can create consistency problems if the questgraph is edited at the same time *in* the editor: having two unsaved versions with changes (one in the questgraph editor and the other in an external text editor) will overwrite the changes after saving the second version. It is VERY important to keep this in mind while editing outside the questgraph editor.
+
+As a rule of thumb:
+
+>> ALWAYS SAVE in the editor BEFORE EDITING OUTSIDE of the editor! <<
+
+and
+
+>> ALWAYS RELOAD the project in the editor AFTER EDITING AND SAVING the files OUTSIDE of the editor! <<
+
+
+##General#Worlds and Layers
+---------------------------------------
+
+TODO: Some introductionary info to worlddata and dynamic layers
+
+Worlds
+---------------------------------------
+
+TODO
+
+Layers
+---------------------------------------
+
+Layers (w2l) are used to dynamically show/hide predefined world content that is not baked into the vanilla level data.
+
+Every W2l contains a predefined set of statically positioned entities (see communities for npcs) that are spawned on top of the baked in level data. W2l can be dynamically hidden and shown by special quest blocks (ChangeLayers) depending on the progress of the quest and are (commonly) representations of different world states.
+
+W2l contain player visible ("content") entities and invisible ("meta") entities. Content entities are used to decorate the world, for example merchant wagons, fires, loot chests, quest clues, corpses, etc.
+
+Meta entities do not contain (or reference) any meshes and are used to statically position some referenced meta-information, like generic tags, waypoints, trigger areas, community spawn- and actionpoints, etc.
+
+Important note: at the time of their (intended) usage meta entities have to be in a shown level to be useable! Otherwise triggerareas from this layer do not trigger and actionpoints/waypoints are not available, etc.!
+
+##General#Journals
+---------------------------------------
+
+There are three different journal types, one for characters, one for creatures (bestiary) and one for quest logs (questjournal). Each of the journals contains subcategories grouping descriptions either by their importance (main/secondary characters), their kind (ogroids, spectre, etc.) or by quest type (main/secondary quest, treasure/monsterhunt, etc.).
+
+The journal categories are not all visible from the start but have to be activated explicitly before adding a new description. Otherwise the group is without caption. This has to be kept in mind since adding can be triggered by events occuring in arbitrary order and uncommon categories may still be invisible (especially the different bestiary categories).
+
+Character Descriptions
+---------------------------------------
+
+Descriptions can be split into multiple entries so a specific entry can be activated depending on quest progress (new clues/insights), quest branching and quest outcome (success/failure). Entries are always appended (?? or should??) and cannot be deactivated. The text (especially different versions based on different outcome) has to reflect this.
+
+In addition to textual descriptions every journal contains an image. This image can be overlayed with a temporaery image via a specific scriptcall in the questgraph (see predefined questgraph script templates) to indicate a yet-to-be-seen character or creature.
+
+Creature Descriptions
+---------------------------------------
+
+In addition to a description and image creature journals contain a list of  vulnerabilities to special signs or oils.
+
+Quest journals
+---------------------------------------
+
+In addition to a textual description the quest journal also defines quest phases with specific objectives (= instructions to fullfil the phase). In most cases every objective defines a map pin or a map area to point the player in the right direction - but this is optional.
+
+Quest phases and objectives have to be activated and updated with a success or failure outcome via questgraph.
+
+##General#Questgraph
+---------------------------------------
+
+Questgraph represent the possible progression of a quest by defining one or multiple static routes for a "signal": beginning in one globally defined startpoint (called QuestStart block) and ending in one globally defined endpoint (called QuestEnd block).
+
+If the signal reaches any endpoint (no matter what route it took) the quest is finished and no further evaluation of the questgraph is performed anymore.
+
+Routes are defined by directed connections between quest blocks.
+
+There are different types of questblocks: some can trigger specific game actions, query information, pause the signal until conditions are met or initiate some other block-specific task.
+
+Multiple connections can point to the same block: no matter from where the signal originates a signal visiting a block triggers always the block-specific funtionality. However some blocks (e.g. subsegment-blocks, scene-blocks, ...) may define multiple different input- and output-sockets (called in-socket and out-socket) and behave differently depending on which socket the signal arrived.
+
+If the block-specific action does not pause the signal until some conditions are met it immediately exits the block on a specific out-socket and continues on its route. A signal exiting a block may branch and point to different blocks at once. In this case the signal continues in parallel to all the blocks the routes point to at the same time.
+
+Subsegments
+---------------------------------------
+
+A Questgraph may be split into subsegments which are basically questgraphs itself with some differences:
+- a subsegment may contain more than one in-block (called segment-in)
+- a subsegment does not need to have an out-block (called segment-out) but may contain more than one
+- segment-in and segment-out blocks can be named
+- a subsegment can be referenced by more than one subsegment-block residing in any other  subsegment
+
+The actual segment-in and segment-out block names of a subsegment define the sockets on all subsegment-blocks referencing the respective subsegment.
+
+This means the questgraph is a unique top-level (root) subsegment which has one predefined, non changeable in-block and one predefined, non changeable out-block and it cannot be referenced by any subsegment-block.
+
+As a sidenote: subsegments are encoded as "QuestPhase...something"-class.
+
+For more information on different questblocks see block-context help descriptions.
+
+##Graph#Usage
+
+Position of the graph can be changed by dragging the graphplane while holding middle mouse button pressed. Using the mouse wheel will zoom in/out the graph with the current mouse position as zoom anchor.
+
+A questblock can be selected with the left mouse button. Properties of the selected block can be edited in the block window on the right. Clicking on the plane or another block will deselect the currently selected block. A selected block can be moved while left mouse button is pressed. Releasing the button will stop the dragging.
+
+New blocks can be added via main menu option or a context menu (accessible with right mouse button) anywhere on the plane. A block context menu allows to delete the block or access specialized operations of the block (e.g. adding named in-/out-socket).
+
+Blocks can be connected by left-clicking on a blocks out-socket while it is highlighted, moving the endpoint of the new connection while the mouse button is pressed to an in-socket of a target block and releasing the mouse button when the in-socket is highlighted. Dragging the endpoint of a connection from an in-socket and releasing it while no in-socket is highlighted will delete the highlighted connection.
+
+A specific connection of an in-socket with multiple connections can be removed by first selecting the block where the connection is starting and afterwards dragging the endpoint away from its in-socket as above.
+
+Subsegments can be selected in the right list of subsegments.
+
+##Graph#Block#QuestStart
+Non editable signal-source for the questgraph.
+
+##Graph#Block#QuestEnd
+Non editable signal-sink for the questgraph. The first signal reaching this block (independent of the specific connection) will immediately stop evaluating the remaining branches of this (complete) questgraph effectively stopping the quest.
+
+##Graph#Block#SegmentIn
+Represents a specific signal source of this subsegment. The name corresponds to the in-socket name of the subsegment-blocks referencing this subsegment. Signal incoming to these in-sockets will be forwarded to this segment-in block.
+
+Max N segment-in blocks per subsegment supported.
+
+No properties.
+
+##Graph#Block#SegmentOut
+Represents a specific sink of this subsegment-flow (hence no out-sockets). The first signal reaching *any* segment-out block will immediately stop evaluating the remaining branches of this subsegment. It will be forwarded to *all* subsegment-blocks referencing this subsegment, and it will be connected to the out-socket (of these subsegment-blocks) named as the originating segment-out block.
+
+Max N segment-out per subsegment supported.
+
+No properties.
+
+##Graph#Block#SubSegment
+Forwards the signal to the referenced subsegment. The signal in the subsegment starts in the segment-in block named as the in-socket of this block. If the signal exits the subsegment in a segment-out block it will be forwarded to this blocks out-socket with the name of the segment-out.
+
+properties
+subsegment:
+  reference to a different subsegment
+
+required: subsegment
+
+##Graph#Block#Scene
+Starts a specific scene to be played directly. Depending on the in-socket a specific start segment of the scene will be used (default is "Input"). The output of the scene defines the used out-socket for the continuation of the signal.
+
+In- and out-socket names have to match (case-sensitive!) with the appropriate blocks of the referenced scene. This is NOT verified by the encoder!
+
+properties
+scene:
+  reference to a scene, either by
+  path to a w2scene file in the dlc or
+  by id (autogenerated path)
+placement:
+  reference to scenepoint tag to be used
+  as placement origin of the scene
+interruptable:
+  indicates whether the scene can be
+  skipped by player
+
+required: scene, placement
+
+##Graph#Block#Interaction
+Attaches an interaction scene to an actor. Blocks the signal until an actor is found with the tag. The scene is not started directly. The player must interact (talk to) this actor to start the scene.
+
+In- and out-socket names have to match (case-sensitive!) with the appropriate blocks of the referenced scene. This is NOT verified by the encoder!
+
+properties
+scene:
+  reference to a scene, either by path
+  to a w2scene file in the dlc or by id
+  (autogenerated path)
+actortags:
+  list of tags. interaction with actors
+  having one of these tags triggers scene
+interruptable:
+  indicates whether the scene can be
+  skipped by player
+
+required: scene, actortags
+
+##Graph#Block#Script
+Calls a specific script function and continues with the signal on the out-socket. If function returns a bool value the result can be ignored or evaluated to branch the continuation of the signal on either the "true" or "false" out-socket.
+
+A list of predefined function call templates or a custom function defintion can be used (see context menu).
+
+Function and parameter names are case-sensitive. The parameter list definition have to match the order, names and parameter types of the called function exactly!
+
+Up to 10 primitive-typed parameters are supported.
+
+parameters
+function:
+  case sensitive function name
+parameter:
+  list of case-sensitive named parameters
+
+required: function
+
+##TODO##Graph#Block#Spawnsets
+
+##TODO##Graph#Block#Spawn
+
+##TODO##Graph#Block#Despawn
+
+##Graph#Block#JournalEntry
+Activates a specific journal description entry for a character, creature or a quest log. If the journal entries category (e.g. draconids category) i not already active it will be displayed without caption. In this case the activate root flag should be set.
+
+properties
+entry:
+  reference to specific description entry
+activate root:
+  activate group for entry
+notify:
+  inform player with hud message
+
+required: entry
+
+##Graph#Block#JournalObjective
+Depending on the input-socket a specific objective within a quest phase will be either activated, marked as successfully completed or failed.
+
+properties
+objective:
+  reference to an objective within a
+  quest phase
+notify:
+  display a hud message about the state
+  change for this objective
+track:
+  activate auto-tracking of this
+  objective
+
+required: objective
+
+##Graph#Block#JournalMappin
+Enables or disables a specific map pin depending on the activated input socket (e.g. disabling one of N already searched areas). Mappin must be a pin from the currently active quest phase and objective (?)
+
+properties
+mappin: reference to a specific mappin
+
+required: mappin
+
+##Graph#Block#PauseTime
+Pause the game time.
+
+properties none
+
+##Graph#Block#JournalPhaseObjectives
+Depending on the input-socket all objectives of a specific quest phase will be either activated, marked as successfully completed or failed.
+
+properties
+phase:
+  reference to a quest phase
+notify:
+  display a hud message about the state
+  change for the remaining phase
+  objectives
+
+##Graph#Block#JournalQuestOutcome
+Depending on the input-socket a quest and all of its active objectives will be either marked as successfully completed or failed.
+
+properties
+quest:
+  reference to a quest
+notify:
+  display a hud message about the state
+  change for the remaining quest
+  objectives
+
+##Graph#Block#UnpauseTime
+Unpause the game time.
+
+properties none
+
+##Graph#Block#ShiftTime
+Adds a defined time span to current game time. In combination with a fade out/in and a "time passed" HUD message (see predefined scriptcall block templates) this block can be used to simulate some "skipped" duration.
+
+properties
+by:
+  defines the added timespan,
+  format HH:mm
+
+required: by
+
+##Graph#Block#SetTime
+Sets the game time to a specific time of day.
+
+properties
+time:
+  format HH:mm
+
+required: time
+
+##Graph#Block#AddFact
+Adds a value to a specific fact in the factsdb. Facts are used represent an aspect of the current world/quest state and can be queried (e.g. by conditions, from scripts, in scenes, etc.) to react depending on the current set value.
+
+properties
+id:
+  name of the fact
+value:
+  numeric value
+
+required: id, value
+
+##TODO##Graph#Block#Reward
+Player receives all the items from a defined reward. A special HUD message is shown.
+
+properties
+reward:
+  reference to one defined reward
+  (= named collection of items)
+
+required:
+
+
+##Graph#Block#Teleport
+Teleport moves the player within the current hub to destination tag. Tag must exist, tags from different worlds are ignored (?). Movement is instantaneous (no loading screen).
+
+properties
+destination:
+  waypoint tag in the current hub
+
+required: destination
+
+##Graph#Block#ChangeWorld
+World changes are triggered immediately, even if the target world is the same as the current. After loading the player is spawned at the destination waypoint.
+
+properties
+destination:
+  waypoint tag in a world hub to be
+  loaded
+
+required: destination
+
+##TODO##Graph#Block#WaitUntil
+
+Conditions
+
+Area
+Interaction
+Fact
+Time
+
+##TODO##Graph#Block#WaitUntil#MultiSocket
+
+##Graph#Block#Layers
+Triggers showing and hiding of a set of (dynamic) world layers (w2l) in a specific world at the same time.
+
+Important note: meta entities must be in a "shown" level at the time of of usage!
+
+properties
+sync:
+  waits for the operation to finish
+purge:
+  forgets all the persistent data from
+  hidden layers
+world:
+  defines the world for all layers in
+  this block as filter
+show:
+  list of layer references to be shown
+hide:
+  list of layer references to be hidden
+
+required: world, at least one layer
+
+##Graph#Block#Layers#Show
+Triggers showing of a set of (dynamic) world layers (w2l) in a specific world.
+
+Important note: meta entities must be in a "shown" level at the time of of usage!
+
+properties
+sync:
+  waits for the operation to finish
+purge:
+  forgets all the persistent data from
+  hidden layers
+world:
+  defines the world for all layers in
+  this block as filter
+show:
+  list of layer references to be shown
+
+required: world, at least one layer
+
+##Graph#Block#Layers#Hide
+Triggers hiding of a set of (dynamic) world layers (w2l) in a specific world.
+
+Important note: meta entities must be in a "shown" level at the time of of usage!
+
+properties
+sync:
+  waits for the operation to finish
+purge:
+  forgets all the persistent data from
+  hidden layers
+world:
+  defines the world for all layers in
+  this block as filter
+hide:
+  list of layer references to be hidden
+
+required: world, at least one layer
+
+##Graph#Block#Randomize
+Picks one out of max eight out-sockets randomly for signal to continue.
+
+Note: sockets without any connection are ignored, e.g. for a 1 connected and 5 unconnected configuration the signal will ALWAYS pick the connected out socket.
+
+No properties.

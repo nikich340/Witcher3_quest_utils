@@ -1,0 +1,16 @@
+communities:
+  communitytest:
+    actors:
+      wraith:
+        template: characters/npc_entities/monsters/wraith_mh.w2ent
+        tags: [wraith1]
+    phases:
+      default:
+        wraith:
+          appearance: [wraith_01, true]     # [someappearance, only_on_spawn_bool]
+          immortality: none
+          level: 20
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: prologue/waypoint_2
+        

@@ -1,0 +1,13 @@
+#
+# definition of valid items references and descriptions
+#
+
+items:
+  misc:
+    prison_key:
+      name: "Prison key"
+      description: "This key is opening prison door"
+
+loot:
+  chest_loot:
+    - misc/prison_key

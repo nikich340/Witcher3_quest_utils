@@ -1,0 +1,20 @@
+#
+# definition of entities
+#
+entities:
+  prison_chest:
+    includes:
+     # - gameplay\containers\container_template.w2ent - do not needed for chests  # required instead of interaction component, so "loot" action is removed after looting
+      - gameplay\containers\new_locations\kaer_morhen\indoor\average\ironbound_chest.w2ent
+    #usedAppearances: [merchant_corpses_04]
+    entityObject:
+      .type: W3AnimatedContainer
+      streamingDistance: 0
+
+    templateParams:
+      - .type: CR4LootParam
+        containers:
+          chest_loot:
+            chance: 100.0
+            respawnTime: 0
+

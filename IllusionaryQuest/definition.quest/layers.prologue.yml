@@ -1,0 +1,102 @@
+#-- Radish Quest UI (auto-log) - W2LAYER DUMP -------------------------------------------------
+layers: 
+  traplayer1: 
+    world: "prologue"
+    #context: ""
+
+    areas: 
+      secret_exit: 
+        #height: 2.0
+        borderpoints: 
+          - [ 126.3359985352, 102.7109985352, 5.0964813232 ]
+          - [ 126.2202606201, 100.8375320435, 5.0964813232 ]
+          - [ 129.1027832031, 100.2961578369, 5.0964813232 ]
+          - [ 129.3404846191, 102.9079666138, 5.0964813232 ]
+          
+      exitarea: 
+        #height: 2.0
+        borderpoints: 
+          - [ 135.4887084961, 98.4398269653, 1.2989954948 ]
+          - [ 136.3745880127, 100.3910293579, 1.2989954948 ]
+          - [ 135.1806030273, 102.2533416748, 1.2989954948 ]
+          - [ 132.2914733887, 102.8261337280, 1.2989954948 ]
+          - [ 132.3717803955, 97.5168838501, 1.2989954948 ]
+          - [ 134.5145874023, 98.4786682129, 1.2989954948 ]
+
+    statics:
+      prison1: 
+        template: "CEntity:dlc\\bob\\data\\environment\\architecture\\prison_temp\\prison_kear_morhen_jail.w2ent"
+        pos: [ 126.0341644287, 100.7127761841, 1.2310190201 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        
+      grate_door: 
+        template: "W3NewDoor:gameplay\\interactive_objects\\doors\\animated\\anim_sewer_grate_door_wide.w2ent"
+        pos: [ 131.9586639404, 99.1610565186, 1.2532804012 ]
+        rot: [ 0.0, 0.0, 90.0 ]
+        tags: [ "grate_door1" ]
+
+      grate_door_exit: 
+        template: "W3NewDoor:gameplay\\interactive_objects\\doors\\animated\\anim_sewer_grate_door_wide.w2ent"
+        pos: [ 130.9929809570, 105.4863739014, 1.4932804108 ]
+        rot: [ 0.0, 0.0, 117.0 ]
+        tags: [ "grate_door2" ]
+        #settings:
+        #  key: illusionaryquest_misc_prison_key    # works if interaction is available
+        #  removekey: true                   # removes key after usage
+
+    interactiveEntities:
+      chest:
+        template: CEntity:prison_chest
+        valid_interactions: [Loot]
+        pos: [ 123.5708999634, 108.3432540894, 1.6702008247 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+    
+    waypoints: 
+       waypoint_1: [ 129.1729888916, 105.3133087158, 1.4932804108, 0.0 ]
+       waypoint_2: [ 130.4173126221, 99.7449188232, 1.4932804108, 0.0 ]
+        
+  shownlayer: 
+    world: "prologue"
+    #context: ""
+
+    areas: 
+      areaspawn: 
+        height: 3.0
+        borderpoints: 
+          - [ 125.5334548950, 103.3922653198, 0.4932813644 ]
+          - [ 125.5334548950, 99.3922653198, 0.4932813644 ]
+          - [ 129.5334472656, 99.3922653198, 0.4932813644 ]
+          - [ 129.5334472656, 103.3922653198, 0.4932813644 ]
+
+    mappins: 
+      exitpin: 
+        #radius for quest instructions: 2
+        pos: [ 134.2521667480, 99.9819946289, 1.0025825500 ]
+
+      initpin: [ 127.5334548950, 101.3922653198, 1.4932813644 ]
+      
+  invlayer: 
+    world: "prologue"
+    #context: ""
+
+    statics: 
+      body: 
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q106_tower\\entities\\q106_body_killed_by_morowa.w2ent"
+        pos: [ 127.5746612549, 101.5071258545, 1.1932804108 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+      
+    areas:
+      new_area: 
+        height: 3.0
+        borderpoints: 
+          - [ 117.8030929565, 110.0047912598, 2.6540646553 ]
+          - [ 119.6338806152, 94.2187042236, 2.6540646553 ]
+          - [ 133.4714202881, 88.5735931396, 2.6540646553 ]
+          - [ 146.4391937256, 98.8863143921, 2.6540646553 ]
+          - [ 144.6561431885, 112.7692489624, 2.6540646553 ]
+          - [ 131.6093902588, 119.4538497925, 2.6540646553 ]
+    
+    mappins:
+      invpin: 
+        #radius for quest instructions: 16
+        pos: [ 131.7772369385, 103.8231811523, 1.4932804108 ]

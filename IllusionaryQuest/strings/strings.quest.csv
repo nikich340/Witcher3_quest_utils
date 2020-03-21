@@ -1,0 +1,17 @@
+;meta[language=en]
+; id      |key(hex)|key(str)| text
+2119999000|00000000||MOD questgroup_illusionaryquest Quests
+2119999001|00000000||Investigate a strange place
+2119999002|00000000||Investigate a corpse
+2119999003|00000000||Find a way to open grate
+2119999004|00000000||Find a secret exit
+2119999005|00000000||Geralt found out about a strange place where people disappear without a trace. As experienced witcher he decides to check it.<br/>
+2119999006|00000000||Finally ghost was defeated and illusory prison dissapear. The troubles of the locals stopped.
+2119999007|00000000||Geralt was able to get out from prison and it dissapeared. But the mystery of this place was not unraveled - the locals continued to disappear, and frightened, were forced to move to another place.
+2119999008|00000000||After arriving at the right place Geralt was trapped in a prison. Appearing from nowhere, a wraith attacked the Geralt...<br/>
+2119999009|00000000||Illusory Quest
+2119999010|00000000|item_name_illusionaryquest_misc_prison_key|Prison key
+2119999011|00000000|item_desc_illusionaryquest_misc_prison_key|This key is opening prison door
+2119999012|00000000|dlc_name_illusionaryquest|illusionary Quest
+2119999013|00000000|option_dlc_name_illusionaryquest|MOD: illusionary Quest
+2119999014|00000000|content_name_dlc_illusionaryquest|MOD: illusionary Quest

@@ -1,0 +1,64 @@
+[[highlight]]
+keyword = "[ModBootstrap]"
+color = "Green"
+
+[[highlight]]
+keyword = "[EnvUi]"
+color = "Cyan"
+
+[[highlight]]
+keyword = "[RadishFoliageGenerator]"
+color = "Cyan"
+
+[[highlight]]
+keyword = "[RadishQuestUi]"
+color = "Cyan"
+
+[[highlight]]
+keyword = "[StoryBoardUi]"
+color = "Cyan"
+
+[[highlight]]
+keyword = "[W2SCENE]"
+skip = true
+color = "Magenta"
+
+[[highlight]]
+keyword = "StoryBoard"
+color = "Magenta"
+
+[[redirect]]
+keyword = "[W2SCENE]"
+file = "dumped.scene.yml"
+replace.key = "[W2SCENE] "
+replace.with = ""
+
+[[redirect]]
+keyword = "[W2LAYER]"
+file = "dumped.layerdef.yml"
+replace.key = "[W2LAYER] "
+replace.with = ""
+
+[[redirect]]
+keyword = "[W2COMMUNITY]"
+file = "dumped.community.yml"
+replace.key = "[W2COMMUNITY] "
+replace.with = ""
+
+[[redirect]]
+keyword = "[W3ENV]"
+file = "dumped.env.yml"
+replace.key = "[W3ENV] "
+replace.with = ""
+
+[[redirect]]
+keyword = "[W3FOLIAGE]"
+file = "dumped.foliage.yml"
+replace.key = "[W3FOLIAGE] "
+replace.with = ""
+
+[[redirect]]
+keyword = "[W3NAVMESH]"
+file = "dumped.navmesh.yml"
+replace.key = "[W3NAVMESH] "
+replace.with = ""
