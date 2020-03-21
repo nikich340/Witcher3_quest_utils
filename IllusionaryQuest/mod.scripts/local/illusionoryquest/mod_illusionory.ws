@@ -16,7 +16,7 @@ quest function isla_undress() {
   }
 }
 // ----------------------------------------------------------------------------
-quest function RadishDoorChangeState(tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) 
+quest function IllusionaryquestDoorChangeState(tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) 
 {
   //var newDoorState : EDoorQuestState;
 
