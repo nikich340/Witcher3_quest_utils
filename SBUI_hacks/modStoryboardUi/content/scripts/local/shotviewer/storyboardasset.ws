@@ -113,6 +113,23 @@ abstract class CModStoryBoardAsset {
                 placement = defaultPlacement;
             }
             entity = theGame.CreateEntity(template, placement.pos, placement.rot);
+			
+			// --- start Signs crutch ---
+			if (templatePath == "gameplay\templates\signs\pc_igni.w2ent") {
+				entity.PlayEffect('burn');
+			} else if (templatePath == "gameplay\templates\signs\pc_aard.w2ent") {
+				entity.PlayEffect('blast_lv3');
+			} else if (templatePath == "gameplay\templates\signs\pc_axii.w2ent") {
+				entity.PlayEffect('axii_ready');
+			} else if (templatePath == "gameplay\templates\signs\pc_yrden.w2ent") {
+				entity.PlayEffect('yrden_shock_rune');
+			} else if (templatePath == "gameplay\templates\signs\pc_quen.w2ent") {
+				entity.PlayEffect('shield');
+			} else if (templatePath == "gameplay\templates\signs\pc_quen_hit.w2ent") {
+				entity.PlayEffect('quen_rebound_sphere');
+			}
+			// --- stop Signs crutch ---
+			//LogChannel('SBUI_path', templatePath);
 
             needsRespawn = false;
         }
@@ -820,6 +837,23 @@ class CModStoryBoardItem extends CModStoryBoardAsset {
     {
         super.setPlacement(newPlacement, dontUpdateShotSettings);
 
+		// --- start Signs crutch ---
+		entity.StopAllEffects();
+		if (templatePath == "gameplay\templates\signs\pc_igni.w2ent") {
+				entity.PlayEffect('burn');
+			} else if (templatePath == "gameplay\templates\signs\pc_aard.w2ent") {
+				entity.PlayEffect('blast_lv3');
+			} else if (templatePath == "gameplay\templates\signs\pc_axii.w2ent") {
+				entity.PlayEffect('axii_ready');
+			} else if (templatePath == "gameplay\templates\signs\pc_yrden.w2ent") {
+				entity.PlayEffect('yrden_shock_rune');
+			} else if (templatePath == "gameplay\templates\signs\pc_quen.w2ent") {
+				entity.PlayEffect('shield');
+			} else if (templatePath == "gameplay\templates\signs\pc_quen_hit.w2ent") {
+				entity.PlayEffect('quen_rebound_sphere');
+			}
+		// --- stop Signs crutch ---
+		
         // some assets do not teleport their collision/height information and
         // should be respawned after replacement (aka interactive placement)
         if (!dontUpdateShotSettings){
