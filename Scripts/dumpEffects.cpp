@@ -48,8 +48,6 @@ int main(int argc, char** argv) {
     fpath = string(argv[1]);
 
     ifstream in(fpath.c_str(), ifstream::in);
-    ofstream out("cookedEffects.ws", ofstream::out);
-
     if (!in.is_open()) {
         cout << "\tERROR! " << fpath << " can not be opened (use absolute or relative path from CURRENT directory)\n";
         return 0;
@@ -62,6 +60,10 @@ int main(int argc, char** argv) {
             entname = fpath[i] + entname;
         }
     }
+    fpath = fpath.substr(0, fpath.length() - entname.length());
+    fpath += "cookedEffects.ws";
+
+    ofstream out(fpath.c_str(), ofstream::out);
 
     out << "/*\n";
     while(!in.eof()) {
