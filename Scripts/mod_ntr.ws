@@ -57,13 +57,18 @@ quest function NTRPlayMusic( areaName : string, eventName : string, optional sav
 	}
 }
 // -------------------------------------------------------------------------------
-quest function NTRTuneNPC( tag : name, level : int, attitude : string, mortality : string )
+quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional npcGroupType : string, optional scale : float )
 {
 	var NPCs   : array <CNewNPC>;
 	var i      : int;
 	
 	theGame.GetNPCsByTag(tag, NPCs);
 	// LogQuest( "<<Tune NPC>>> tag: " + tag + " found npcs: " + NPCs.Size());	- uncomment it to check if NPCs are found
+	if (level > 500) {
+		// 1005 = playerLvl + 5;
+		// 995 = playerLvl - 5
+		level = GetWitcherPlayer().GetLevel() + (level - 1000);
+	}
 	
 	for (i = 0; i < NPCs.Size(); i += 1 )
 	{	
@@ -77,7 +82,7 @@ quest function NTRTuneNPC( tag : name, level : int, attitude : string, mortality
 		//NPCs[i].RemoveAbilityAll('DisableFinishers'); - may be also useful
 		
 		/* SET ATTITUDE TO PLAYER */
-		switch(attitude) {
+		switch (attitude) {
 			case "Friendly":
 				NPCs[i].SetTemporaryAttitudeGroup( 'friendly_to_player', AGP_Default );
 				NPCs[i].SetAttitude( thePlayer, AIA_Friendly );
@@ -96,7 +101,7 @@ quest function NTRTuneNPC( tag : name, level : int, attitude : string, mortality
 		}
 		
 		/* SET MORTALITY */
-		switch(mortality) {
+		switch (mortality) {
 			case "None":
 				NPCs[i].SetImmortalityMode( AIM_None, AIC_Combat );
 				NPCs[i].SetImmortalityMode( AIM_None, AIC_Default );
@@ -121,6 +126,38 @@ quest function NTRTuneNPC( tag : name, level : int, attitude : string, mortality
 				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_Fistfight );
 				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_IsAttackableByPlayer );
 				break;
+		}
+		
+		/* SET NPC TYPE GROUP */
+		switch(npcGroupType) {
+			case "ENGT_Commoner":
+				NPCs[i].SetNPCType(ENGT_Commoner);
+				break;
+			case "ENGT_Guard":
+				NPCs[i].SetNPCType(ENGT_Guard);
+				break;
+			case "ENGT_Commoner":
+				NPCs[i].SetNPCType(ENGT_Quest);
+				break;
+			case "ENGT_Enemy":
+				NPCs[i].SetNPCType(ENGT_Enemy);
+				break;
+			
+		}
+		
+		/* SET SCALE (DANGER BUT FUNNY) */
+		if (scale > 0) {
+			var mesh : CMovingPhysicalAgentComponent;
+			var meshs : array<CComponent>;
+			var i : int;
+			meshs = npc.GetComponentsByClassName('CMovingPhysicalAgentComponent');
+
+			for (i = 0; i < meshs.Size(); i+=1) {
+				mesh = (CMovingPhysicalAgentComponent)meshs[i];
+				if (mesh) {
+					mesh.SetScale(Vector(scale, scale, scale));
+				}
+			}
 		}
 	}
 }
