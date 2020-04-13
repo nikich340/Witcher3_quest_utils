@@ -2,6 +2,11 @@
 #include <dirent.h>
 #include <windows.h>
 
+/* unsigned __int128 typed constant. */
+#define __C_UINT128(LOW, HIGH) ((((unsigned __int128) (HIGH)) << 32) | ((unsigned __int128) (LOW)))
+/* signed __int128 typed constant. */
+#define __C_INT128(LOW, HIGH) (signed __int128) (__C_UINT128(LOW, HIGH))
+
 #define ll long long int
 #define ld long double
 #define X first
