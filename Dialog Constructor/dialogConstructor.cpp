@@ -2,11 +2,6 @@
 #include <dirent.h>
 #include <windows.h>
 
-/* unsigned __int128 typed constant. */
-#define __C_UINT128(LOW, HIGH) ((((unsigned __int128) (HIGH)) << 32) | ((unsigned __int128) (LOW)))
-/* signed __int128 typed constant. */
-#define __C_INT128(LOW, HIGH) (signed __int128) (__C_UINT128(LOW, HIGH))
-
 #define ll long long int
 #define ld long double
 #define X first
@@ -18,7 +13,7 @@
 #define pb push_back
 #define pii pair<ll, ll>
 #define el '\n'
-#define sfio() freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
+#define sfio() freopen("input.txt", "r", stdin); freopen("output.txt", "w", stcout);
 #define PI acos(-1.0)
 #define eps 0.0000001
 #define mod 1000000007
@@ -49,6 +44,7 @@ bool firstTime = true;
 int curType = 0;
 int limit = 10;
 bool reset = true;
+bool idFillZero = false;
 /* 0 - default,
    1 - loaded (at least 1) csv and ready to find
    2 - loaded dir and choose csv
@@ -68,6 +64,29 @@ int getCode(char x) {
     if (x == '\'')
         return 27;
     return (x - 'a');
+}
+string fillWithZeros(ll id) {
+    string ret = to_string(id);
+    if (idFillZero) {
+        int zeroCnt = 10 - ret.length();
+        ret = string(zeroCnt, '0') + ret;
+    }
+    return ret;
+}
+int to_int(string s) {
+    int pos = 0;
+    int ret = 0;
+    int cnt = 0;
+    while (pos < s.length() && isspace(s[pos]))
+        ++pos;
+    while (pos < s.length() && isdigit(s[pos])) {
+        ++cnt;
+        ret = ret * 10 + (s[pos] - '0');
+        ++pos;
+    }
+    if (!cnt)
+        return - INT_MAX;
+    return ret;
 }
 string normalizePhrase(string phrase) {
     string newPhrase = "";
@@ -100,23 +119,28 @@ void setConsoleColor(int type) {
     /*for(int k = 1; k < 255; k++)    {
     // pick the colorattribute k you want
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), k);
-        dout << k << " have a nice day!\n";
+        cout << k << " have a nice day!\n";
     }*/
 }
 void coutColor(string s, int type, int next = 7) {
+    setConsoleColor(type);
+    cout << s;
+    setConsoleColor(next);
+}
+void doutColor(string s, int type, int next = 7) {
     setConsoleColor(type);
     dout << s;
     setConsoleColor(next);
 }
 void coutLines(vector<ll>& id, int limit, string highlight, int type, int next = 7) {
-    coutColor("\t\tPrint " + to_string(min(limit, (int) id.size())) + " of " + to_string(id.size()) + " suitable dialogs\n", 11);
+    doutColor("\t\tPrint " + to_string(min(limit, (int) id.size())) + " of " + to_string(id.size()) + " suitable dialogs\n", 11);
     for (auto it : id) {
         --limit;
         if (limit < 0) {
             break;
         }
         string get = mapLines[it] + "\n";
-        //dout << "get: " << get;
+        //cout << "get: " << get;
         int pos = normalizePhrase(get).find(highlight);
         while (pos < get.length() - highlight.length() && tolower(get[pos]) != highlight[0]) {
             ++pos;
@@ -128,8 +152,8 @@ void coutLines(vector<ll>& id, int limit, string highlight, int type, int next =
         }
 
         if (pos != string::npos) {
-            dout << "\t\t" << it << "|" << get.substr(0, pos);
-            coutColor(get.substr(pos, highlight.length()), type);
+            dout << "\t\t" << fillWithZeros(it) << "|" << get.substr(0, pos);
+            doutColor(get.substr(pos, highlight.length()), type);
             pos += highlight.length();
             dout << get.substr(pos, get.length() - pos);
         }
@@ -159,7 +183,7 @@ string deleteFirst(string phrase) {
 }
 void parseConfLine(string s) {
     if (s == "" || s.find("//") != string::npos) {
-        //dout << "commentLine" << el;
+        //cout << "commentLine" << el;
         return;
     }
     if (s.find("limit") != string::npos) {
@@ -178,18 +202,18 @@ void parseConfLine(string s) {
         if (workPath.back() != '\\' && workPath.back() != '/') {
             workPath.pb('\\');
         }
-        //dout << "workPath: [" << workPath << "]" << el;
+        //cout << "workPath: [" << workPath << "]" << el;
         return;
     }
     if (s.find(".csv") != string::npos) {
         int pos = s.find(".csv");
         pos += 4;
         string csvPath = s.substr(0, pos);
-        //dout << "csvPath: [" << csvPath << "]" << el;
+        //cout << "csvPath: [" << csvPath << "]" << el;
         while (s[pos] == ' ')
             ++pos;
         string csvName = s.substr(pos, s.length() - pos);
-        //dout << "csvName: [" << csvName << "]" << el;
+        //cout << "csvName: [" << csvName << "]" << el;
         CSVs.pb({csvName, csvPath});
         return;
     }
@@ -198,7 +222,7 @@ void parseConfLine(string s) {
     while (s[pos] == ' ')
         ++pos;
     string dirName = s.substr(pos, s.length() - pos);
-    //dout << "dirPath: [" << dirPath << "], nameDir: [" << dirName << "]\n";
+    //cout << "dirPath: [" << dirPath << "], nameDir: [" << dirName << "]\n";
     DIRs.pb({dirName, dirPath});
 }
 
@@ -213,10 +237,10 @@ void findForest(string phrase) {
         coutColor("\tYour text must contain at least 1 literal ([a - z], [A - Z])!\n", 12);
         return;
     }
-    //dout << "findForest: [" << phrase << "]\n";
+    //cout << "findForest: [" << phrase << "]\n";
 
     upn(i, 0, phrase.length() - 1) {
-        //dout << "PREV! " << prev << " cur: [" << phrase.substr(start, i - start) << "], prev:[" << phrase.substr(start, prev - start) << "]\n";
+        //cout << "PREV! " << prev << " cur: [" << phrase.substr(start, i - start) << "], prev:[" << phrase.substr(start, prev - start) << "]\n";
         if (phrase[i] == ' ') {
             if (!forest[jump].IDs.empty()) {
                 foundPrev = forest[jump].IDs;
@@ -225,15 +249,15 @@ void findForest(string phrase) {
                 jump = 0;
                 if (!foundPrev.empty()) {
                     string curPhrase = cutSpaces(phrase.substr(start, prev - start));
-                    coutColor("\t[" + curPhrase + "]\n", 10);
+                    doutColor("\t[" + curPhrase + "]\n", 10);
                     coutLines(foundPrev, limit, curPhrase, 47);
                     foundPrev.clear();
                     start = prev;
                     i = prev;
                 } else {
                     string curPhrase = cutSpaces(phrase.substr(start, i - start));
-                    coutColor("\t[" + curPhrase  + "]\n", 4);
-                    coutColor("\t\tNot found :(\n", 79);
+                    doutColor("\t[" + curPhrase  + "]\n", 4);
+                    doutColor("\t\tNot found :(\n", 79);
                     start = i;
                     prev = i;
                 }
@@ -246,7 +270,7 @@ void findForest(string phrase) {
             jump = 0;
             if (!foundPrev.empty()) {
                 string curPhrase = cutSpaces(phrase.substr(start, prev - start));
-                coutColor("\t[" + curPhrase + "]\n", 10);
+                doutColor("\t[" + curPhrase + "]\n", 10);
                 coutLines(foundPrev, limit, curPhrase, 47);
                 foundPrev.clear();
                 start = prev;
@@ -255,8 +279,8 @@ void findForest(string phrase) {
                 while (phrase[i] != ' ')
                     ++i;
                 string curPhrase = cutSpaces(phrase.substr(start, i - start));
-                coutColor("\t[" + curPhrase + "]\n", 4);
-                coutColor("\t\tNot found :(\n", 79);
+                doutColor("\t[" + curPhrase + "]\n", 4);
+                doutColor("\t\tNot found :(\n", 79);
                 start = i;
                 prev = i;
             }
@@ -269,13 +293,13 @@ void findForest(string phrase) {
         return;
     if (!foundPrev.empty()) {
         string curPhrase = cutSpaces(phrase.substr(start, prev - start));
-        coutColor("\t[" + curPhrase + "]\n", 10);
+        doutColor("\t[" + curPhrase + "]\n", 10);
         coutLines(foundPrev, limit, curPhrase, 47);
         foundPrev.clear();
     } else {
         string curPhrase = cutSpaces(phrase.substr(start, (phrase.length() - 1)- start));
-        coutColor("\t" + curPhrase + "\n", 4);
-        coutColor("\t\tNot found :(\n", 79);
+        doutColor("\t" + curPhrase + "\n", 4);
+        doutColor("\t\tNot found :(\n", 79);
     }
 }
 void addForest(string phrase, ll id) {
@@ -299,7 +323,7 @@ void addForest(string phrase, ll id) {
         forest[jump].IDs.pb(id);
 }
 void addPhrase(string phrase, ll id) {
-    //dout << "[" << id << "]" << phrase << el;
+    //cout << "[" << id << "]" << phrase << el;
 
     // wrap some strange '...' csv symbols
     upn(i, 0, phrase.length() - 3) {
@@ -319,12 +343,12 @@ void addPhrase(string phrase, ll id) {
 }
 void loadCsv(string csvPath, string csvName, bool notify = true) {
     if (notify) {
-        dout << "\tLoading " << csvName << " wait a second..." << el;
+        cout << "\tLoading " << csvName << " wait a second..." << el;
         loadedCsv.pb(csvName);
     }
     ifstream csvIn(csvPath);
     if (!csvIn.is_open()) {
-        dout << "\tERROR! Fail to open " << csvPath << ", check path!\n";
+        cout << "\tERROR! Fail to open " << csvPath << ", check path!\n";
         return;
     }
     string curLine;
@@ -350,7 +374,7 @@ void loadCsv(string csvPath, string csvName, bool notify = true) {
 }
 void loadDir(string dirName, string dirPath) {
     dirPath = workPath + dirPath;
-    dout << "\tLoaded DIR: " << dirName << el;
+    cout << "\tLoaded DIR: " << dirName << el;
     DIR *dir;
     struct dirent *ent;
     vector<string> dirFiles;
@@ -362,28 +386,37 @@ void loadDir(string dirName, string dirPath) {
         }
         closedir(dir);
     } else {
-        dout << "ERROR OPENING DIR! Possibly it does not exits? Check path: " << dirPath << "\n";
+        cout << "ERROR OPENING DIR! Possibly it does not exits? Check path: " << dirPath << "\n";
         return;
     }
     if (dirName == "REMAINING ACTORS") {
-        dout << "\tLoading REMAINING ACTORS .csv, wait a second..." << el;
-        for (auto csv : dirFiles) {
-            string csvPath = dirPath + "\\" + csv;
-            loadCsv(csvPath, csv, false);
+        cout << "\t1: Load all actors\n\t2: Choose one actor\n";
+        cout << "\tPrint number of your choice (1 - 2): ";
+        int userIdx = 0;
+        while (userIdx < 1 || userIdx > 2) {
+            getline(cin, tmp);
+            userIdx = to_int(tmp);
         }
-        loadedCsv.pb("*.csv (REMAINING ACTORS DIALOGS)");
-        return;
+        if (userIdx == 1) {
+            cout << "\tLoading REMAINING ACTORS .csv, wait a second..." << el;
+            for (auto csv : dirFiles) {
+                string csvPath = dirPath + "\\" + csv;
+                loadCsv(csvPath, csv, false);
+            }
+            loadedCsv.pb("*.csv (REMAINING ACTORS DIALOGS)");
+            return;
+        }
     }
 
     int idx = 1;
     for (auto csv : dirFiles) {
-        dout << "\t" << idx << " [" << csv << "]\n";
+        cout << "\t" << idx << " [" << csv << "]\n";
         ++idx;
     }
     int userIdx = idx;
     int maxIdx = idx - 1;
     while (userIdx < 1 || userIdx > maxIdx) {
-        dout << "Print number of your choice (1 - " << maxIdx << "): ";
+        cout << "Print number of your choice (1 - " << maxIdx << "): ";
         cin >> userIdx;
     }
     string csvPath = dirPath + "\\" + dirFiles[userIdx - 1];
@@ -393,7 +426,7 @@ void loadDir(string dirName, string dirPath) {
 int main(int argc, char** argv) {
     ifstream conf("dialogConstructor.conf");
     if (!conf.is_open()) {
-        dout << "\tError opening dialogConstructor.conf!\n";
+        cout << "\tError opening dialogConstructor.conf!\n";
         return -1;
     } else {
         while (!conf.eof()) {
@@ -403,7 +436,7 @@ int main(int argc, char** argv) {
                 break;*/
         }
     }
-    cout << "+++++ Dialog Constructor v1.0 (@nikich340) +++++\n";
+    cout << "+++++ Dialog Constructor v1.1 (@nikich340) +++++\n";
     coutColor("+++ Tips: 1) search algorithm is case-insensitive and punctuation-insensitive, do not care about it\n"
             "+++       2) apostrophe was saved, so try to use abbreviations (I will -> I'll, we have -> we've and etc)\n"
             "+++       3) algorithm eagerly looking for the longest existing phrase on each iteration and always prefers few longer phrases to many short ones\n"
@@ -421,57 +454,63 @@ int main(int argc, char** argv) {
         firstTime = false;
         int idx = 1;
         dout << "\n---Loaded dialogs: ";
-        if (loadedCsv.empty()) coutColor("[]", 11);
+        if (loadedCsv.empty()) doutColor("[]", 11);
         for (auto it : loadedCsv) {
-            coutColor("[" + it + "] ", 11);
+            doutColor("[" + it + "] ", 11);
         }
         dout << "---\n";
 
         for (auto csv : CSVs) {
-            dout << "\t" << idx << ": choose " << csv.Y << " [" << csv.X << "]\n";
+            cout << "\t" << idx << ": choose " << csv.Y << " [" << csv.X << "]\n";
             ++idx;
         }
         for (auto dir : DIRs) {
-            dout << "\t" << idx << ": choose " << dir.Y << " [" << dir.X << "]\n";
+            cout << "\t" << idx << ": choose " << dir.Y << " [" << dir.X << "]\n";
             ++idx;
         }
+        cout << "\t\t" << idx << ": fill ID of found dialog lines with zeros (498762|Text... -> 0000498762|Text...), current: [" << (idFillZero ? "Yes" : "No") << "]\n";
+        ++idx;
+        cout << "\t\t" << idx << ": go to search with current set\n";
+        ++idx;
+        cout << "\t\t" << idx << ": quit\n";
+        ++idx;
+
         int userIdx = idx;
         int maxIdx = idx - 1;
         while (userIdx < 1 || userIdx > maxIdx) {
-            dout << "\nPrint number of your choice (1 - " << maxIdx << "): ";
+            cout << "\nPrint number of your choice (1 - " << maxIdx << "): ";
             getline(cin, tmp);
-            for (auto x : tmp) {
-                if (!isdigit(x))
-                    break;
-            }
-            userIdx = 0;
-            for (auto x : tmp) {
-                userIdx = userIdx * 10 + (x - '0');
-            }
+            userIdx = to_int(tmp);
+        }
+        if (userIdx == maxIdx) {
+            return 0;
+        }
+        if (userIdx == maxIdx - 2) {
+            idFillZero = !idFillZero;
+            continue;
         }
         if (userIdx <= CSVs.size()) {
             --userIdx;
             loadCsv(workPath + CSVs[userIdx].Y, CSVs[userIdx].X);
-        } else {
+        } else if (userIdx <= CSVs.size() + DIRs.size()) {
             userIdx -= CSVs.size() + 1;
             loadDir(DIRs[userIdx].X, DIRs[userIdx].Y);
         }
         while (true) {
             tmp = "";
-            dout << "Your dialog line: ";
+            cout << "Your dialog line: ";
             setConsoleColor(6);
             getline(cin, tmp);
 
             system("cls");
             coutColor("...Print \"!back\" (save loaded) or \"!reset\" to load another actor dialogs...\n", 8);
-            dout << "---Loaded dialogs: ";
+            cout << "---Loaded dialogs: ";
             if (loadedCsv.empty()) coutColor("[]", 11);
             for (auto it : loadedCsv) {
                 coutColor("[" + it + "] ", 11);
             }
-            dout << "---\n";
+            cout << "---\n";
 
-            coutColor("  " + tmp + "\n", 6);
             if (tmp == "")
                 continue;
             else if (tmp == "!reset") {
@@ -481,6 +520,7 @@ int main(int argc, char** argv) {
                 reset = false;
                 break;
             } else {
+                doutColor("  " + tmp + "\n", 6);
                 findForest(tmp);
             }
         }
