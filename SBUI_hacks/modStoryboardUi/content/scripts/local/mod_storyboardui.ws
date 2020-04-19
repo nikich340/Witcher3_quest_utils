@@ -27,7 +27,6 @@ class CModStoryBoardUi extends CMod {
     default logLevel = MLOG_DEBUG;
     // ------------------------------------------------------------------------
     private var sceneId: CName;
-	private var sceneTag: CName;
     // ------------------------------------------------------------------------
     // UI stuff
     private var confirmPopup: CModUiActionConfirmation;
@@ -146,10 +145,6 @@ class CModStoryBoardUi extends CMod {
         theInput.SetContext('Exploration');
 
         deactivate();
-    }
-	// ------------------------------------------------------------------------
-	public function setSceneTag(tag : CName) {
-        this.sceneTag = tag;
     }
     // ------------------------------------------------------------------------
     event OnQuitRequest() {
@@ -364,7 +359,6 @@ exec function sbui_with_scenepoint(tag: CName, optional sceneId: CName) {
         pos = scenepoint.GetWorldPosition();
         rot = scenepoint.GetWorldRotation();
 
-		mod.setSceneTag(tag);
         if (sceneId) {
             mod.initWithSceneId(sceneId);
         } else {

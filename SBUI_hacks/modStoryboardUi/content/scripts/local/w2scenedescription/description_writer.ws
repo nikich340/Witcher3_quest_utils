@@ -523,10 +523,7 @@ class CModSbUiW2SceneDescriptionWriter {
         var indent: String = "  ";
         var indent2: String = indent + "  ";
 
-		if (placementTag == "USERDEFINED")
-			logKv_Str("", "placement", placementTag);
-		else
-			logKv_Str("", "placement", sceneTag);
+        logKv_Str("", "placement", placementTag);
 
         logComment(indent2, "INFO: world coordinates of used origin:");
         logKv(indent2, "pos", toVecStr(originPos), true);
