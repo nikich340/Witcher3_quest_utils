@@ -764,10 +764,13 @@ class CModStoryBoardW2SceneDescrCreator {
 
         newOrigin = thePlacement.getOrigin();
         originAssetId = newOrigin.assetId;
-
+		
         if (originAssetId == "USERDEFINED") {
             // do nothing - origin was provided as parameter
             return "USERDEFINED";
+        }
+		if (StrFindFirst(originAssetId, "SCENEPOINT:") >= 0) {
+            return StrAfterFirst(originAssetId, "SCENEPOINT:");
         }
 
         // try to find actor with tag (if found it was set userselected)

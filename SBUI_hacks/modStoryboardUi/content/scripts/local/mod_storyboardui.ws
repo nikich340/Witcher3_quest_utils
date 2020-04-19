@@ -83,8 +83,8 @@ class CModStoryBoardUi extends CMod {
         ((CModStoryBoardOverviewMode)currentMode).activateDeferred(storyboard.getCurrentShot());
     }
     // ------------------------------------------------------------------------
-    public function repositionOrigin(originPos: Vector, originRot: EulerAngles) {
-        storyboard.repositionOrigin(originPos, originRot);
+    public function repositionOrigin(originPos: Vector, originRot: EulerAngles, optional scenepointTag: String) {
+        storyboard.repositionOrigin(originPos, originRot, scenepointTag);
         GetWitcherPlayer().DisplayHudMessage(
             GetLocStringByKeyExt("SBUI_OriginOverwrite")
             + VecToString(originPos));
@@ -364,7 +364,7 @@ exec function sbui_with_scenepoint(tag: CName, optional sceneId: CName) {
         } else {
             mod.init();
         }
-        mod.repositionOrigin(pos, rot);
+        mod.repositionOrigin(pos, rot, "SCENEPOINT:" + tag);
         mod.activate();
     } else {
         theGame.GetGuiManager().ShowNotification(GetLocStringByKeyExt("SBUI_ScenepointNotFound"));

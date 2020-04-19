@@ -89,10 +89,15 @@ class CModStoryBoard {
         shotViewer.displayShot(this.shots[currentShotSlot]);
     }
     // ------------------------------------------------------------------------
-    public function repositionOrigin(originPos: Vector, originRot: EulerAngles)
+    public function repositionOrigin(originPos: Vector, originRot: EulerAngles, optional scenepointTag: String)
     {
+		var tag: String;
+        tag = "USERDEFINED";
+        if (StrFindFirst(scenepointTag, "SCENEPOINT:") >= 0) {
+            tag = scenepointTag;
+		}
         shotViewer.getPlacementDirector().setOrigin(
-            SStoryBoardOriginStateData("USERDEFINED", originPos, originRot), true);
+            SStoryBoardOriginStateData(tag, originPos, originRot), true);
     }
     // ------------------------------------------------------------------------
     private function hidePlayer() {
