@@ -44,7 +44,7 @@ bool firstTime = true;
 int curType = 0;
 int limit = 10;
 bool reset = true;
-bool idFillZero = false;
+bool idFillZero = true;
 /* 0 - default,
    1 - loaded (at least 1) csv and ready to find
    2 - loaded dir and choose csv
