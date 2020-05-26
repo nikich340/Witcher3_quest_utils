@@ -1,0 +1,1163 @@
+# depslib dependency file v1.0
+1588856279 source:d:\games\_w3.tools\_git\w2sceneadjuster\main.cpp
+	<bits/stdc++.h>
+	<dirent.h>
+	<windows.h>
+	<yaml-cpp/yaml.h>
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\binary.cpp
+	"yaml-cpp/binary.h"
+	<cctype>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\binary.h
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\dll.h
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\contrib\graphbuilder.cpp
+	"graphbuilderadapter.h"
+	"yaml-cpp/parser.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\contrib\graphbuilderadapter.h
+	<cstdlib>
+	<map>
+	<stack>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/contrib/anchordict.h"
+	"yaml-cpp/contrib/graphbuilder.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\anchor.h
+	<cstddef>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\contrib\anchordict.h
+	<vector>
+	"../anchor.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\contrib\graphbuilder.h
+	"yaml-cpp/mark.h"
+	<string>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\mark.h
+	"yaml-cpp/dll.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitterstyle.h
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\eventhandler.h
+	<string>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/emitterstyle.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\parser.h
+	<ios>
+	<memory>
+	"yaml-cpp/dll.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\contrib\graphbuilderadapter.cpp
+	"graphbuilderadapter.h"
+	"yaml-cpp/contrib/graphbuilder.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\convert.cpp
+	<algorithm>
+	"yaml-cpp/node/convert.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\convert.h
+	<array>
+	<cmath>
+	<limits>
+	<list>
+	<map>
+	<sstream>
+	<type_traits>
+	<vector>
+	"yaml-cpp/binary.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/type.h"
+	"yaml-cpp/null.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\impl.h
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/node/detail/memory.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/node.h"
+	<sstream>
+	<string>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\exceptions.h
+	"yaml-cpp/mark.h"
+	"yaml-cpp/noexcept.h"
+	"yaml-cpp/traits.h"
+	<sstream>
+	<stdexcept>
+	<string>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\noexcept.h
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\traits.h
+	<type_traits>
+	<utility>
+	<string>
+	<sstream>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\memory.h
+	<set>
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\ptr.h
+	"yaml-cpp/dll.h"
+	<memory>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/node/detail/node_ref.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+	<set>
+	<atomic>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node_ref.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/type.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/detail/node_data.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\type.h
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node_data.h
+	<list>
+	<map>
+	<string>
+	<utility>
+	<vector>
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node_iterator.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/ptr.h"
+	<cstddef>
+	<iterator>
+	<memory>
+	<map>
+	<utility>
+	<vector>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\iterator.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/detail/iterator_fwd.h"
+	"yaml-cpp/node/detail/iterator.h"
+	<list>
+	<utility>
+	<vector>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\node.h
+	<stdexcept>
+	<string>
+	"yaml-cpp/dll.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/mark.h"
+	"yaml-cpp/node/detail/iterator_fwd.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\iterator_fwd.h
+	"yaml-cpp/dll.h"
+	<list>
+	<utility>
+	<vector>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\iterator.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/ptr.h"
+	<cstddef>
+	<iterator>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\null.h
+	"yaml-cpp/dll.h"
+	<string>
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\depthguard.cpp
+	"yaml-cpp/depthguard.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\depthguard.h
+	"exceptions.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\directives.cpp
+	"directives.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\directives.h
+	<string>
+	<map>
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emit.cpp
+	"yaml-cpp/node/emit.h"
+	"nodeevents.h"
+	"yaml-cpp/emitfromevents.h"
+	"yaml-cpp/emitter.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\emit.h
+	<string>
+	<iosfwd>
+	"yaml-cpp/dll.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodeevents.h
+	<map>
+	<vector>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitfromevents.h
+	<stack>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitter.h
+	<cmath>
+	<cstddef>
+	<limits>
+	<memory>
+	<sstream>
+	<string>
+	<type_traits>
+	"yaml-cpp/binary.h"
+	"yaml-cpp/dll.h"
+	"yaml-cpp/emitterdef.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/null.h"
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitterdef.h
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emittermanip.h
+	<string>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\ostream_wrapper.h
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitfromevents.cpp
+	<cassert>
+	<sstream>
+	"yaml-cpp/emitfromevents.h"
+	"yaml-cpp/emitter.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/null.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitter.cpp
+	<sstream>
+	"emitterutils.h"
+	"indentation.h"
+	"yaml-cpp/emitter.h"
+	"yaml-cpp/emitterdef.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterutils.h
+	<string>
+	"emitterstate.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterstate.h
+	"setting.h"
+	"yaml-cpp/emitterdef.h"
+	"yaml-cpp/emittermanip.h"
+	<cassert>
+	<memory>
+	<stack>
+	<stdexcept>
+	<vector>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\setting.h
+	"yaml-cpp/noexcept.h"
+	<memory>
+	<utility>
+	<vector>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\indentation.h
+	<iostream>
+	<cstddef>
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterstate.cpp
+	<limits>
+	"emitterstate.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterutils.cpp
+	<iomanip>
+	<sstream>
+	"emitterutils.h"
+	"exp.h"
+	"indentation.h"
+	"regex_yaml.h"
+	"regeximpl.h"
+	"stringsource.h"
+	"yaml-cpp/binary.h"
+	"yaml-cpp/null.h"
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\exp.h
+	<ios>
+	<string>
+	"regex_yaml.h"
+	"stream.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\regex_yaml.h
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+	"regeximpl.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\regeximpl.h
+	"stream.h"
+	"streamcharsource.h"
+	"stringsource.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\stream.h
+	"yaml-cpp/mark.h"
+	<cstddef>
+	<deque>
+	<ios>
+	<iostream>
+	<set>
+	<string>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\streamcharsource.h
+	"yaml-cpp/noexcept.h"
+	"stream.h"
+	<cstddef>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\stringsource.h
+	<cstddef>
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\exceptions.cpp
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/noexcept.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\exp.cpp
+	<sstream>
+	"exp.h"
+	"stream.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\memory.cpp
+	"yaml-cpp/node/detail/memory.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\node.cpp
+	"yaml-cpp/node/node.h"
+	"nodebuilder.h"
+	"nodeevents.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodebuilder.h
+	<vector>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\node_data.cpp
+	<cassert>
+	<iterator>
+	<sstream>
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/node/detail/memory.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/detail/node_data.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodebuilder.cpp
+	<cassert>
+	"nodebuilder.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodeevents.cpp
+	"nodeevents.h"
+	"yaml-cpp/eventhandler.h"
+	"yaml-cpp/mark.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\null.cpp
+	"yaml-cpp/null.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\ostream_wrapper.cpp
+	"yaml-cpp/ostream_wrapper.h"
+	<algorithm>
+	<cstring>
+	<iostream>
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\parse.cpp
+	"yaml-cpp/node/parse.h"
+	<fstream>
+	<sstream>
+	"nodebuilder.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/parser.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\parse.h
+	<iosfwd>
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\parser.cpp
+	<cstdio>
+	<sstream>
+	"directives.h"
+	"scanner.h"
+	"singledocparser.h"
+	"token.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/parser.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanner.h
+	<cstddef>
+	<ios>
+	<map>
+	<queue>
+	<set>
+	<stack>
+	<string>
+	"ptr_vector.h"
+	"stream.h"
+	"token.h"
+	"yaml-cpp/mark.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\ptr_vector.h
+	<cstddef>
+	<cstdlib>
+	<memory>
+	<vector>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\token.h
+	"yaml-cpp/mark.h"
+	<iostream>
+	<string>
+	<vector>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\singledocparser.h
+	<map>
+	<memory>
+	<string>
+	"yaml-cpp/anchor.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\regex_yaml.cpp
+	"regex_yaml.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanner.cpp
+	<cassert>
+	<memory>
+	"exp.h"
+	"scanner.h"
+	"token.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanscalar.cpp
+	"scanscalar.h"
+	<algorithm>
+	"exp.h"
+	"regeximpl.h"
+	"stream.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanscalar.h
+	<string>
+	"regex_yaml.h"
+	"stream.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scantag.cpp
+	"exp.h"
+	"regex_yaml.h"
+	"regeximpl.h"
+	"stream.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/mark.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scantoken.cpp
+	<sstream>
+	"exp.h"
+	"regex_yaml.h"
+	"regeximpl.h"
+	"scanner.h"
+	"scanscalar.h"
+	"scantag.h"
+	"tag.h"
+	"token.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/mark.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scantag.h
+	<string>
+	"stream.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\tag.h
+	<string>
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\simplekey.cpp
+	"scanner.h"
+	"token.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\singledocparser.cpp
+	<algorithm>
+	<cstdio>
+	<sstream>
+	"collectionstack.h"
+	"scanner.h"
+	"singledocparser.h"
+	"tag.h"
+	"token.h"
+	"yaml-cpp/depthguard.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/mark.h"
+	"yaml-cpp/null.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\collectionstack.h
+	<cassert>
+	<stack>
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\stream.cpp
+	<iostream>
+	"stream.h"
+
+1588202973 source:d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\tag.cpp
+	<cassert>
+	<stdexcept>
+	"directives.h"
+	"tag.h"
+	"token.h
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\yaml.h
+	"yaml-cpp/parser.h"
+	"yaml-cpp/emitter.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/stlemitter.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/convert.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/detail/impl.h"
+	"yaml-cpp/node/parse.h"
+	"yaml-cpp/node/emit.h"
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\stlemitter.h
+	<vector>
+	<list>
+	<set>
+	<map>
+
+1588202973 d:\games\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\impl.h
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/detail/node_data.h"
+	<type_traits>
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\binary.cpp
+	"yaml-cpp/binary.h"
+	<cctype>
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\contrib\graphbuilder.cpp
+	"graphbuilderadapter.h"
+	"yaml-cpp/parser.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\contrib\graphbuilderadapter.h
+	<cstdlib>
+	<map>
+	<stack>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/contrib/anchordict.h"
+	"yaml-cpp/contrib/graphbuilder.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\contrib\graphbuilderadapter.cpp
+	"graphbuilderadapter.h"
+	"yaml-cpp/contrib/graphbuilder.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\convert.cpp
+	<algorithm>
+	"yaml-cpp/node/convert.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\depthguard.cpp
+	"yaml-cpp/depthguard.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\directives.cpp
+	"directives.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\directives.h
+	<string>
+	<map>
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emit.cpp
+	"yaml-cpp/node/emit.h"
+	"nodeevents.h"
+	"yaml-cpp/emitfromevents.h"
+	"yaml-cpp/emitter.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodeevents.h
+	<map>
+	<vector>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitfromevents.cpp
+	<cassert>
+	<sstream>
+	"yaml-cpp/emitfromevents.h"
+	"yaml-cpp/emitter.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/null.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitter.cpp
+	<sstream>
+	"emitterutils.h"
+	"indentation.h"
+	"yaml-cpp/emitter.h"
+	"yaml-cpp/emitterdef.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterutils.h
+	<string>
+	"emitterstate.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterstate.h
+	"setting.h"
+	"yaml-cpp/emitterdef.h"
+	"yaml-cpp/emittermanip.h"
+	<cassert>
+	<memory>
+	<stack>
+	<stdexcept>
+	<vector>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\setting.h
+	"yaml-cpp/noexcept.h"
+	<memory>
+	<utility>
+	<vector>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\indentation.h
+	<iostream>
+	<cstddef>
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterstate.cpp
+	<limits>
+	"emitterstate.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\emitterutils.cpp
+	<iomanip>
+	<sstream>
+	"emitterutils.h"
+	"exp.h"
+	"indentation.h"
+	"regex_yaml.h"
+	"regeximpl.h"
+	"stringsource.h"
+	"yaml-cpp/binary.h"
+	"yaml-cpp/null.h"
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\exp.h
+	<ios>
+	<string>
+	"regex_yaml.h"
+	"stream.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\regex_yaml.h
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+	"regeximpl.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\regeximpl.h
+	"stream.h"
+	"streamcharsource.h"
+	"stringsource.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\stream.h
+	"yaml-cpp/mark.h"
+	<cstddef>
+	<deque>
+	<ios>
+	<iostream>
+	<set>
+	<string>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\streamcharsource.h
+	"yaml-cpp/noexcept.h"
+	"stream.h"
+	<cstddef>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\stringsource.h
+	<cstddef>
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\exceptions.cpp
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/noexcept.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\exp.cpp
+	<sstream>
+	"exp.h"
+	"stream.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\memory.cpp
+	"yaml-cpp/node/detail/memory.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\node.cpp
+	"yaml-cpp/node/node.h"
+	"nodebuilder.h"
+	"nodeevents.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodebuilder.h
+	<vector>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\node_data.cpp
+	<cassert>
+	<iterator>
+	<sstream>
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/node/detail/memory.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/detail/node_data.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodebuilder.cpp
+	<cassert>
+	"nodebuilder.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\nodeevents.cpp
+	"nodeevents.h"
+	"yaml-cpp/eventhandler.h"
+	"yaml-cpp/mark.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\null.cpp
+	"yaml-cpp/null.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\ostream_wrapper.cpp
+	"yaml-cpp/ostream_wrapper.h"
+	<algorithm>
+	<cstring>
+	<iostream>
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\parse.cpp
+	"yaml-cpp/node/parse.h"
+	<fstream>
+	<sstream>
+	"nodebuilder.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/parser.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\parser.cpp
+	<cstdio>
+	<sstream>
+	"directives.h"
+	"scanner.h"
+	"singledocparser.h"
+	"token.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/parser.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanner.h
+	<cstddef>
+	<ios>
+	<map>
+	<queue>
+	<set>
+	<stack>
+	<string>
+	"ptr_vector.h"
+	"stream.h"
+	"token.h"
+	"yaml-cpp/mark.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\ptr_vector.h
+	<cstddef>
+	<cstdlib>
+	<memory>
+	<vector>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\token.h
+	"yaml-cpp/mark.h"
+	<iostream>
+	<string>
+	<vector>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\singledocparser.h
+	<map>
+	<memory>
+	<string>
+	"yaml-cpp/anchor.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\regex_yaml.cpp
+	"regex_yaml.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanner.cpp
+	<cassert>
+	<memory>
+	"exp.h"
+	"scanner.h"
+	"token.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanscalar.cpp
+	"scanscalar.h"
+	<algorithm>
+	"exp.h"
+	"regeximpl.h"
+	"stream.h"
+	"yaml-cpp/exceptions.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scanscalar.h
+	<string>
+	"regex_yaml.h"
+	"stream.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scantag.cpp
+	"exp.h"
+	"regex_yaml.h"
+	"regeximpl.h"
+	"stream.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/mark.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scantoken.cpp
+	<sstream>
+	"exp.h"
+	"regex_yaml.h"
+	"regeximpl.h"
+	"scanner.h"
+	"scanscalar.h"
+	"scantag.h"
+	"tag.h"
+	"token.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/mark.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\scantag.h
+	<string>
+	"stream.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\tag.h
+	<string>
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\simplekey.cpp
+	"scanner.h"
+	"token.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\singledocparser.cpp
+	<algorithm>
+	<cstdio>
+	<sstream>
+	"collectionstack.h"
+	"scanner.h"
+	"singledocparser.h"
+	"tag.h"
+	"token.h"
+	"yaml-cpp/depthguard.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/mark.h"
+	"yaml-cpp/null.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\collectionstack.h
+	<cassert>
+	<stack>
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\stream.cpp
+	<iostream>
+	"stream.h"
+
+1588202973 source:d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\src\tag.cpp
+	<cassert>
+	<stdexcept>
+	"directives.h"
+	"tag.h"
+	"token.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\binary.h
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\dll.h
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\anchor.h
+	<cstddef>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\contrib\anchordict.h
+	<vector>
+	"../anchor.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\contrib\graphbuilder.h
+	"yaml-cpp/mark.h"
+	<string>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\mark.h
+	"yaml-cpp/dll.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitterstyle.h
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\eventhandler.h
+	<string>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/emitterstyle.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\parser.h
+	<ios>
+	<memory>
+	"yaml-cpp/dll.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\convert.h
+	<array>
+	<cmath>
+	<limits>
+	<list>
+	<map>
+	<sstream>
+	<type_traits>
+	<vector>
+	"yaml-cpp/binary.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/type.h"
+	"yaml-cpp/null.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\impl.h
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/node/detail/memory.h"
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/node.h"
+	<sstream>
+	<string>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\exceptions.h
+	"yaml-cpp/mark.h"
+	"yaml-cpp/noexcept.h"
+	"yaml-cpp/traits.h"
+	<sstream>
+	<stdexcept>
+	<string>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\noexcept.h
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\traits.h
+	<type_traits>
+	<utility>
+	<string>
+	<sstream>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\memory.h
+	<set>
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/ptr.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\ptr.h
+	"yaml-cpp/dll.h"
+	<memory>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/node/detail/node_ref.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+	<set>
+	<atomic>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node_ref.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/type.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/detail/node_data.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\type.h
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node_data.h
+	<list>
+	<map>
+	<string>
+	<utility>
+	<vector>
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\node_iterator.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/ptr.h"
+	<cstddef>
+	<iterator>
+	<memory>
+	<map>
+	<utility>
+	<vector>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\iterator.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/detail/iterator_fwd.h"
+	"yaml-cpp/node/detail/iterator.h"
+	<list>
+	<utility>
+	<vector>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\node.h
+	<stdexcept>
+	<string>
+	"yaml-cpp/dll.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/mark.h"
+	"yaml-cpp/node/detail/iterator_fwd.h"
+	"yaml-cpp/node/ptr.h"
+	"yaml-cpp/node/type.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\iterator_fwd.h
+	"yaml-cpp/dll.h"
+	<list>
+	<utility>
+	<vector>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\iterator.h
+	"yaml-cpp/dll.h"
+	"yaml-cpp/node/detail/node_iterator.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/ptr.h"
+	<cstddef>
+	<iterator>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\null.h
+	"yaml-cpp/dll.h"
+	<string>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\depthguard.h
+	"exceptions.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\emit.h
+	<string>
+	<iosfwd>
+	"yaml-cpp/dll.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitfromevents.h
+	<stack>
+	"yaml-cpp/anchor.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/eventhandler.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitter.h
+	<cmath>
+	<cstddef>
+	<limits>
+	<memory>
+	<sstream>
+	<string>
+	<type_traits>
+	"yaml-cpp/binary.h"
+	"yaml-cpp/dll.h"
+	"yaml-cpp/emitterdef.h"
+	"yaml-cpp/emittermanip.h"
+	"yaml-cpp/null.h"
+	"yaml-cpp/ostream_wrapper.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emitterdef.h
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\emittermanip.h
+	<string>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\ostream_wrapper.h
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\parse.h
+	<iosfwd>
+	<string>
+	<vector>
+	"yaml-cpp/dll.h"
+
+1590455879 source:d:\_w3.tools\_git\w2sceneadjuster\main.cpp
+	<bits/stdc++.h>
+	<dirent.h>
+	<windows.h>
+	<yaml-cpp/yaml.h>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\yaml.h
+	"yaml-cpp/parser.h"
+	"yaml-cpp/emitter.h"
+	"yaml-cpp/emitterstyle.h"
+	"yaml-cpp/stlemitter.h"
+	"yaml-cpp/exceptions.h"
+	"yaml-cpp/node/node.h"
+	"yaml-cpp/node/impl.h"
+	"yaml-cpp/node/convert.h"
+	"yaml-cpp/node/iterator.h"
+	"yaml-cpp/node/detail/impl.h"
+	"yaml-cpp/node/parse.h"
+	"yaml-cpp/node/emit.h"
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\stlemitter.h
+	<vector>
+	<list>
+	<set>
+	<map>
+
+1588202973 d:\_w3.tools\_git\w2sceneadjuster\yaml-cpp-master\include\yaml-cpp\node\detail\impl.h
+	"yaml-cpp/node/detail/node.h"
+	"yaml-cpp/node/detail/node_data.h"
+	<type_traits>
+

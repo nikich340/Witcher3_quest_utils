@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="W2SceneAdjuster" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/W2SceneAdjuster" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/W2SceneAdjuster" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="yaml-cpp-master/include" />
+			<Add directory="yaml-cpp-master/src" />
+			<Add directory="yaml-cpp-master" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/anchor.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/binary.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/contrib/anchordict.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/contrib/graphbuilder.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/depthguard.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/dll.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/emitfromevents.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/emitter.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/emitterdef.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/emittermanip.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/emitterstyle.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/eventhandler.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/exceptions.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/mark.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/convert.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/impl.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/iterator.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/iterator_fwd.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/memory.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/node.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/node_data.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/node_iterator.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/detail/node_ref.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/emit.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/impl.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/iterator.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/node.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/parse.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/ptr.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/node/type.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/noexcept.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/null.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/ostream_wrapper.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/parser.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/stlemitter.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/traits.h" />
+		<Unit filename="yaml-cpp-master/include/yaml-cpp/yaml.h" />
+		<Unit filename="yaml-cpp-master/src/binary.cpp" />
+		<Unit filename="yaml-cpp-master/src/collectionstack.h" />
+		<Unit filename="yaml-cpp-master/src/contrib/graphbuilder.cpp" />
+		<Unit filename="yaml-cpp-master/src/contrib/graphbuilderadapter.cpp" />
+		<Unit filename="yaml-cpp-master/src/contrib/graphbuilderadapter.h" />
+		<Unit filename="yaml-cpp-master/src/convert.cpp" />
+		<Unit filename="yaml-cpp-master/src/depthguard.cpp" />
+		<Unit filename="yaml-cpp-master/src/directives.cpp" />
+		<Unit filename="yaml-cpp-master/src/directives.h" />
+		<Unit filename="yaml-cpp-master/src/emit.cpp" />
+		<Unit filename="yaml-cpp-master/src/emitfromevents.cpp" />
+		<Unit filename="yaml-cpp-master/src/emitter.cpp" />
+		<Unit filename="yaml-cpp-master/src/emitterstate.cpp" />
+		<Unit filename="yaml-cpp-master/src/emitterstate.h" />
+		<Unit filename="yaml-cpp-master/src/emitterutils.cpp" />
+		<Unit filename="yaml-cpp-master/src/emitterutils.h" />
+		<Unit filename="yaml-cpp-master/src/exceptions.cpp" />
+		<Unit filename="yaml-cpp-master/src/exp.cpp" />
+		<Unit filename="yaml-cpp-master/src/exp.h" />
+		<Unit filename="yaml-cpp-master/src/indentation.h" />
+		<Unit filename="yaml-cpp-master/src/memory.cpp" />
+		<Unit filename="yaml-cpp-master/src/node.cpp" />
+		<Unit filename="yaml-cpp-master/src/node_data.cpp" />
+		<Unit filename="yaml-cpp-master/src/nodebuilder.cpp" />
+		<Unit filename="yaml-cpp-master/src/nodebuilder.h" />
+		<Unit filename="yaml-cpp-master/src/nodeevents.cpp" />
+		<Unit filename="yaml-cpp-master/src/nodeevents.h" />
+		<Unit filename="yaml-cpp-master/src/null.cpp" />
+		<Unit filename="yaml-cpp-master/src/ostream_wrapper.cpp" />
+		<Unit filename="yaml-cpp-master/src/parse.cpp" />
+		<Unit filename="yaml-cpp-master/src/parser.cpp" />
+		<Unit filename="yaml-cpp-master/src/ptr_vector.h" />
+		<Unit filename="yaml-cpp-master/src/regex_yaml.cpp" />
+		<Unit filename="yaml-cpp-master/src/regex_yaml.h" />
+		<Unit filename="yaml-cpp-master/src/regeximpl.h" />
+		<Unit filename="yaml-cpp-master/src/scanner.cpp" />
+		<Unit filename="yaml-cpp-master/src/scanner.h" />
+		<Unit filename="yaml-cpp-master/src/scanscalar.cpp" />
+		<Unit filename="yaml-cpp-master/src/scanscalar.h" />
+		<Unit filename="yaml-cpp-master/src/scantag.cpp" />
+		<Unit filename="yaml-cpp-master/src/scantag.h" />
+		<Unit filename="yaml-cpp-master/src/scantoken.cpp" />
+		<Unit filename="yaml-cpp-master/src/setting.h" />
+		<Unit filename="yaml-cpp-master/src/simplekey.cpp" />
+		<Unit filename="yaml-cpp-master/src/singledocparser.cpp" />
+		<Unit filename="yaml-cpp-master/src/singledocparser.h" />
+		<Unit filename="yaml-cpp-master/src/stream.cpp" />
+		<Unit filename="yaml-cpp-master/src/stream.h" />
+		<Unit filename="yaml-cpp-master/src/streamcharsource.h" />
+		<Unit filename="yaml-cpp-master/src/stringsource.h" />
+		<Unit filename="yaml-cpp-master/src/tag.cpp" />
+		<Unit filename="yaml-cpp-master/src/tag.h" />
+		<Unit filename="yaml-cpp-master/src/token.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

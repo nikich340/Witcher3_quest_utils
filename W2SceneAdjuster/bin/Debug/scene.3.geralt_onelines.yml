@@ -1,0 +1,38 @@
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 650
+
+  gameplay: true
+  ###hasCinematicOneliners: true
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        # tags: [ "PLAYER" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt" ]
+
+  section_start_hag_wall:
+    - geralt: "0000575753|Jumped this wall? Nimble little beast."
+    - NEXT: section_exit
+
+  #section_start_fresh_air:
+  #  - geralt: "2114670650|I need some fresh air."
+  #  - NEXT: section_exit
+
+  section_start_using_owl:
+    - geralt: "2114670651|A letter... Who's using an owl for this?"
+    - NEXT: section_exit
+
+  section_start_check_orphanage:
+    - geralt: "Well, I should check an orphanage first - last time Orianna was there."
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
