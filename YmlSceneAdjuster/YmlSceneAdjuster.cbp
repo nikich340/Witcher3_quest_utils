@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="W2SceneAdjuster" />
+		<Option title="YmlSceneAdjuster" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/W2SceneAdjuster" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/ymlsceneadjuster" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/W2SceneAdjuster" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/ymlsceneadjuster" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -35,7 +35,7 @@
 			<Add directory="yaml-cpp-master/src" />
 			<Add directory="yaml-cpp-master" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="YmlSceneAdjuster.cpp" />
 		<Unit filename="yaml-cpp-master/include/yaml-cpp/anchor.h" />
 		<Unit filename="yaml-cpp-master/include/yaml-cpp/binary.h" />
 		<Unit filename="yaml-cpp-master/include/yaml-cpp/contrib/anchordict.h" />
