@@ -144,11 +144,17 @@ void setConsoleColor(int type) {
 }
 void showInfoLabel() {
     setConsoleColor(2);
-    cout << labelScene << el;
-    cout << "    " << labelSection << el;
-    cout << "        " << labelShot << el;
-    cout << "            " << labelCamera << el;
-    cout << "    Last change: " << labelLastOP << el << el;
+    if (labelScene != "-")
+        cout << labelScene << el;
+    if (labelSection != "-")
+        cout << "    " << labelSection << el;
+    if (labelShot != "-")
+        cout << "        " << labelShot << el;
+    if (labelCamera != "-")
+        cout << "            " << labelCamera << el;
+    if (labelCamera != "-" && labelLastOP != "-")
+        cout << "    Last change: " << labelLastOP << el;
+    cout << el;
     setConsoleColor(7);
 }
 void showError(string err) {
@@ -363,6 +369,7 @@ bool loadShotNames() {
 }
 void chooseSection() {
     system("cls");
+    showInfoLabel();
     cout << "Choose section: \n";
     setConsoleColor(14);
     cout << "    -1. Auto (one by one)\n";
@@ -381,6 +388,7 @@ void chooseSection() {
 }
 void chooseShot() {
     system("cls");
+    showInfoLabel();
     cout << "Shot selection:\n";
     setConsoleColor(11);
     cout << "   -1. Auto (one by one)\n";
@@ -718,6 +726,9 @@ void manageShotDOF() {
         if (backk)
             break;
     }
+    labelCamera = "-";
+    labelLastOP = "-";
+	labelShot = "-";
 }
 void manageShots() {
     shotNames.clear();
@@ -737,10 +748,12 @@ void manageShots() {
         }
         manageShotDOF();
     }
+    labelSection = "-";
 }
 int main()
 {
     cout.precision(5);
+    labelCamera = labelLastOP = labelScene = labelSection = labelShot = "-";
     workPath = getPath();
     loadSceneNames();
     while (1) {
