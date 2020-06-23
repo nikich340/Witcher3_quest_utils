@@ -28,7 +28,8 @@ fs::path workDir, speechDir, stringsDir, scenesDir;
 vector<string> sceneYmls;
 vector< pair<int, pair<string, string>> > adjustLines;
 /*           old     new      */
-map<string, pair<string, string>> lineInfo;
+map<string, string> durById;
+map<string, pair<string, string>> lineInfo, lineInfo2;
 map<string, string> idByStr;
 /*    id      duration    str      */
 
@@ -51,7 +52,6 @@ void loadMainCsv(fs::path p) {
         int pos = 0;
         int sepCnt = 0;
         string id = "";
-        string duration = "-1";
         string str = "";
         while (isdigit(tmp[pos]) && pos < tmp.length()) {
             id.push_back(tmp[pos]);
@@ -64,8 +64,10 @@ void loadMainCsv(fs::path p) {
             ++pos;
         }
         str = tmp.substr(pos, tmp.length() - pos);
-        lineInfo[id] = {duration, str};
-        idByStr[str] = id;
+        if (durById.count(id) > 0) {
+            lineInfo[id] = {durById[id], str};
+            idByStr[str] = id;
+        }
     }
     csv.close();
 }
@@ -99,20 +101,41 @@ void tryAddDuration(fs::path p) {
             return;
         }
     }
-    if (lineInfo[id].X != "-1") {
+    /*if (lineInfo[id].X != "-1") {
 		setConsoleColor(6);
         cout << "    Warning! Override duration of " << p.filename().u8string() << ", old = [";
 		setConsoleColor(7);
         cout << lineInfo[id].X << "], new = [" << duration << "]\n";
-    }
-    lineInfo[id].X = duration;
+    }*/
+    durById[id] = duration;
+    //lineInfo[id].X = duration;
 }
-string formatLine(string prefix, string suffix, string id, bool allowDuration) {
+/*void removeWithoutDuration() {
+    lineInfo2 = lineInfo;
+    lineInfo.clear();
+    for (auto it = lineInfo2.begin(); it != lineInfo2.end(); ++it) {
+        if (it->Y.X == "-1") {
+            setConsoleColor(4);
+            cout << it->Y.Y << "\n";
+            setConsoleColor(7);
+            if (idByStr.find(it->X) != idByStr.end())
+                idByStr.erase(idByStr.find(it->X));
+        } else {
+            setConsoleColor(2);
+            cout << it->Y.Y << "\n";
+            setConsoleColor(7);
+            lineInfo.insert(*it);
+        }
+    }
+}*/
+string formatLine(string prefix, string suffix, string id, bool hadId) {
     string newLine = prefix + "\"";
-    if (lineInfo[id].X != "-1" && allowDuration) {
+    if (lineInfo[id].X != "-1") {
         newLine += "[" + lineInfo[id].X + "]";
     }
-    newLine += id + "|" + lineInfo[id].Y + suffix;
+    if (hadId)
+        newLine += id + "|";
+    newLine += lineInfo[id].Y + suffix;
     return newLine;
 }
 void tryAdjustLines(fs::path p) {
@@ -129,14 +152,11 @@ void tryAdjustLines(fs::path p) {
         ++cntLine;
         if (tmp.find("dialogscript:") != NF)
             dialogscript = true;
-        if (tmp.find("SCRIPT") != NF)
-            section = false;
-        if (tmp.find("CHOICE") != NF)
-            choice = true;
         if (tmp.find("section_") != NF) {
             section = true;
-            choice = false;
         }
+        if (tmp.find("SCRIPT") != NF || tmp.find("CHOICE") != NF || tmp.find("choice") != NF)
+            section = false;
 
         if (!dialogscript || !section)
             continue;
@@ -168,13 +188,11 @@ void tryAdjustLines(fs::path p) {
         }
         if (!str.empty()) {
             if (idByStr.count(str) > 0) {
-                adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, idByStr[str], !choice)} });
+                adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, idByStr[str], false)} });
             } else if (str.length() > 10) {
                 string tryId = str.substr(0, 10);
                 if (lineInfo.count(tryId) > 0) {
-                    string newLine = formatLine(prefix, suffix, tryId, !choice);
-                    if (tmp != newLine)
-                        adjustLines.pb({cntLine, {tmp, newLine} });
+                    adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, tryId, true)} });
                 }
             }
         }
@@ -266,14 +284,14 @@ int main()
         return 0;
     }
 
-
-    loadMainCsv(stringsDir / "all.en.strings.csv");
     for (const auto& dirEntry : fs::recursive_directory_iterator(speechDir)) {
         fs::path curPath = dirEntry.path();
         if (curPath.extension() == ".wav") {
             tryAddDuration(curPath);
         }
     }
+    loadMainCsv(stringsDir / "all.en.strings.csv");
+    //removeWithoutDuration();
 
     for (const auto& dirEntry : fs::recursive_directory_iterator(scenesDir)) {
         fs::path curPath = dirEntry.path();
