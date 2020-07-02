@@ -1,0 +1,2695 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    triss_monster:
+      template: "dlc\\dlcntr\\data\\entities\\triss_monster.w2ent"
+      appearance: [ "triss" ]
+
+    Eredin_vesemir:
+      template: "dlc\\dlcntr\\data\\entities\\eredin_vesemir.w2ent"
+      appearance: [ "eredin_vesemir", "eredin_scratched" ]
+
+    Eredin_vesemir2:
+      template: "dlc\\dlcntr\\data\\entities\\eredin_vesemir.w2ent"
+      appearance: [ "eredin_vesemir", "eredin_scratched" ]
+
+    Azar_Javed:
+      template: "dlc\\dlcntr\\data_w1_prol\\entities\\azar.w2ent"
+      appearance: [ "naked_man_03" ]
+
+    Iorweth:
+      template: "dlc\\dlcntr\\data\\entities\\iorweth.w2ent"
+      appearance: [ "roche" ]
+
+    regis:
+      template: "dlc\\dlcntr\\data\\entities\\regis_vampire_scene_fix.w2ent"
+      appearance: [ "regis_human", "regis_vampire" ]
+
+    detlaff:
+      #template: "dlc\\bob\\data\\quests\\main_npcs\\dettlaff_van_eretein.w2ent"
+      template: "dlc\\dlcntr\\data\\entities\\dettlaff_vampire_extra_fx.w2ent"
+      appearance: [ "dettlaff_vampire" ]
+
+    mirror:
+      template: "dlc\\ep1\\data\\quests\\main_npcs\\mr_mirror_ep1.w2ent"
+      appearance: [ "mirror_man_wedding", "mirror_man_satan" ]
+
+    unseen:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\secondary_npc\\original_vampire.w2ent"
+      appearance: [ "original_vampire" ]
+
+  props:
+    portal_04:
+      template: "gameplay\\interactive_objects\\portals\\portal_04.w2ent"
+
+    vampire_vison:
+      #template: "dlc\\bob\\data\\fx\\cutscenes\\cs704_sister_intro\\cs704_vision_env.w2ent"
+      template: "dlc\\dlcntr\\data\\entities\\vampire_vision_env.w2ent"
+
+    cocoon:
+      template: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\monster\\dettlaff_cocoon_with_dettlaff.w2ent"
+      #template: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\monster\\third_phase\\cocoon.w2ent"
+
+    pc_aard:
+      template: "gameplay\\templates\\signs\\pc_aard.w2ent"
+
+    q605_witcher_sword:
+      template: "dlc\\ep1\\data\\quests\\quest_files\\q605_finale\\entities\\q605_witcher_sword.w2ent"
+
+  animations:
+    anim_eredin_cutscene:
+       animation: "eredin:Root:cs501_crach_dies"
+       frames: 3035
+       
+    anim_13650_scared_start:
+      animation: "scared_start"
+      frames: 18
+
+    anim_13640_scared_loop:
+      animation: "scared_loop"
+      frames: 175
+
+    anim_6981_high_standing_determined_enter_frontal:
+      animation: "high_standing_determined_enter_frontal"
+      frames: 167
+
+    anim_5769_man_geralt_sword_attack_fast_8_rp_40ms:
+      animation: "man_geralt_sword_attack_fast_8_rp_40ms"
+      frames: 48
+
+    anim_12054_woman_sorceress_death_front_01:
+      animation: "woman_sorceress_death_front_01"
+      frames: 91
+
+    anim_291_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined:
+      animation: "geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined"
+      frames: 230
+
+    anim_13636_scared_end:
+      animation: "scared_end"
+      frames: 22
+
+    anim_12112_woman_sorceress_teleport_lp:
+      animation: "woman_sorceress_teleport_lp"
+      frames: 75
+
+    anim_338_high_standing_determined_turn_180_right_casual:
+      animation: "high_standing_determined_turn_180_right_casual"
+      frames: 143
+
+    anim_11254_high_standing_wildhunt_determined_enter_frontal:
+      animation: "high_standing_wildhunt_determined_enter_frontal"
+      frames: 204
+
+    anim_11261_high_standing_wildhunt_determined_gesture_question_01:
+      animation: "high_standing_wildhunt_determined_gesture_question_01"
+      frames: 160
+
+    anim_6970_high_standing_determined_calm_enter_frontal:
+      animation: "high_standing_determined_calm_enter_frontal"
+      frames: 253
+
+    anim_7119_high_standing_determined_to_high_standing_determined2:
+      animation: "high_standing_determined_to_high_standing_determined2"
+      frames: 111
+
+    anim_313_high_standing_determined_enter_front_45_right:
+      animation: "high_standing_determined_enter_front_45_right"
+      frames: 197
+
+    anim_7125_high_standing_determined_to_high_standing_proud:
+      animation: "high_standing_determined_to_high_standing_proud"
+      frames: 118
+
+    anim_7004_high_standing_determined_gesture_both_hands_stop:
+      animation: "high_standing_determined_gesture_both_hands_stop"
+      frames: 110
+
+    anim_7084_high_standing_determined_gesture_two_steps_back:
+      animation: "high_standing_determined_gesture_two_steps_back"
+      frames: 240
+
+    anim_592_locomotion_walk_cycle_slow_forward:
+      animation: "locomotion_walk_cycle_slow_forward"
+      frames: 160
+
+    anim_6961_high_standing_determined_2_steps_forward:
+      animation: "high_standing_determined_2_steps_forward"
+      frames: 127
+
+    anim_7266_high_standing_proud_three_steps_forward:
+      animation: "high_standing_proud_three_steps_forward"
+      frames: 137
+
+    anim_4680_man_geralt_axe_unsheathe_silver:
+      animation: "man_geralt_axe_unsheathe_silver"
+      frames: 45
+
+    anim_7129_high_standing_determined_turn180_left:
+      animation: "high_standing_determined_turn180_left"
+      frames: 115
+
+    anim_1671_utility_taunt_01:
+      animation: "utility_taunt_01"
+      frames: 45
+
+    anim_317_high_standing_determined_enter_run_in_frontal_left:
+      animation: "high_standing_determined_enter_run_in_frontal_left"
+      frames: 180
+
+    anim_5263_combat_locomotion_run_rightfoward_to_idle_02:
+      animation: "combat_locomotion_run_rightfoward_to_idle_02"
+      frames: 50
+
+  animations.mimic:
+    mimicsanim_433_geralt_neutral_gesture_smile_face:
+      animation: "geralt_neutral_gesture_smile_face"
+      frames: 67
+
+    mimicsanim_118_geralt_neutral_gesture_brows_up_face_lcl:
+      animation: "geralt_neutral_gesture_brows_up_face_lcl"
+      frames: 90
+
+    mimicsanim_465_geralt_neutral_question_king_slaughtered_face:
+      animation: "geralt_neutral_question_king_slaughtered_face"
+      frames: 79
+
+    mimicsanim_142_geralt_neutral_question_what_face:
+      animation: "geralt_neutral_question_what_face"
+      frames: 100
+
+    mimicsanim_122_geralt_neutral_gesture_death_longer_face:
+      animation: "geralt_neutral_gesture_death_longer_face"
+      frames: 300
+
+    mimicsanim_168_geralt_reaction_pain_face:
+      animation: "geralt_reaction_pain_face"
+      frames: 280
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_399_High_Standing_Neutral:
+      name: "Standing"
+      emotional_state: "Neutral"
+      status: "High"
+      idle_anim: "high_standing_neutral_idle"
+
+    pose_1785_scared_loop:
+      idle_anim: "scared_loop"
+
+    pose_1774_woman_sorceress_effect_knockdown_f_loop:
+      idle_anim: "woman_sorceress_effect_knockdown_f_loop"
+
+    pose_0_high_standing_wildhunt_determined_idle:
+      idle_anim: "high_standing_wildhunt_determined_idle"
+
+    pose_0_man_big_ex_idle:
+      idle_anim: "man_big_ex_idle"
+
+    pose_0_idle_vampire:
+      idle_anim: "idle_vampire"
+
+    pose_2127_High_Standing2_Determined:
+      name: "Standing2"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_standing_determined2_idle"
+
+    pose_2138_High_Standing_Proud:
+      name: "Standing"
+      emotional_state: "Proud"
+      status: "High"
+      idle_anim: "high_standing_proud_idle"
+
+    pose_31_q704_truth_07_unseen_hanging_idle:
+      name: "303"
+      idle_anim: "q704_truth_07_unseen_hanging_idle"
+
+    pose_411_Regis_Hand_Straight_Standing:
+      name: "Hand Straight"
+      emotional_state: "Standing"
+      status: "Regis"
+      idle_anim: "regis_standing_hand_straight_idle"
+
+    pose_1751_guard_readyleft_loop:
+      idle_anim: "guard_readyleft_loop"
+
+    pose_47_man_noble_posing_mirror_loop_idle_01:
+      name: "130"
+      idle_anim: "man_noble_posing_mirror_loop_idle_01"
+
+    pose_2124_High_Standing_Relaxed_Combat:
+      name: "Standing Relaxed"
+      emotional_state: "Combat"
+      status: "High"
+      idle_anim: "dialogue_witcher_combat_pose_relaxed"
+
+    pose_2155_Low_Kneeling_Determined:
+      name: "Kneeling"
+      emotional_state: "Determined"
+      status: "Low"
+      idle_anim: "low_kneeling_determined_idle"
+
+    pose_600_ep1_mirror_sitting_ground_idle:
+      idle_anim: "ep1_mirror_sitting_ground_idle"
+
+    pose_2160_Low_Lying_Dead:
+      name: "Lying"
+      emotional_state: "Dead"
+      status: "Low"
+      idle_anim: "low_lying_dead_idle"
+
+    pose_30_q704_truth_07_nolwenn_standing_aggressive_idle:
+      name: "279"
+      idle_anim: "q704_truth_07_nolwenn_standing_aggressive_idle"
+
+  cameras:
+    cam_1_Shot1_triss:
+      fov: 40.0
+      transform:
+        pos: [ -2.8704185486, 7.8215332031, 1.2077484131 ]
+        rot: [ 0.0, 352.5299987793, 172.6477661133 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.9448363781, 4.9448366165 ]
+        focus: [ 2.4448363781, 3.4448363781 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot2_geralt_go:
+      fov: 40.0
+      transform:
+        pos: [ -4.4630298615, 3.5839843750, 1.3577575684 ]
+        rot: [ 0.0, 352.2000122070, 331.7082214355 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3936719894, 6.3936719894 ]
+        focus: [ 3.8936719894, 4.8936719894 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot4a_kill:
+      fov: 40.0
+      transform:
+        pos: [ -4.8781681061, 2.0861816406, 0.5077056885 ]
+        rot: [ 0.0, 357.5350341797, 337.3182678223 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.8310408592, 6.8310408592 ]
+        focus: [ 4.3310408592, 5.3310408592 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot4b_laugh:
+      fov: 30.0
+      transform:
+        pos: [ -4.0456886292, 7.5595703125, 1.3577575684 ]
+        rot: [ 0.0, 354.8950195313, 201.5781860352 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3936719894, 6.3936719894 ]
+        focus: [ 3.8936719894, 4.8936719894 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_Shot5_what_the_hell:
+      fov: 40.0
+      transform:
+        pos: [ -6.4013252258, 2.8930664063, 1.5077667236 ]
+        rot: [ 0.0, 350.0550231934, 316.3636474609 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.8388991356, 7.8388991356 ]
+        focus: [ 5.3388991356, 6.3388991356 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_Shot5_who_is_it:
+      fov: 40.0
+      transform:
+        pos: [ -1.7310009003, 5.2707519531, 3.8079071045 ]
+        rot: [ 0.0, 287.4099426270, 115.1486511230 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.8388991356, 7.8388991356 ]
+        focus: [ 5.3388991356, 6.3388991356 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_11_Shot6_eredin_appear:
+      fov: 40.0
+      transform:
+        pos: [ -2.8961105347, 13.3344726563, 0.1576843262 ]
+        rot: [ 0.0, 359.6801147461, 188.5986175537 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3936719894, 6.3936719894 ]
+        focus: [ 3.8936719894, 4.8936719894 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot0_overview:
+      fov: 40.0
+      transform:
+        pos: [ -11.7889223099, 11.2080078125, 5.8080291748 ]
+        rot: [ 0.0, 324.1500549316, 272.0882873535 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3936719894, 6.3936719894 ]
+        focus: [ 3.8936719894, 4.8936719894 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot12_no_jokes:
+      fov: 30.0
+      transform:
+        pos: [ -3.0497417450, 9.5053710938, 1.4577636719 ]
+        rot: [ 0.0, 354.8402099609, 173.4188385010 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3936719894, 6.3936719894 ]
+        focus: [ 3.8936719894, 4.8936719894 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_Shot13_haha:
+      fov: 25.0
+      transform:
+        pos: [ -4.3564701080, 6.2558593750, 1.5577697754 ]
+        rot: [ 0.0, 356.2702026367, 339.6836242676 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3936719894, 6.3936719894 ]
+        focus: [ 3.8936719894, 4.8936719894 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_14_Shot14_mask_close:
+      fov: 30.0
+      transform:
+        pos: [ -2.9384288788, 9.9360351563, 1.7077789307 ]
+        rot: [ 0.0, 1.7151952982, 351.7288208008 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.0305573940, 5.0305576324 ]
+        focus: [ 2.5305573940, 3.5305573940 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot15_checjjk:
+      fov: 20.0
+      transform:
+        pos: [ -3.1279430389, 9.1635742188, 1.8577880859 ]
+        rot: [ 0.0, 357.7001953125, 352.4438781738 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3936719894, 6.3936719894 ]
+        focus: [ 3.8936719894, 4.8936719894 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot16_azar_appear:
+      fov: 30.0
+      transform:
+        pos: [ -5.1658821106, 9.7766113281, 1.0577392578 ]
+        rot: [ 0.0, 354.8402099609, 30.0090026855 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.0305573940, 5.0305576324 ]
+        focus: [ 2.5305573940, 3.5305573940 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot16_azar_appear2:
+      fov: 25.0
+      transform:
+        pos: [ -5.8554286957, 10.8769531250, 0.8077239990 ]
+        rot: [ 0.0, 6.6652169228, 29.8439636230 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.0305573940, 5.0305576324 ]
+        focus: [ 1.0305573940, 3.5305573940 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_17_Shot17_azar_to_aggresive:
+      fov: 30.0
+      transform:
+        pos: [ -5.1658821106, 9.7766113281, 1.0577392578 ]
+        rot: [ 0.0, 354.0152282715, 28.9090576172 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.3149306774, 5.3149309158 ]
+        focus: [ 2.8149306774, 3.8149306774 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_18_Shot18_iorweth_appear:
+      fov: 40.0
+      transform:
+        pos: [ -5.1705131531, 10.0014648438, 1.0577392578 ]
+        rot: [ 0.0, 357.1502075195, 290.1301269531 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.6592555046, 8.6592559814 ]
+        focus: [ 6.1592555046, 7.1592555046 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_19_Shot19_iorewth_phrase:
+      fov: 40.0
+      transform:
+        pos: [ -0.1716976166, 10.4172363281, 1.3577575684 ]
+        rot: [ 0.0, 354.2902221680, 290.8998718262 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.2160961628, 4.2160959244 ]
+        focus: [ 1.7160961628, 2.7160961628 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_20_Shot20_fuck:
+      fov: 40.0
+      transform:
+        pos: [ -6.6929512024, 4.1423339844, 2.5578308105 ]
+        rot: [ 0.0, 345.2702026367, 329.4556579590 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 8.4805746078, 11.4805746078 ]
+        focus: [ 8.9805746078, 9.9805746078 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_21_Shot21_vampires_fly_far:
+      fov: 40.0
+      transform:
+        pos: [ -36.0880088806, -40.0786132813, -1.7924346924 ]
+        rot: [ 0.0, 10.1852378845, 312.5646057129 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8238117695, 4.8238115311 ]
+        focus: [ 2.3238117695, 3.3238117695 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_22_Shot21_vampires_fly_2:
+      fov: 40.0
+      transform:
+        pos: [ -17.6072406769, -24.8422851563, 2.7578430176 ]
+        rot: [ 0.0, 4.5202393532, 310.2546997070 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8238117695, 4.8238115311 ]
+        focus: [ 2.3238117695, 3.3238117695 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_23_Shot21_vampires_fly_3:
+      fov: 40.0
+      transform:
+        pos: [ -12.3461656570, -20.2714843750, 4.1079254150 ]
+        rot: [ 0.0, 354.5102539063, 342.7596435547 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8238117695, 4.8238115311 ]
+        focus: [ 2.3238117695, 3.3238117695 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_24_Shot21_vampires_fly_4:
+      fov: 40.0
+      transform:
+        pos: [ -5.3536396027, 1.3803710938, 1.6077728271 ]
+        rot: [ 0.0, 350.0002441406, 345.1795959473 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8238117695, 4.8238115311 ]
+        focus: [ 2.3238117695, 3.3238117695 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_25_Shot21_vampires_fly_5:
+      fov: 40.0
+      transform:
+        pos: [ -5.3660831451, 9.3010253906, 1.9077911377 ]
+        rot: [ 0.0, 343.7852478027, 205.4249877930 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8238117695, 4.8238115311 ]
+        focus: [ 2.3238117695, 3.3238117695 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_26_Shot21_vampires_rotate:
+      fov: 40.0
+      transform:
+        pos: [ -5.3660831451, 9.3010253906, 1.9077911377 ]
+        rot: [ 0.0, 343.6752319336, 207.8995361328 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.2887578011, 7.2887578011 ]
+        focus: [ 4.7887578011, 5.7887578011 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_27_Shot21_vampires_geralt:
+      fov: 30.0
+      transform:
+        pos: [ -4.0736370087, 5.6936035156, 1.5077667236 ]
+        rot: [ 0.0, 351.0452270508, 339.7898864746 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.3870375156, 4.3870372772 ]
+        focus: [ 1.8870375156, 2.8870375156 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_28_Shot21_vampires_regis_taunt:
+      fov: 30.0
+      transform:
+        pos: [ -1.9151210785, 8.3171386719, 1.6577758789 ]
+        rot: [ 0.0, 347.0852355957, 148.8844604492 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.9800949097, 5.9800949097 ]
+        focus: [ 3.4800949097, 4.4800949097 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_29_Shot21_vampires_regis:
+      fov: 25.0
+      transform:
+        pos: [ -3.8865871429, 6.4777832031, 1.4577636719 ]
+        rot: [ 0.0, 359.5152282715, 220.5194702148 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0870399475, 4.0870399475 ]
+        focus: [ 1.5870399475, 2.5870399475 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_31_Shot_mirror1:
+      fov: 40.0
+      transform:
+        pos: [ 4.9414672852, 7.5197753906, 1.7577819824 ]
+        rot: [ 0.0, 352.0903320313, 77.7692871094 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 8.7468185425, 11.7468185425 ]
+        focus: [ 9.2468185425, 10.2468185425 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    #cam_30_Shot21_vampires_overwiew:
+    #  fov: 20.0
+    #  transform:
+    #    pos: [ 6.7705440521, 17.5168457031, 3.2578735352 ]
+    #    rot: [ 0.0, 347.1953430176, 127.2689208984 ]
+      #zoom: 1.0
+    #  dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+    #    blur: [ 9.5830545425, 12.5830545425 ]
+    #    focus: [ 10.0830545425, 11.0830545425 ]
+    #    intensity: 0.2500000000
+    #  event_generator:
+    #    plane: "medium"
+    #    tags: [ "ext" ]
+    cam_30_Shot21_vampires_overwiew:
+      fov: 10.0
+      transform:
+        pos: [ 4.9962425232, 17.5905761719, 2.0578002930 ]
+        rot: [ 0.0, 354.5653381348, 144.8134155273 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 8.7834348679, 11.7834348679 ]
+        focus: [ 9.2834348679, 10.2834348679 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_31_Shot_mirror1:
+      fov: 40.0
+      transform:
+        pos: [ 4.9414672852, 7.5197753906, 1.7577819824 ]
+        rot: [ 0.0, 351.9803466797, 78.0993041992 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.2462205887, 6.2462205887 ]
+        focus: [ 3.7462205887, 4.7462205887 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_32_Shot_mirror_heart_keycam:
+      fov: 40.0
+      transform:
+        pos: [ 2.8766803741, 11.0935058594, 1.8077850342 ]
+        rot: [ 0.0, 355.6653442383, 148.1138916016 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.9845335484, 5.9845333099 ]
+        focus: [ 3.4845335484, 4.4845333099 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_33_Shot_mirror_heart_keycam2:
+      fov: 40.0
+      transform:
+        pos: [ -0.8147239685, 9.5678710938, 1.8077850342 ]
+        rot: [ 0.0, 356.5453491211, 246.9489135742 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.0698444843, 5.0698442459 ]
+        focus: [ 2.5698444843, 3.5698444843 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_34_Shot_mirror_heart:
+      fov: 40.0
+      transform:
+        pos: [ -0.8147239685, 9.5678710938, 4.5579528809 ]
+        rot: [ 0.0, 0.7253409028, 253.1088867188 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.0698444843, 5.0698442459 ]
+        focus: [ 2.5698444843, 3.5698444843 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_35_Shot_mirror_close:
+      fov: 20.0
+      transform:
+        pos: [ 2.5065670013, 9.5881347656, 5.0079803467 ]
+        rot: [ 0.0, 357.1503295898, 264.3289184570 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.8742275238, 5.8742275238 ]
+        focus: [ 3.3742275238, 4.3742275238 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_36_Shot_mirror_geralt_far:
+      fov: 30.0
+      transform:
+        pos: [ 7.1305446625, 8.6035156250, 6.0580444336 ]
+        rot: [ 0.0, 324.4803161621, 86.4037475586 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 7.5659923553, 10.5659923553 ]
+        focus: [ 8.0659923553, 9.0659923553 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_38_Shot_mirror_fuck_aard:
+      fov: 40.0
+      transform:
+        pos: [ -1.5419235229, 6.1250000000, 1.3077545166 ]
+        rot: [ 0.0, 6.7203369141, 294.1640014648 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 7.7767257690, 10.7767257690 ]
+        focus: [ 8.2767257690, 9.2767257690 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_39_Shot_mirror_slow_fall:
+      fov: 40.0
+      transform:
+        pos: [ 0.0148525238, 8.8569335938, 1.6577758789 ]
+        rot: [ 0.0, 358.4703369141, 264.5190429688 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.1727623940, 8.1727619171 ]
+        focus: [ 5.6727623940, 6.6727623940 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_40_Shot_mirror_demon_close:
+      fov: 25.0
+      transform:
+        pos: [ 3.4811382294, 9.5502929688, 1.0577392578 ]
+        rot: [ 0.0, 1.2203340530, 263.4188232422 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.6772720814, 4.6772718430 ]
+        focus: [ 2.1772720814, 3.1772720814 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_41_Shot_mirror_demon_very_close_smile:
+      fov: 15.0
+      transform:
+        pos: [ 4.3554077148, 7.8315429688, 1.3077545166 ]
+        rot: [ 0.0, 2.3203344345, 262.3190307617 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.4280050993, 3.4280052185 ]
+        focus: [ 0.9280050993, 1.9280050993 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_42_Shot_mirror_grlt_pain_start1:
+      fov: 15.0
+      transform:
+        pos: [ 4.5343170166, 10.1057128906, 1.7577819824 ]
+        rot: [ 0.0, 354.5653381348, 122.4285278320 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.4078097343, 6.4078097343 ]
+        focus: [ 3.9078097343, 4.9078097343 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_44_Shot_mirror_grlt_pain_stoop:
+      fov: 30.0
+      transform:
+        pos: [ 4.5636291504, 8.1762695313, 0.9577331543 ]
+        rot: [ 0.0, 356.5453491211, 93.7734375000 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.5991938114, 5.5991935730 ]
+        focus: [ 3.0991938114, 4.0991935730 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_45_Shot_mirror_grlt_pain_after:
+      fov: 30.0
+      transform:
+        pos: [ 4.9098186493, 9.2080078125, 1.1077423096 ]
+        rot: [ 0.0, 358.1953430176, 106.6984863281 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.1510887146, 6.1510887146 ]
+        focus: [ 3.6510887146, 4.6510887146 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_46_Shot_mirror_grlt_pain_start2:
+      fov: 15.0
+      transform:
+        pos: [ 5.3652725220, 10.6623535156, 0.9077301025 ]
+        rot: [ 0.0, 358.4153442383, 123.9133300781 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.1143889427, 7.1143889427 ]
+        focus: [ 4.6143889427, 5.6143889427 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_51_Shot_mirror_grlt_pain_start3:
+      fov: 15.0
+      transform:
+        pos: [ 5.8416576385, 6.1687011719, 0.7577209473 ]
+        rot: [ 0.0, 0.6703375578, 68.3631591797 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.1143889427, 7.1143889427 ]
+        focus: [ 4.6143889427, 5.6143889427 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_48_Shot_mirror_grlt_unseen:
+      fov: 30.0
+      transform:
+        pos: [ 3.7509975433, 8.4553222656, 1.7577819824 ]
+        rot: [ 0.0, 353.5753479004, 97.1832885742 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.2184848785, 5.2184848785 ]
+        focus: [ 2.7184848785, 3.7184848785 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_49_Shot_mirror_grlt_unseen_kill:
+      fov: 30.0
+      transform:
+        pos: [ -1.4948081970, 8.0412597656, 1.5077667236 ]
+        rot: [ 0.0, 359.0203247070, 86.6783447266 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7662105560, 4.7662105560 ]
+        focus: [ 2.2662105560, 3.2662105560 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_50_Shot_mirror_grlt_unseen_death:
+      fov: 30.0
+      transform:
+        pos: [ -2.5522384644, 7.0610351563, 1.6077728271 ]
+        rot: [ 0.0, 352.2553405762, 292.8433837891 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.1029810905, 6.1029810905 ]
+        focus: [ 3.6029810905, 4.6029810905 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_52_Shot_mirror_grlt_pain_start4:
+      fov: 15.0
+      transform:
+        pos: [ 3.9740276337, 12.1855468750, 0.9077301025 ]
+        rot: [ 0.0, 359.6253356934, 146.1333618164 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.1143889427, 7.1143889427 ]
+        focus: [ 4.6143889427, 5.6143889427 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 720
+
+  placement: "ntr_bob_introscenes_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ 24.4257621765, -2107.7331542969, 126.1453247070 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      triss_monster:
+        repo: "triss_monster"
+        by_voicetag: false
+        appearance: "triss"
+        tags: [ "triss_monster" ]
+
+      Eredin_vesemir:
+        repo: "Eredin_vesemir"
+        #by_voicetag: true
+        appearance: "eredin_scratched"
+        tags: [ "Eredin_vesemir" ]
+
+      Eredin_vesemir2:
+        repo: "Eredin_vesemir2"
+        #by_voicetag: true
+        appearance: "eredin_vesemir"
+        tags: [ "Eredin_vesemir2" ]
+
+      Azar_Javed:
+        repo: "Azar_Javed"
+        #by_voicetag: true
+        appearance: "naked_man_03"
+        tags: [ "Azar_Javed" ]
+
+      Iorweth:
+        repo: "Iorweth"
+        #by_voicetag: true
+        appearance: "roche"
+        tags: [ "Iorweth" ]
+
+      regis:
+        repo: "regis"
+        #by_voicetag: true
+        appearance: "regis_human"
+        tags: [ "regis" ]
+
+      detlaff:
+        repo: "detlaff"
+        #by_voicetag: true
+        appearance: "dettlaff_vampire"
+        tags: [ "detlaff" ]
+
+      mirror:
+        repo: "mirror"
+        #by_voicetag: true
+        appearance: "mirror_man_wedding"
+        tags: [ "mirror" ]
+
+      unseen:
+        repo: "unseen"
+        #by_voicetag: true
+        appearance: "original_vampire"
+        tags: [ "unseen" ]
+
+    props:
+      portal_04:
+        repo: "portal_04"
+
+      cocoon:
+        repo: "cocoon"
+
+      vampire_vison:
+        repo: "vampire_vison"
+
+      pc_aard:
+        repo: "pc_aard"
+
+      q605_witcher_sword:
+        repo: "q605_witcher_sword"
+
+    cameras:
+      cam_1_Shot1_triss:
+        repo: "cam_1_Shot1_triss"
+
+      cam_3_Shot2_geralt_go:
+        repo: "cam_3_Shot2_geralt_go"
+
+      cam_5_Shot4a_kill:
+        repo: "cam_5_Shot4a_kill"
+
+      cam_7_Shot4b_laugh:
+        repo: "cam_7_Shot4b_laugh"
+
+      cam_9_Shot4a_after:
+        repo: "cam_9_Shot4a_after"
+
+      cam_10_Shot5_what_the_hell:
+        repo: "cam_10_Shot5_what_the_hell"
+
+      cam_10_Shot5_who_is_it:
+        repo: "cam_10_Shot5_who_is_it"
+
+      cam_11_Shot6_eredin_appear:
+        repo: "cam_11_Shot6_eredin_appear"
+
+      cam_12_Shot12_no_jokes:
+        repo: "cam_12_Shot12_no_jokes"
+
+      cam_13_Shot13_haha:
+        repo: "cam_13_Shot13_haha"
+
+      cam_14_Shot14_mask_close:
+        repo: "cam_14_Shot14_mask_close"
+
+      cam_15_Shot15_cutscene:
+        repo: "cam_15_Shot15_checjjk"
+
+      cam_15_Shot16_azar_appear:
+        repo: "cam_15_Shot16_azar_appear"
+
+      cam_15_Shot16_azar_appear2:
+        repo: "cam_15_Shot16_azar_appear2"
+
+      cam_17_Shot17_azar_to_aggresive:
+        repo: "cam_17_Shot17_azar_to_aggresive"
+
+      cam_18_Shot18_iorweth_appear:
+        repo: "cam_18_Shot18_iorweth_appear"
+
+      cam_19_Shot19_iorewth_phrase:
+        repo: "cam_19_Shot19_iorewth_phrase"
+
+      cam_20_Shot20_fuck:
+        repo: "cam_20_Shot20_fuck"
+
+      cam_21_Shot21_vampires_fly_far:
+        repo: "cam_21_Shot21_vampires_fly_far"
+
+      cam_22_Shot21_vampires_fly_2:
+        repo: "cam_22_Shot21_vampires_fly_2"
+
+      cam_23_Shot21_vampires_fly_3:
+        repo: "cam_23_Shot21_vampires_fly_3"
+
+      cam_24_Shot21_vampires_fly_4:
+        repo: "cam_24_Shot21_vampires_fly_4"
+
+      cam_25_Shot21_vampires_fly_5:
+        repo: "cam_25_Shot21_vampires_fly_5"
+
+      cam_26_Shot21_vampires_rotate:
+        repo: "cam_26_Shot21_vampires_rotate"
+
+      cam_27_Shot21_vampires_geralt:
+        repo: "cam_27_Shot21_vampires_geralt"
+
+      cam_28_Shot21_vampires_regis_taunt:
+        repo: "cam_28_Shot21_vampires_regis_taunt"
+
+      cam_29_Shot21_vampires_regis:
+        repo: "cam_29_Shot21_vampires_regis"
+
+      cam_30_Shot21_vampires_overwiew:
+        repo: "cam_30_Shot21_vampires_overwiew"
+
+      cam_31_Shot_mirror1:
+        repo: "cam_31_Shot_mirror1"
+
+      cam_32_Shot_mirror_heart_keycam:
+        repo: "cam_32_Shot_mirror_heart_keycam"
+
+      cam_33_Shot_mirror_heart_keycam2:
+        repo: "cam_33_Shot_mirror_heart_keycam2"
+
+      cam_34_Shot_mirror_heart:
+        repo: "cam_34_Shot_mirror_heart"
+
+      cam_35_Shot_mirror_close:
+        repo: "cam_35_Shot_mirror_close"
+
+      cam_36_Shot_mirror_geralt_far:
+        repo: "cam_36_Shot_mirror_geralt_far"
+
+      cam_38_Shot_mirror_fuck_aard:
+        repo: "cam_38_Shot_mirror_fuck_aard"
+
+      cam_39_Shot_mirror_slow_fall:
+        repo: "cam_39_Shot_mirror_slow_fall"
+
+      cam_40_Shot_mirror_demon_close:
+        repo: "cam_40_Shot_mirror_demon_close"
+
+      cam_41_Shot_mirror_demon_very_close_smile:
+        repo: "cam_41_Shot_mirror_demon_very_close_smile"
+
+      cam_42_Shot_mirror_grlt_pain_start1:
+        repo: "cam_42_Shot_mirror_grlt_pain_start1"
+
+      cam_43_Shot_mirror_demon_very_close_2:
+        repo: "cam_43_Shot_mirror_demon_very_close_2"
+
+      cam_44_Shot_mirror_grlt_pain_stoop:
+        repo: "cam_44_Shot_mirror_grlt_pain_stoop"
+
+      cam_45_Shot_mirror_grlt_pain_after:
+        repo: "cam_45_Shot_mirror_grlt_pain_after"
+
+      cam_46_Shot_mirror_grlt_pain_start2:
+        repo: "cam_46_Shot_mirror_grlt_pain_start2"
+
+      cam_48_Shot_mirror_grlt_unseen:
+        repo: "cam_48_Shot_mirror_grlt_unseen"
+
+      cam_49_Shot_mirror_grlt_unseen_kill:
+        repo: "cam_49_Shot_mirror_grlt_unseen_kill"
+
+      cam_50_Shot_mirror_grlt_unseen_death:
+        repo: "cam_50_Shot_mirror_grlt_unseen_death"
+
+      cam_51_Shot_mirror_grlt_pain_start3:
+        repo: "cam_51_Shot_mirror_grlt_pain_start3"
+
+      cam_52_Shot_mirror_grlt_pain_start4:
+        repo: "cam_52_Shot_mirror_grlt_pain_start4"
+
+    soundbanks:
+      - monster_dettlaff_vampire
+      - monster_dettlaff_monster
+      - qu_ep2_704_dlg_fairytaleworld
+      - qu_ep1_605
+      - grunt_vo_geralt
+      - qu_ep2_704_dlg
+
+    animations:
+      triss_monster_scared_start:
+        actor: "triss_monster"
+        repo: "anim_13650_scared_start"
+        #duration: 0.6000000238
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_monster_scared_loop:
+        actor: "triss_monster"
+        repo: "anim_13640_scared_loop"
+        #duration: 5.8333334923
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_enter_frontal:
+        actor: "geralt"
+        repo: "anim_6981_high_standing_determined_enter_frontal"
+        #duration: 5.5666666031
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_man_geralt_sword_attack_fast_8_rp_40ms:
+        actor: "geralt"
+        repo: "anim_5769_man_geralt_sword_attack_fast_8_rp_40ms"
+        #duration: 1.6000000238
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_monster_woman_sorceress_death_front_01:
+        actor: "triss_monster"
+        repo: "anim_12054_woman_sorceress_death_front_01"
+        #duration: 3.0333333015
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined:
+        actor: "geralt"
+        repo: "anim_291_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined"
+        #duration: 7.6666665077
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_monster_scared_end:
+        actor: "triss_monster"
+        repo: "anim_13636_scared_end"
+        #duration: 0.7333333492
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_monster_woman_sorceress_teleport_lp:
+        actor: "triss_monster"
+        repo: "anim_12112_woman_sorceress_teleport_lp"
+        #duration: 2.5000000000
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_turn_180_right_casual:
+        actor: "geralt"
+        repo: "anim_338_high_standing_determined_turn_180_right_casual"
+        #duration: 4.7666668892
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Eredin_vesemir_high_standing_wildhunt_determined_enter_frontal:
+        actor: "Eredin_vesemir"
+        repo: "anim_11254_high_standing_wildhunt_determined_enter_frontal"
+        #duration: 6.8000001907
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Eredin_vesemir_high_standing_wildhunt_determined_gesture_question_01:
+        actor: "Eredin_vesemir"
+        repo: "anim_11261_high_standing_wildhunt_determined_gesture_question_01"
+        #duration: 5.3333334923
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Azar_Javed_high_standing_determined_calm_enter_frontal:
+        actor: "Azar_Javed"
+        repo: "anim_6970_high_standing_determined_calm_enter_frontal"
+        #duration: 8.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Azar_Javed_high_standing_determined_to_high_standing_determined2:
+        actor: "Azar_Javed"
+        repo: "anim_7119_high_standing_determined_to_high_standing_determined2"
+        #duration: 3.7000000477
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Iorweth_high_standing_determined_enter_front_45_right:
+        actor: "Iorweth"
+        repo: "anim_313_high_standing_determined_enter_front_45_right"
+        #duration: 6.5666666031
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Iorweth_high_standing_determined_to_high_standing_proud:
+        actor: "Iorweth"
+        repo: "anim_7125_high_standing_determined_to_high_standing_proud"
+        #duration: 3.9333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_both_hands_stop:
+        actor: "geralt"
+        repo: "anim_7004_high_standing_determined_gesture_both_hands_stop"
+        #duration: 3.6666667461
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_two_steps_back:
+        actor: "geralt"
+        repo: "anim_7084_high_standing_determined_gesture_two_steps_back"
+        #duration: 8.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Eredin2_vesemir_locomotion_walk_cycle_slow_forward:
+        actor: "Eredin_vesemir2"
+        repo: "anim_592_locomotion_walk_cycle_slow_forward"
+        #duration: 5.3333334923
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Azar_Javed_high_standing_determined_2_steps_forward:
+        actor: "Azar_Javed"
+        repo: "anim_6961_high_standing_determined_2_steps_forward"
+        #duration: 4.2333331108
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Iorweth_high_standing_proud_three_steps_forward:
+        actor: "Iorweth"
+        repo: "anim_7266_high_standing_proud_three_steps_forward"
+        #duration: 4.5666666031
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_man_geralt_axe_unsheathe_silver:
+        actor: "geralt"
+        repo: "anim_4680_man_geralt_axe_unsheathe_silver"
+        #duration: 1.5000000000
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_turn180_left:
+        actor: "geralt"
+        repo: "anim_7129_high_standing_determined_turn180_left"
+        #duration: 3.8333332539
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      regis_high_standing_determined_enter_run_in_frontal:
+        actor: "regis"
+        repo: "anim_316_high_standing_determined_enter_run_in_frontal"
+        #duration: 7.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      detlaff_high_standing_determined_enter_run_in_frontal:
+        actor: "detlaff"
+        repo: "anim_316_high_standing_determined_enter_run_in_frontal"
+        #duration: 1.5000000000
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      regis_utility_taunt_01:
+        actor: "regis"
+        repo: "anim_1671_utility_taunt_01"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      detlaff_utility_taunt_01:
+        actor: "detlaff"
+        repo: "anim_1671_utility_taunt_01"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_enter_run_in_frontal_left:
+        actor: "geralt"
+        repo: "anim_317_high_standing_determined_enter_run_in_frontal_left"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_combat_locomotion_run_rightfoward_to_idle_02:
+        actor: "geralt"
+        repo: "anim_5263_combat_locomotion_run_rightfoward_to_idle_02"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      geralt_geralt_neutral_gesture_death_longer_face:
+        actor: "geralt"
+        repo: "mimicsanim_122_geralt_neutral_gesture_death_longer_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_reaction_pain_face:
+        actor: "geralt"
+        repo: "mimicsanim_168_geralt_reaction_pain_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      triss_monster_geralt_neutral_gesture_smile_face:
+        actor: "triss_monster"
+        repo: "mimicsanim_433_geralt_neutral_gesture_smile_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_neutral_gesture_brows_up_face_lcl:
+        actor: "geralt"
+        repo: "mimicsanim_118_geralt_neutral_gesture_brows_up_face_lcl"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      Eredin_vesemir_geralt_neutral_question_king_slaughtered_face:
+        actor: "Eredin_vesemir"
+        repo: "mimicsanim_465_geralt_neutral_question_king_slaughtered_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_neutral_question_what_face:
+        actor: "geralt"
+        repo: "mimicsanim_142_geralt_neutral_question_what_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      triss_monster_High_Standing_Neutral:
+        actor: "triss_monster"
+        repo: "pose_399_High_Standing_Neutral"
+
+      triss_monster_scared_loop:
+        actor: "triss_monster"
+        repo: "pose_1785_scared_loop"
+
+      triss_monster_woman_sorceress_effect_knockdown_f_loop:
+        actor: "triss_monster"
+        repo: "pose_1774_woman_sorceress_effect_knockdown_f_loop"
+
+      Eredin_vesemir_high_standing_wildhunt_determined_idle:
+        actor: "Eredin_vesemir"
+        repo: "pose_0_high_standing_wildhunt_determined_idle"
+
+      Eredin_vesemir_high_standing_wildhunt_determined_idle2:
+        actor: "Eredin_vesemir2"
+        repo: "pose_0_high_standing_wildhunt_determined_idle"
+
+      Azar_Javed_man_big_ex_idle:
+        actor: "Azar_Javed"
+        repo: "pose_0_man_big_ex_idle"
+
+      Iorweth_high_standing_determined_idle:
+        actor: "Iorweth"
+        repo: "pose_0_high_standing_determined_idle"
+
+      regis_high_standing_determined_idle:
+        actor: "regis"
+        repo: "pose_0_high_standing_determined_idle"
+
+      detlaff_high_standing_determined_idle:
+        actor: "detlaff"
+        repo: "pose_0_high_standing_determined_idle"
+
+      regis_idle_vampire:
+        actor: "regis"
+        repo: "pose_0_idle_vampire"
+
+      detlaff_idle_vampire:
+        actor: "detlaff"
+        repo: "pose_0_idle_vampire"
+
+      Azar_Javed_High_Standing2_Determined:
+        actor: "Azar_Javed"
+        repo: "pose_2127_High_Standing2_Determined"
+
+      Iorweth_High_Standing_Proud:
+        actor: "Iorweth"
+        repo: "pose_2138_High_Standing_Proud"
+
+      unseen_q704_truth_07_unseen_hanging_idle:
+        actor: "unseen"
+        repo: "pose_31_q704_truth_07_unseen_hanging_idle"
+
+      regis_Regis_Hand_Straight_Standing:
+        actor: "regis"
+        repo: "pose_411_Regis_Hand_Straight_Standing"
+
+      Eredin_vesemir2_guard_readyleft_loop:
+        actor: "Eredin_vesemir2"
+        repo: "pose_1751_guard_readyleft_loop"
+
+      Azar_Javed_man_noble_posing_mirror_loop_idle_01:
+        actor: "Azar_Javed"
+        repo: "pose_47_man_noble_posing_mirror_loop_idle_01"
+
+      Iorweth_High_Standing_Relaxed_Combat:
+        actor: "Iorweth"
+        repo: "pose_2124_High_Standing_Relaxed_Combat"
+
+      geralt_High_Standing_Relaxed_Combat:
+        actor: "geralt"
+        repo: "pose_2124_High_Standing_Relaxed_Combat"
+
+      mirror_Low_Kneeling_Determined:
+        actor: "mirror"
+        repo: "pose_2155_Low_Kneeling_Determined"
+
+      mirror_ep1_mirror_sitting_ground_idle:
+        actor: "mirror"
+        repo: "pose_600_ep1_mirror_sitting_ground_idle"
+
+      geralt_Low_Lying_Dead:
+        actor: "geralt"
+        repo: "pose_2160_Low_Lying_Dead"
+
+      unseen_q704_truth_07_nolwenn_standing_aggressive_idle:
+        actor: "unseen"
+        repo: "pose_30_q704_truth_07_nolwenn_standing_aggressive_idle"
+
+storyboard:
+  defaults:
+    placement:
+      triss_monster: [[ 5.9047527313, 28.5288085938, -7.6801147461 ], [ 0.0, 0.0, 0.0 ]]
+      Eredin_vesemir: [[ 4.7026748657, 29.4824218750, -8.3214111328 ], [ 0.0, 0.0, 223.0726623535 ]]
+      Eredin_vesemir2: [[ 4.7026748657, 30.4824218750, -8.3214111328 ], [ 0.0, 0.0, 223.0726623535 ]]
+      Azar_Javed: [[ 3.6670093536, 29.4055175781, -8.0089721680 ], [ 0.0, 0.0, 234.6000671387 ]]
+      Iorweth: [[ 5.9101390839, 29.5314941406, -8.5799560547 ], [ 0.0, 0.0, 169.1800689697 ]]
+      regis: [[ 7.8927764893, 28.7670898438, -8.3466186523 ], [ 0.0, 0.0, 320.5100097656 ]]
+      detlaff: [[ 6.8804740906, 29.9362792969, -8.9980468750 ], [ 0.0, 0.0, 300.0499877930 ]]
+      mirror: [[ 6.0435962677, 30.2612304688, -6.8916931152 ], [ 0.0, 0.0, 83.2402343750 ]]
+      portal_04: [[ 23.9531250000, 23.5368652344, -9.4530487061 ], [ 0.0, 0.0, 42.8999824524 ]]
+      cocoon: [[ 30.0858535767, 24.1938476563, -10.5068893433 ], [ 0.0, 0.0, 80.8499832153 ]]
+      unseen: [[ 5.9047527313, 20.5288085938, -7.6801147461 ], [ 0.0, 0.0, 0.0 ]]
+
+    actor.pose:
+      geralt: geralt_high_standing_determined_idle
+      triss_monster: triss_monster_scared_loop
+      mirror: mirror_ep1_mirror_sitting_ground_idle
+      Eredin_vesemir2: Eredin_vesemir2_guard_readyleft_loop
+      Eredin_vesemir: Eredin_vesemir_high_standing_wildhunt_determined_idle
+      detlaff: detlaff_idle_vampire
+      regis: regis_idle_vampire
+      Iorweth: Iorweth_High_Standing_Relaxed_Combat
+      Azar_Javed: Azar_Javed_man_noble_posing_mirror_loop_idle_01
+      unseen: unseen_q704_truth_07_nolwenn_standing_aggressive_idle
+
+      ### Use it to kick them out of scene ###
+      #- actor.placement: [0.0, triss_monster, [ 5.9047527313, 28.5288085938, -7.6801147461 ], [ 0.0, 0.0, 0.0 ]]
+      #- actor.placement: [0.0, Eredin_vesemir, [ 4.7026748657, 29.4824218750, -8.3214111328 ], [ 0.0, 0.0, 223.0726623535 ]]
+      #- actor.placement: [0.0, Azar_Javed, [ 3.6670093536, 29.4055175781, -8.0089721680 ], [ 0.0, 0.0, 234.6000671387 ]]
+      #- actor.placement: [0.0, Iorweth, [ 5.9101390839, 29.5314941406, -8.5799560547 ], [ 0.0, 0.0, 169.1800689697 ]]
+      #- actor.placement: [0.0, regis, [ 7.8927764893, 28.7670898438, -8.3466186523 ], [ 0.0, 0.0, 320.5100097656 ]]
+      #- actor.placement: [0.0, detlaff, [ 6.8804740906, 29.9362792969, -8.9980468750 ], [ 0.0, 0.0, 300.0499877930 ]]
+      #- actor.placement: [0.0, mr_mirror_ep1, [ 6.0435962677, 30.2612304688, -6.8916931152 ], [ 0.0, 0.0, 83.2402343750 ]]
+      #- prop.placement: [0.0, portal_04, [ 23.9531250000, 23.5368652344, -9.4530487061 ], [ 0.0, 0.0, 42.8999824524 ]]
+      #- prop.placement: [0.0, cocoon, [ 30.0858535767, 24.1938476563, -10.5068893433 ], [ 0.0, 0.0, 80.8499832153 ]]
+
+  section_storyboard_ui:
+    # shot Shot1 triss
+    shot_1:
+      - prop.effect.stop: [0.0, portal_04, teleport]
+      - prop.placement: [0.0, portal_04, [ -3.2630882263, 0.4868164063, -35.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - prop.placement: [0.0, vampire_vison, [ 200.2630882263, 200.4868164063, 200.2647094727 ], [ 0.0, 0.0, 0.9900360107 ]]
+      - actor.placement: [0.0, geralt, [ -3.2630882263, 7.4868164063, -5.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - actor.placement: [0.0, triss_monster, [ -3.0958557129, 5.2841796875, -0.2697753906 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - cam: [0.0, cam_1_Shot1_triss]
+      - actor.equip.right: [0.0, geralt, steelsword]
+      - actor.effect.start: [0.0, triss_monster, q502_teleport_disappear]
+      - actor.anim: 
+          .@pos: [0.0, triss_monster_scared_start]
+          blendout: 0.3
+      - actor.pose: [0.3, triss_monster_scared_loop]
+      - actor.anim: 
+          .@pos: [0.1, triss_monster_scared_loop]
+          blendin: 0.3
+          blendout: 0.3
+
+    # shot Shot2 geralt go
+    shot_3:
+      - actor.placement: [0.0, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - cam: [0.0, cam_3_Shot2_geralt_go]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_enter_frontal]
+          clipfront: 2.0
+
+  section_choice_actions:
+    CHOICE_1:
+      - actor.placement: [0.0, triss_monster, [ -3.0958557129, 5.2841796875, -0.2697753906 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.anim: 
+          actor: triss_monster
+          .@pos: [0.0, triss_monster_scared_loop]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.placement: [0.0, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+
+  section_kill_triss:
+    # shot Shot4a kill
+    shot_5_pre:
+      ### Go away, Gunter!
+      #- actor.placement: [0.0, mr_mirror_ep1, [ 6.0435962677, 30.2612304688, -6.8916931152 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.placement: [0.0, triss_monster, [ -3.0958557129, 5.2841796875, -0.2697753906 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement: [0.0, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+
+    shot_5:
+      - cam: [0.0, cam_5_Shot4a_kill]
+      - actor.anim: 
+          .@pos: [0.0, geralt_man_geralt_sword_attack_fast_8_rp_40ms]
+          blendout: 0.5
+      - actor.effect.start: [0.1, triss_monster, heavy_hit]
+      - actor.anim: 
+          .@pos: [0.1, triss_monster_woman_sorceress_death_front_01]
+          blendin: 0.3
+      - actor.pose: [0.5, triss_monster_woman_sorceress_effect_knockdown_f_loop]
+      - actor.placement.start: [0.333, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - actor.placement.end: [0.485, geralt, [ -3.0143222809, 5.8850097656, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - actor.anim: 
+          .@pos: [0.333, geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined]
+          blendin: 0.5
+
+    shot_10_kill:
+      #- actor.placement: [0.0, geralt, [ -2.9319896698, 6.1804199219, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - actor.unequip.right: [0.0, geralt]
+      - actor.placement: [0.0, triss_monster, [ -2.7775707245, 5.1667480469, -0.2139739990 ], [ 0.0, 0.0, 333.0500183105 ]]
+      - cam: [0.0, cam_10_Shot5_who_is_it]
+
+    shot_11_kill:
+      - actor.placement: [0.0, Eredin_vesemir, [ -3.5768527985, 15.8188476563, -0.3903851318 ], [ 0.0, 0.0, 201.8799591064 ]]
+      - cam: [0.0, cam_11_Shot6_eredin_appear]
+      - actor.anim: 
+          .@pos: [0.29853, geralt_high_standing_determined_turn_180_right_casual]
+          blendin: 0.3
+      - actor.lookat: [0.6, geralt, Eredin_vesemir]
+      - actor.anim: [0.0, Eredin_vesemir_high_standing_wildhunt_determined_enter_frontal]
+
+  section_spare_triss:
+    # shot Shot4b spare
+    shot_6:
+      ### Go away, Gunter!
+      #- actor.placement: [0.0, mr_mirror_ep1, [ 6.0435962677, 30.2612304688, -6.8916931152 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.placement: [0.0, triss_monster, [ -3.0958557129, 5.2841796875, -0.2697753906 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement: [0.0, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      #- actor.pose: [0.0, triss_monster_High_Standing_Neutral]
+      - actor.anim: 
+          .@pos: [0.0, geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined]
+          blendin: 0.3
+          blendout: 0.5
+      - actor.anim: 
+          .@pos: [0.9, triss_monster_scared_end]
+          blendin: 0.2
+          blendout: 0.2
+          stretch: 1.5
+
+    shot_6_2:
+      - actor.pose: [0.1, triss_monster_High_Standing_Neutral]
+      - actor.unequip.right: [0.4, geralt]
+    # shot Shot4b laugh
+    shot_7:
+      - cam: [0.0, cam_7_Shot4b_laugh]
+      - actor.anim.mimic: [0.0, triss_monster_geralt_neutral_gesture_smile_face]
+
+    # shot Shot4b disappear
+    shot_8:
+      - actor.anim: 
+          .@pos: [0.0, triss_monster_woman_sorceress_teleport_lp]
+          blendin: 0.5
+      - actor.hide: [0.5, triss_monster]
+
+    shot_10_spare:
+      - cam: [0.0, cam_10_Shot5_what_the_hell]
+
+    shot_11_spare:
+      - actor.placement: [0.0, geralt, [ -3.0143222809, 5.8850097656, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - actor.placement: [0.0, Eredin_vesemir, [ -3.5768527985, 15.8188476563, -0.3903851318 ], [ 0.0, 0.0, 201.8799591064 ]]
+      - cam: [0.0, cam_11_Shot6_eredin_appear]
+      - actor.anim: 
+          .@pos: [0.29853, geralt_high_standing_determined_turn_180_right_casual]
+          blendin: 0.3
+      - actor.lookat: [0.6, geralt, Eredin_vesemir]
+      - actor.anim: [0.0, Eredin_vesemir_high_standing_wildhunt_determined_enter_frontal]
+
+  section_storyboard_ui2:
+    # shot Shot12 no jokes
+    shot_12:
+      - actor.hide: [0.0, triss_monster]
+      - actor.placement: [0.0, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 352.2526550293 ]]
+      - actor.placement: [0.0, Eredin_vesemir, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 172.2526550293 ]]
+      - actor.pose: [0.0, Eredin_vesemir_high_standing_wildhunt_determined_idle]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.lookat: [0.0, geralt, Eredin_vesemir]
+      #- actor.lookat: [0.0, Eredin_vesemir, geralt]
+      - cam: [0.0, cam_12_Shot12_no_jokes]
+      - actor.anim.mimic: 
+          actor: geralt
+          blendin: 0.5000000000
+          blendout: 0.5000000000
+          .@pos: [0.0, mimicsanim_128_geralt_neutral_gesture_rapid_head_flick_up_face]
+
+    # shot Shot13 haha
+    shot_13:
+      - cam: [0.0, cam_13_Shot13_haha]
+      - actor.anim:
+          actor: Eredin_vesemir
+          .@pos: [0.0, anim_11261_high_standing_wildhunt_determined_gesture_question_01]
+          blendin: 0.3
+          blendout: 0.3
+
+    shot_14:
+      - cam: [0.0, cam_12_Shot12_no_jokes]
+
+    # shot Shot13 haha
+    shot_15:
+      - actor.placement: [0.0, Eredin_vesemir, [ -2.0190048218, 13.2812500000, -0.2955932617 ], [ 0.0, 0.0, 18.9126625061 ]]
+      - actor.anim: 
+          actor: Eredin_vesemir
+          .@pos: [0.0, anim_eredin_cutscene]
+          clipfront: 71.8
+          clipend: 75.0
+          stretch: 1.3
+      - cam: [0.25, cam_15_Shot15_cutscene]
+      - cam: [0.9, cam_12_Shot12_no_jokes]
+      - actor.hide: [1.0, Eredin_vesemir]
+    shot_16:
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 172.2526550293 ]]
+      - actor.lookat: [0.1, Eredin_vesemir, geralt]
+      - actor.pose: [0.1, Eredin_vesemir_high_standing_wildhunt_determined_idle2]
+      - actor.anim.mimic:
+          .@pos: [0.25, mimicsanim_118_geralt_neutral_gesture_brows_up_face_lcl]
+          actor: geralt
+          weight: 1.0
+          blendin: 0.5000000000
+          blendout: 0.5000000000
+
+    # shot Shot13 haha
+    shot_17:
+      - cam: [0.0, cam_14_Shot14_mask_close]
+
+    # shot Shot16 azar appear
+    shot_18:
+      - cam.blend.start: [0.0, cam_14_Shot14_mask_close]
+      - prop.placement: [0.0, portal_04, [ -8.1503582001, 14.6176757813, -0.5945358276 ], [ 0.0, 0.0, 42.8999824524 ]]
+      - prop.effect.start: [0.0, portal_04, teleport]
+      - actor.lookat: [0.2, Eredin_vesemir2, Azar_Javed]
+      - actor.placement: [0.0, geralt, [ -3.5566349030, 7.2065429688, -0.2647094727 ], [ 0.0, 0.0, 352.2526550293 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.6261005402, 12.2111816406, -0.6538085938 ], [ 0.0, 0.0, 209.7400207520 ]]
+      - actor.anim: 
+          .@pos: [0.0, Azar_Javed_high_standing_determined_calm_enter_frontal]
+          blendout: 0.5
+
+    # shot Shot16 azar appear
+    shot_18_phrase:
+      - cam.blend.end: [0.3, cam_15_Shot16_azar_appear]
+      - cam.blend.start: [1.0, cam_15_Shot16_azar_appear]
+      - prop.effect.stop: [0.4, portal_04, teleport]
+
+    # shot Shot17 azar to aggresive
+    shot_19:
+      #- actor.placement: [0.0, geralt, [ -3.5566349030, 7.2065429688, -0.2647094727 ], [ 0.0, 0.0, 352.2526550293 ]]
+      #- actor.placement: [0.0, Azar_Javed, [ -6.6261005402, 12.2111816406, -0.6538085938 ], [ 0.0, 0.0, 209.7400207520 ]]
+      - actor.pose: [0.5, Azar_Javed_High_Standing2_Determined]
+      - cam.blend.end: [1.0, cam_15_Shot16_azar_appear2]
+      #- cam: [0.0, cam_17_Shot17_azar_to_aggresive]
+      - actor.anim: 
+          .@pos: [0.0, Azar_Javed_high_standing_determined_to_high_standing_determined2]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot18 iorweth appear
+    shot_20:
+      - actor.placement: [0.0, Iorweth, [ 1.2958259583, 10.9382324219, -0.2285766602 ], [ 0.0, 0.0, 108.0200119019 ]]
+      - cam: [0.0, cam_14_Shot14_mask_close]
+      - cam: [0.4, cam_19_Shot19_iorewth_phrase]
+      - actor.lookat: [0.2, Eredin_vesemir2, Iorweth]
+      - actor.anim: 
+          .@pos: [0.0, Iorweth_high_standing_determined_enter_front_45_right]
+          clipfront: 2.0
+          blendout: 0.5
+
+    # shot Shot19 iorewth phrase
+    shot_21:
+      - actor.lookat: [0.0, Eredin_vesemir2, geralt]
+      - actor.lookat: [0.0, Iorweth, geralt]
+      - actor.lookat: [0.0, Azar_Javed, geralt]
+      - actor.pose: [0.2, Iorweth_High_Standing_Proud]
+      - actor.anim: 
+          .@pos: [0.0, Iorweth_high_standing_determined_to_high_standing_proud]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot20 fuck
+    shot_22:
+      - actor.anim.additive: [0.0, geralt_high_standing_determined_gesture_both_hands_stop]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_gesture_two_steps_back]
+          blendout: 0.5
+      - cam: [0.0, cam_12_Shot12_no_jokes]
+
+    # shot Shot21 vampires fly far
+    shot_23:
+      - actor.placement: [0.0, geralt, [ -3.5627613068, 7.0126953125, -0.2921752930 ], [ 0.0, 0.0, 343.5626525879 ]]
+      - cam: [0.0, cam_20_Shot20_fuck]
+      - actor.anim: 
+          .@pos: [0.0, Eredin2_vesemir_locomotion_walk_cycle_slow_forward]
+          clipend: 3.0
+      - actor.anim: 
+          .@pos: [0.0, Azar_Javed_high_standing_determined_2_steps_forward]
+          clipend: 3.0
+      - actor.anim: 
+          .@pos: [0.0, Iorweth_high_standing_proud_three_steps_forward]
+          clipend: 3.0
+      
+  section_storyboard_ui3:
+    # shot Shot21 vampires fly far
+    shot_24:
+      - actor.effect.start: [0.0, detlaff, camera_smoke]
+      - actor.placement: [0.0, detlaff, [-36.0880088806, -40.0786132813, -3.7924346924], [ 0.0, 0.0, 343.5626525879 ] ]
+      - actor.placement: [0.0, unseen, [ -12.7928209305, -15.7275390625, 1.8649139404 ], [ 0.0, 0.0, 252.9700012207 ]]
+      - actor.pose: [0.0, unseen_q704_truth_07_unseen_hanging_idle]
+      - actor.placement: [0.0, geralt, [ -3.5627613068, 7.0126953125, -0.2921752930 ], [ 0.0, 0.0, 343.5626525879 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2958259583, 10.9382324219, -0.2285766602 ], [ 0.0, 0.0, 108.0200119019 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.6261005402, 12.2111816406, -0.6538085938 ], [ 0.0, 0.0, 209.7400207520 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 172.2526550293 ]]
+      
+      - prop.placement.start: [0.0, vampire_vison, [ -36.0880088806, -40.0786132813, -1.7924346924 ], [0.0, 0.1852378845, 0.5646057129], smooth]
+      - cam.blend.start: [0.0, cam_21_Shot21_vampires_fly_far]
+      - actor.lookat: [0.0, geralt, Azar_Javed]
+      - actor.sound: [0.0, detlaff, q704_dettlaff_mistform]
+    
+    # shot Shot21 vampires fly 2
+    shot_25:
+      - cam.blend.key: [0.33, cam_22_Shot21_vampires_fly_2]
+      - prop.placement.key: [0.33, vampire_vison, [ -17.6072406769, -24.8422851563, 2.7578430176 ], [ 0.0, 0.0, 0.0]]
+
+    # shot Shot21 vampires fly 3
+    shot_26:
+      - cam.blend.key: [0.66, cam_23_Shot21_vampires_fly_3]
+      - prop.placement.key: [0.66, vampire_vison, [ -12.3461656570, -20.2714843750, 4.1079254150 ], [0.0, 0.0, 0.0]]
+      - actor.anim: [0.0, Eredin2_vesemir_locomotion_walk_cycle_slow_forward]
+      - actor.anim: [0.0, Azar_Javed_high_standing_determined_2_steps_forward]
+      - actor.anim: [0.0, Iorweth_high_standing_proud_three_steps_forward]
+
+    # shot Shot21 vampires fly 4
+    shot_27:
+      - actor.effect.start: [0.0, regis, mist_fly]
+      - actor.effect.start: [0.0, detlaff, mist_fly]
+      - cam.blend.end: [0.999, cam_24_Shot21_vampires_fly_4, rapid]
+      - prop.placement.end: [0.999, vampire_vison, [ -5.3536396027, 1.3803710938, 1.6077728271 ], [0.0, 0.0, 0.0]]
+      - prop.placement: [1.0, vampire_vison, [ 100.2630882263, 100.4868164063, 100.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - actor.lookat: [0.0, geralt, Azar_Javed]
+      - actor.anim: 
+          .@pos: [0.0, geralt_man_geralt_axe_unsheathe_silver]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.equip.right: [0.2, geralt, silversword]
+      - actor.effect.stop: [1.0, detlaff, camera_smoke]
+
+    # shot Shot21 vampires FLY MIST
+    shot_28:
+      - cam: [0.0, cam_26_Shot21_vampires_rotate]
+      - actor.placement.start: [0.0, regis, [ -3.0317420959, -0.6992187500, -0.2558593750 ], [ 0.0, 0.0, 355.3800048828 ]]
+      - actor.placement.start: [0.0, detlaff, [ -4.3090496063, -0.4328613281, -0.2921752930 ], [ 0.0, 0.0, 342.0700073242 ]]
+      - actor.placement.end: [0.5, regis, [ -3.1512737274, 5.6601562500, -0.2517700195 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement.end: [0.5, detlaff, [ -4.3018493652, 5.1730957031, -0.2921752930 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.pose: [0.0, regis_high_standing_determined_idle]
+      - actor.pose: [0.0, detlaff_high_standing_determined_idle]
+      - actor.effect.stop: [0.6, regis, mist_fly]
+      - actor.effect.stop: [0.6, detlaff, mist_fly]
+      #- actor.effect.stop: [0.3, regis, mist_fly]
+      #- actor.effect.stop: [0.3, detlaff, smoke_movings]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_turn180_left]
+          blendin: 0.3
+          stretch: 0.75
+      - actor.lookat: [0.5, geralt, regis]
+      - actor.lookat: [0.5, regis, geralt]
+      - actor.lookat: [0.5, detlaff, geralt]
+
+      - actor.pose: [0.0, Eredin_vesemir2_guard_readyleft_loop]
+      - actor.equip.right: [0.0, Eredin_vesemir2, steelsword]
+      - actor.pose: [0.0, Azar_Javed_man_noble_posing_mirror_loop_idle_01]
+      - actor.pose: [0.0, Iorweth_High_Standing_Relaxed_Combat]
+
+      - actor.sound: [1.0, detlaff, q704_dettlaff_mistform_stop]
+
+    # shot Shot21 vampires GERALT FACE
+    shot_29:    
+      - actor.placement: [0.0, geralt, [ -3.5567016602, 7.2189941406, -0.2647094727 ], [ 0.0, 0.0, 166.4625854492 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -3.2787380219, 9.6394042969, -0.2647094727 ], [ 0.0, 0.0, 188.9726562500 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -5.3830986023, 9.3464355469, -0.3471069336 ], [ 0.0, 0.0, 213.7000427246 ]]
+      - actor.placement: [0.0, Iorweth, [ -1.2380065918, 9.0424804688, -0.1688842773 ], [ 0.0, 0.0, 136.6199951172 ]]
+      - actor.placement: [0.0, regis, [ -3.0880241394, 5.6276855469, -0.2729492188 ], [ 0.0, 0.0, 0.0 ]]
+      - cam: [0.0, cam_27_Shot21_vampires_geralt]
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_question_what_face]
+
+    # shot Shot21 vampires REGIS FACE
+    shot_30:
+      - actor.lookat: [0.0, regis, geralt]
+      - actor.placement: [0.0, detlaff, [ -4.3018493652, 5.1730957031, -0.2921752930 ], [ 0.0, 0.0, 0.0 ]]
+      - cam: [0.0, cam_29_Shot21_vampires_regis]
+      - actor.anim: 
+          .@pos: [0.9, regis_utility_taunt_01]
+          blendin: 0.2
+          blendout: 0.2
+      - actor.anim: 
+          .@pos: [0.9, detlaff_utility_taunt_01]
+          blendin: 0.1
+          blendout: 0.1
+      - actor.appearance: [1.0, regis, regis_vampire]
+
+    # shot Shot21 vampires TAUNT
+    shot_31:
+      #- actor.sound: [0.08, regis, monster_dettlaff_vampire_dialog_claws_scrape]
+      #- actor.sound: [0.13, regis, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+      - actor.sound: [0.08, detlaff, monster_dettlaff_vampire_dialog_claws_scrape]
+      - actor.sound: [0.13, detlaff, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+
+      #- actor.sound: [0.4, detlaff, monster_dettlaff_vampire_dialog_claws_scrape]
+      #- actor.sound: [0.45, detlaff, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+      - actor.sound: [0.4, regis, monster_dettlaff_vampire_dialog_claws_scrape]
+      - actor.sound: [0.45, regis, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+      #- actor.placement: [0.0, geralt, [ -3.5566349030, 7.2065429688, -0.2647094727 ], [ 0.0, 0.0, 352.2526550293 ]]
+      #- actor.placement: [0.0, regis, [ -3.1063232422, 5.0368652344, -0.2558593750 ], [ 0.0, 0.0, 0.0 ]]
+      - cam: [0.0, cam_28_Shot21_vampires_regis_taunt]
+      #- actor.placement: [0.0, geralt, [ 2.7864761353, 8.3112792969, -0.1164093018 ], [ 0.0, 0.0, 194.7624511719 ]]
+      - actor.pose: [0.2, regis_idle_vampire]
+      - actor.pose: [0.2, detlaff_idle_vampire]
+
+    # shot Shot21 vampires GERALT RUN
+    shot_32:
+      - actor.placement: [0.0, geralt, [ 2.7864761353, 8.3112792969, -0.1164093018 ], [ 0.0, 0.0, 194.7624511719 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 172.2526550293 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.6261005402, 12.2111816406, -0.5096435547 ], [ 0.0, 0.0, 209.7400207520 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2587337494, 11.0075683594, -0.2285766602 ], [ 0.0, 0.0, 136.6199951172 ]]
+      - actor.placement: [0.0, regis, [ -3.1063232422, 5.0368652344, -0.2558593750 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement: [0.0, detlaff, [ -4.7582054138, 4.8593750000, -0.2921752930 ], [ 0.0, 0.0, 338.0 ]]
+      - actor.lookat: [0.0, regis, geralt]
+      - cam: [0.0, cam_30_Shot21_vampires_overwiew]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_enter_run_in_frontal_left]
+          #blendin: 0.3
+          clipend: 2.0
+      - prop.effect.start: [0.5, cocoon, growing]
+          
+    # shot Shot mirror1 GERALT STOP
+    shot_40:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - cam: [0.0, cam_31_Shot_mirror1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_combat_locomotion_run_rightfoward_to_idle_02]
+      - actor.lookat: [0.0, geralt, [ 0.0674499124, 1.1114001274, 1.6784515381 ]]
+
+    # shot Shot mirror heart keycam1
+    shot_41:
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.pose: [0.0, mirror_ep1_mirror_sitting_ground_idle]
+      - actor.sound: [0.0, mirror, monster_dettlaff_monster_construct_beating_heart_vfx_LP]
+      - cam: [0.0, cam_33_Shot_mirror_heart_keycam2]
+      - actor.lookat: [0.6, geralt, mirror]
+      - cam.blend.start: [1.0, cam_33_Shot_mirror_heart_keycam2]
+
+    # shot Shot mirror heart
+    shot_43:
+      - cam.blend.end: [1.0, cam_34_Shot_mirror_heart]
+
+    # shot Shot mirror close
+    shot_44:
+      - cam.blend.start: [0.2, cam_34_Shot_mirror_heart]
+      - cam.blend.end: [0.8, cam_35_Shot_mirror_close, smooth]
+
+  section_choice_mirror:
+    CHOICE_1:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.lookat: [0.0, geralt, mirror]
+      - actor.lookat: [0.0, mirror, geralt]
+      - cam: [0.0, cam_36_Shot_mirror_geralt_far]
+
+  section_mirror_helpme:
+    shot_helpme_init:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.lookat: [0.0, geralt, mirror]
+      - actor.lookat: [0.0, mirror, geralt]
+      - cam: [0.0, cam_36_Shot_mirror_geralt_far]
+    shot_helpme_mr:
+      - cam: [0.0, cam_35_Shot_mirror_close]
+
+  section_choice_mirror_soul:
+    CHOICE_1:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.lookat: [0.0, geralt, mirror]
+      - actor.lookat: [0.0, mirror, geralt]
+      - cam: [0.0, cam_36_Shot_mirror_geralt_far]
+
+  section_mirror_yourdoing:
+    shot_yourdoing_init:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.lookat: [0.0, geralt, mirror]
+      - actor.lookat: [0.0, mirror, geralt]
+      - cam: [0.0, cam_36_Shot_mirror_geralt_far]
+
+    shot_yourdoing_mr:
+      - cam: [0.0, cam_35_Shot_mirror_close]
+    shot_yourdoing_grlt2:
+      - cam: [0.0, cam_36_Shot_mirror_geralt_far]
+    shot_yourdoing_mr2:
+      - cam: [0.0, cam_35_Shot_mirror_close]
+
+  section_mirror_soul_yes:
+    shot_soul_yes_init:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.lookat: [0.0, geralt, mirror]
+      - actor.lookat: [0.0, mirror, geralt]
+      - cam: [0.0, cam_36_Shot_mirror_geralt_far]
+    shot_soul_yes_mr:
+      - cam: [0.0, cam_35_Shot_mirror_close]
+
+  section_mirror_soul_no:
+    shot_soul_no_init:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.lookat: [0.0, geralt, mirror]
+      - actor.lookat: [0.0, mirror, geralt]
+      - cam: [0.0, cam_36_Shot_mirror_geralt_far]
+    shot_soul_no_mr:
+      - cam: [0.0, cam_35_Shot_mirror_close]
+
+  section_mirror_fuckyou:
+    shot_fuckyou_init:
+      - actor.placement: [0.0, geralt, [ 1.1129741669, 8.0175781250, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      - actor.placement: [0.0, Eredin_vesemir2, [ -2.6177959442, 12.2299804688, -0.2465209961 ], [ 0.0, 0.0, 223.0726623535 ]]
+      - actor.placement: [0.0, Azar_Javed, [ -6.7499923706, 12.2885742188, -0.5209350586 ], [ 0.0, 0.0, 234.6000671387 ]]
+      - actor.placement: [0.0, Iorweth, [ 1.2131385803, 11.0566406250, -0.2099609375 ], [ 0.0, 0.0, 169.1800689697 ]]
+      - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
+      - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
+      - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.lookat: [0.0, geralt, mirror]
+      - actor.lookat: [0.0, mirror, geralt]
+      - cam: [0.0, cam_38_Shot_mirror_fuck_aard]
+      - actor.pose: [0.0, geralt_High_Standing_Relaxed_Combat]
+
+    # fuck AARD
+    shot_fuckyou_aard:
+      - prop.placement: [0.0, pc_aard, [ 1.6200771332, 8.2995605469, 1.0861053467 ], [ 0.0, 0.0, 0.0 ]]
+      - prop.effect.start: [0.2, pc_aard, blast_lv3]
+      - prop.effect.start: [0.2, pc_aard, blast_lv3_power]
+      - prop.effect.start: [0.2, pc_aard, blast_ground_mutation_6]
+      - prop.effect.start: [0.24, cocoon, pumping]
+
+      - prop.placement.start: [0.24, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
+      - prop.placement.end: [0.4, cocoon, [ 8.9476127625, 7.7819824219, 1.6110763550 ], [ 0.0, 0.0, 80.8499832153 ], smooth]
+      - actor.placement.start: [0.26, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.placement.key: [0.5, mirror, [ 6.0930747986, 9.2265625000, 1.2669372559 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.placement.end: [1.0, mirror, [ 6.0930747986, 9.2265625000, 0.5670547485 ], [ 0.0, 0.0, 83.2402343750 ], smooth]
+      #- cam: [0.4, cam_39_Shot_mirror_slow_fall]
+
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_5606_man_ger_sword_aard_front_rp]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.anim:
+          actor: mirror
+          .@pos: [0.0, anim_2807_ep1_mirror_sitting_ground_gesture_02]
+          stretch: 0.8
+          blendin: 0.3
+          blendout: 0.3
+
+    # shot Shot mirror demon close
+    shot_demon_close:
+      - cam: [0.0, cam_40_Shot_mirror_demon_close]
+      - actor.effect.start: [0.1, mirror, demonic_possession]
+
+    shot_demon_very_close:
+      - actor.placement: [0.0, mirror, [ 5.5650539398, 7.6662597656, 0.5670547485 ], [ 0.0, 0.0, 83.2402343750 ]]
+      - actor.appearance: [0.0, mirror, mirror_man_satan]
+      - actor.lookat: [0.0, mirror, geralt]
+      - actor.lookat: [0.0, geralt, mirror]
+      - cam: [0.0, cam_41_Shot_mirror_demon_very_close_smile]
+      - cam.blend.start: [0.9, cam_42_Shot_mirror_grlt_pain_start1]
+      - actor.anim.mimic: 
+          actor: mirror
+          .@pos: [0.0, mimicsanim_9_geralt_happiness_gesture_smile_face]
+          weight: 0.6
+          blendin: 0.5000000000
+          blendout: 0.5000000000
+
+    # shot Shot mirror grlt pain mark
+    shot_pain_start:
+      #- actor.placement: [0.0, geralt, [ 1.2097263336, 8.0485839844, -0.0100479126 ], [ 0.0, 0.0, 275.7223205566 ]]
+      #- actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - prop.placement: [0.0, q605_witcher_sword, [ 1.7568702698, 7.8320312500, 0.0082397461 ], [ 0.0, 0.0, 347.0199890137 ]]
+      - actor.unequip.right: [0.4, geralt]
+      - cam.blend.key: [0.5, cam_46_Shot_mirror_grlt_pain_start2]
+      - actor.effect.start: [0.0, geralt, geralt_face_mark]
+      - actor.sound: [0.0, geralt, q605_geralt_mark]
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_death_longer_face]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_8407_man_kneeling_on_floor_in_pain_start]
+          blendout: 0.23
+
+    shot_pain_loop:
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_8406_man_kneeling_on_floor_in_pain_loop_01]
+          blendin: 0.23
+          blendout: 0.3
+          clipend: 7.6
+      - cam.blend.end: [1.0, cam_52_Shot_mirror_grlt_pain_start4]
+
+    shot_demon_very_close2:
+      - cam: [0.0, cam_41_Shot_mirror_demon_very_close_smile]
+      - cam.blend.start: [0.5, cam_52_Shot_mirror_grlt_pain_start4]
+      - actor.placement: [0.0, unseen, [ -4.0275592804, 8.4887695313, -0.2921752930 ], [ 0.0, 0.0, 265.0600280762 ]]
+      - actor.pose: [0.0, unseen_q704_truth_07_nolwenn_standing_aggressive_idle]
+      - actor.anim: 
+          actor: unseen
+          .@pos: [0.25, anim_479_q704_truth_07_unseen_standing_aggressive_enter_frontal]
+          clipfront: 2.65
+      - actor.effect.stop: [0.5, geralt, geralt_face_mark]
+
+    shot_pain_end:
+      #- actor.placement: [0.0, unseen, [ -3.8350543976, 8.5053710938, -0.2921752930 ], [ 0.0, 0.0, 257.1499938965 ]]
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_death_longer_face]
+      - anim:
+          actor: geralt
+          .@pos: [0.0, anim_8408_man_kneeling_on_floor_in_pain_stop_01]
+          blendin: 0.3
+          blendout: 0.5
+      - actor.pose: [0.2, geralt_high_standing_determined_idle]
+      - cam.blend.end: [0.7, cam_44_Shot_mirror_grlt_pain_stoop]
+      - cam.blend.start: [0.8, cam_44_Shot_mirror_grlt_pain_stoop, smooth]
+
+    shot_pain_end2:
+      - actor.anim: 
+          .@pos: [0.6, geralt_high_standing_determined_turn180_left]
+          blendin: 0.5
+      - actor.lookat: [0.8, geralt, unseen]
+      - cam.blend.end: [0.3, cam_48_Shot_mirror_grlt_unseen]
+
+    shot_unseen_close:
+      - cam: [0.0, cam_49_Shot_mirror_grlt_unseen_kill]
+      - actor.placement: [0.0, geralt, [ 1.1019706726, 7.9904785156, -0.0100479126 ], [ 0.0, 0.0, 86.9623718262 ]]
+      - actor.placement: [0.0, unseen, [ -4.0275592804, 8.4887695313, -0.021752930 ], [ 0.0, 0.0, 265.0600280762 ]]
+      - actor.anim:
+          actor: unseen
+          .@pos: [0.0, anim_482_q704_truth_07_unseen_standing_aggressive_gesture_kill]
+          blendin: 0.0
+          blendout: 0.0
+      - actor.sound: [0.9, unseen, q704_you_died]
+
+    shot_unseen_killing:
+      - actor.placement: [0.0, geralt, [ 1.1019706726, 7.9904785156, -0.0100479126 ], [ 0.0, 0.0, 86.9623718262 ]]
+      - actor.placement: [0.0, unseen, [ -4.0275592804, 8.4887695313, -0.021752930 ], [ 0.0, 0.0, 265.0600280762 ]]
+      #- cam: [0.7, cam_50_Shot_mirror_grlt_unseen_death]
+      - cam: [0.0, cam_48_Shot_mirror_grlt_unseen]
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_471_q704_truth_07_geralt_high_standing_determined_gesture_die]
+          clipfront: 4.5
+          blendout: 0.0
+      #- actor.sound: [0.3, geralt, q704_G_bodyfall]
+      ##- actor.pose: [0.3, geralt_Low_Lying_Dead]
+      ##- actor.anim:
+      #    actor: geralt
+      #    .@pos: [0.0, anim_7608_low_standing_paralyzed_die_to_low_lying_dead] #anim_5737_man_ger_sword_death_1]
+      #    blendin: 0.3
+      - actor.effect.start: [0.05, geralt, heavy_hit]
+      - actor.sound: [0.1, geralt, grunt_vo_death]
+      - fade.in: [0.87, 0.9, [255, 255, 255, 255]]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "triss_monster", "Eredin_vesemir", "Eredin_vesemir2", "Azar_Javed", "Iorweth", "regis", "detlaff", "mirror", "unseen" ]
+  props: [ "portal_04", "vampire_vison", "cocoon", "pc_aard", "q605_witcher_sword" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_music_cemetery
+
+  script_music_cemetery:
+    - SCRIPT:
+            function: NTRPlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "toussaint"
+                - eventName: "mus_loc_toussaint_cemetery"
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1 triss
+    - CUE: shot_1
+    - PAUSE: 1.0
+    - triss_monster: "[1.6104]2114670727|Geralt, please..."
+    # shot Shot2 geralt go
+    - CUE: shot_3
+    # (longest) anim: high_standing_determined_enter_frontal
+    - PAUSE: 3.5666
+    # shot Shot3 choice
+    - NEXT: section_choice_actions
+
+  section_choice_actions:
+        - CHOICE:
+            - choice: ["[Kill]", section_kill_triss]
+              emphasize: true
+            - choice: ["[Spare]", section_spare_triss]
+              emphasize: true
+            - TIME_LIMIT: 5.0
+
+  section_kill_triss: 
+    # shot Shot4a kill
+    - CUE: shot_5_pre
+    - geralt: "0001054229|Die!"
+    - CUE: shot_5
+    # (longest) anim: woman_sorceress_death_front_01
+    - PAUSE: 3.3666
+    # shot Shot4a after
+    - CUE: shot_10_kill
+    - PAUSE: 2.0
+    - geralt: "[0.834]0000477076|Who was it?"
+    - PAUSE: 2.591
+    - CUE: shot_11_kill
+    - PAUSE: 6.8
+    - NEXT: section_storyboard_ui2
+
+  section_spare_triss:
+    # shot Shot4b spare
+    - CUE: shot_6
+    # (longest) anim: geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined
+    - geralt: "0000591259|Tell me what happened."
+    - CUE: shot_6_2
+    - PAUSE: 5.0
+    # shot Shot4b laugh
+    - CUE: shot_7
+    - triss_monster: "[1.9990962744]0001000680|Hahahah."
+    # (longest) anim: geralt_neutral_gesture_smile_face: 2.233333
+    # shot Shot4b disappear
+    - CUE: shot_8
+    # (longest) anim: woman_sorceress_teleport_lp
+    - PAUSE: 2.5000000000
+    - CUE: shot_10_spare
+    - PAUSE: 2.0
+    - geralt: "[1.4899674654]0000380709|What the hell was that?"
+    - PAUSE: 2.0
+    - CUE: shot_11_spare
+    - PAUSE: 6.8
+
+    - NEXT: section_storyboard_ui2
+
+  section_storyboard_ui2:
+    - CUE: shot_12
+    # (longest) anim: geralt_neutral_gesture_rapid_head_flick_up_face
+    - PAUSE: 1.3333333731
+    - geralt: "0000581921|Not in the mood for jokes."
+    # shot Shot13 haha
+    - CUE: shot_13
+    - PAUSE: 1.0
+    - Eredin_vesemir: "0000534083|I'd planned to kill Zireael quickly, painlessly... But now... I shall not deny myself the pleasure."
+    # (longest) anim: high_standing_wildhunt_determined_enter_frontal: 6.800000
+    - CUE: shot_14
+    - geralt: "[1.4235]2114670728|Show me your face."
+    - CUE: shot_15
+    - Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
+    - CUE: shot_16
+    - PAUSE: 2.0
+    - geralt: "[2.7799]2114670729|I must be out of my mind... Vesemir!"
+    - CUE: shot_17
+    #- Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
+    - Eredin_vesemir2: "[1.3952225]0001058454|Draw your sword, Geralt."
+    - CUE: shot_18
+    # (longest) anim: high_standing_determined_calm_enter_frontal
+    - PAUSE: 3.263
+    - CUE: shot_18_phrase
+    - PAUSE: 3.7000000477
+    - CUE: shot_19
+    # (longest) anim: high_standing_determined_to_high_standing_determined2
+    - Azar_Javed: "[4.7370]2114670730|I warned you. Pissing upwind leads to disaster."
+    #- CUE: shot_18_2
+    - Azar_Javed: "[2.9032]2114670731|This time you pissed in a tornado."
+    - CUE: shot_20
+    # (longest) anim: high_standing_determined_enter_front_45_right
+    - PAUSE: 4.0666666031
+    # shot Shot19 iorewth phrase
+    - CUE: shot_21
+    # (longest) anim: high_standing_determined_to_high_standing_proud
+    - Iorweth: "[7.5937]2114670732|Do anything stupid and they'll tie you down on an anthill, face coated with honey. You'll scream so loud even the storm riders will hear you."
+    - CUE: shot_22
+    # (longest) anim: high_standing_determined_to_high_standing_proud
+    - geralt: "[1.4232]2114670733|Are you ghosts?"
+    - geralt: "0000476195|Go away. Or I'll kill you."
+    - CUE: shot_23
+    - PAUSE: 1.2
+    - NEXT: script_music_hos
+
+  script_music_hos:
+    - SCRIPT:
+            function: NTRPlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "novigrad"
+                #- eventName: "mus_q605_final_standoff"
+                - eventName: "mus_q605_final_confrontation_stage02"
+    - NEXT: section_storyboard_ui3
+
+  section_storyboard_ui3:
+    - CUE: shot_24
+    - PAUSE: 2.5
+    - CUE: shot_25
+    - PAUSE: 2.5
+    - CUE: shot_26
+    - PAUSE: 2.0
+    - CUE: shot_27
+    - PAUSE: 1.5
+    # VAMPIRES FLY
+    - CUE: shot_28
+    - PAUSE: 2.8725
+    # GERALT CLOSE
+    - CUE: shot_29
+    - geralt: "[0.9755476]0001196841|Regis!"
+    # REGIS CLOSE
+    - CUE: shot_30
+    - regis: "[1.5661]2114670734|I'm sorry, my friend..."
+    # REGIS TAUNT
+    - CUE: shot_31
+    - PAUSE: 2.0
+    - PAUSE: 0.5
+    # GERALT RUN FAR CAM
+    - CUE: shot_32
+    - geralt: "[1.6975838]0001061767|Aaaaaaaaargh!!!!"
+    - PAUSE: 0.3024162
+    # GERALT STOP
+    - CUE: shot_40
+    - PAUSE: 1.67
+    # shot Shot mirror heart keycam
+    - CUE: shot_41
+    - PAUSE: 4.0
+    # shot Shot mirror heart
+    - CUE: shot_43
+    - PAUSE: 3.0
+    # shot Shot mirror close
+    - CUE: shot_44
+    - mirror: "0001097874|Greetings, Geralt. Remember me?"
+    - NEXT: section_choice_mirror
+
+  section_choice_mirror:
+        - CHOICE:
+            - choice: ["Is it your doing?", section_mirror_yourdoing]
+              #emphasize: true
+            - choice: ["Fuck you!", script_music_hos_final]
+              emphasize: true
+            - choice: ["Help me, and I'll return the favor", section_mirror_helpme]
+              emphasize: true
+
+  section_mirror_helpme:
+    - CUE: shot_helpme_init
+    - geralt: "[3.8945067]0001156846|Help me, and I'll return the favor."
+    - CUE: shot_helpme_mr
+    - mirror: "[2.5423]2114670735|You wish to give your soul for this?"
+    - NEXT: section_choice_mirror_soul
+
+  section_choice_mirror_soul:
+    - CHOICE:
+            - choice: ["Yes", section_mirror_soul_yes]
+              emphasize: true
+            - choice: ["No", section_mirror_soul_no]
+              emphasize: true
+
+  section_mirror_soul_yes:
+    - CUE: shot_soul_yes_init
+    - geralt: "[0.95819706]0000433763|Yes."
+    - CUE: shot_soul_yes_mr
+    - mirror: "0001103255|No, Geralt, you don't. This one time I shall spare you and not grant your wish."
+    - NEXT: section_choice_mirror
+
+  section_mirror_soul_no:
+    - CUE: shot_soul_no_init
+    - geralt: "[0.94723827]0001003705|No."
+    - CUE: shot_soul_no_mr
+    - mirror: "[2.3555]2114670736|Then you don't have what I need."
+    - NEXT: section_choice_mirror
+
+  section_mirror_yourdoing:
+    - CUE: shot_yourdoing_init
+    - geralt: "[1.3771]2114670737|Is it your doing?"
+    - CUE: shot_yourdoing_mr
+    - mirror: "[3.79388]0001108117|Haha, you like it?"
+    - CUE: shot_yourdoing_grlt2
+    - geralt: "0001175865|You crazy?! You're a recovering addict!"
+    - CUE: shot_yourdoing_mr2
+    - mirror: "[4.9930]2114670738|So you say, yet I wait and wait, and nothing..." #0001108192
+    - NEXT: section_choice_mirror
+
+  script_music_hos_final:
+    - SCRIPT:
+            function: NTRPlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "novigrad"
+                - eventName: "mus_cs605_merchant_lose"
+    - NEXT: section_mirror_fuckyou
+
+  section_mirror_fuckyou:
+    - CUE: shot_fuckyou_init
+    - geralt: "[1.0363]2114670739|Fuck you!"
+    - CUE: shot_fuckyou_aard
+    - PAUSE: 2.5
+    - CUE: shot_demon_close
+    - mirror: "[1.3369]2114670740|Death mistake."
+    - PAUSE: 1.0
+    - CUE: shot_demon_very_close
+    - mirror: "0001135556|Ouw se on coq é coq là sé rwa an lè pil fimié ay."
+    - CUE: shot_pain_start
+    - mirror: "[5.0160403]0001135558|Shen ggonia monerie, ara scdebi."
+    - CUE: shot_pain_loop
+    - geralt: "[1.001217]0001070656|Aaa-argh!"
+    - CUE: shot_demon_very_close2
+    - mirror: "[6.2954383]0001135560|Man amaran nai. Nir sauyn fala fashtama azdahznan."
+    - CUE: shot_pain_end
+    - geralt: "[1.001217]0001070656|Aaa-argh!"
+    - PAUSE: 1.0
+    - unseen: "[2.9714754]0001156849|Hehehehehe..."
+    - CUE: shot_pain_end2
+    - PAUSE: 4.0
+    - CUE: shot_unseen_close
+    - unseen: "[5.246143]0001156752|You waste my time."
+    - CUE: shot_unseen_killing
+    - PAUSE: 6.9
+    - NEXT: script_music_stop
+
+  script_music_stop:
+    - SCRIPT:
+            function: NTRPlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "toussaint"
+                #- eventName: "mus_q605_final_standoff"
+                - eventName: "mus_loc_toussaint_unseen_cave"
+    - NEXT: script_music_gameplay
+
+  script_music_gameplay:
+    - SCRIPT:
+            function: NTRPlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "toussaint"
+                #- eventName: "mus_q605_final_standoff"
+                - eventName: "mus_loc_toussaint_general_cs_to_gmpl"
+    - NEXT: section_exit
+
+  section_exit:
+    #- CAMERA_BLEND: 5.0
+    - BLACKSCREEN: true
+    - EXIT

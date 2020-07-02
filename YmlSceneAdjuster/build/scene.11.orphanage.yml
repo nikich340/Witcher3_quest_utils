@@ -1,0 +1,695 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    fat_bandit:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
+      appearance: [ "bob_thug_lvl2_03" ]
+
+    bandit_2:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
+      appearance: [ "bob_thug_lvl1_06" ]
+
+    bandit_3:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
+      appearance: [ "bob_thug_lvl1_10" ]
+
+  animations:
+    anim_6981_high_standing_determined_enter_frontal:
+      animation: "high_standing_determined_enter_frontal"
+      frames: 167
+
+    anim_320_high_standing_determined_gesture_door_knock:
+      animation: "high_standing_determined_gesture_door_knock"
+      frames: 110
+
+    anim_6937_high_standing_aggressive_turn90_right:
+      animation: "high_standing_aggressive_turn90_right"
+      frames: 125
+
+    anim_6923_high_standing_aggressive_gesture_left_hand_flick_1:
+      animation: "high_standing_aggressive_gesture_left_hand_flick_1"
+      frames: 78
+
+    anim_6915_high_standing_aggressive_enter_frontal:
+      animation: "high_standing_aggressive_enter_frontal"
+      frames: 177
+
+    anim_4953_man_fistfight_idle:
+      animation: "man_fistfight_idle"
+      frames: 358
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2120_High_Standing_Aggressive:
+      name: "Standing"
+      emotional_state: "Aggressive"
+      status: "High"
+      idle_anim: "high_standing_aggressive_idle"
+
+    pose_32_q705_geralt_standing_leaning_determined_idle:
+      name: "691"
+      idle_anim: "q705_geralt_standing_leaning_determined_idle"
+
+    pose_81_q702_regis_sitting_relaxed_idle:
+      name: "500"
+      idle_anim: "q702_regis_sitting_relaxed_idle"
+
+  cameras:
+    cam_1_shot1:
+      fov: 40.0
+      transform:
+        pos: [ 17.4093322754, -14.3733520508, 1.8696022034 ]
+        rot: [ 0.0, 347.3050231934, 351.9769287109 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_shot3_band:
+      fov: 30.0
+      transform:
+        pos: [ 16.2073059082, -11.5069580078, 1.8696022034 ]
+        rot: [ 0.0, 352.8600158691, 280.5868530273 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_shot4_ger:
+      fov: 30.0
+      transform:
+        pos: [ 21.1775817871, -10.5593872070, 1.8696022034 ]
+        rot: [ 0.0, 354.1250305176, 96.4469604492 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.9186413288, 5.9186410904 ]
+        focus: [ 3.4186413288, 4.4186410904 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_shot6:
+      fov: 40.0
+      transform:
+        pos: [ 17.1391906738, -8.6999511719, 1.8196029663 ]
+        rot: [ 0.0, 349.5050354004, 242.3317565918 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.9186413288, 5.9186410904 ]
+        focus: [ 3.4186413288, 4.4186410904 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_8_shot7_ger:
+      fov: 20.0
+      transform:
+        pos: [ 22.1250915527, -9.5369873047, 1.7696037292 ]
+        rot: [ 0.0, 357.1500244141, 121.8271484375 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.3056216240, 5.3056216240 ]
+        focus: [ 2.8056216240, 3.8056216240 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_shot8_bandit:
+      fov: 20.0
+      transform:
+        pos: [ 18.6792297363, -10.3688964844, 1.8196029663 ]
+        rot: [ 0.0, 356.2150268555, 264.3870849609 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7354090214, 4.7354087830 ]
+        focus: [ 2.2354090214, 3.2354090214 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_shot9_to_fistfight:
+      fov: 35.0
+      transform:
+        pos: [ 18.4335021973, -10.3170166016, 1.6196060181 ]
+        rot: [ 0.0, 353.6300354004, 287.2672119141 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.9186413288, 5.9186410904 ]
+        focus: [ 3.4186413288, 4.4186410904 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 755
+
+  placement: "ntr_bob_orphscenepoint_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -291.8728637695, -992.0385131836, 41.5070190430 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      fat_bandit:
+        repo: "fat_bandit"
+        by_voicetag: false
+        appearance: "bob_thug_lvl2_03"
+        tags: [ "ntr_fat_bandit" ]
+
+      bandit_2:
+        repo: "bandit_2"
+        by_voicetag: false
+        appearance: "bob_thug_lvl1_06"
+        tags: [ "ntr_bandit_2" ]
+
+      bandit_3:
+        repo: "bandit_3"
+        by_voicetag: false
+        appearance: "bob_thug_lvl1_10"
+        tags: [ "ntr_bandit_3" ]
+
+    cameras:
+      cam_1_shot1:
+        repo: "cam_1_shot1"
+
+      cam_3_shot3_band:
+        repo: "cam_3_shot3_band"
+
+      cam_4_shot4_ger:
+        repo: "cam_4_shot4_ger"
+
+      cam_7_shot6:
+        repo: "cam_7_shot6"
+
+      cam_8_shot7_ger:
+        repo: "cam_8_shot7_ger"
+
+      cam_9_shot8_bandit:
+        repo: "cam_9_shot8_bandit"
+
+      cam_10_shot9_to_fistfight:
+        repo: "cam_10_shot9_to_fistfight"
+
+    animations:
+      geralt_high_standing_determined_enter_frontal:
+        actor: "geralt"
+        repo: "anim_6981_high_standing_determined_enter_frontal"
+        #duration: 5.5666666031
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_door_knock:
+        actor: "geralt"
+        repo: "anim_320_high_standing_determined_gesture_door_knock"
+        #duration: 3.6666667461
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      fat_bandit_high_standing_aggressive_turn90_right:
+        actor: "fat_bandit"
+        repo: "anim_6937_high_standing_aggressive_turn90_right"
+        #duration: 4.1666665077
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      fat_bandit_high_standing_aggressive_gesture_left_hand_flick_1:
+        actor: "fat_bandit"
+        repo: "anim_6923_high_standing_aggressive_gesture_left_hand_flick_1"
+        #duration: 2.5999999046
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_aggressive_enter_frontal:
+        actor: "geralt"
+        repo: "anim_6915_high_standing_aggressive_enter_frontal"
+        #duration: 5.9000000954
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      bandit_2_man_fistfight_idle:
+        actor: "bandit_2"
+        repo: "anim_4953_man_fistfight_idle"
+        #duration: 11.9333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      bandit_3_man_fistfight_idle:
+        actor: "bandit_3"
+        repo: "anim_4953_man_fistfight_idle"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      fat_bandit_High_Standing_Aggressive:
+        actor: "fat_bandit"
+        repo: "pose_2120_High_Standing_Aggressive"
+
+      bandit_2_q705_geralt_standing_leaning_determined_idle:
+        actor: "bandit_2"
+        repo: "pose_32_q705_geralt_standing_leaning_determined_idle"
+
+      bandit_3_q702_regis_sitting_relaxed_idle:
+        actor: "bandit_3"
+        repo: "pose_81_q702_regis_sitting_relaxed_idle"
+
+      geralt_High_Standing_Aggressive:
+        actor: "geralt"
+        repo: "pose_2120_High_Standing_Aggressive"
+
+storyboard:
+  defaults:
+    placement:
+      bandit_2: [[ 23.0559997559, -9.8716430664, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+      bandit_3: [[ 21.8456726074, -8.5714721680, 0.0667266846 ], [ 0.0, 0.0, 90.1999435425 ]]
+      geralt: [[ 17.1320190430, -11.6549682617, 0.0696029663 ], [ 0.0, 0.0, 297.5199890137 ]]
+      fat_bandit: [[ 19.8524475098, -10.3160400391, 0.0608367920 ], [ 0.0, 0.0, 122.3200607300 ]]
+
+    actor.pose:
+      geralt: geralt_high_standing_determined_idle
+      fat_bandit: fat_bandit_High_Standing_Aggressive
+      bandit_2: bandit_2_q705_geralt_standing_leaning_determined_idle
+      bandit_3: bandit_3_q702_regis_sitting_relaxed_idle
+
+  section_storyboard_ui1:
+    # shot shot1
+    shot_1:
+      - actor.placement: [0.0, geralt, [ 17.6568908691, -11.5568237305, 0.0696029663 ], [ 0.0, 0.0, 297.5199890137 ]]
+      - cam: [0.0, cam_1_shot1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_enter_frontal]
+          clipfront: 1.0
+
+    # shot shot2
+    shot_2:
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_7030_high_standing_determined_gesture_knock_door]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_2_back:
+      - actor.anim:
+          .@pos: [0.0, anim_332_high_standing_determined_step_back_casual]
+          actor: geralt
+          clipend: 4.0
+          blendin: 0.3
+          blendout: 0.0
+
+  section_storyboard_ui2:
+    shot_3:
+      - cam: [0.0, cam_3_shot3_band]
+
+    # shot shot4 ger
+  section_choice_who:
+    CHOICE_1:
+      - cam: [0.0, cam_4_shot4_ger]
+
+  section_traveler:
+    shot_traveler_ger:
+      - cam: [0.0, cam_4_shot4_ger]
+    shot_traveler_band:
+      - cam: [0.0, cam_3_shot3_band]
+
+  section_vampire:
+    shot_vampire_ger:
+      - cam: [0.0, cam_4_shot4_ger]
+    shot_vampire_band:
+      - cam: [0.0, cam_3_shot3_band]
+
+  section_witcher:
+    shot_witcher_ger:
+      - cam: [0.0, cam_4_shot4_ger]
+    shot_witcher_band:
+      - cam: [0.0, cam_3_shot3_band]
+
+  section_storyboard_ui3:
+    # shot shot5 gesture enter
+    shot_5:
+      - cam: [0.0, cam_3_shot3_band]
+      - actor.placement.start: [0.2, fat_bandit, [ 19.8524475098, -10.3160400391, 0.0608367920 ], [ 0.0, 0.0, 122.3200607300 ], smooth]
+      - actor.placement.end: [0.8, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ], smooth]
+      - actor.anim.additive:
+          .@pos: [0.0, anim_332_high_standing_determined_step_back_casual]
+          actor: fat_bandit
+          clipend: 3.5
+          blendin: 0.0
+          blendout: 0.0
+      - actor.anim.additive: [0.0, fat_bandit_high_standing_aggressive_gesture_left_hand_flick_1]
+
+    # shot shot6
+    shot_7:
+      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
+      #- actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 73.4800338745 ]]
+      - cam: [0.0, cam_7_shot6]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_aggressive_enter_frontal]
+          clipfront: 1.0
+
+  section_storyboard_ui4:
+    # shot shot7 ger
+    shot_d1_ger:
+      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
+      - actor.pose: [0.0, geralt_High_Standing_Aggressive]
+      - cam: [0.1, cam_8_shot7_ger]
+
+    # shot shot8 bandit
+    shot_d1_band:
+      - cam: [0.0, cam_9_shot8_bandit]
+
+    shot_d2_ger:
+      - cam: [0.0, cam_8_shot7_ger]
+
+    shot_d2_band:
+      - cam: [0.0, cam_9_shot8_bandit]
+
+    shot_d3_ger:
+      - cam: [0.0, cam_8_shot7_ger]
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_6932_high_standing_aggressive_to_high_standing_determined]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.pose: [0.5, geralt_high_standing_determined_idle]
+
+    shot_d3_band:
+      - cam: [0.0, cam_9_shot8_bandit]
+
+  section_choice_details:
+    CHOICE_1:
+      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
+      - cam: [0.0, cam_8_shot7_ger]
+
+  section_why_children:
+    shot_d4_ger:
+      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
+      - cam: [0.0, cam_8_shot7_ger]
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
+
+    shot_d4_band:
+      - cam: [0.0, cam_9_shot8_bandit]
+
+  section_orianna:
+    shot_d5_ger:
+      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
+      - cam: [0.0, cam_8_shot7_ger]
+
+    shot_d5_band:
+      - cam: [0.0, cam_9_shot8_bandit]
+
+  section_fight:
+    shot_d6_ger:
+      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
+      - cam: [0.0, cam_8_shot7_ger]
+
+    shot_d6_band:
+      - cam: [0.0, cam_9_shot8_bandit]
+      - actor.anim.mimic:
+          actor: fat_bandit
+          .@pos: [0.0, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
+
+    # shot shot9 to fistfight
+    shot_10:
+      - actor.placement: [0.0, bandit_3, [ 21.6425781250, -8.6456909180, 0.0658645630 ], [ 0.0, 0.0, 153.6699829102 ]]
+      - actor.placement: [0.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+      - cam: [0.0, cam_10_shot9_to_fistfight]
+      #- cam.blend.togame: [0.4, cam_10_shot9_to_fistfight]
+      #- actor.gamestate: [0.4, geralt]
+      - actor.anim: 
+          .@pos: [0.0, bandit_2_man_fistfight_idle]
+          blendin: 0.7
+      - actor.anim: 
+          .@pos: [0.0, bandit_3_man_fistfight_idle]
+          blendin: 0.7
+
+  section_leader:
+    shot_d7_ger:
+      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
+      - cam: [0.0, cam_8_shot7_ger]
+      #- actor.anim:
+      #   actor: geralt
+      #    .@pos: [0.0, anim_6932_high_standing_aggressive_to_high_standing_determined]
+      #    blendin: 0.3
+      #    blendout: 0.3
+      - actor.anim.additive:
+          actor: geralt
+          .@pos: [0.0, anim_7011_high_standing_determined_gesture_do_it]
+
+    shot_d7_band:
+      - cam: [0.0, cam_9_shot8_bandit]
+      ### Crutch!
+      - actor.placement: [0.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+    
+    shot_ger_togame:
+      - actor.gamestate: [0.0, geralt]
+      #- actor.gamestate: [0.0, fat_bandit]
+      #- actor.gamestate: [0.0, bandit_2]
+      #- actor.gamestate: [0.0, bandit_3]
+      - cam.blend.togame: [0.0, cam_9_shot8_bandit]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "fat_bandit", "bandit_2", "bandit_3" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui1
+
+  section_storyboard_ui1:
+    # shot shot1
+    - CUE: shot_1
+    # (longest) anim: high_standing_determined_enter_frontal
+    - PAUSE: 4.5666666031
+    # shot shot2
+    - CUE: shot_2
+    # (longest) anim: high_standing_determined_gesture_door_knock
+    - PAUSE: 3.6666667461
+    - CUE: shot_2_back
+    # (longest) anim: high_standing_determined_gesture_door_knock
+    - PAUSE: 3.0
+    # shot shot3 band
+    - NEXT: script_open_door
+
+  script_open_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+          - tag: "CNAME_q704_oriana_feeding_room"
+          - newState: "EDQS_Open"
+          - smoooth: true
+         # - dontBlockInCombat: false
+    - NEXT: section_storyboard_ui2
+
+  section_storyboard_ui2:
+    #- CUE: shot_3_init
+    #- PAUSE: 1.0
+    - CUE: shot_3
+    - PAUSE: 2.5
+    - fat_bandit: "Who the foek are you?!"
+    - NEXT: section_choice_who
+
+  section_choice_who:
+    - CHOICE:
+      - choice: ["A witcher", section_witcher]
+        emphasize: true
+      - choice: ["Just a traveler", section_traveler]
+        emphasize: true
+      - choice: ["Vampire of Rivia", section_vampire]
+        emphasize: true
+
+  section_vampire:
+    - CUE: shot_vampire_ger
+    - geralt: "Me? Drifter, stranger, mutant... Sometimes even by my name. Vampire of Rivia."
+    - CUE: shot_vampire_band
+    - fat_bandit: "Very funny, cretin."
+    - NEXT: section_storyboard_ui3
+
+  section_traveler:
+    - CUE: shot_traveler_ger
+    - geralt: "0000393630|Just a traveler. Happened to be passing through."
+    - CUE: shot_traveler_band
+    - fat_bandit: "Just a traveler you say.. And just two swords behind? Looks like you can swing them well."
+    - NEXT: section_storyboard_ui3
+
+  section_witcher:
+    - CUE: shot_witcher_ger
+    - geralt: "0001094310|Geralt of Rivia. Witcher."
+    - CUE: shot_witcher_band
+    - fat_bandit: "Witcher? So you know how to track down somebody, right?"
+    - NEXT: section_storyboard_ui3
+
+  section_storyboard_ui3:
+    # shot shot5 gesture enter
+    - fat_bandit: "Well, get in here, will talk with you."
+    - CUE: shot_5
+    # (longest) anim: high_standing_aggressive_turn90_right
+    - PAUSE: 3.5
+    - CUE: shot_7
+    # (longest) anim: high_standing_aggressive_enter_frontal
+    - PAUSE: 4.5666666031
+    # shot shot7 ger
+    - NEXT: script_close_door
+
+  script_close_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+          - tag: "CNAME_q704_oriana_feeding_room"
+          - newState: "EDQS_Close"
+          - smoooth: true
+          - dontBlockInCombat: false
+    - NEXT: section_storyboard_ui4
+
+  section_storyboard_ui4:
+    - CUE: shot_d1_ger
+    - geralt: "I suppose to find red-haired woman here, not bandits."
+    # shot shot8 bandit
+    - CUE: shot_d1_band
+    - fat_bandit: "That's interesting. Because we supposed to meet her too."
+    - CUE: shot_d2_ger
+    - geralt: "Why are you looking for her?"
+    - CUE: shot_d2_band
+    - fat_bandit: "Our boss has questions for her about orphanage and children."
+    - CUE: shot_d3_ger
+    - geralt: "The orphanage was attacked by vampires, and almost none of the children survived."
+    - CUE: shot_d3_band
+    - fat_bandit: "Almost - nice word. So someone of them survived. And we know for sure that Orianna herself is alive."
+    - fat_bandit: "But she stubbornly doesn't want to come here. So there's something wrong here. We are few, and we guard the places where she used to be. Perhaps you could help us, and then our leader Baron Edward will give you a decent reward."
+    - NEXT: section_choice_details
+
+  section_choice_details:
+    - CHOICE:
+      - choice: ["Why are you interested in her children?", section_why_children]
+        condition: [ NTR_scenefact_whychildren, "!=", 1 ]
+        #emphasize: true
+      - choice: ["I'll ask again, polite like, and you'll answer, just as politely", section_fight]
+        condition: [ NTR_scenefact_whychildren, "=", 1 ]
+        emphasize: true
+      - choice: ["Orianna will kill you", section_orianna]
+        #emphasize: true
+      - choice: ["It's a deal", section_leader]
+        emphasize: true
+
+  section_why_children:
+    - CUE: shot_d4_ger
+    - geralt: "Why are you interested in her children?"
+    - CUE: shot_d4_band
+    - fat_bandit: "It's no concern of yours."
+    - NEXT: script_set_whychildren
+
+  script_set_whychildren:
+        - SCRIPT:
+            function: AddFact_S
+            parameter:
+                - factName: NTR_scenefact_whychildren
+                - value: 1
+                - validFor: 0
+        - NEXT: section_choice_details
+
+  section_orianna:
+    - CUE: shot_d5_ger
+    - geralt: "Orianna will kill you. She is not a human, but a vampire. Only I can help. I need every last bit of information available."
+    - CUE: shot_d5_band
+    - fat_bandit: "Do you think we believe first fella? Talk with our leader about it."
+    - NEXT: section_choice_details
+
+  section_fight:
+    - CUE: shot_d6_ger
+    - geralt: "0001117735|I'll ask again, polite like, and you'll answer, just as politely."
+    - CUE: shot_d6_band
+    - fat_bandit: "Look at that - vagrant mutt's givin' us orders… Needs to know his place! Fuck 'im up!"
+    - CUE: shot_10
+    - bandit_2: "Three against one - you're dead already."
+    - NEXT: section_exit_fistfight
+
+  section_leader:
+    - CUE: shot_d7_ger
+    - geralt: "It's a deal. Where can I find him?"
+    - CUE: shot_d7_band
+    - fat_bandit: "We have pitched camp near <place>..."
+    - CUE: shot_ger_togame
+    - geralt: "0001003998|See what I can do."
+    - NEXT: section_exit_normal
+    #- geralt: "Oughta have a chat with this Baron."
+
+  section_exit_fistfight:
+    - CAMERA_BLEND: 1.0
+    - OUTPUT: fistfight
+    - EXIT
+
+  section_exit_normal:
+    - OUTPUT: normal
+    - EXIT
