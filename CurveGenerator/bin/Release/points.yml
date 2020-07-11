@@ -1,0 +1,15 @@
+      scent_test2: 
+        template: "CGameplayEntity:quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+        pos: [ -404.7073669434, -1446.6956298828, 87.2468414307 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        tags: [ "ntr_orianna_scent_t" ]
+
+      alfred_corpse: 
+        template: "CEntity:dlc\\bob\\data\\environment\\decorations\\corpses\\human corpses\\bob_raider_lvl1_corpse\\raider_lvl1_corpse_01.w2ent"
+        pos: [ -410.8599853516, -1437.3299560547, 87.0290985107 ]
+        rot: [ 0.0, 0.0, 171.3800506592 ]
+
+      blood_main: 
+        template: "CNewNPC:fx\\blood\\blood_decal\\blood_decal.w2ent"
+        pos: [ -410.7269897461, -1437.4035644531, 87.4016113281 ]
+        rot: [ 0.0, 0.0, 0.0 ]
