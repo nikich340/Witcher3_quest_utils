@@ -29,6 +29,11 @@ struct vec3 {
 		y = a.y;
 		z = a.z;
 	}
+	vec3(double xx, double yy, double zz) {
+		x = xx;
+		y = yy;
+		z = zz;
+	}
 	vec3() {
 		x = 0.0;
 		y = 0.0;
@@ -109,8 +114,10 @@ const int rveTypeL = 3, rveTypeR = 3;
 const float scaleX = 1.0, scaleY = 1.0, scaleZ = 1.0;
 YAML::Node root;
 vector<vec3> poss, rots;
-string tmp;
+vec3 enginePos, engineRot;
+string filePath, filePathOut, tmp;
 int step = 0;
+
 
 string ps() {
     string ret = "";
@@ -178,12 +185,12 @@ int to_int(string s) {
     while (pos < s.length() && isdigit(s[pos])) {
         ++cnt;
         if (cnt > 9)
-            return - INT_MAX;
+            return INT_MIN;
         ret = ret * 10 + (s[pos] - '0');
         ++pos;
     }
     if (!cnt)
-        return - INT_MAX;
+        return INT_MIN;
     return (positive ? ret : -ret);
 }
 double to_double(string s) {
@@ -279,97 +286,35 @@ pair<int, int> to_pairInt(string s) {
 
     return {ret, ret2};
 }
-/*bool loadSceneYml() {
-	root = YAML::LoadFile(workPath + "/" + fileName);
-	if (root["repository"]["cameras"]) {
-        cameras = root["repository"]["cameras"];
-        for(YAML::const_iterator it = cameras.begin();it != cameras.end(); ++it) {
-            //cout << "CamName: [" << it->first.as<string>() << "]\n";
-            cameraNames.insert(it->first.as<string>());
-        }
-    } else {
-    	showError("No cameras in repository found!");
-    	return false;
-    }
-    if (root["storyboard"]) {
-        storyboard = root["storyboard"];
-        for(YAML::const_iterator it = storyboard.begin();it != storyboard.end(); ++it) {
-            tmp = it->first.as<string>();
-            if (tmp.find("section_") != NF) {
-                sectionNames.pb(it->first.as<string>());
-            }
-        }
-    } else {
-    	showError("No storyboard found!");
-    	return false;
-    }
-    return true;
-}
-*/
-/*void loadShotData() {
-    labelShot = shotNames[shotNum - 1];
-    shot = storyboard[ sectionNames[sectionNum - 1] ][ shotNames[shotNum - 1] ];
-
-    upn(i, 0, (int) shot.size() - 1) {
-        YAML::Node tempNode = shot[i];
-        for(YAML::const_iterator it = tempNode.begin();it != tempNode.end(); ++it) {
-            tmp = it->first.as<string>();
-            if (tmp.find("cam") != NF) {
-                YAML::Node tempCamSeq = it->second;
-                if (!tempCamSeq.IsSequence() || tempCamSeq.size() < 2) {
-                    showError("WRONG (or advanced..) CAMERA DEFINITION found! Skipped");
-                } else {
-                    tmp = tempCamSeq[1].as<string>();
-                    if (cameraNames.find(tmp) == cameraNames.end()) {
-                        showError("Camera [" + tmp + "] NOT FOUND IN REPOSITORY! Skipped");
-                    } else {
-                        shotCameras.pb({tempCamSeq[0].as<double>(), tmp});
-                    }
-                }
-            }
-            if (tmp.find("actor.placement") != NF || tmp.find("prop.placement") != NF) {
-                YAML::Node tempPlacementSeq = it->second;
-                if (!tempPlacementSeq.IsSequence() || tempPlacementSeq.size() < 4) {
-                    showError("WRONG (or advanced..) PLACEMENT DEFINITION found! Skipped");
-                } else {
-                    double timing = tempPlacementSeq[0].as<double>();
-                    string entity = tempPlacementSeq[1].as<string>();
-                    vec3 pos = tempPlacementSeq[2].as<vec3>();
-                    if (timing < 0.0 || timing > 1.0) {
-                        showError("WRONG TIMING (<0.0 or >1.0) PLACEMENT DEFINITION found! Skipped");
-                        continue;
-                    }
-                    entityPositions[entity].pb({timing, pos});
-                    if (entityPositionLast.count(entity) < 1 || timing > entityPositionLast[entity].X) {
-                        entityPositionLast[entity] = {timing, pos};
-                    }
-                }
-            }
-        }
-    }
-}*/
 void loadPoints() {
-    root = YAML::LoadFile("points.yml");
+    root = YAML::LoadFile(filePath);
     for(YAML::const_iterator it = root.begin();it != root.end(); ++it) {
         tmp = it->first.as<string>();
+        if (tmp == "engine_transform") {
+            enginePos = root[tmp]["pos"].as<vec3>();
+            if (root[tmp]["rot"]) {
+                engineRot = root[tmp]["rot"].as<vec3>();
+            }
+            continue;
+        }
         if (root[tmp]["pos"]) {
             vec3 vecTmp = root[tmp]["pos"].as<vec3>();
-            coutColor("Loaded pos for point " + tmp + "!\n", 6);
+            coutColor("Load pos for point \"" + tmp + "\"!\n", 6);
             poss.pb(vecTmp);
             if (root[tmp]["rot"]) {
                 vec3 vecTmp = root[tmp]["rot"].as<vec3>();
-                coutColor("Loaded rot for point " + tmp + "!\n", 6);
+                coutColor("    Load rot for point \"" + tmp + "\"!\n", 6);
                 rots.pb(vecTmp);
             } else {
                 rots.pb(vec3());
             }
         } else {
-            showError("Missing pos for " + tmp + ", skipped!\n");
+            showError("Missing pos for point \"" + tmp + "\", skipped!\n");
         }
     }
 }
 void printCurve() {
-    ofstream out("curve.yml");
+    ofstream out(filePathOut);
     out.precision(3);
     out << "curve:\n";
     ++step;
@@ -390,7 +335,7 @@ void printCurve() {
             ++step;
             out << ps() << "me: " << (i * 1.0) / (double) (poss.size() - 1) << el;
             out << ps() << "ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]\n";
-            out << ps() << "lue: " << poss[i].x << el;
+            out << ps() << "lue: " << poss[i].x - enginePos.x << el;
             out << ps() << "rveTypeL: " << rveTypeL << el;
             out << ps() << "rveTypeL: " << rveTypeR << el;
             --step;
@@ -413,7 +358,7 @@ void printCurve() {
             ++step;
             out << ps() << "me: " << (i * 1.0) / (double) (poss.size() - 1) << el;
             out << ps() << "ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]\n";
-            out << ps() << "lue: " << poss[i].y << el;
+            out << ps() << "lue: " << poss[i].y - enginePos.y << el;
             out << ps() << "rveTypeL: " << rveTypeL << el;
             out << ps() << "rveTypeL: " << rveTypeR << el;
             --step;
@@ -436,7 +381,7 @@ void printCurve() {
             ++step;
             out << ps() << "me: " << (i * 1.0) / (double) (poss.size() - 1) << el;
             out << ps() << "ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]\n";
-            out << ps() << "lue: " << poss[i].z << el;
+            out << ps() << "lue: " << poss[i].z - enginePos.z << el;
             out << ps() << "rveTypeL: " << rveTypeL << el;
             out << ps() << "rveTypeL: " << rveTypeR << el;
             --step;
@@ -459,7 +404,7 @@ void printCurve() {
             ++step;
             out << ps() << "me: " << (i * 1.0) / (double) (poss.size() - 1) << el;
             out << ps() << "ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]\n";
-            out << ps() << "lue: " << rots[i].x << el;
+            out << ps() << "lue: " << rots[i].x - engineRot.x << el;
             out << ps() << "rveTypeL: " << rveTypeL << el;
             out << ps() << "rveTypeL: " << rveTypeR << el;
             --step;
@@ -482,7 +427,7 @@ void printCurve() {
             ++step;
             out << ps() << "me: " << (i * 1.0) / (double) (poss.size() - 1) << el;
             out << ps() << "ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]\n";
-            out << ps() << "lue: " << rots[i].y << el;
+            out << ps() << "lue: " << rots[i].y - engineRot.y << el;
             out << ps() << "rveTypeL: " << rveTypeL << el;
             out << ps() << "rveTypeL: " << rveTypeR << el;
             --step;
@@ -505,7 +450,7 @@ void printCurve() {
             ++step;
             out << ps() << "me: " << (i * 1.0) / (double) (poss.size() - 1) << el;
             out << ps() << "ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]\n";
-            out << ps() << "lue: " << rots[i].z << el;
+            out << ps() << "lue: " << rots[i].z - engineRot.z << el;
             out << ps() << "rveTypeL: " << rveTypeL << el;
             out << ps() << "rveTypeL: " << rveTypeR << el;
             --step;
@@ -588,16 +533,48 @@ void printCurve() {
     --step;
     out << ps() << "initialParentTransform:\n";
     ++step;
-    out << ps() << "pos: [ 0.0, 0.0, 0.0 ]\n";
+    out << ps() << "pos: [ " << enginePos.x << ", " << enginePos.y << ", " << enginePos.z << " ]\n";
+    if (abs(engineRot.x + engineRot.y + engineRot.z) > 0.001f)
+        out << ps() << "rot: [ " << engineRot.x << ", " << engineRot.y << ", " << engineRot.z << " ]\n";
     --step;
-    out << ps() << "hasInitialParentTransform: false\n";
+    out << ps() << "hasInitialParentTransform: " << "true" << "\n";
 
     out << el;
     out.close();
-    coutColor("Done!\n", 2);
+    if (abs(enginePos.x + enginePos.y + enginePos.z) <= 0.001f)
+        showError("\nengine_tranform entity not defined, Curve will have wrong placement in game!\n");
+    else
+        coutColor("\nset initialParentTransform to [ " + to_string(enginePos.x) + ", " + to_string(enginePos.y) + ", " + to_string(enginePos.z) + "]\n", 2);
+    coutColor("\nDone!\n", 2);
 }
-int main()
+int main(int argc, char** argv)
 {
+    if (argc > 1) {
+        int newStep = to_int(string(argv[1]));
+        if (newStep == INT_MIN) {
+            coutColor("Usage: CurveGenerator.exe [init_step_size] [path_to_file]\n", 6);
+            coutColor("             Example: CurveGenerator.exe 7 myfile.yml\n", 6);
+            system("pause");
+            return -1;
+        } else {
+            step = newStep;
+            coutColor("Set init step size to: " + to_string(step) + "\n", 2);
+        }
+    } else {
+        coutColor("Using default init step size: " + to_string(step) + "\n", 6);
+    }
+    if (argc > 2) {
+        filePath = string(argv[2]);
+        coutColor("Set file path to: " + filePath + "\n", 2);
+    } else {
+        filePath = "points.yml";
+        coutColor("Using default file path: " + filePath + "\n", 6);
+    }
+    cout << el;
+
+    filePathOut = "curve.yml";
+    enginePos = vec3(0.0, 0.0, 0.001);
+    engineRot = vec3(0.0, 0.0, 0.0);
     loadPoints();
     printCurve();
     system("pause");
