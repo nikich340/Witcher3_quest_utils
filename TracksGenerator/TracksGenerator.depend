@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1594803736 source:d:\_w3.tools\_git\tracksgenerator\tracksgenerator.cpp
+	<bits/stdc++.h>
+	<dirent.h>
+	<windows.h>
+

@@ -1,0 +1,1608 @@
+      horse_tracks_gen_1:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -300.11279, -1518.16162, 45.40033 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_2:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -299.72144, -1517.27808, 45.14130 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_3:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -299.22855, -1516.41846, 44.90369 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_4:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -298.98416, -1515.52173, 44.67017 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_5:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -298.64887, -1514.60352, 44.39557 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_6:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -298.21207, -1513.70923, 44.13513 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_7:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -297.92221, -1512.80176, 43.87091 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_8:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -297.47473, -1511.95288, 43.60211 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_9:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -297.91162, -1512.84680, 43.87982 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_10:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -298.32440, -1513.63940, 44.13025 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_11:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -297.80331, -1512.82983, 43.86383 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_12:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -297.33337, -1511.95825, 43.58740 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_13:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -297.01096, -1511.08215, 43.32587 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_14:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -296.51425, -1510.30029, 43.02667 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_15:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -296.04422, -1509.42871, 42.72473 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_16:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -295.38885, -1508.77002, 42.40161 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_17:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -294.74695, -1508.06641, 42.09888 ]
+        rot: [ 0.00000, 0.00000, 159.50000 ]
+
+      horse_tracks_gen_18:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -294.07037, -1507.48889, 41.78931 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_19:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -293.19986, -1507.03625, 41.47211 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_20:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -292.54526, -1506.42859, 41.07385 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_21:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -291.91659, -1505.75183, 40.64783 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_22:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -291.45547, -1504.96448, 40.26764 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_23:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -290.66653, -1504.53613, 39.86066 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_24:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -289.88010, -1504.07288, 39.49231 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_25:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -288.97055, -1503.88220, 39.12946 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_26:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -288.13342, -1503.68372, 38.83594 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_27:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -287.28897, -1503.28540, 38.50586 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_28:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -286.36206, -1502.93079, 38.20544 ]
+        rot: [ 0.00000, 0.00000, 137.05989 ]
+
+      horse_tracks_gen_29:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -285.43301, -1502.94544, 38.00397 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_30:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -284.35846, -1503.27026, 37.97150 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_31:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -283.29855, -1503.52271, 37.88507 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_32:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -282.31784, -1503.30920, 37.65302 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_33:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -281.40341, -1503.21484, 37.39026 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_34:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -280.39600, -1503.28223, 37.30054 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_35:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -279.34463, -1503.56653, 37.20587 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_36:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -278.29590, -1503.98694, 37.13605 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_37:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -277.38324, -1504.40478, 37.11987 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_38:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -276.39557, -1504.67200, 37.01221 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_39:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -275.41492, -1504.62231, 36.82269 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_40:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -274.42429, -1504.53003, 36.63995 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_41:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -273.43426, -1504.53687, 36.47406 ]
+        rot: [ 0.00000, 0.00000, 91.07977 ]
+
+      horse_tracks_gen_42:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -272.94244, -1504.63965, 36.39471 ]
+        rot: [ 0.00000, 0.00000, 98.33978 ]
+
+      horse_tracks_gen_43:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -272.31686, -1504.66028, 36.26062 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_44:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -271.32730, -1504.69189, 36.06226 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_45:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -270.33362, -1504.59131, 35.87756 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_46:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -269.30905, -1504.55786, 35.69904 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_47:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -268.25357, -1504.59143, 35.52661 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_48:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -267.22690, -1504.49194, 35.33655 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_49:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -266.17773, -1504.72339, 35.19855 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_50:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -265.09244, -1504.85681, 35.03790 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_51:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -264.14535, -1505.18396, 34.93329 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_52:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -263.05649, -1505.33350, 34.78192 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_53:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -262.00357, -1505.41309, 34.64703 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_54:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -261.01150, -1505.42188, 34.58856 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_55:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -259.93048, -1505.54541, 34.52002 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_56:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -258.91483, -1505.66785, 34.53381 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_57:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -257.87027, -1505.82690, 34.57593 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_58:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -256.93982, -1506.10510, 34.68701 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_59:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -255.93597, -1506.32568, 34.76709 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_60:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -254.92830, -1506.51355, 34.83057 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_61:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -253.94942, -1506.66492, 34.93603 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_62:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -252.93817, -1506.81873, 35.01898 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_63:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -251.86282, -1506.99072, 35.13098 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_64:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -250.78226, -1507.13000, 35.19836 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_65:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -249.67432, -1507.30688, 35.23914 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_66:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -248.71234, -1507.56079, 35.31030 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_67:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -247.68518, -1507.82519, 35.39972 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_68:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -246.67499, -1507.98657, 35.45923 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_69:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -245.59966, -1508.15845, 35.52539 ]
+        rot: [ 0.00000, 0.00000, 93.71978 ]
+
+      horse_tracks_gen_70:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -244.72464, -1507.86890, 35.57483 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_71:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -243.85172, -1507.28503, 35.59692 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_72:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -242.89984, -1506.95483, 35.70312 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_73:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -242.05913, -1506.36365, 35.79950 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_74:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -241.24695, -1505.90149, 35.52130 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_75:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -240.46701, -1505.43225, 35.65454 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_76:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -239.77881, -1504.82385, 35.36279 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_77:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -238.85214, -1504.29858, 35.27075 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_78:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -237.79263, -1504.04724, 35.24634 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_79:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -236.88281, -1503.59387, 35.08173 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_80:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -235.95775, -1503.20508, 34.89551 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_81:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -235.02506, -1502.84802, 34.84393 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_82:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -234.26440, -1502.49768, 35.01410 ]
+        rot: [ 0.00000, 0.00000, 137.27982 ]
+
+      horse_tracks_gen_83:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -233.30713, -1502.64758, 35.36603 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_84:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -232.35223, -1502.82446, 35.65210 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_85:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -231.36269, -1502.86987, 35.92786 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_86:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -230.37897, -1503.37732, 36.12836 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_87:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -229.39690, -1504.01648, 36.36212 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_88:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -228.40820, -1504.12805, 36.56317 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_89:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -227.47813, -1504.38354, 36.79040 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_90:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -226.55324, -1504.67981, 36.96258 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_91:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -225.54468, -1504.85486, 37.14417 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_92:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -224.55048, -1504.89453, 37.31195 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_93:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -223.48636, -1504.91077, 37.49152 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_94:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -222.49216, -1504.95056, 37.65930 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_95:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -221.46986, -1505.02734, 37.82812 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_96:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -220.48093, -1504.86633, 37.99866 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_97:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -219.53233, -1504.77405, 38.18012 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_98:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -218.49327, -1504.96521, 38.36298 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_99:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -217.57686, -1505.30481, 38.55469 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_100:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -216.49237, -1505.63648, 38.75854 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_101:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -215.40582, -1505.73474, 38.99530 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_102:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -214.40724, -1505.75293, 39.21594 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_103:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -213.41365, -1505.80396, 39.40796 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_104:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -212.37257, -1505.98047, 39.55078 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_105:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -211.26712, -1506.17236, 39.59930 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_106:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -210.11786, -1506.30469, 39.69653 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_107:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -209.14249, -1506.47412, 39.85284 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_108:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -208.08647, -1506.75781, 39.98492 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_109:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -207.12924, -1507.03174, 40.04865 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_110:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -206.14867, -1507.35205, 40.15478 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_111:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -205.05852, -1507.62585, 40.08038 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_112:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -204.03493, -1507.71899, 40.01215 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_113:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -203.05131, -1507.86816, 39.94818 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_114:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -202.07037, -1508.03516, 39.98956 ]
+        rot: [ 0.00000, 0.00000, 102.51978 ]
+
+      horse_tracks_gen_115:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -201.04576, -1508.04260, 40.18530 ]
+        rot: [ 0.00000, 0.00000, 100.53977 ]
+
+      horse_tracks_gen_116:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -200.06483, -1508.20935, 40.36987 ]
+        rot: [ 0.00000, 0.00000, 100.53977 ]
+
+      horse_tracks_gen_117:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -199.20305, -1508.68579, 40.59479 ]
+        rot: [ 0.00000, 0.00000, 100.53977 ]
+
+      horse_tracks_gen_118:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -198.30945, -1509.17090, 40.72552 ]
+        rot: [ 0.00000, 0.00000, 100.53977 ]
+
+      horse_tracks_gen_119:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -197.37530, -1509.63281, 40.73401 ]
+        rot: [ 0.00000, 0.00000, 100.53977 ]
+
+      horse_tracks_gen_120:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -196.37198, -1510.08887, 40.70319 ]
+        rot: [ 0.00000, 0.00000, 100.53977 ]
+
+      horse_tracks_gen_121:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -195.39772, -1510.40295, 40.62433 ]
+        rot: [ 0.00000, 0.00000, 100.53977 ]
+
+      horse_tracks_gen_122:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -194.40921, -1510.53601, 40.52057 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_123:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -193.42648, -1510.69177, 40.41138 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_124:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -192.41867, -1510.75147, 40.24951 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_125:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -191.44531, -1510.78857, 40.05743 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_126:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -190.47461, -1510.81567, 39.84570 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_127:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -189.57556, -1511.19861, 39.68988 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_128:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -188.66351, -1511.51685, 39.54785 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_129:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -187.70609, -1511.77686, 39.46252 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_130:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -186.51585, -1512.21838, 39.41711 ]
+        rot: [ 0.00000, 0.00000, 69.73965 ]
+
+      horse_tracks_gen_131:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -185.53719, -1512.33289, 39.36853 ]
+        rot: [ 0.00000, 0.00000, 104.71967 ]
+
+      horse_tracks_gen_132:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -184.47922, -1512.02649, 39.35699 ]
+        rot: [ 0.00000, 0.00000, 104.71967 ]
+
+      horse_tracks_gen_133:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -183.68919, -1511.45642, 39.33051 ]
+        rot: [ 0.00000, 0.00000, 104.71967 ]
+
+      horse_tracks_gen_134:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -182.78018, -1510.84131, 39.10767 ]
+        rot: [ 0.00000, 0.00000, 104.71967 ]
+
+      horse_tracks_gen_135:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -181.87402, -1510.40967, 38.82214 ]
+        rot: [ 0.00000, 0.00000, 104.71967 ]
+
+      horse_tracks_gen_136:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -180.92233, -1510.13635, 38.54877 ]
+        rot: [ 0.00000, 0.00000, 104.71967 ]
+
+      horse_tracks_gen_137:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -180.01621, -1509.70483, 38.24463 ]
+        rot: [ 0.00000, 0.00000, 104.71967 ]
+
+      horse_tracks_gen_138:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -179.07333, -1509.66125, 37.98468 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_139:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -178.11003, -1509.49646, 37.69812 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_140:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -177.26047, -1508.95093, 37.38751 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_141:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -176.44162, -1508.41711, 37.09540 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_142:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -175.77519, -1507.76624, 36.79846 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_143:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -174.89618, -1507.38635, 36.50903 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_144:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -173.99310, -1507.06812, 36.21411 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_145:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -173.09935, -1506.80029, 35.98395 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_146:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -172.36212, -1506.19727, 35.59460 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_147:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -171.56689, -1505.64001, 35.25116 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_148:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -170.79642, -1504.87549, 34.83203 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_149:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -170.07326, -1504.24255, 34.43683 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_150:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -169.31854, -1503.52185, 34.05194 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_151:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -168.42139, -1503.02600, 33.68811 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_152:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -167.58392, -1502.55811, 33.37476 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_153:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -166.62151, -1502.43262, 33.12463 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_154:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -165.74487, -1501.74097, 32.82593 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_155:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -164.68910, -1501.16138, 32.47534 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_156:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -163.78751, -1500.74072, 32.22894 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_157:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -162.75659, -1500.58948, 31.97150 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_158:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -161.76616, -1500.52222, 31.81531 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_159:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -160.76906, -1500.63208, 31.71783 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_160:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -159.84168, -1500.36133, 31.57288 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_161:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -158.80186, -1500.17407, 31.50330 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_162:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -157.96396, -1499.74939, 31.34106 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_163:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -156.95682, -1499.56677, 31.24426 ]
+        rot: [ 0.00000, 0.00000, 116.37971 ]
+
+      horse_tracks_gen_164:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -156.00049, -1499.49170, 31.20282 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_165:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -154.98619, -1499.80859, 31.10059 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_166:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -154.08316, -1500.27539, 31.03613 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_167:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -153.29898, -1499.85986, 31.01416 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_168:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -152.31621, -1500.09106, 30.81219 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_169:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -151.36752, -1500.35376, 30.60028 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_170:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -150.34517, -1500.38782, 30.32898 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_171:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -149.28978, -1500.42297, 30.07751 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_172:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -148.30129, -1500.30872, 29.85504 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_173:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -147.27747, -1500.39893, 29.66138 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_174:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -146.21835, -1500.75281, 29.71100 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_175:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -145.22667, -1500.94214, 29.59924 ]
+        rot: [ 0.00000, 0.00000, 92.39969 ]
+
+      horse_tracks_gen_176:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -144.29266, -1500.70508, 29.27032 ]
+        rot: [ 0.00000, 0.00000, 100.31971 ]
+
+      horse_tracks_gen_177:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -143.29366, -1500.48254, 29.12830 ]
+        rot: [ 0.00000, 0.00000, 100.31971 ]
+
+      horse_tracks_gen_178:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -142.33673, -1500.32056, 29.00336 ]
+        rot: [ 0.00000, 0.00000, 100.31971 ]
+
+      horse_tracks_gen_179:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -141.36011, -1500.01624, 28.86835 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_180:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -140.54263, -1499.40027, 28.66449 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_181:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -139.92970, -1498.67200, 28.36719 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_182:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -139.09380, -1498.11926, 28.25037 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_183:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -138.15593, -1498.02295, 28.17651 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_184:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -137.28560, -1497.69067, 28.10309 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_185:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -136.31984, -1497.46081, 27.99646 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_186:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -135.32927, -1497.46301, 27.73407 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_187:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -134.36700, -1497.33215, 27.38648 ]
+        rot: [ 0.00000, 0.00000, 122.53973 ]
+
+      horse_tracks_gen_188:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -133.45424, -1497.10901, 27.09015 ]
+        rot: [ 0.00000, 0.00000, 103.83971 ]
+
+      horse_tracks_gen_189:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -132.42931, -1497.12866, 26.87415 ]
+        rot: [ 0.00000, 0.00000, 103.83971 ]
+
+      horse_tracks_gen_190:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -131.41817, -1497.31274, 26.72137 ]
+        rot: [ 0.00000, 0.00000, 103.83971 ]
+
+      horse_tracks_gen_191:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -130.47827, -1497.55725, 26.58057 ]
+        rot: [ 0.00000, 0.00000, 103.83971 ]
+
+      horse_tracks_gen_192:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -129.47536, -1497.84021, 26.55243 ]
+        rot: [ 0.00000, 0.00000, 103.83971 ]
+
+      horse_tracks_gen_193:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -128.46814, -1498.24206, 26.54633 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_194:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -127.50050, -1498.46143, 26.30048 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_195:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -126.56031, -1498.64307, 26.03027 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_196:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -125.62599, -1499.07263, 25.77374 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_197:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -124.82516, -1499.54443, 25.46960 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_198:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -123.99143, -1500.10339, 25.18439 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_199:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -123.07829, -1500.80688, 24.98511 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_200:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -122.25251, -1501.54321, 24.90124 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_201:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -121.34501, -1502.31397, 24.84009 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_202:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -120.38502, -1502.73621, 24.70032 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_203:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -119.49773, -1503.14575, 24.56775 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_204:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -118.63004, -1503.58179, 24.40631 ]
+        rot: [ 0.00000, 0.00000, 65.99964 ]
+
+      horse_tracks_gen_205:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -117.80062, -1503.95264, 24.26141 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_206:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -116.74455, -1504.24963, 24.01294 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_207:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -115.77998, -1504.07935, 23.74817 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_208:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -114.79005, -1503.84827, 23.51251 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_209:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -113.84824, -1503.99036, 23.22485 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_210:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -112.92922, -1504.44470, 23.01703 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_211:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -111.94569, -1504.70300, 22.80298 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_212:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -110.92628, -1504.81079, 22.48401 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_213:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -109.96172, -1505.04309, 22.31604 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_214:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -108.98599, -1505.21045, 22.17023 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_215:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -107.97774, -1505.38354, 21.99103 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_216:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -106.87193, -1505.57324, 21.79590 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_217:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -105.78842, -1505.89307, 21.67841 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_218:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -104.68354, -1506.28357, 21.55786 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_219:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -103.75850, -1506.72546, 21.46252 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_220:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -102.84573, -1507.19788, 21.35419 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_221:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -101.89614, -1507.57861, 21.26422 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_222:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -100.98338, -1508.05115, 21.17682 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_223:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -100.03378, -1508.43176, 21.05707 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_224:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -99.06583, -1508.85535, 20.96143 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_225:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -98.17142, -1509.28491, 20.85748 ]
+        rot: [ 0.00000, 0.00000, 91.73966 ]
+
+      horse_tracks_gen_226:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -97.21284, -1509.33557, 20.62500 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_227:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -96.18050, -1509.47729, 20.41473 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_228:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -95.11808, -1509.83838, 20.29639 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_229:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -94.12818, -1510.10510, 20.17432 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_230:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -93.08639, -1510.42432, 20.05237 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_231:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -91.95091, -1510.57922, 19.88690 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_232:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -90.96027, -1510.48669, 19.70416 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_233:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -89.80530, -1510.49438, 19.51056 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_234:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -88.81531, -1510.50098, 19.34460 ]
+        rot: [ 0.00000, 0.00000, 80.07967 ]
+
+      horse_tracks_gen_235:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -87.95707, -1510.53015, 19.20465 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_236:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -86.90196, -1510.42200, 19.06311 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_237:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -85.88013, -1510.28113, 18.89160 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_238:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -84.82587, -1510.07410, 18.77020 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_239:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -83.73748, -1509.99853, 18.75421 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_240:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -82.58281, -1509.95557, 18.57709 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_241:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -81.62840, -1509.65039, 18.45685 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_242:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -80.47516, -1509.44238, 18.37738 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_243:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -79.32105, -1509.33350, 18.26233 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_244:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -78.58443, -1508.74536, 18.19373 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_245:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -77.34807, -1508.53577, 17.98425 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_246:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -76.33946, -1508.36475, 17.77789 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_247:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -75.27681, -1508.11731, 17.61676 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_248:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -74.37189, -1507.72961, 17.49792 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_249:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -73.42891, -1507.36877, 17.36804 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_250:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -72.46938, -1507.10559, 17.23767 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_251:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -71.45087, -1506.59814, 17.05157 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_252:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -70.45198, -1506.35632, 16.92401 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_253:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -69.51357, -1505.92310, 16.85040 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_254:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -68.54269, -1505.71863, 16.76337 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_255:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -67.54378, -1505.47681, 16.72015 ]
+        rot: [ 0.00000, 0.00000, 104.27966 ]
+
+      horse_tracks_gen_256:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -66.48380, -1505.36401, 16.70154 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_257:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -65.46232, -1505.41992, 16.73621 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_258:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -64.44084, -1505.47583, 16.83057 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_259:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -63.39003, -1505.59961, 16.86047 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_260:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -62.39788, -1505.58838, 16.77594 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_261:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -61.37866, -1505.67322, 16.71118 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_262:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -60.29520, -1505.78284, 16.67487 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_263:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -59.32019, -1505.98108, 16.67487 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_264:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -58.30239, -1506.08423, 16.67487 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_265:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -57.24935, -1506.16980, 16.65808 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_266:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -56.03234, -1506.27368, 16.66126 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_267:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -55.01579, -1506.38843, 16.54486 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+
+      horse_tracks_gen_268:
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -53.99924, -1506.50330, 16.47015 ]
+        rot: [ 0.00000, 0.00000, 88.87965 ]
+

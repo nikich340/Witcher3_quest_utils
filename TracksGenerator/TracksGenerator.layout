@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="TracksGenerator.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2985" topLine="44" />
+		</Cursor>
+		<Folding>
+			<Collapse line="32" />
+			<Collapse line="72" />
+			<Collapse line="76" />
+			<Collapse line="80" />
+			<Collapse line="83" />
+			<Collapse line="88" />
+			<Collapse line="93" />
+			<Collapse line="96" />
+			<Collapse line="101" />
+		</Folding>
+	</File>
+</CodeBlocks_layout_file>
