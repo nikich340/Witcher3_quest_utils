@@ -24,7 +24,7 @@ using namespace std;
 namespace fs = std::experimental::filesystem;
 
 string tmp;
-fs::path workDir, speechDir, stringsDir, scenesDir;
+fs::path workDir, speechDir, speechExtraDir, stringsDir, stringsVanillaFile, scenesDir;
 vector<string> sceneYmls;
 vector< pair<int, pair<string, string>> > adjustLines;
 /*           old     new      */
@@ -107,8 +107,9 @@ void tryAddDuration(fs::path p) {
 		setConsoleColor(7);
         cout << lineInfo[id].X << "], new = [" << duration << "]\n";
     }*/
+    //cout << "[OK] id = " << id << ", duration = " << duration << el;
     durById[id] = duration;
-    //lineInfo[id].X = duration;
+    lineInfo[id].X = duration;
 }
 /*void removeWithoutDuration() {
     lineInfo2 = lineInfo;
@@ -135,6 +136,7 @@ string formatLine(string prefix, string suffix, string id, bool hadId) {
     }
     if (hadId)
         newLine += id + "|";
+    //cout << "str: " << lineInfo[id].Y << el;
     newLine += lineInfo[id].Y + suffix;
     return newLine;
 }
@@ -187,6 +189,7 @@ void tryAdjustLines(fs::path p) {
             ++pos;
         }
         if (!str.empty()) {
+            //cout << "Original: " << tmp << el << "pref: " << prefix << " str:" << str << " suff: " << suffix << el;
             if (idByStr.count(str) > 0) {
                 adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, idByStr[str], false)} });
             } else if (str.length() > 10) {
@@ -290,7 +293,17 @@ int main()
             tryAddDuration(curPath);
         }
     }
+    speechExtraDir = "D:/_w3.tools/_voicelines/enpc.w3speech-extracted";
+    stringsVanillaFile = "D:/_w3.tools/_voicelines/w3string.en.all.csv";
+    for (const auto& dirEntry : fs::recursive_directory_iterator(speechExtraDir)) {
+        fs::path curPath = dirEntry.path();
+        if (curPath.extension() == ".ogg") {
+            tryAddDuration(curPath);
+            //cout << "tryAdd: " << curPath.filename().u8string() << el;
+        }
+    }
     loadMainCsv(stringsDir / "all.en.strings.csv");
+    loadMainCsv(stringsVanillaFile);
     //removeWithoutDuration();
 
     for (const auto& dirEntry : fs::recursive_directory_iterator(scenesDir)) {
