@@ -1,0 +1,1 @@
+D:\_w3.tools\_git\CurveGenerator\bin\Release\curvegenerator.exe 7

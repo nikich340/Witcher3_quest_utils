@@ -9,7 +9,7 @@
 	</File>
 	<File name="CurveGenerator.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="17654" topLine="319" />
+			<Cursor1 position="8109" topLine="90" />
 		</Cursor>
 		<Folding>
 			<Collapse line="62" />
@@ -31,8 +31,8 @@
 			<Collapse line="195" />
 			<Collapse line="236" />
 			<Collapse line="288" />
-			<Collapse line="551" />
-			<Collapse line="565" />
+			<Collapse line="550" />
+			<Collapse line="564" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>

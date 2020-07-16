@@ -1,24 +1,32 @@
       # scent pos and rot in layerentity!!!
       engine_transform: 
         template: "CGameplayEntity:quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
-        pos: [ -404.7073669434, -1446.6956298828, 87.2468414307 ]
+        pos: [ -410.4502258301, -1439.1752929688, 85.5653915405 ]
+        # z -1
         rot: [ 0.0, 0.0, 0.0 ]
         tags: [ "ntr_orianna_scent_t" ]
 
-      # point 1
-      alfred_corpse: 
-        template: "CEntity:dlc\\bob\\data\\environment\\decorations\\corpses\\human corpses\\bob_raider_lvl1_corpse\\raider_lvl1_corpse_01.w2ent"
-        pos: [ -451.7073669434, -1446.6956298828, 87.2468414307 ]
-        rot: [ 0.0, 0.0, 171.3800506592 ]
+      point_24: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -326.7393188477, -1518.0876464844, 57.6610107422 ]
+        rot: [ 0.0, 0.0, 0.0 ]
 
-      # point 2
-      alfred_corpse: 
-        template: "CEntity:dlc\\bob\\data\\environment\\decorations\\corpses\\human corpses\\bob_raider_lvl1_corpse\\raider_lvl1_corpse_01.w2ent"
-        pos: [ -410.8599853516, -1437.3299560547, 87.0290985107 ]
-        rot: [ 0.0, 0.0, 171.3800506592 ]
+      point_25: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -324.7121582031, -1523.3642578125, 56.4677124023 ]
+        rot: [ 0.0, 0.0, 0.0 ]
 
-      # etc
-      blood_main: 
-        template: "CNewNPC:fx\\blood\\blood_decal\\blood_decal.w2ent"
-        pos: [ -410.7269897461, -1437.4035644531, 87.4016113281 ]
+      point_26: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -319.9288024902, -1524.8802490234, 54.5670166016 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_27: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -313.9660644531, -1525.7930908203, 51.4703369141 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_28: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -311.2984924316, -1526.1728515625, 50.5809326172 ]
         rot: [ 0.0, 0.0, 0.0 ]

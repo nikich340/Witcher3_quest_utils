@@ -1,217 +1,324 @@
 curve:
-  ".type": SMultiCurve
-  type: ECurveType_EngineTransform
-  showFlags: SHOW_AnimatedProperties
-  enableAutomaticTimeByDistanceRecalculation: true
-  curves:
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: -47.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: -47.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: -6.020
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 9.292
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.155
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 171.380
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 171.380
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 0.000
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-    - ".type": SCurveData
-      Curve Values:
-        - ".type": SCurveDataEntry
-          me: 0.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 0.500
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-        - ".type": SCurveDataEntry
-          me: 1.000
-          ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-          lue: 1.000
-          rveTypeL: 3
-          rveTypeL: 3
-      value type: CVT_Float
-      type: CT_Smooth
-      is looped: false
-  initialParentTransform:
-    pos: [ -404.707, -1446.696, 87.247 ]
-  hasInitialParentTransform: true
-
+                ".type": SMultiCurve
+                type: ECurveType_EngineTransform
+                showFlags: SHOW_AnimatedProperties
+                enableAutomaticTimeByDistanceRecalculation: true
+                curves:
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 83.711
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 85.738
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 90.521
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 96.484
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 99.152
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -78.912
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -84.189
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -85.705
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -86.618
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -86.998
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -27.904
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -29.098
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -30.998
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -34.095
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -34.984
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.250
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.750
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                initialParentTransform:
+                  pos: [ -410.450, -1439.175, 85.565 ]
+                hasInitialParentTransform: true

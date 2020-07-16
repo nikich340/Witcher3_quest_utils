@@ -314,7 +314,7 @@ void loadPoints() {
     }
 }
 void printCurve() {
-    ofstream out(filePathOut);
+    ofstream out(filePathOut, ios::out | ios::trunc);
     out.precision(3);
     out << "curve:\n";
     ++step;
@@ -537,9 +537,8 @@ void printCurve() {
     if (abs(engineRot.x + engineRot.y + engineRot.z) > 0.001f)
         out << ps() << "rot: [ " << engineRot.x << ", " << engineRot.y << ", " << engineRot.z << " ]\n";
     --step;
-    out << ps() << "hasInitialParentTransform: " << "true" << "\n";
+    out << ps() << "hasInitialParentTransform: " << "true";
 
-    out << el;
     out.close();
     if (abs(enginePos.x + enginePos.y + enginePos.z) <= 0.001f)
         showError("\nengine_tranform entity not defined, Curve will have wrong placement in game!\n");

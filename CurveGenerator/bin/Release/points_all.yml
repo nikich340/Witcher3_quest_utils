@@ -1,0 +1,148 @@
+      # scent pos and rot in layerentity!!!
+      engine_transform: 
+        template: "CGameplayEntity:quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+        pos: [ -410.4502258301, -1439.1752929688, 87.0653915405 ]
+        # z -1
+        rot: [ 0.0, 0.0, 0.0 ]
+        tags: [ "ntr_orianna_scent_t" ]
+
+      point1: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -410.4502258301, -1439.1752929688, 87.0653915405 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point2: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -409.4561462402, -1441.1297607422, 86.7617416382 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point3: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -405.8952636719, -1444.3345947266, 85.9674682617 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point4: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -401.5386657715, -1447.4404296875, 84.5354003906 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point5: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -400.1132507324, -1450.5625000000, 84.0133056641 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point6: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -394.4752502441, -1456.4865722656, 83.9396972656 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point7: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -389.2019653320, -1459.3371582031, 83.8321533203 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point8: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -383.9878234863, -1462.9954833984, 83.0073852539 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point9: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -376.8200988770, -1463.1771240234, 81.2918090820 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point10: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -370.2756042480, -1465.6579589844, 79.0222167969 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point11: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -365.9220886230, -1467.6070556641, 76.8576049805 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point12: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -362.2931213379, -1470.3062744141, 74.5944824219 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point13: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -357.9754638672, -1474.3607177734, 72.0968017578 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point14: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -354.6950683594, -1475.1611328125, 71.1036987305 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point15: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -348.4770812988, -1474.2875976563, 69.8419189453 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point16: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -344.1293029785, -1475.5130615234, 68.6562500000 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point17: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -340.3482055664, -1480.4090576172, 66.7955322266 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point18: 
+        template: "W3Campfire:dlc\\dlc3\\data\\entities\\mh201_troll_campfire.w2ent"
+        pos: [ -337.1702575684, -1485.4710693359, 63.8648071289 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_19: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -334.4668884277, -1489.7879638672, 62.2034912109 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_20: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -332.9267578125, -1495.5310058594, 61.8335571289 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_21: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -331.3662414551, -1500.6942138672, 60.7587890625 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_22: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -330.0280151367, -1505.3624267578, 59.1633300781 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_23: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -328.3142395020, -1510.4348144531, 58.7642211914 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_24: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -326.7393188477, -1518.0876464844, 57.6610107422 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_25: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -324.7121582031, -1523.3642578125, 56.4677124023 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_26: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -319.9288024902, -1524.8802490234, 54.5670166016 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_27: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -313.9660644531, -1525.7930908203, 51.4703369141 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      point_28: 
+        template: "W3Campfire:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\lightsources\\campfire\\gen_campfire_c_.w2ent"
+        pos: [ -311.2984924316, -1526.1728515625, 50.5809326172 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
