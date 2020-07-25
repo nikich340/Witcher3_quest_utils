@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1595686371 source:d:\_w3.tools\_git\witcherscriptsymlscrapper\witcherscriptymlscrapper.cpp
+	<bits/stdc++.h>
+	<windows.h>
+	<experimental/filesystem>
+

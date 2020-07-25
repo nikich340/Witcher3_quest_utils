@@ -1,0 +1,969 @@
+    EInterpMethodType:
+      .extends: none
+
+    EInterpCurveMode:
+      .extends: none
+
+    ECompareOp:
+      .extends: none
+
+    ESpaceFillMode:
+      .extends: none
+
+    EComboAttackResponse:
+      .extends: none
+
+    ECameraState:
+      .extends: none
+
+    ECameraShakeState:
+      .extends: none
+
+    ECameraShakeMagnitude:
+      .extends: none
+
+    EDismembermentEffectTypeFlags:
+      .extends: none
+
+    ETriggerChannels:
+      .extends: none
+
+    EDayPart:
+      .extends: none
+
+    EGameplayMimicMode:
+      .extends: none
+
+    EPlayerGameplayMimicMode:
+      .extends: none
+
+    ESoundGameState:
+      .extends: none
+
+    ESoundEventSaveBehavior:
+      .extends: none
+
+    EStaticCameraAnimState:
+      .extends: none
+
+    EStaticCameraGuiEffect:
+      .extends: none
+
+    ECharacterPowerStats:
+      .extends: none
+
+    ECharacterRegenStats:
+      .extends: none
+
+    EDirection:
+      .extends: none
+
+    EDirectionZ:
+      .extends: none
+
+    EMoonState:
+      .extends: none
+
+    EWeatherEffect:
+      .extends: none
+
+    EScriptedEventCategory:
+      .extends: none
+
+    EScriptedEventType:
+      .extends: none
+
+    EInputDeviceType:
+      .extends: none
+
+    Platform:
+      .extends: none
+
+    EncumbranceBoyMode:
+      .extends: none
+
+    EActorImmortalityMode:
+      .extends: none
+
+    EActorImmortalityChanel:
+      .extends: none
+
+    ETerrainType:
+      .extends: none
+
+    EAreaName:
+      .extends: none
+
+    EDlcAreaName:
+      .extends: none
+
+    EZoneName:
+      .extends: none
+
+    EHitReactionType:
+      .extends: none
+
+    EFocusHitReaction:
+      .extends: none
+
+    EAttackSwingType:
+      .extends: none
+
+    EAttackSwingDirection:
+      .extends: none
+
+    EManageGravity:
+      .extends: none
+
+    ECounterAttackSwitch:
+      .extends: none
+
+    EAttitudeGroupPriority:
+      .extends: none
+
+    ETimescaleSource:
+      .extends: none
+
+    EMonsterCategory:
+      .extends: none
+
+    EButtonStage:
+      .extends: none
+
+    EStaminaActionType:
+      .extends: none
+
+    EFocusModeSoundEffectType:
+      .extends: none
+
+    EStatistic:
+      .extends: none
+
+    EAchievement:
+      .extends: none
+
+    ETutorialHintDurationType:
+      .extends: none
+
+    ETutorialHintPositionType:
+      .extends: none
+
+    ESpeedType:
+      .extends: none
+
+    EBloodType:
+      .extends: none
+
+    EStatOwner:
+      .extends: none
+
+    ETestSubject:
+      .extends: none
+
+    ETargetName:
+      .extends: none
+
+    EMonsterTactic:
+      .extends: none
+
+    EOperator:
+      .extends: none
+
+    ESpawnPositionPattern:
+      .extends: none
+
+    ESpawnRotation:
+      .extends: none
+
+    EFlyingCheck:
+      .extends: none
+
+    ECriticalEffectCounterType:
+      .extends: none
+
+    EFairytaleWitchAction:
+      .extends: none
+
+    EActionInfoType:
+      .extends: none
+
+    EBossAction:
+      .extends: none
+
+    EBossSpecialAttacks:
+      .extends: none
+
+    EEredinPhaseChangeAction:
+      .extends: none
+
+    ESpawnCondition:
+      .extends: none
+
+    ENPCCollisionStance:
+      .extends: none
+
+    ENPCBaseType:
+      .extends: none
+
+    EGuardState:
+      .extends: none
+
+    ENPCType:
+      .extends: none
+
+    EChosenTarget:
+      .extends: none
+
+    ETeleportType:
+      .extends: none
+
+    ECameraAnimPriority:
+      .extends: none
+
+    ECameraBlendSpeedMode:
+      .extends: none
+
+    EMerchantMapPinType:
+      .extends: none
+
+    EScriptedDetroyableComponentState:
+      .extends: none
+
+    EFoodGroup:
+      .extends: none
+
+    EClimbProbeUsed:
+      .extends: none
+
+    ESideSelected:
+      .extends: none
+
+    EPlayerCollisionStance:
+      .extends: none
+
+    EMovementCorrectionType:
+      .extends: none
+
+    EGameplayContextInput:
+      .extends: none
+
+    EExplorationStateType:
+      .extends: none
+
+    EBehGraphConfirmationState:
+      .extends: none
+
+    EAirCollisionSide:
+      .extends: none
+
+    EClimbRequirementType:
+      .extends: none
+
+    EClimbRequirementVault:
+      .extends: none
+
+    EClimbRequirementPlatform:
+      .extends: none
+
+    EClimbHeightType:
+      .extends: none
+
+    EClimbDistanceType:
+      .extends: none
+
+    EClimbEndReady:
+      .extends: none
+
+    EOutsideCapsuleState:
+      .extends: none
+
+    EPlayerIdleSubstate:
+      .extends: none
+
+    ExplorationInteractionType:
+      .extends: none
+
+    EJumpSubState:
+      .extends: none
+
+    EJumpType:
+      .extends: none
+
+    ELandPredictionType:
+      .extends: none
+
+    ELandType:
+      .extends: none
+
+    ELandRunForcedMode:
+      .extends: none
+
+    PrepareJumpSubState:
+      .extends: none
+
+    EPushSide:
+      .extends: none
+
+    ESlidingSubState:
+      .extends: none
+
+    ESlideCameraShakeState:
+      .extends: none
+
+    EFallType:
+      .extends: none
+
+    ECollisionTrajecoryStatus:
+      .extends: none
+
+    ECollisionTrajecoryExplorationStatus:
+      .extends: none
+
+    ECollisionTrajectoryPart:
+      .extends: none
+
+    ECollisionTrajectoryToWaterState:
+      .extends: none
+
+    EDoorMarkingState:
+      .extends: none
+
+    AQMTN_EntityType:
+      .extends: none
+
+    ESkillColor:
+      .extends: none
+
+    ESkillPath:
+      .extends: none
+
+    ESkillSubPath:
+      .extends: none
+
+    EPlayerMutationType:
+      .extends: none
+
+    EActionHitAnim:
+      .extends: none
+
+    EAlchemyExceptions:
+      .extends: none
+
+    EAlchemyCookedItemType:
+      .extends: none
+
+    EBirdType:
+      .extends: none
+
+    EWhaleMovementPatern:
+      .extends: none
+
+    EJobTreeType:
+      .extends: none
+
+    ECraftsmanType:
+      .extends: none
+
+    ECraftingException:
+      .extends: none
+
+    ECraftsmanLevel:
+      .extends: none
+
+    EItemUpgradeException:
+      .extends: none
+
+    EElevatorSwitchType:
+      .extends: none
+
+    ETrapOperation:
+      .extends: none
+
+    EEffectInteract:
+      .extends: none
+
+    EEffectType:
+      .extends: none
+
+    ECriticalHandling:
+      .extends: none
+
+    EEncounterMonitorCounterType:
+      .extends: none
+
+    EEncounterSpawnGroup:
+      .extends: none
+
+    EFocusModeChooseEntityStrategy:
+      .extends: none
+
+    ETriggeredDamageType:
+      .extends: none
+
+    EIllusionDiscoveredOneliner:
+      .extends: none
+
+    W3TableState:
+      .extends: none
+
+    EDoorOperation:
+      .extends: none
+
+    EMonsterNestType:
+      .extends: none
+
+    ENestType:
+      .extends: none
+
+    ENewDoorOperation:
+      .extends: none
+
+    EShrineBuffs:
+      .extends: none
+
+    EToxicCloudOperation:
+      .extends: none
+
+    EOilBarrelOperation:
+      .extends: none
+
+    EArmorType:
+      .extends: none
+
+    EEquipmentSlots:
+      .extends: none
+
+    EItemGroup:
+      .extends: none
+
+    EInventoryFilterType:
+      .extends: none
+
+    EInventoryActionType:
+      .extends: none
+
+    ECompareType:
+      .extends: none
+
+    ESpendablePointType:
+      .extends: none
+
+    EEP2PoiType:
+      .extends: none
+
+    EPhysicalDamagemechanismOperation:
+      .extends: none
+
+    ESwitchState:
+      .extends: none
+
+    EResetSwitchMode:
+      .extends: none
+
+    PhysicalSwitchAnimationType:
+      .extends: none
+
+    ERequiredSwitchState:
+      .extends: none
+
+    EEncounterOperation:
+      .extends: none
+
+    EFactOperation:
+      .extends: none
+
+    EOcurrenceTime:
+      .extends: none
+
+    ELogicalOperator:
+      .extends: none
+
+    EBoidClueState:
+      .extends: none
+
+    EMonsterCluesTypes:
+      .extends: none
+
+    EMonsterSize:
+      .extends: none
+
+    EMonsterEmittedSound:
+      .extends: none
+
+    EMonsterDamageMarks:
+      .extends: none
+
+    EMonsterVictimState:
+      .extends: none
+
+    EMonsterApperance:
+      .extends: none
+
+    EMonsterSkinFacture:
+      .extends: none
+
+    EMonsterMovement:
+      .extends: none
+
+    EMonsterBehaviour:
+      .extends: none
+
+    EMonsterAttitude:
+      .extends: none
+
+    EMonsterAttackTime:
+      .extends: none
+
+    EMonsterHideout:
+      .extends: none
+
+    EFocusClueAttributeAction:
+      .extends: none
+
+    EClueOperation:
+      .extends: none
+
+    EFocusClueMedallionReaction:
+      .extends: none
+
+    EPlayerVoicesetType:
+      .extends: none
+
+    EMonsterClueAnim:
+      .extends: none
+
+    EReputationLevel:
+      .extends: none
+
+    EFactionName:
+      .extends: none
+
+    ETutorialMessageType:
+      .extends: none
+
+    EUITutorialTriggerCondition:
+      .extends: none
+
+    EUserDialogButtons:
+      .extends: none
+
+    EUniqueMessageIDs:
+      .extends: none
+
+    ELockedControlScheme:
+      .extends: none
+
+    EGamepadType:
+      .extends: none
+
+    ECursorType:
+      .extends: none
+
+    EGuiSceneControllerRenderFocus:
+      .extends: none
+
+    EQuantityTransferFunction:
+      .extends: none
+
+    EHudVisibilitySource:
+      .extends: none
+
+    EFloatingValueType:
+      .extends: none
+
+    HudItemInfoBinding:
+      .extends: none
+
+    EUpdateEventType:
+      .extends: none
+
+    EMutationFeedbackType:
+      .extends: none
+
+    InGameMenuActionType:
+      .extends: none
+
+    EIngameMenuConstants:
+      .extends: none
+
+    CreditsIndex:
+      .extends: none
+
+    CharacterMenuTabIndexes:
+      .extends: none
+
+    EMutationResourceType:
+      .extends: none
+
+    EBonusSkillSlot:
+      .extends: none
+
+    EInventoryMenuState:
+      .extends: none
+
+    InventoryMenuTabIndexes:
+      .extends: none
+
+    InventoryMenuStashTabIndexes:
+      .extends: none
+
+    ENotificationType:
+      .extends: none
+
+    PreparationTrackType:
+      .extends: none
+
+    PreparationMenuTabIndexes:
+      .extends: none
+
+    EItemSelectionPopupMode:
+      .extends: none
+
+    EUserMessageAction:
+      .extends: none
+
+    EUserMessageProgressType:
+      .extends: none
+
+    EPreporationItemType:
+      .extends: none
+
+    EBackgroundNPCWork_Single:
+      .extends: none
+
+    EBackgroundNPCWork_Paired:
+      .extends: none
+
+    EBgNPCType:
+      .extends: none
+
+    EBackgroundNPCWomanWork:
+      .extends: none
+
+    EConverserType:
+      .extends: none
+
+    EDeathType:
+      .extends: none
+
+    EFinisherDeathType:
+      .extends: none
+
+    EActionFail:
+      .extends: none
+
+    ETauntType:
+      .extends: none
+
+    EBehaviorGraph:
+      .extends: none
+
+    EExplorationMode:
+      .extends: none
+
+    EAgonyType:
+      .extends: none
+
+    ENPCFightStage:
+      .extends: none
+
+    ECriticalStateType:
+      .extends: none
+
+    EHitReactionDirection:
+      .extends: none
+
+    EHitReactionSide:
+      .extends: none
+
+    EDetailedHitType:
+      .extends: none
+
+    EAttackType:
+      .extends: none
+
+    EChargeAttackType:
+      .extends: none
+
+    EDodgeType:
+      .extends: none
+
+    EDodgeDirection:
+      .extends: none
+
+    ETurnDirection:
+      .extends: none
+
+    ETargetDirection:
+      .extends: none
+
+    ENpcPose:
+      .extends: none
+
+    EFlightStance:
+      .extends: none
+
+    ENPCRightItemType:
+      .extends: none
+
+    ENPCLeftItemType:
+      .extends: none
+
+    EInventoryFundsType:
+      .extends: none
+
+    EWeaponSubType1Handed:
+      .extends: none
+
+    EWeaponSubType2Handed:
+      .extends: none
+
+    EWeaponSubTypeRanged:
+      .extends: none
+
+    ENpcWeapons:
+      .extends: none
+
+    ENpcFightingStyles:
+      .extends: none
+
+    EAnimalType:
+      .extends: none
+
+    EPlayerDeathType:
+      .extends: none
+
+    EAimType:
+      .extends: none
+
+    EPlayerMode:
+      .extends: none
+
+    EForceCombatModeReason:
+      .extends: none
+
+    EGeneralEnum:
+      .extends: none
+
+    EPlayerExplorationAction:
+      .extends: none
+
+    EPlayerBoatMountFacing:
+      .extends: none
+
+    EPlayerAttackType:
+      .extends: none
+
+    ESkill:
+      .extends: none
+
+    EItemSetBonus:
+      .extends: none
+
+    EItemSetType:
+      .extends: none
+
+    EPlayerCommentary:
+      .extends: none
+
+    EPlayerWeapon:
+      .extends: none
+
+    EPlayerRangedWeapon:
+      .extends: none
+
+    EPlayerCombatStance:
+      .extends: none
+
+    ESignType:
+      .extends: none
+
+    EMoveSwitchDirection:
+      .extends: none
+
+    EPlayerEvadeType:
+      .extends: none
+
+    EPlayerEvadeDirection:
+      .extends: none
+
+    EPlayerParryDirection:
+      .extends: none
+
+    EPlayerRepelType:
+      .extends: none
+
+    ERotationRate:
+      .extends: none
+
+    EItemType:
+      .extends: none
+
+    ESpecialAbilityInput:
+      .extends: none
+
+    EThrowStage:
+      .extends: none
+
+    EParryStage:
+      .extends: none
+
+    EParryType:
+      .extends: none
+
+    EAttackSwingRange:
+      .extends: none
+
+    EInputActionBlock:
+      .extends: none
+
+    EPlayerMoveType:
+      .extends: none
+
+    EPlayerActionToRestore:
+      .extends: none
+
+    EPlayerInteractionLock:
+      .extends: none
+
+    EPlayerPreviewInventory:
+      .extends: none
+
+    EDismembermentWoundTypes:
+      .extends: none
+
+    ERecoilLevel:
+      .extends: none
+
+    EPlayerMovementLockType:
+      .extends: none
+
+    EHorseMode:
+      .extends: none
+
+    ECustomCameraType:
+      .extends: none
+
+    ECustomCameraController:
+      .extends: none
+
+    EInitialAction:
+      .extends: none
+
+    EDir:
+      .extends: none
+
+    EPlayerStopPose:
+      .extends: none
+
+    EVehicleCombatAction:
+      .extends: none
+
+    HorseAttackSide:
+      .extends: none
+
+    EBookDirection:
+      .extends: none
+
+    EQuestSword:
+      .extends: none
+
+    EFactValueChangeMethod:
+      .extends: none
+
+    EMapPinStatus:
+      .extends: none
+
+    EFocusEffectActivationAction:
+      .extends: none
+
+    ECameraEffect:
+      .extends: none
+
+    EQuestReplacerEntities:
+      .extends: none
+
+    EItemSelectionType:
+      .extends: none
+
+    EQuestNPCStates:
+      .extends: none
+
+    EDrawWeaponQuestType:
+      .extends: none
+
+    ESwarmStateOnArrival:
+      .extends: none
+
+    EAnimalReaction:
+      .extends: none
+
+    EDoorQuestState:
+      .extends: none
+
+    EGeraltPath:
+      .extends: none
+
+    EDM_MappinType:
+      .extends: none
+
+    EGwentCardFaction:
+      .extends: none
+
+    EGwentDeckUnlock:
+      .extends: none
+
+    EEnableMode:
+      .extends: none
+
+    EHudTimeOutAction:
+      .extends: none
+
+    EQuestPadVibrationStrength:
+      .extends: none
+
+    ELanguageCheckType:
+      .extends: none
+
+    ECheckedLanguage:
+      .extends: none
+
+    EQuestConditionDLCType:
+      .extends: none
+
+    EContainerMode:
+      .extends: none
+
+    EQuestPlayerSkillLevel:
+      .extends: none
+
+    EQuestPlayerSkillCondition:
+      .extends: none
+
+    EQuestConditionPlayerState:
+      .extends: none
+
+    ESwitchStateCondition:
+      .extends: none
+
+    EPlayerReplacerType:
+      .extends: none
+
+    EStorySceneOutputAction:
+      .extends: none
+
+    EStorySceneGameplayAction:
+      .extends: none
+
+    ENegotiationResult:
+      .extends: none
+
+    ECollectItemsRes:
+      .extends: none
+
+    ECollectItemsCustomRes:
+      .extends: none
+
+    EHorseWaterTestResult:
+      .extends: none
+

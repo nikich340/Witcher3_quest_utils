@@ -1,0 +1,1558 @@
+    SRange:
+      .extends: none
+      .adds:
+        min: int
+        max: int
+
+    SRangeF:
+      .extends: none
+      .adds:
+        min: float
+        max: float
+
+    SAnimMultiplyCauser:
+      .extends: none
+      .adds:
+        id: int
+        mul: float
+
+    SPlayerOffenseStats:
+      .extends: none
+      .adds:
+        steelFastDmg: float
+        steelFastCritChance: float
+        steelFastCritDmg: float
+        steelFastDPS: float
+        steelStrongDmg: float
+        steelStrongCritChance: float
+        steelStrongCritDmg: float
+        steelStrongDPS: float
+        silverFastDmg: float
+        silverFastCritChance: float
+        silverFastCritDmg: float
+        silverFastDPS: float
+        silverStrongDmg: float
+        silverStrongCritChance: float
+        silverStrongCritDmg: float
+        silverStrongDPS: float
+        crossbowCritChance: float
+        crossbowSteelDmg: float
+        crossbowSteelDmgType: name
+        crossbowSilverDmg: float
+
+    SAvailableFastTravelMapPin:
+      .extends: none
+      .adds:
+        tag: name
+        type: name
+        area: EAreaName
+
+    AlignmentTest:
+      .extends: none
+      .adds:
+        i: int
+        a: Vector
+
+    SWeatherBonus:
+      .extends: none
+      .adds:
+        dayPart: EDayPart
+        weather: EWeatherEffect
+        moonState: EMoonState
+        ability: name
+
+    SFactParameters:
+      .extends: none
+      .adds:
+        ID: string
+        value: int
+        validFor: int
+
+    SGameplayFact:
+      .extends: none
+      .adds:
+        factName: string
+        value: int
+
+    SGameplayFactRemoval:
+      .extends: none
+      .adds:
+        factName: string
+        value: int
+        timerID: int
+
+    SDurabilityThreshold:
+      .extends: none
+      .adds:
+        thresholdMax: float
+        multiplier: float
+        difficulty: EDifficultyMode
+
+    SInGameConfigBufferedEntry:
+      .extends: none
+      .adds:
+        groupName: name
+        varName: name
+        varValue: string
+        startValue: string
+
+    SPostponedPreAttackEvent:
+      .extends: none
+      .adds:
+        entity: CGameplayEntity
+        eventName: name
+        eventType: EAnimationEventType
+        data: CPreAttackEventData
+        animInfo: SAnimationEventAnimInfo
+
+    SCombatParams:
+      .extends: none
+      .adds:
+        goalId: int
+
+    SAttackEventData:
+      .extends: none
+      .adds:
+        animData: CPreAttackEventData
+        weaponId: SItemUniqueId
+        parriedBy: array<CActor>
+
+    STimescaleSource:
+      .extends: none
+      .adds:
+        sourceName: name
+        sourceType: ETimescaleSource
+        sourcePriority: int
+
+    SDroppedItem:
+      .extends: none
+      .adds:
+        entity: CEntity
+        itemName: name
+
+    SAttributeTooltip:
+      .extends: none
+      .adds:
+        originName: name
+        attributeName: string
+        attributeColor: string
+        value: float
+        percentageValue: bool
+        primaryStat: bool
+
+    SNotWorkingOutFunctionParametersHackStruct1:
+      .extends: none
+      .adds:
+        outValue: int
+        retValue: bool
+
+    SStatistic:
+      .extends: none
+      .adds:
+        statType: EStatistic
+        registeredAchievements: array<SAchievement>
+
+    SCachedCombatMessage:
+      .extends: none
+      .adds:
+        finalIncomingDamage: float
+        resistPoints: float
+        resistPercents: float
+        finalDamage: float
+        attacker: CGameplayEntity
+        victim: CGameplayEntity
+
+    SAchievement:
+      .extends: none
+      .adds:
+        type: EAchievement
+        requiredValue: float
+
+    STutorialMessage:
+      .extends: none
+      .adds:
+        type: ETutorialMessageType
+        tutorialScriptTag: name
+        journalEntryName: name
+        canBeShownInMenus: bool
+        canBeShownInDialogs: bool
+        glossaryLink: bool
+        enableAcceptButton: bool
+        force: bool
+        disableHorizontalResize: bool
+        forceToQueueFront: bool
+        hintPositionType: ETutorialHintPositionType
+        hintPosX: float
+        hintPosY: float
+        hintDuration: float
+        hintCloseOnFactExist: string
+        highlightAreas: array<STutorialHighlight>
+        disabledPanelsExceptions: array<name>
+        hintPromptScriptTag: name
+        hintPromptPosX: float
+        hintPromptPosY: float
+        hintPromptDuration: float
+        hintPromptCloseFact: string
+        markAsSeenOnShow: bool
+        isHUDTutorial: bool
+        hintDurationType: ETutorialHintDurationType
+        blockInput: bool
+        pauseGame: bool
+        fullscreen: bool
+        minDuration: float
+        remainingMinDuration: float
+        hideOnMinDurationEnd: bool
+        factOnFinishedDisplay: string
+
+    STutorialHighlight:
+      .extends: none
+      .adds:
+        x: float
+        y: float
+        width: float
+        height: float
+
+    SFXSurfacePostParams:
+      .extends: none
+      .adds:
+        fxFadeInTime: float
+        fxLastingTime: float
+        fxFadeOutTime: float
+        fxRadius: float
+        fxType: int
+
+    SSwarmVictim:
+      .extends: none
+      .adds:
+        actor: CActor
+        timeInSwarm: float
+        inTrigger: bool
+
+    CriticalStateStruct:
+      .extends: none
+      .adds:
+        CSType: ECriticalStateType
+        isActive: bool
+        lastTimeActive: float
+
+    AttackInfo:
+      .extends: none
+      .adds:
+        attackName: name
+        attackCount: int
+
+    SFxOnAnimEvent:
+      .extends: none
+      .adds:
+        fxOnAnimEvent: name
+        animEvent: name
+
+    SSyncAttackTypes:
+      .extends: none
+      .adds:
+        leftStanceFrontAttack: EAttackType
+        rightStanceFrontAttack: EAttackType
+        leftStanceBackAttack: EAttackType
+        rightStanceBackAttack: EAttackType
+
+    SNoiseEntity:
+      .extends: none
+      .adds:
+        noiseEntity: CEntity
+        noiseLevel: float
+        animatedComponent: CAnimatedComponent
+
+    SCombatPhaseParameters:
+      .extends: none
+      .adds:
+        setBehVariable: int
+        priority: float
+        duration: float
+        cooldown: float
+        timerRandomization: float
+        minRangeFromTarget: float
+        maxRangeFromTarget: float
+        activationAnimEvent: name
+        deactivationAnimEvent: name
+        activationGameplayEvent: name
+        deactivationGameplayEvent: name
+
+    SReactionEventData:
+      .extends: none
+      .adds:
+        eventName: name
+        lifetime: float
+        distance: float
+        broadcastInterval: float
+        recipientCount: int
+        cooldown: float
+        chanceOfSucceeding: float
+        lastBroadcastTime: float
+
+    SQuestCameraRequest:
+      .extends: none
+      .adds:
+        requestYaw: bool
+        yaw: float
+        requestPitch: bool
+        pitch: float
+        lookAtTag: name
+        duration: float
+        requestTimeStamp: float
+
+    SCameraAnimationData:
+      .extends: none
+      .adds:
+        animation: name
+        priority: ECameraAnimPriority
+        blend: float
+        weight: float
+        loop: bool
+
+    SCraftsman:
+      .extends: none
+      .adds:
+        type: ECraftsmanType
+        level: ECraftsmanLevel
+        noCraftingCost: Bool
+
+    SItemExt:
+      .extends: none
+      .adds:
+        itemName: SItemNameProperty
+        quantity: int
+
+    SCardSourceData:
+      .extends: none
+      .adds:
+        cardName: name
+        source: string
+        originArea: string
+        originQuest: string
+        details: string
+        coords: string
+
+    Runeword:
+      .extends: none
+      .adds:
+        wordName: name
+        runes: array<name>
+        abilities: array<name>
+
+    SPlaneMovementParameters:
+      .extends: none
+      .adds:
+        m_SpeedMaxF: float
+        m_AccelF: float
+        m_DecelF: float
+        m_BrakeF: float
+        m_BrakeDotF: float
+
+    SVerticalMovementParams:
+      .extends: none
+      .adds:
+        m_VertImpulseF: float
+        m_VertMaxSpeedF: float
+        m_GravityUpF: float
+        m_GravityDownF: float
+
+    SSlidingMovementParams:
+      .extends: none
+      .adds:
+        m_TurnSpeedF: float
+        m_FrictionSquareF: float
+        m_FrictionLinearF: float
+        m_FrictionConstF: float
+        m_FrictionConstExitF: float
+        m_InputVisualTurnCoefF: float
+        m_GravityF: float
+        m_RestitutionF: float
+        m_InputAccelInfluenceF: float
+        m_InputFrictionCoefMinF: float
+        m_InputFrictionCoefMaxF: float
+        m_InputFrictionBlend: float
+        m_InputStrafeCoefF: float
+
+    SSkatingLevelParams:
+      .extends: none
+      .adds:
+        speedMax: float
+        reflectInput: bool
+
+    SSkatingMovementParams:
+      .extends: none
+      .adds:
+        accel: float
+        decel: float
+        decelMaxSpeed: float
+        brake: float
+        brakeBaseSpeed: float
+        frictionSquare: float
+        frictionLinear: float
+        frictionConst: float
+        turnCurve: CCurve
+        gravity: float
+        turnToGravity: float
+        gravitySpeedMax: float
+
+    SDefaultStateTransition:
+      .extends: none
+      .adds:
+        m_StateNameN: name
+        m_TimeToStartCheckingF: float
+
+    CClimbType:
+      .extends: none
+      .adds:
+        requiredState: EClimbRequirementType
+        requiredVault: EClimbRequirementVault
+        requiredPlatform: EClimbRequirementPlatform
+        type: EClimbHeightType
+        heightUseDefaults: bool
+        heightMax: float
+        heightMin: float
+        heightExact: float
+        forwardDistExact: float
+        playCameraAnimation: bool
+        cameraAnimation: name
+
+    SJumpParams:
+      .extends: none
+      .adds:
+        m_BehaviorEventN: name
+        m_PredictionTimeF: float
+        m_VerticalMovementS: SVerticalMovementParams
+        m_HorImpulseAtStartB: bool
+        m_HorImpulseF: float
+        m_HorMovementS: SPlaneMovementParameters
+        m_TakeOffTimeF: float
+        m_StartOrientTimeF: float
+        m_UsePhysicJumpB: bool
+        m_ConserveCoefsB: bool
+        m_ExternalDirectionForcedB: bool
+        m_AllowAirDisplacementControlB: bool
+        m_StartDirectionAllowanceF: float
+        m_StartDirectionIgnoreF: float
+        m_OrientationSpeedF: float
+        m_ConserveAddB: bool
+        m_RecalcSpeedOnInertialB: bool
+        m_TimeToCheckCollisionsF: float
+        m_TimeToPrepareForLandF: float
+        m_JumpTypeE: EJumpType
+        m_DontRecalcFootOnLand: bool
+        m_FlipFeetOnLandB: bool
+
+    SLandData:
+      .extends: none
+      .adds:
+        landType: ELandType
+        timeBeforeChain: float
+        cameraShakeStrength: float
+        orientationSpeed: float
+        timeSafetyEnd: float
+        landEndForcedMode: ELandRunForcedMode
+        shouldFlipFoot: bool
+
+    SSlidingMaterialPresetParams:
+      .extends: none
+      .adds:
+        presetName: name
+        angleMin: float
+        angleMinRain: float
+        frictionMultiplier: float
+        frictionMultiplierRain: float
+
+    SSlidingMaterialNamesToPresets:
+      .extends: none
+      .adds:
+        materialName: name
+        presetName: name
+
+    ErrandDetailsList:
+      .extends: none
+      .adds:
+        errandStringKey: string
+        newQuestFact: string
+        requiredFact: string
+        forbiddenFact: string
+        addedItemName: name
+        displayAsFluff: bool
+        posX: int
+        posY: int
+        errandPosition: int
+
+    SMutagenSlot:
+      .extends: none
+      .adds:
+        item: SItemUniqueId
+        unlockedAtLevel: int
+        skillGroupID: int
+        equipmentSlot: EEquipmentSlots
+
+    SSkillSlot:
+      .extends: none
+      .adds:
+        id: int
+        unlockedOnLevel: int
+        socketedSkill: ESkill
+        unlocked: bool
+        groupID: int
+
+    SSkill:
+      .extends: none
+      .adds:
+        skillType: ESkill
+        skillPath: ESkillPath
+        skillSubPath: ESkillSubPath
+        level: int
+        maxLevel: int
+        requiredSkills: array<ESkill>
+        requiredSkillsIsAlternative: bool
+        requiredPointsSpent: int
+        priority: int
+        cost: int
+        isTemporary: bool
+        abilityName: name
+        modifierTags: array<name>
+        localisationNameKey: string
+        localisationDescriptionKey: string
+        localisationDescriptionLevel2Key: string
+        localisationDescriptionLevel3Key: string
+        iconPath: string
+        positionID: int
+        isNew: bool
+        isCoreSkill: bool
+        wasEquippedOnUIEnter: bool
+        remainingBlockedTime: float
+        precachedModifierSkills: array<ESkill>
+
+    SRestoredSkill:
+      .extends: none
+      .adds:
+        level: int
+        skillType: ESkill
+        isNew: bool
+        remainingBlockedTime: float
+
+    SSimpleSkill:
+      .extends: none
+      .adds:
+        level: int
+        skillType: ESkill
+
+    STutorialSavedSkill:
+      .extends: none
+      .adds:
+        skillSlotID: int
+        skillType: ESkill
+
+    STutorialTemporarySkill:
+      .extends: none
+      .adds:
+        wasLearned: bool
+        skillType: ESkill
+
+    SMutagenBonusAlchemy19:
+      .extends: none
+      .adds:
+        abilityName: name
+        count: int
+
+    SMutationProgress:
+      .extends: none
+      .adds:
+        redUsed: int
+        redRequired: int
+        blueUsed: int
+        blueRequired: int
+        greenUsed: int
+        greenRequired: int
+        skillpointsUsed: int
+        skillpointsRequired: int
+        overallProgress: int
+
+    SMutation:
+      .extends: none
+      .adds:
+        type: EPlayerMutationType
+        colors: array<ESkillColor>
+        progress: SMutationProgress
+        requiredMutations: array<EPlayerMutationType>
+        localizationNameKey: name
+        localizationDescriptionKey: name
+        iconPath: name
+        soundbank: string
+
+    SAlchemyRecipe:
+      .extends: none
+      .adds:
+        cookedItemName: name
+        cookedItemType: EAlchemyCookedItemType
+        cookedItemIconPath: string
+        cookedItemQuantity: int
+        recipeName: name
+        recipeIconPath: string
+        typeName: name
+        level: int
+        requiredIngredients: array<SItemParts>
+
+    SCookable:
+      .extends: none
+      .adds:
+        type: EAlchemyCookedItemType
+        cnt: int
+
+    SBirdSpawnpoint:
+      .extends: none
+      .adds:
+        isBirdSpawned: bool
+        isFlying: bool
+        entityId: int
+        entitySpawnTimestamp: float
+        bird: W3Bird
+        position: Vector
+        rotation: EulerAngles
+
+    SFishSpawnpoint:
+      .extends: none
+      .adds:
+        shouldBeErased: bool
+        isFishSpawned: bool
+        position: Vector
+        rotation: EulerAngles
+        spawnHandler: CCreateEntityHelper
+
+    SCookingSchematic:
+      .extends: none
+      .adds:
+        cookedItemName: name
+        cookedItemQuantity: int
+        ingredients: array<SItemParts>
+        schemName: name
+
+    SCraftable:
+      .extends: none
+      .adds:
+        type: name
+        cnt: int
+
+    SCraftAttribute:
+      .extends: none
+      .adds:
+        attributeName: name
+        valAdditive: float
+        valMultiplicative: float
+        displayPercMul: bool
+        displayPercAdd: bool
+
+    SCraftingSchematic:
+      .extends: none
+      .adds:
+        craftedItemName: name
+        craftedItemCount: int
+        requiredCraftsmanType: ECraftsmanType
+        requiredCraftsmanLevel: ECraftsmanLevel
+        baseCraftingPrice: int
+        ingredients: array<SItemParts>
+        schemName: name
+
+    SEnchantmentSchematic:
+      .extends: none
+      .adds:
+        schemName: name
+        baseCraftingPrice: int
+        level: int
+        ingredients: array<SItemParts>
+        localizedName: name
+        localizedDescriptionName: string
+
+    SItemUpgradeListElement:
+      .extends: none
+      .adds:
+        itemId: SItemUniqueId
+        upgrade: SItemUpgrade
+
+    SItemUpgrade:
+      .extends: none
+      .adds:
+        upgradeName: name
+        localizedName: name
+        localizedDescriptionName: name
+        cost: int
+        iconPath: string
+        ability: name
+        ingredients: array<SItemParts>
+        requiredUpgrades: array<name>
+
+    SRawDamage:
+      .extends: none
+      .adds:
+        dmgType: name
+        dmgVal: Float
+
+    SCustomEffectParams:
+      .extends: none
+      .adds:
+        effectType: EEffectType
+        creator: CGameplayEntity
+        sourceName: string
+        duration: float
+        effectValue: SAbilityAttributeValue
+        customAbilityName: name
+        customFXName: name
+        isSignEffect: bool
+        customPowerStatValue: SAbilityAttributeValue
+        buffSpecificParams: W3BuffCustomParams
+        vibratePadLowFreq: float
+        vibratePadHighFreq: float
+
+    SCurrentBuffFX:
+      .extends: none
+      .adds:
+        fx: name
+        sources: array<string>
+
+    SEffectInitInfo:
+      .extends: none
+      .adds:
+        owner: CGameplayEntity
+        target: CActor
+        duration: float
+        sourceName: string
+        targetEffectManager: W3EffectManager
+        powerStatValue: SAbilityAttributeValue
+        customEffectValue: SAbilityAttributeValue
+        customAbilityName: name
+        customFXName: name
+        isSignEffect: bool
+        vibratePadLowFreq: float
+        vibratePadHighFreq: float
+
+    SEffectInfo:
+      .extends: none
+      .adds:
+        effectType: EEffectType
+        effectDuration: float
+        effectAbilityName: name
+        customFXName: name
+        effectCustomValue: SAbilityAttributeValue
+        effectCustomParam: W3BuffCustomParams
+        applyChance: float
+
+    SEffectCachedDamage:
+      .extends: none
+      .adds:
+        dmgType: name
+        attacker: EntityHandle
+        carrier: CBaseGameplayEffect
+        dmgVal: float
+        dt: float
+        dontShowHitParticle: bool
+        powerStatType: ECharacterPowerStats
+        isEnvironment: bool
+        sourceName: string
+
+    SDoTDamage:
+      .extends: none
+      .adds:
+        damageTypeName: name
+        hitsVitality: bool
+        hitsEssence: bool
+        resistance: ECharacterDefenseStats
+
+    SEffectIconType:
+      .extends: none
+      .adds:
+        typeName: name
+        path: string
+
+    SApplicatorSpawnEffect:
+      .extends: none
+      .adds:
+        spawnAbilityName: name
+        spawnType: EEffectType
+        spawnFlagsHostile: bool
+        spawnFlagsNeutral: bool
+        spawnFlagsFriendly: bool
+        spawnSourceName: string
+
+    SPausedAutoEffect:
+      .extends: none
+      .adds:
+        effectType: EEffectType
+        duration: float
+        sourceName: name
+        singleLock: bool
+        useMaxDuration: bool
+        timeLeft: float
+
+    STemporarilyPausedEffect:
+      .extends: none
+      .adds:
+        buff: CBaseGameplayEffect
+        timeLeft: float
+        source: name
+        singleLock: bool
+        useMaxDuration: bool
+        duration: float
+
+    SBuffPauseLock:
+      .extends: none
+      .adds:
+        sourceName: name
+        counter: int
+
+    SBuffImmunity:
+      .extends: none
+      .adds:
+        buffType: EEffectType
+        sources: array<name>
+
+    CreatureCounterDef:
+      .extends: none
+      .adds:
+        entryName: name
+        creatureAmount: int
+
+    CreaturesGroupDef:
+      .extends: none
+      .adds:
+        groupName: name
+        disabledBySources: int
+        sourcesNames: array<name>
+
+    SOwnerEncounterTaskParams:
+      .extends: none
+      .adds:
+        triggerWhenOutsideOwnerEncounterArea: bool
+        deactivateEncounter: bool
+        delay: GameTimeWrapper
+        factOnTaskPerformed: string
+        spawnTreeNodesToActivate: array<name>
+        spawnTreeNodesToDeactivate: array<name>
+        encounterPhasetoActivate: name
+        creaturesGroupToDisable: array<name>
+        creaturesGroupToEnable: array<name>
+        sourceName: name
+        forceDespawn: bool
+        ID: int
+        setTime: GameTime
+
+    SExternalEncounterTaskParams:
+      .extends: none
+      .adds:
+        triggerWhenOutsideOwnerEncounterArea: bool
+        shouldEncounterChangeState: bool
+        enableEncounter: bool
+        encounterTag: name
+        delay: GameTimeWrapper
+        factOnTaskPerformed: string
+        spawnTreeNodesToActivate: array<name>
+        spawnTreeNodesToDeactivate: array<name>
+        creaturesGroupToDisable: array<name>
+        creaturesGroupToEnable: array<name>
+        sourceName: name
+        forceDespawn: bool
+        encounterPhasetoActivate: name
+        ID: int
+        setTime: GameTime
+
+    SEncounterActionPointSelectorPairScr:
+      .extends: none
+      .adds:
+        category: SWorkCategoryWrapper
+        chance: float
+
+    SWorkCetegoriesForCreatureDefinitionEntryGeneratorParam:
+      .extends: none
+      .adds:
+        creatureDefinition: SCreatureDefinitionWrapper
+        workCategories: SWorkCategoriesWrapper
+
+    SGuardAreaEntryGeneratorNodeParam:
+      .extends: none
+      .adds:
+        guardAreaTag: name
+        pursuitAreaTag: name
+        pursuitRange: float
+
+    SCreatureEntrySpawnerParams:
+      .extends: none
+      .adds:
+        visibility: ESpawnTreeSpawnVisibility
+        spawnpointDelay: float
+
+    SIdleAEntryGeneratorParam:
+      .extends: none
+      .adds:
+        creatureEntry: SCreatureEntryEntryGeneratorNodeParam
+        idleTree: CAIIdleTree
+        guartArea: SGuardAreaEntryGeneratorNodeParam
+
+    SWanderWorkCetegoriesForCreatureDefinitionEntryGeneratorParam:
+      .extends: none
+      .adds:
+        creatureDefinition: SCreatureDefinitionWrapper
+        categories: array<SEncounterActionPointSelectorPairScr>
+
+    SWanderAndWorkEntryGeneratorCommon:
+      .extends: none
+      .adds:
+        wanderParams: CAINpcHistoryWanderParams
+        spawnToWork: bool
+        delay: float
+
+    SWanderEntryGeneratorParam:
+      .extends: none
+      .adds:
+        qualityMin: int
+        qualityMax: int
+        creatureDefinition: SCreatureDefinitionWrapper
+        spawnWayPointTag: TagList
+        wanderPointsGroupTag: name
+
+    genericSceneDefinition:
+      .extends: none
+      .adds:
+        voicesTag: name
+        storyScene: CStoryScene
+        input: name
+
+    SHouseDecorationItemData:
+      .extends: none
+      .adds:
+        decorationItemName: name
+        decorationAppearance: name
+
+    SMonsterNestUpdateDefinition:
+      .extends: none
+      .adds:
+        isRebuilding: bool
+        defaultPhaseToActivate: name
+        bossPhaseToActivate: name
+        hasBoss: bool
+        bossSpawnDelay: float
+        nestRebuildSchedule: GameTimeWrapper
+
+    SLeaderBoardData:
+      .extends: none
+      .adds:
+        competitor: string
+        points: int
+
+    SItemDataStub:
+      .extends: none
+      .adds:
+        id: SItemUniqueId
+        quantity: int
+        iconPath: string
+        gridPosition: int
+        gridSize: int
+        slotType: int
+        isNew: bool
+        actionType: int
+        price: int
+        userData: string
+        category: string
+        equipped: int
+        isReaded: bool
+
+    SAreaItemDefinition:
+      .extends: none
+      .adds:
+        itemName: name
+        maxCount: int
+
+    SAreaLootParams:
+      .extends: none
+      .adds:
+        remainingItemDrops: array<SAreaItemDefinition>
+        areaType: EAreaName
+
+    SAardEffects:
+      .extends: none
+      .adds:
+        baseCommonThrowEffect: name
+        baseCommonThrowEffectUpgrade1: name
+        baseCommonThrowEffectUpgrade2: name
+        baseCommonThrowEffectUpgrade3: name
+        throwEffectSoil: name
+        throwEffectSoilUpgrade1: name
+        throwEffectSoilUpgrade2: name
+        throwEffectSoilUpgrade3: name
+        throwEffectSPNoUpgrade: name
+        throwEffectSPUpgrade1: name
+        throwEffectSPUpgrade2: name
+        throwEffectSPUpgrade3: name
+        throwEffectDmgNoUpgrade: name
+        throwEffectDmgUpgrade1: name
+        throwEffectDmgUpgrade2: name
+        throwEffectDmgUpgrade3: name
+        throwEffectWater: name
+        throwEffectWaterUpgrade1: name
+        throwEffectWaterUpgrade2: name
+        throwEffectWaterUpgrade3: name
+        cameraShakeStrength: float
+
+    SAardAspect:
+      .extends: none
+      .adds:
+        projTemplate: CEntityTemplate
+        cone: float
+        distance: float
+        distanceUpgrade1: float
+        distanceUpgrade2: float
+        distanceUpgrade3: float
+
+    SAxiiEffects:
+      .extends: none
+      .adds:
+        castEffect: name
+        throwEffect: name
+
+    SIgniEffects:
+      .extends: none
+      .adds:
+        throwEffect: name
+        forestEffect: name
+        upgradedThrowEffect: name
+        meltArmorEffect: name
+        combustibleEffect: name
+        throwEffectSpellPower: name
+
+    SIgniAspect:
+      .extends: none
+      .adds:
+        projTemplate: CEntityTemplate
+        cone: float
+        distance: float
+        upgradedDistance: float
+
+    SIgniChannelDT:
+      .extends: none
+      .adds:
+        actor: CActor
+        dtSinceLastTest: float
+
+    SQuenEffects:
+      .extends: none
+      .adds:
+        lastingEffectUpgNone: name
+        lastingEffectUpg1: name
+        lastingEffectUpg2: name
+        lastingEffectUpg3: name
+        castEffect: name
+        cameraShakeStranth: float
+
+    SYrdenEffects:
+      .extends: none
+      .adds:
+        castEffect: name
+        placeEffect: name
+        shootEffect: name
+        activateEffect: name
+
+    SPetardParams:
+      .extends: none
+      .adds:
+        damages: array<SRawDamage>
+        buffs: array<SEffectInfo>
+        ignoresArmor: bool
+        range: float
+        cylinderHeight: float
+        cylinderOffsetZ: float
+        playHitAnimMode: EActionHitAnim
+        disabledAbilities: array<SBlockedAbility>
+        fxPlayedWhenAbilityDisabled: array<name>
+        fxStoppedWhenAbilityDisabled: array<name>
+        fxPlayedOnHit: array<name>
+        surfaceFX: SFXSurfacePostParams
+        fx: array<name>
+        fxCluster: array<name>
+        fxClusterWater: array<name>
+        fxWater: array<name>
+        componentsToSnap: array<name>
+        decalComponentNames: array<name>
+        decalComponentVisibleTimes: array<float>
+        decalComponentUseRandom: bool
+        decalComponentScaleModifier: float
+
+    SPetardShownDecals:
+      .extends: none
+      .adds:
+        componentName: name
+        remainingShowTime: float
+
+    SSpendablePoints:
+      .extends: none
+      .adds:
+        free: int
+        used: int
+
+    SLevelDefinition:
+      .extends: none
+      .adds:
+        number: int
+        requiredTotalExp: int
+        addedSkillPoints: int
+        requiredExp: int
+
+    SRiddleNodePositionDef:
+      .extends: none
+      .adds:
+        animName: name
+        changePosTime: float
+        fxName: name
+        pairedRiddleNodes: array<SPairedRiddleNodeDef>
+        isPositionValid: bool
+        externalRiddleFx: SExternalRiddleEffectEntityDef
+        igni: bool
+        aard: bool
+
+    SExternalRiddleEffectEntityDef:
+      .extends: none
+      .adds:
+        entityTag: name
+        fxName: name
+        isEffectOn: bool
+
+    SPairedRiddleNodeDef:
+      .extends: none
+      .adds:
+        pairedRiddleNodeTag: name
+        pairedRiddleNodeRequiredPos: int
+        externalRiddleFx: SExternalRiddleEffectEntityDef
+
+    SRequiredSwitch:
+      .extends: none
+      .adds:
+        requiredSwitchTag: name
+        switchState: ERequiredSwitchState
+
+    EncounterEntryDetails:
+      .extends: none
+      .adds:
+        encounterTag: name
+        canBeRepeated: bool
+        occurenceTime: EOcurrenceTime
+        questFileEntry: array<CEntityTemplate>
+
+    SSignProjectile:
+      .extends: none
+      .adds:
+        speed: float
+        flyEffect: name
+        hitEffect: name
+        targetHitEffect: name
+        lastingTime: float
+
+    W3POIEntities:
+      .extends: none
+      .adds:
+        poiEntityTemplate: CEntityTemplate
+        maxSpawnedEntities: int
+
+    SUITutorial:
+      .extends: none
+      .adds:
+        menuName: name
+        tutorialStateName: name
+        triggerCondition: EUITutorialTriggerCondition
+        requiredGameplayFactName: string
+        requiredGameplayFactValueInt: int
+        requiredGameplayFactComparator: ECompareOp
+        requiredGameplayFactName2: string
+        requiredGameplayFactValueInt2: int
+        requiredGameplayFactComparator2: ECompareOp
+        priority: int
+        abortOnMenuClose: bool
+        sourceName: string
+
+    SUISavedData:
+      .extends: none
+      .adds:
+        panelName: name
+        selectedTag: name
+        openedCategories: array<name>
+        gridItem: SItemUniqueId
+        slotID: int
+        selectedModule: int
+
+    SGlossaryEntry:
+      .extends: none
+      .adds:
+        panelName: name
+        newEntry: CJournalBase
+        tag: name
+
+    SMappinEntry:
+      .extends: none
+      .adds:
+        newMappin: name
+        newMappinType: name
+
+    SCraftingFilters:
+      .extends: none
+      .adds:
+        showCraftable: bool
+        showMissingIngre: bool
+        showAlreadyCrafted: bool
+
+    SEnchantmentFilters:
+      .extends: none
+      .adds:
+        showHasIngredients: bool
+        showMissingIngredients: bool
+        showLevel1: bool
+        showLevel2: bool
+        showLevel3: bool
+
+    SFocusInteractionIcon:
+      .extends: none
+      .adds:
+        m_id: int
+        m_actionName: name
+        m_entity: CEntity
+        m_screenPos: Vector
+        m_distanceSquared: float
+        m_valid: bool
+        m_canBeSeen: bool
+        m_isSeen: bool
+
+    SHudItemInfo:
+      .extends: none
+      .adds:
+        m_icon: string
+        m_category: string
+        m_itemName: string
+        m_ammoStr: string
+        m_btn: int
+        m_pcBtn: int
+
+    SJournalUpdate:
+      .extends: none
+      .adds:
+        text: string
+        title: string
+        status: EJournalStatus
+        journalEntry: CJournalBase
+        iconPath: string
+        panelName: name
+        entryTag: name
+        soundEvent: string
+        isQuestUpdate: bool
+        displayTime: float
+        itemId: SItemUniqueId
+        isItemUpdate: bool
+
+    OnelinerDefinition:
+      .extends: none
+      .adds:
+        m_Target: CActor
+        m_Text: string
+        m_ID: int
+
+    SUpdateEvent:
+      .extends: none
+      .adds:
+        eventType: EUpdateEventType
+        delay: int
+        journalBase: CJournalBase
+        index: int
+
+    newGameConfig:
+      .extends: none
+      .adds:
+        tutorialsOn: bool
+        difficulty: int
+        simulate_import: bool
+        import_save_index: int
+
+    CreditsSection:
+      .extends: none
+      .adds:
+        sectionName: string
+        positionNames: array<string>
+        crewNames: array<string>
+        displayTime: float
+        positionX: int
+        positionY: int
+        delay: float
+
+    SMovieData:
+      .extends: none
+      .adds:
+        movieName: string
+        isSkipable: bool
+        showLogo: bool
+
+    SItemAttribute:
+      .extends: none
+      .adds:
+        attributeName: name
+        min: float
+        max: float
+
+    SMenuTab:
+      .extends: none
+      .adds:
+        MenuName: name
+        MenuLabel: string
+        Visible: bool
+        Enabled: bool
+        Restricted: bool
+        ParentMenu: name
+        MenuState: name
+
+    SentStatsData:
+      .extends: none
+      .adds:
+        statName: name
+        statValue: string
+
+    JournalDescriptionText:
+      .extends: none
+      .adds:
+        order: int
+        groupOrder: int
+        stringKey: int
+        currentEntry: CJournalQuestDescriptionEntry
+
+    SMenuButtonDef:
+      .extends: none
+      .adds:
+        NavigationCode: string
+        LocalisationKey: string
+        enabled: bool
+
+    SKeyBinding:
+      .extends: none
+      .adds:
+        ActionID: int
+        LocalizationKey: string
+        Gamepad_NavCode: string
+        Keyboard_KeyCode: int
+        Enabled: bool
+        IsLocalized: bool
+        IsHold: bool
+
+    UserMessageActionData:
+      .extends: none
+      .adds:
+        actionId: EUserMessageAction
+        label: string
+
+    TutorialHighlightedArea:
+      .extends: none
+      .adds:
+        x: float
+        y: float
+        width: float
+        height: float
+
+    SItemGenericStat:
+      .extends: none
+      .adds:
+        statName: string
+        value: float
+        comparence: string
+
+    SBackgroundPairSpawnedEntity:
+      .extends: none
+      .adds:
+        entityTemplate: CEntityTemplate
+        slotName: name
+        referenceName: name
+
+    SMountEvent:
+      .extends: none
+      .adds:
+        animEventName: name
+        entityReferenceName: name
+        newSlotName: name
+        entityContainingSlot: EBgNPCType
+
+    MerchantNPCEmbeddedScenes:
+      .extends: none
+      .adds:
+        voiceTag: name
+        storyScene: CStoryScene
+        input: name
+        conditions: array<MerchantNPCEmbeddedScenesConditions>
+
+    MerchantNPCEmbeddedScenesConditions:
+      .extends: none
+      .adds:
+        applyToTag: name
+        requiredFact: string
+        forbiddenFact: string
+
+    SParryInfo:
+      .extends: none
+      .adds:
+        attacker: CActor
+        target: CActor
+        targetToAttackerAngleAbs: float
+        targetToAttackerDist: float
+        attackSwingType: EAttackSwingType
+        attackSwingDir: EAttackSwingDirection
+        attackActionName: name
+        attackerWeaponId: SItemUniqueId
+        canBeParried: bool
+
+    SDrunkMutagen:
+      .extends: none
+      .adds:
+        slot: int
+        mutagenName: name
+        toxicityOffset: float
+        effectType: EEffectType
+
+    SWitcherSign:
+      .extends: none
+      .adds:
+        template: CEntityTemplate
+        entity: W3SignEntity
+
+    SRadialSlotDef:
+      .extends: none
+      .adds:
+        slotName: name
+        disabledBySources: array<name>
+
+    SHighlightMappin:
+      .extends: none
+      .adds:
+        MappinName: name
+        MappinState: bool
+
+    SInputActionLock:
+      .extends: none
+      .adds:
+        sourceName: name
+        removedOnSpawn: bool
+        isFromQuest: bool
+        isFromPlace: bool
+
+    SInteriorAreaInfo:
+      .extends: none
+      .adds:
+        areaName: string
+        isSmallInterior: bool
+        modifyPlayerSpeed: bool
+
+    SCustomOrientationInfo:
+      .extends: none
+      .adds:
+        orientationTarget: EOrientationTarget
+        sourceName: name
+        customHeading: float
+
+    SSelectedQuickslotItem:
+      .extends: none
+      .adds:
+        sourceName: name
+        itemID: SItemUniqueId
+
+    SRewardMultiplier:
+      .extends: none
+      .adds:
+        rewardName: name
+        rewardMultiplier: float
+        isItemMultiplier: bool
+
+    SCustomCameraParams:
+      .extends: none
+      .adds:
+        source: CActor
+        useCustomCamera: bool
+        cameraParams: SMultiValue
+
+    SCustomOrientationParams:
+      .extends: none
+      .adds:
+        source: CActor
+        customOrientationTarget: EOrientationTarget
+
+    SHeadingHistory:
+      .extends: none
+      .adds:
+        time: EngineTime
+        headValue: float
+        speedValue: float
+
+    SItem:
+      .extends: none
+      .adds:
+        itemName: name
+        quantity: int
+
+    SGlossaryImageOverride:
+      .extends: none
+      .adds:
+        uniqueTag: name
+        imageFileName: string
+
+    SGwentIngDef:
+      .extends: none
+      .adds:
+        itemName: name
+        reqLevel: int
+        quantityMin: int
+        quantityMax: int
+
+    SQuestPlayerSkill:
+      .extends: none
+      .adds:
+        skill: ESkill
+        skillLevel: int
+        condition: EQuestPlayerSkillCondition
+
+    SRadialDesaturation:
+      .extends: none
+      .adds:
+        value: bool
+        fieldName: name
+
+    shopQuestItemDef:
+      .extends: none
+      .adds:
+        itemName: name
+        requiredFact: string
+        forbiddenFact: string
+        quantity: int
+
+    SBackgroundEntityData:
+      .extends: none
+      .adds:
+        entityTemplate: CEntityTemplate
+        spawnSlotName: name
+        workAnimationEvent: EBackgroundNPCWork_Single
+        appearanceName: name
+
+    ParticleEffectNames:
+      .extends: none
+      .adds:
+        rightSplash: name
+        leftSplash: name
+        backSplash: name
+
+    SBoatPartsConfig:
+      .extends: none
+      .adds:
+        destructionVolumeIndex: int
+        parts: array<SBoatDesctructionPart>
+
+    SBoatDesctructionPart:
+      .extends: none
+      .adds:
+        hpFalloffThreshold: float
+        componentName: string
+        isPartDropped: bool
+
+    CollsionActorStruct:
+      .extends: none
+      .adds:
+        actor: CActor
+        timestamp: float
+

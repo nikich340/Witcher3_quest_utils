@@ -1,0 +1,1412 @@
+    CCamera:
+      .adds:
+        cameraState: ECameraState
+
+    CInteractionComponent:
+      .adds:
+        isEnabledOnHorse: bool
+        aimVector: Vector
+        iconOffset: Vector
+        iconOffsetSlotName: name
+
+    CAnimatedComponent:
+      .adds:
+        nextFreeAnimMultCauserId: int
+        animationMultiplierCausers: array<SAnimMultiplyCauser>
+
+    CScriptSoundSystem:
+      .adds:
+        currentGameState: ESoundGameState
+        defaultGameState: ESoundGameState
+        defaultStates: array<ESoundGameState>
+        stateChangeTimestamp: float
+        stateCheckCooldown: float
+        isGameStopped: bool
+        currentThreatRating: float
+        desiredThreatRating: float
+        lastThreatUpdateTime: float
+        lastThreatDampTime: float
+        threatUpdateCooldown: float
+        threatDampCooldown: float
+        threatDamper: SpringDamper
+        monsterHunt: bool
+        monster: bool
+        isBlackscreen: bool
+        soundSystemSettings: C2dArray
+        threatWeight: int
+        levelWeight: int
+        tweakWeight: float
+
+    CSwitchableFoliageComponent:
+      .adds:
+        currEntryName: name
+
+    CActor:
+      .adds:
+        isTargatebleByPlayer: bool
+        isUsingTooltip: bool
+        slideTarget: CGameplayEntity
+        parryTypeTable: array<array<EParryType>
+        lastAttacker: CActor
+        counterAttackAnimTable: array<name>
+        bIsGuarded: bool
+        bParryEnabled: bool
+        bCanPerformCounter: bool
+        lastParryType: EParryType
+        useAdditiveHits: bool
+        oneTimeAdditiveHit: bool
+        useAdditiveCriticalStateAnim: bool
+        criticalCancelAdditiveHit: bool
+        lastAttackRangeName: name
+        attackActionName: name
+        hitTargets: array<CGameplayEntity>
+        droppedItems: array<SDroppedItem>
+        wasDefeatedFromFistFight: bool
+        isCurrentlyDodging: bool
+        combatStartTime: float
+        combatPartStartTime: float
+        collisionDamageTimestamp: float
+        lastWasAttackedTime: float
+        lastWasHitTime: float
+        lowerGuardTime: float
+        knockedUncounscious: bool
+        isGameplayVisible: bool
+        lastBreathTime: float
+        isRecoveringFromKnockdown: bool
+        hitCounter: int
+        totalHitCounter: int
+        customHits: bool
+        defendCounter: int
+        totalDefendCounter: int
+        bIsPlayerCurrentTarget: bool
+        buffImmunities: array<SBuffImmunity>
+        buffRemovedImmunities: array<SBuffImmunity>
+        newRequestedCS: CBaseGameplayEffect
+        criticalStateCounter: int
+        totalCriticalStateCounter: int
+        isDead: bool
+        canPlayHitAnim: bool
+        damageDistanceNotReducing: float
+        deathDistNotReducing: float
+        damageDistanceReducing: float
+        deathDistanceReducing: float
+        fallDamageMinHealthPerc: float
+        isPlayerFollower: bool
+        MAC: CMovingPhysicalAgentComponent
+        immortalityFlags: int
+        abilityManager: W3AbilityManager
+        effectsUpdateTicking: bool
+        immortalityFlagsCopy: int
+        isSwimming: bool
+        usedVehicleHandle: EntityHandle
+        usedVehicle: CGameplayEntity
+        effectManager: W3EffectManager
+        traverser: CScriptedExplorationTraverser
+        nextFreeAnimMultCauserId: int
+        animationMultiplierCausers: array<SAnimMultiplyCauser>
+        isInAir: bool
+        ragdollPullingStartPosition: Vector
+        cachedIsHuman: int
+        cachedIsWoman: int
+        cachedIsMan: int
+        cachedIsMonster: int
+        cachedIsAnimal: int
+        cachedIsVampire: int
+        isImmuneToNegativeBuffs: bool
+        woundToDismember: name
+        forwardVector: Vector
+        dismemberForceRagdoll: bool
+        dismemberEffectsMask: int
+        attackEventInProgress: bool
+        ignoreAttack: bool
+        currentAttackData: CPreAttackEventData
+        currentAttackAnimInfo: SAnimationEventAnimInfo
+        ignoreTargetsForCurrentAttack: array<CGameplayEntity>
+        phantomWeaponAnimData: CPreAttackEventData
+        phantomWeaponWeaponId: SItemUniqueId
+        phantomWeaponParried: bool
+        phantomWeaponCountered: bool
+        phantomWeaponParriedBy: array<CActor>
+        phantomWeaponAttackAnimationName: name
+        phantomWeaponHitTime: float
+        phantomWeaponHitTargets: array<CGameplayEntity>
+        phantomStrike: bool
+        customCameraStackIndex: int
+        cachedHeal: float
+        hudModuleHealScheduledUpdate: bool
+        cachedDoTDamage: float
+        hudModuleDoTScheduledUpdate: bool
+
+    CCommonGame:
+      .adds:
+        tooltipSettings: C2dArray
+
+    CCommonMapManager:
+      .adds:
+        m_destinationPinTag: name
+        m_debugTeleportWaypointTag: name
+        m_noSaveLock: int
+        m_dbgShowKnownPins: bool
+        m_dbgShowPins: bool
+        m_dbgShowAllFT: bool
+        m_dbgAllowFT: bool
+        m_borderTeleportPosition: Vector
+        m_borderTeleportRotation: EulerAngles
+        m_lastGlobalFastTravelArea: int
+        m_lastGlobalFastTravelPosition: Vector
+
+    W3GameParams:
+      .adds:
+        dm: CDefinitionsManagerAccessor
+        main: SCustomNode
+        BASE_ABILITY_TAG: name
+        PASSIVE_BONUS_ABILITY_TAG: name
+        forbiddenAttributes: array<name>
+        GLOBAL_ENEMY_ABILITY: name
+        ENEMY_BONUS_PER_LEVEL: name
+        ENEMY_BONUS_FISTFIGHT_LOW: name
+        ENEMY_BONUS_FISTFIGHT_HIGH: name
+        ENEMY_BONUS_LOW: name
+        ENEMY_BONUS_HIGH: name
+        ENEMY_BONUS_DEADLY: name
+        MONSTER_BONUS_PER_LEVEL: name
+        MONSTER_BONUS_PER_LEVEL_GROUP: name
+        MONSTER_BONUS_PER_LEVEL_ARMORED: name
+        MONSTER_BONUS_PER_LEVEL_GROUP_ARMORED: name
+        MONSTER_BONUS_LOW: name
+        MONSTER_BONUS_HIGH: name
+        MONSTER_BONUS_DEADLY: name
+        BOSS_NGP_BONUS: name
+        GLOBAL_PLAYER_ABILITY: name
+        NOT_A_SKILL_ABILITY_TAG: name
+        ALCHEMY_COOKED_ITEM_TYPE_POTION: string
+        ALCHEMY_COOKED_ITEM_TYPE_BOMB: string
+        ALCHEMY_COOKED_ITEM_TYPE_OIL: string
+        OIL_ABILITY_TAG: name
+        QUANTITY_INCREASED_BY_ALCHEMY_TABLE: int
+        ATTACK_NAME_LIGHT: name
+        ATTACK_NAME_HEAVY: name
+        ATTACK_NAME_SUPERHEAVY: name
+        ATTACK_NAME_SPEED_BASED: name
+        ATTACK_NO_DAMAGE: name
+        MAX_DYNAMICALLY_SPAWNED_BOATS: int
+        MAX_THROW_RANGE: float
+        UNDERWATER_THROW_RANGE: float
+        PROXIMITY_PETARD_IDLE_DETONATION_TIME: float
+        BOMB_THROW_DELAY: float
+        CONTAINER_DYNAMIC_DESTROY_TIMEOUT: int
+        CRITICAL_HIT_CHANCE: name
+        CRITICAL_HIT_DAMAGE_BONUS: name
+        CRITICAL_HIT_REDUCTION: name
+        CRITICAL_HIT_FX: name
+        HEAD_SHOT_CRIT_CHANCE_BONUS: float
+        BACK_ATTACK_CRIT_CHANCE_BONUS: float
+        DAMAGE_NAME_DIRECT: name
+        DAMAGE_NAME_PHYSICAL: name
+        DAMAGE_NAME_SILVER: name
+        DAMAGE_NAME_SLASHING: name
+        DAMAGE_NAME_PIERCING: name
+        DAMAGE_NAME_BLUDGEONING: name
+        DAMAGE_NAME_RENDING: name
+        DAMAGE_NAME_ELEMENTAL: name
+        DAMAGE_NAME_FIRE: name
+        DAMAGE_NAME_FORCE: name
+        DAMAGE_NAME_FROST: name
+        DAMAGE_NAME_POISON: name
+        DAMAGE_NAME_SHOCK: name
+        DAMAGE_NAME_MORALE: name
+        DAMAGE_NAME_STAMINA: name
+        FOCUS_DRAIN_PER_HIT: float
+        UNINTERRUPTED_HITS_CAMERA_EFFECT_REGULAR_ENEMY: name
+        UNINTERRUPTED_HITS_CAMERA_EFFECT_BIG_ENEMY: name
+        MONSTER_RESIST_THRESHOLD_TO_REFLECT_FISTS: float
+        ARMOR_VALUE_NAME: name
+        LOW_HEALTH_EFFECT_SHOW: float
+        UNDERWATER_CROSSBOW_DAMAGE_BONUS: float
+        UNDERWATER_CROSSBOW_DAMAGE_BONUS_NGP: float
+        ARCHER_DAMAGE_BONUS_NGP: float
+        IGNI_SPELL_POWER_MILT: float
+        INSTANT_KILL_INTERNAL_PLAYER_COOLDOWN: float
+        DIFFICULTY_TAG_EASY: name
+        DIFFICULTY_TAG_MEDIUM: name
+        DIFFICULTY_TAG_HARD: name
+        DIFFICULTY_TAG_HARDCORE: name
+        DIFFICULTY_TAG_DIFF_ABILITY: name
+        DIFFICULTY_HP_MULTIPLIER: name
+        DIFFICULTY_DMG_MULTIPLIER: name
+        DIFFICULTY_TAG_IGNORE: name
+        DISMEMBERMENT_ON_DEATH_CHANCE: int
+        FINISHER_ON_DEATH_CHANCE: int
+        DURABILITY_ARMOR_LOSE_CHANCE: int
+        DURABILITY_WEAPON_LOSE_CHANCE: int
+        DURABILITY_ARMOR_LOSE_VALUE: float
+        DURABILITY_WEAPON_LOSE_VALUE: float
+        DURABILITY_WEAPON_LOSE_VALUE_HARDCORE: float
+        DURABILITY_ARMOR_CHEST_WEIGHT: int
+        DURABILITY_ARMOR_PANTS_WEIGHT: int
+        DURABILITY_ARMOR_BOOTS_WEIGHT: int
+        DURABILITY_ARMOR_GLOVES_WEIGHT: int
+        DURABILITY_ARMOR_MISS_WEIGHT: int
+        durabilityThresholdsWeapon: array<SDurabilityThreshold>
+        durabilityThresholdsArmor: array<SDurabilityThreshold>
+        TAG_REPAIR_CONSUMABLE_ARMOR: name
+        TAG_REPAIR_CONSUMABLE_STEEL: name
+        TAG_REPAIR_CONSUMABLE_SILVER: name
+        ITEM_DAMAGED_DURABILITY: int
+        INTERACTIVE_REPAIR_OBJECT_MAX_DURS: array<int>
+        CFM_SLOWDOWN_RATIO: float
+        LIGHT_HIT_FX: name
+        LIGHT_HIT_BACK_FX: name
+        LIGHT_HIT_PARRIED_FX: name
+        LIGHT_HIT_BACK_PARRIED_FX: name
+        HEAVY_HIT_FX: name
+        HEAVY_HIT_BACK_FX: name
+        HEAVY_HIT_PARRIED_FX: name
+        HEAVY_HIT_BACK_PARRIED_FX: name
+        LOW_HP_SHOW_LEVEL: float
+        TAG_ARMOR: name
+        TAG_ENCUMBRANCE_ITEM_FORCE_YES: name
+        TAG_ENCUMBRANCE_ITEM_FORCE_NO: name
+        TAG_ITEM_UPGRADEABLE: name
+        TAG_DONT_SHOW: name
+        TAG_DONT_SHOW_ONLY_IN_PLAYERS: name
+        TAG_ITEM_SINGLETON: name
+        TAG_INFINITE_AMMO: name
+        TAG_UNDERWATER_AMMO: name
+        TAG_GROUND_AMMO: name
+        TAG_ILLUSION_MEDALLION: name
+        TAG_PLAYER_STEELSWORD: name
+        TAG_PLAYER_SILVERSWORD: name
+        TAG_INFINITE_USE: name
+        ARMOR_MASTERWORK_ABILITIES: array<name>
+        ARMOR_MAGICAL_ABILITIES: array<name>
+        GLOVES_MASTERWORK_ABILITIES: array<name>
+        GLOVES_MAGICAL_ABILITIES: array<name>
+        PANTS_MASTERWORK_ABILITIES: array<name>
+        PANTS_MAGICAL_ABILITIES: array<name>
+        BOOTS_MASTERWORK_ABILITIES: array<name>
+        BOOTS_MAGICAL_ABILITIES: array<name>
+        WEAPON_MASTERWORK_ABILITIES: array<name>
+        WEAPON_MAGICAL_ABILITIES: array<name>
+        ITEM_SET_TAG_BEAR: name
+        ITEM_SET_TAG_GRYPHON: name
+        ITEM_SET_TAG_LYNX: name
+        ITEM_SET_TAG_WOLF: name
+        ITEM_SET_TAG_RED_WOLF: name
+        ITEM_SET_TAG_VAMPIRE: name
+        ITEM_SET_TAG_VIPER: name
+        BOUNCE_ARROWS_ABILITY: name
+        TAG_ALCHEMY_REFILL_ALCO: name
+        REPAIR_OBJECT_BONUS_ARMOR_ABILITY: name
+        REPAIR_OBJECT_BONUS_WEAPON_ABILITY: name
+        REPAIR_OBJECT_BONUS: name
+        CIRI_SWORD_NAME: name
+        TAG_OFIR_SET: name
+        newGamePlusLevel: int
+        NEW_GAME_PLUS_LEVEL_ADD: int
+        NEW_GAME_PLUS_MIN_LEVEL: int
+        NEW_GAME_PLUS_EP1_MIN_LEVEL: int
+        TAG_STEEL_OIL: name
+        TAG_SILVER_OIL: name
+        HEAVY_STRIKE_COST_MULTIPLIER: float
+        PARRY_HALF_ANGLE: int
+        PARRY_STAGGER_REDUCE_DAMAGE_LARGE: float
+        PARRY_STAGGER_REDUCE_DAMAGE_SMALL: float
+        POTION_QUICKSLOTS_COUNT: int
+        ITEMS_REQUIRED_FOR_MINOR_SET_BONUS: int
+        ITEMS_REQUIRED_FOR_MAJOR_SET_BONUS: int
+        ITEM_SET_TAG_BONUS: name
+        TAG_STEEL_SOCKETABLE: name
+        TAG_SILVER_SOCKETABLE: name
+        TAG_ARMOR_SOCKETABLE: name
+        TAG_ABILITY_SOCKET: name
+        STAMINA_COST_PARRY_ATTRIBUTE: name
+        STAMINA_COST_COUNTERATTACK_ATTRIBUTE: name
+        STAMINA_COST_EVADE_ATTRIBUTE: name
+        STAMINA_COST_SWIMMING_PER_SEC_ATTRIBUTE: name
+        STAMINA_COST_SUPER_HEAVY_ACTION_ATTRIBUTE: name
+        STAMINA_COST_HEAVY_ACTION_ATTRIBUTE: name
+        STAMINA_COST_LIGHT_ACTION_ATTRIBUTE: name
+        STAMINA_COST_DODGE_ATTRIBUTE: name
+        STAMINA_COST_SPRINT_ATTRIBUTE: name
+        STAMINA_COST_SPRINT_PER_SEC_ATTRIBUTE: name
+        STAMINA_COST_JUMP_ATTRIBUTE: name
+        STAMINA_COST_USABLE_ITEM_ATTRIBUTE: name
+        STAMINA_COST_DEFAULT: name
+        STAMINA_COST_PER_SEC_DEFAULT: name
+        STAMINA_COST_ROLL_ATTRIBUTE: name
+        STAMINA_COST_LIGHT_SPECIAL_ATTRIBUTE: name
+        STAMINA_COST_HEAVY_SPECIAL_ATTRIBUTE: name
+        STAMINA_DELAY_PARRY_ATTRIBUTE: name
+        STAMINA_DELAY_COUNTERATTACK_ATTRIBUTE: name
+        STAMINA_DELAY_EVADE_ATTRIBUTE: name
+        STAMINA_DELAY_SWIMMING_ATTRIBUTE: name
+        STAMINA_DELAY_SUPER_HEAVY_ACTION_ATTRIBUTE: name
+        STAMINA_DELAY_HEAVY_ACTION_ATTRIBUTE: name
+        STAMINA_DELAY_LIGHT_ACTION_ATTRIBUTE: name
+        STAMINA_DELAY_DODGE_ATTRIBUTE: name
+        STAMINA_DELAY_SPRINT_ATTRIBUTE: name
+        STAMINA_DELAY_JUMP_ATTRIBUTE: name
+        STAMINA_DELAY_USABLE_ITEM_ATTRIBUTE: name
+        STAMINA_DELAY_DEFAULT: name
+        STAMINA_DELAY_ROLL_ATTRIBUTE: name
+        STAMINA_DELAY_LIGHT_SPECIAL_ATTRIBUTE: name
+        STAMINA_DELAY_HEAVY_SPECIAL_ATTRIBUTE: name
+        STAMINA_SEGMENT_SIZE: int
+        TOXICITY_DAMAGE_THRESHOLD: float
+        DEBUG_CHEATS_ENABLED: bool
+        SKILL_GLOBAL_PASSIVE_TAG: name
+        TAG_OPEN_FIRE: name
+        TAG_MONSTER_SKILL: name
+        TAG_EXPLODING_GAS: name
+        ON_HIT_HP_REGEN_DELAY: float
+        TAG_NPC_IN_PARTY: name
+        TAG_PLAYERS_MOUNTED_VEHICLE: name
+        TAG_SOFT_LOCK: name
+        MAX_SPELLPOWER_ASSUMED: float
+        NPC_RESIST_PER_LEVEL: float
+        XP_PER_LEVEL: int
+        XP_MINIBOSS_BONUS: float
+        XP_BOSS_BONUS: float
+        ADRENALINE_DRAIN_AFTER_COMBAT_DELAY: float
+        KEYBOARD_KEY_FONT_COLOR: string
+        MONSTER_HUNT_ACTOR_TAG: name
+        GWINT_CARD_ACHIEVEMENT_TAG: name
+        TAG_AXIIABLE: name
+        TAG_AXIIABLE_LOWER_CASE: name
+        LEVEL_DIFF_DEADLY: int
+        LEVEL_DIFF_HIGH: int
+        LEVEL_DIFF_XP_MOD: float
+        MAX_XP_MOD: float
+        DEVIL_HORSE_AURA_MIN_DELAY: int
+        DEVIL_HORSE_AURA_MAX_DELAY: int
+        TOTAL_AMOUNT_OF_BOOKS: int
+        MAX_PLAYER_LEVEL: int
+
+    CGameplayEntity:
+      .adds:
+        minLootParamNumber: int
+        maxLootParamNumber: int
+        iconOffset: Vector
+        highlighted: bool
+        focusModeSoundEffectType: EFocusModeSoundEffectType
+        isPlayingFocusSound: bool
+        isColorBlindMode: bool
+        focusSoundVisualEffectBoneName: name
+        isHighlightedByMedallion: bool
+        isMagicalObject: bool
+        soundEntityName: string
+        soundEntityGender: string
+        soundEntitySet: string
+        cutsceneForbiddenFXs: array<name>
+
+    CR4GlobalEventsScriptsDispatcher:
+      .adds:
+        listenersByCategory: array<array<IGlobalEventScriptedListener>
+
+    CInteractionsManager:
+      .adds:
+        activeInteraction: CInteractionComponent
+
+    W3LockableEntity:
+      .adds:
+        keyItemName: name
+        removeKeyOnUse: bool
+        enabledByFact: string
+        factOnLockedAttempt: string
+        factOnUnlockedByKey: string
+        isEnabled: bool
+        isPlayerInActivationRange: bool
+        isInteractionBlocked: bool
+
+    CR4Game:
+      .adds:
+        zoneName: EZoneName
+        gamerProfile: W3GamerProfile
+        isDialogOrCutscenePlaying: bool
+        recentDialogOrCutsceneEndGameTime: GameTime
+        isCutscenePlaying: bool
+        isDialogDisplayDisabled: bool
+        witcherLog: W3GameLog
+        deathSaveLockId: int
+        currentPresence: name
+        restoreUsableItemL: bool
+        savedEnchanterFunds: int
+        gameplayFactsForRemoval: array<SGameplayFactRemoval>
+        gameplayFacts: array<SGameplayFact>
+        tutorialManagerHandle: EntityHandle
+        diffChangePostponed: EDifficultyMode
+        dynamicallySpawnedBoats: array<EntityHandle>
+        dynamicallySpawnedBoatsToDestroy: array<EntityHandle>
+        uberMovement: bool
+        isRespawningInLastCheckpoint: bool
+        environmentID: int
+        logEnabled: bool
+        globalEventsScriptsDispatcherInternal: CR4GlobalEventsScriptsDispatcher
+        minimapSettings: C2dArray
+        playerStatisticsSettings: C2dArray
+        hudSettings: C2dArray
+        damageMgr: W3DamageManager
+        effectMgr: W3GameEffectManager
+        timescaleSources: array<STimescaleSource>
+        envMgr: W3EnvironmentManager
+        runewordMgr: W3RunewordManager
+        questLevelsFilePaths: array<string>
+        questLevelsContainer: array<C2dArray>
+        expGlobalModifiers: C2dArray
+        expGlobalMod_kills: float
+        expGlobalMod_quests: float
+        syncAnimManager: W3SyncAnimationManager
+        isSignedIn: bool
+        m_runReactionSceneDialog: bool
+        uiHorizontalFrameScale: float
+        uiVerticalFrameScale: float
+        uiScale: float
+        uiGamepadScaleGain: float
+        uiOpacity: float
+        isColorBlindMode: bool
+        menuToOpen: name
+        postponedPreAttackEvents: array<SPostponedPreAttackEvent>
+
+    CHorseRiderSharedParams:
+      .adds:
+        hasFallenFromHorse: bool
+        scriptedActionPending: bool
+        isPlayingAnimWithRider: bool
+        combatTarget: CActor
+
+    CAIStorageAnimalData:
+      .adds:
+        scared: Bool
+
+    CAIStorageHorseData:
+      .adds:
+        horseEntity: CActor
+        horseComponent: W3HorseComponent
+
+    CGameplayLightComponent:
+      .adds:
+        factOnIgnite: name
+        actionBlockingExceptions: array<EInputActionBlock>
+        restoreItemLAtEnd: bool
+
+    CR4InteriorAreaComponent:
+      .adds:
+        isDarkPlace: bool
+        allowHorseInThisInterior: bool
+        movementLock: EPlayerMovementLockType
+
+    CInventoryComponent:
+      .adds:
+        priceMult: float
+        priceRepairMult: float
+        priceRepair: float
+        fundsType: EInventoryFundsType
+        recentlyAddedItems: array<SItemUniqueId>
+        fundsMax: int
+        daysToIncreaseFunds: int
+        listeners: array<IInventoryScriptedListener>
+
+    CMovingAgentComponent:
+      .adds:
+        relativeSpeedBuffer: array<float>
+
+    CScriptedDestroyableComponent:
+      .adds:
+        distanceValue: float
+        destroyTimeDuration: float
+        contactDestroyDelay: float
+        destroyAtTime: float
+        m_state: EScriptedDetroyableComponentState
+        entryTime: float
+        timerInterval: float
+
+    W3AbilityManager:
+      .adds:
+        overhealBonus: float
+        isInitialized: bool
+
+    CDamageData:
+      .adds:
+        isActionMelee: bool
+
+    W3Container:
+      .adds:
+        isDynamic: bool
+        skipInventoryPanel: bool
+        focusModeHighlight: EFocusModeVisibility
+        factOnContainerOpened: string
+        usedByCiri: bool
+        allowToInjectBalanceItems: bool
+        disableLooting: bool
+        disableStealing: bool
+        checkedForBonusMoney: bool
+        usedByClueStash: EntityHandle
+        disableFocusHighlightControl: bool
+        isPlayingInteractionAnim: bool
+        QUEST_HIGHLIGHT_FX: name
+        spoonCollectorTested: bool
+        SKIP_NO_DROP_NO_SHOW: bool
+
+    CEncounter:
+      .adds:
+        dataManager: CEncounterDataManager
+        ownerTasksToPerformOnLeaveEncounter: array<SOwnerEncounterTaskParams>
+        externalTasksToPerformOnLeaveEncounter: array<SExternalEncounterTaskParams>
+        isUpdating: bool
+
+    CSpawnTreeInitializerIdleAI:
+      .adds:
+        ai: CAIIdleRedefinitionParameters
+
+    CSpawnTreeInitializerRiderIdleAI:
+      .adds:
+        ai: CAIRiderIdleRedefinitionParameters
+
+    CSpawnTreeInitializerIdleFlightAI:
+      .adds:
+        ai: CAIFlightIdleRedefinitionParameters
+
+    CSpawnTreeInitializerStartingBehavior:
+      .adds:
+        ai: CAIStartingBehaviorParameters
+
+    CSpawnTreeInitializerRiderStartingBehavior:
+      .adds:
+        ai: CAIRiderStartingBehaviorParameters
+
+    ISpawnTreeInitializerCommunityAI:
+      .adds:
+        ai: CAIRedefinitionParameters
+
+    CWanderAndWorkEntryGenerator:
+      .adds:
+        workCategories: array<SWanderWorkCetegoriesForCreatureDefinitionEntryGeneratorParam>
+        commonSpawnParams: SCreatureEntrySpawnerParams
+        commmonWaW: SWanderAndWorkEntryGeneratorCommon
+
+    CWorkEntryGenerator:
+      .adds:
+        commonSpawnParams: SCreatureEntrySpawnerParams
+        workCategories: array<SWorkCetegoriesForCreatureDefinitionEntryGeneratorParam>
+
+    CFocusModeController:
+      .adds:
+        detectedCluesTags: array<name>
+        medallionIntensity: W3FocusModeEffectIntensity
+        dimmingClue: W3MonsterClue
+        blockVibrations: bool
+        focusAreaIntensity: float
+        effectFadeTime: float
+        controllerVibrationFactor: float
+        controllerVibrationDuration: float
+        activationSoundTimer: float
+        activationSoundInterval: float
+        fastFocusTimer: float
+        activateAfterFastFocus: bool
+        fastFocusDuration: float
+        isUnderwaterFocus: bool
+        isInCombat: bool
+        isNight: bool
+        lastDarkPlaceCheck: float
+        DARK_PLACE_CHECK_INTERVAL: float
+        focusInteractionsInterval: float
+
+    CBeehiveEntity:
+      .adds:
+        damageVal: SAbilityAttributeValue
+        destroyEntAfter: float
+        isFallingObject: bool
+        desiredTargetTagForBeesSwarm: name
+        excludedEntitiesTagsForBeeSwarm: array<name>
+        isOnFire: bool
+        hangingDamageArea: CComponent
+        originPoint: Vector
+        actorsInHangArea: array<CActor>
+        hangingBuffParams: SCustomEffectParams
+        beesActivated: bool
+        activeMovingBees: W3BeeSwarm
+        activeAttachedBees: W3BeeSwarm
+        HANGING_AREA_NAME: name
+
+    W3ToxicCloud:
+      .adds:
+        poisonDamage: SAbilityAttributeValue
+        explosionDamage: SAbilityAttributeValue
+        restorationTime: float
+        settlingTime: float
+        fxOnSettle: name
+        fxOnSettleCluster: name
+        fxOnExplode: name
+        fxOnExplodeCluster: name
+        bIsEnabled: bool
+        usePoisonBuffWithAnim: bool
+        cameraShakeRadius: float
+        isEnvironment: bool
+        burningChance: float
+        excludedTags: array<name>
+        chainedExplosion: bool
+        entitiesInPoisonRange: array<CActor>
+        effectType: EEffectType
+        poisonArea: CTriggerAreaComponent
+        explosionArea: CTriggerAreaComponent
+        explodingTargetDamages: array<SRawDamage>
+        entitiesInExplosionRange: array<CGameplayEntity>
+        isFromBomb: bool
+        buffParams: SCustomEffectParams
+        buffSpecParams: W3BuffDoTParams
+        isFromClusterBomb: bool
+        bombOwner: CActor
+        wasPerk16Active: bool
+        canMultiplyDamageFromPerk20: bool
+        friendlyFire: bool
+
+    RangedWeapon:
+      .adds:
+        owner: CActor
+        ownerPlayer: CR4Player
+        ownerPlayerWitcher: W3PlayerWitcher
+        isPlayer: bool
+        inv: CInventoryComponent
+        previousAmmoItemName: name
+        deployedEnt: W3BoltProjectile
+        isSettingOwnerOrientation: bool
+        isDeployedEntAiming: bool
+        isAimingWeapon: bool
+        isShootingWeapon: bool
+        isWeaponLoaded: bool
+        recoilLevel: int
+        setFullWeight: bool
+        noSaveLockCombatAction: int
+        performedDraw: bool
+        shootingIsComplete: bool
+        wasBLAxisReleased: bool
+        bLAxisWasReleased: bool
+
+    CWitcherSword:
+      .adds:
+        runeCount: int
+        padBacklightColor: Vector
+
+    CFlyingCrittersLairEntityScript:
+      .adds:
+        dynamicGroups: bool
+        doCircling: bool
+        isAgressive: bool
+        initDynamicGroups: bool
+        initDoCircling: bool
+        initAgressive: bool
+        initMain: bool
+        isActive: Bool
+        firstActivation: bool
+        idleGroupIndexArray: array<int>
+        m_requestGroupStateArray: array<CName>
+        m_requestGroupIdStateArray: array<W3FlyingSwarmStateChangeRequest>
+        m_requestCreateGroupArray: array<W3FlyingSwarmCreateGroupRequest>
+        m_allGroupsStateRequest: CName
+        m_requestAllGroupsDespawn: bool
+        m_requestAllGroupChangeState: bool
+        m_birdMaster: CGameplayEntity
+        m_gotoRequestArray: array<GotoRequest>
+        m_requestCircle: Bool
+        m_requestSupernatural: Bool
+        m_requestAttack: Bool
+        m_requestDespawnTest: Bool
+        m_requestGroupMerge: Bool
+        m_requestGroupSplit: Bool
+        m_requestPopulateGroup: Bool
+
+    CR4GuiManager:
+      .adds:
+        lastOpenedCommonMenuName: name
+        isColorBlindMode: bool
+        displayedObjectivesGUID: array<CGUID>
+        UISavedData: array<SUISavedData>
+        signoutOccurred: bool
+        signInChangeInProgress: bool
+        isDuringFirstStartup: bool
+        ignoreControllerDisconnectionEvents: bool
+        controllerDisconnected: bool
+        potalConfirmationPending: bool
+        pendingPortalConfirmationPauseParam: bool
+        mouseCursorRequestStack: int
+        tutHideCounter: int
+        tutForcedhideCounter: int
+        guiSceneController: CR4GuiSceneController
+        hudEventController: CR4HudEventController
+        lastRequestedCreditsIndex: int
+        NewestItems: array<SItemUniqueId>
+        GlossaryEntries: array<SGlossaryEntry>
+        AlchemyEntries: array<SGlossaryEntry>
+        CraftingEntries: array<SGlossaryEntry>
+        SkillsEntries: array<ESkill>
+        MappinEntries: array<SMappinEntry>
+        EnchantmentFilters: SEnchantmentFilters
+        PinnedCraftingRecipe: name
+        InventorySortingMode: int
+        bUsePortal: bool
+        bUsePortalAnswered: bool
+        horseUnmountFeedbackActive: bool
+        hideMessageRequestId: int
+        bKinectMessageAlreadyShown: bool
+        m_cachedHold: bool
+        m_cachedHold_gpadKeyCode: int
+        m_cachedHold_kbKeyCode: int
+        m_cachedHold_label: string
+        m_cachedHold_holdDuration: float
+        m_cachedHold_intName: name
+        inGameConfigBufferedWrapper: CInGameConfigBufferedWrapper
+        showItemNames: bool
+        lastMessageData: W3MessagePopupData
+        _ignoreNewItemNotifications: bool
+
+    CR4GwintManager:
+      .adds:
+        testMatch: bool
+        enemyDecksSet: bool
+        enemyDecks: array<SDeckDefinition>
+        selectedEnemyDeck: int
+        forcePlayerFaction: eGwintFaction
+        difficulty: int
+        diff1: int
+        diff2: int
+        diff3: int
+        diff4: int
+        diff5: int
+        diff6: int
+        diff7: int
+        diff8: int
+        diff9: int
+        diff10: int
+        diff11: int
+        diff12: int
+        diff13: int
+        diff14: int
+        diff15: int
+        doubleAIEnabled: bool
+        gameRequested: bool
+
+    CNewNPC:
+      .adds:
+        isImmortal: bool
+        isInvulnerable: bool
+        willBeUnconscious: bool
+        minUnconsciousTime: float
+        unstoppable: bool
+        RemainsTags: array<name>
+        level: int
+        currentLevel: int
+        levelFakeAddon: int
+        newGamePlusFakeLevelAddon: bool
+        xmlLevel: SAbilityAttributeValue
+        isXmlLevelSet: bool
+        isMiniBossLevel: bool
+        dontUseReactionOneLiners: bool
+        disableConstrainLookat: bool
+        isMonsterType_Group: bool
+        useSoundValue: bool
+        soundValue: int
+        clearInvOnDeath: bool
+        noAdaptiveBalance: bool
+        grantNoExperienceAfterKill: bool
+        abilityBuffStackedOnEnemyHitName: name
+        levelBonusesComputedAtPlayerLevel: int
+        isHorse: bool
+        canFlee: bool
+        isFallingFromHorse: bool
+        immortalityInitialized: bool
+        canBeFollowed: bool
+        bAgony: bool
+        bFinisher: bool
+        bPlayDeathAnim: bool
+        bAgonyDisabled: bool
+        bFinisherInterrupted: bool
+        bIsInHitAnim: bool
+        threatLevel: int
+        counterWindowStartTime: EngineTime
+        bIsCountering: bool
+        allowBehGraphChange: bool
+        aardedFlight: bool
+        lastMeleeHitTime: EngineTime
+        preferedCombatStyle: EBehaviorGraph
+        previousStance: ENpcStance
+        regularStance: ENpcStance
+        currentFightStage: ENPCFightStage
+        currentState: CName
+        behaviorGraphEventListened: array<name>
+        isTemporaryOffGround: bool
+        npc_health_bar: float
+        isUnderwater: bool
+        isTranslationScaled: bool
+        tauntedToAttackTimeStamp: float
+        isTeleporting: bool
+        itemToEquip: SItemUniqueId
+        wasBleedingBurningPoisoned: bool
+        wasInTalkInteraction: bool
+        wasInCutscene: bool
+        shieldDebris: CItemEntity
+        lastMealTime: float
+        packName: name
+        isPackLeader: bool
+        mac: CMovingPhysicalAgentComponent
+        parentEncounter: CEncounter
+        npcLevelToUpscaledLevelDifference: int
+        isTalkDisabled: bool
+        isTalkDisabledTemporary: bool
+        wasNGPlusLevelAdded: bool
+        deathTimestamp: float
+        combatStorage: CBaseAICombatStorage
+        fistFightForcedFromQuest: bool
+        SHIELD_BURN_TIMER: float
+        beingHitByIgni: bool
+        firstIgniTick: float
+        lastIgniTick: float
+        isRagdollOn: bool
+        m_storedInteractionPri: EInteractionPriority
+
+    CPlayer:
+      .adds:
+        _DEBUGDisplayRadiusMinimapIcons: bool
+        debug_BIsInputAllowedLocks: array<name>
+        ENTER_SWIMMING_WATER_LEVEL: float
+        useSprintingCameraAnim: bool
+        oTCameraOffset: float
+        oTCameraPitchOffset: float
+        bIsRollAllowed: bool
+        bIsInCombatAction: bool
+        bIsInCombatActionFriendly: bool
+        bIsInputAllowed: bool
+        bIsFirstAttackInCombo: bool
+        bIsInHitAnim: bool
+        FarZoneDistMax: float
+        DangerZoneDistMax: float
+        commentaryCooldown: float
+        commentaryLastTime: EngineTime
+        canPlaySpecificVoiceset: bool
+        isHorseMounted: bool
+        isCompanionFollowing: bool
+        bStartScreenIsOpened: bool
+        bEndScreenIsOpened: bool
+        fStartScreenFadeDuration: float
+        bStartScreenEndWithBlackScreen: bool
+        fStartScreenFadeInDuration: float
+        DEATH_SCREEN_OPEN_DELAY: float
+        bLAxisReleased: bool
+        bRAxisReleased: bool
+        bUITakesInput: bool
+        inputHandler: CPlayerInput
+        sprintActionPressed: bool
+        inputModuleNeededToRun: float
+        bInteractionPressed: bool
+        rawPlayerSpeed: float
+        rawPlayerAngle: float
+        rawPlayerHeading: float
+        cachedRawPlayerHeading: float
+        cachedCombatActionHeading: float
+        canResetCachedCombatActionHeading: bool
+        combatActionHeading: float
+        rawCameraHeading: float
+        isSprinting: bool
+        isRunning: bool
+        isWalking: bool
+        playerMoveType: EPlayerMoveType
+        sprintingTime: float
+        walkToggle: bool
+        sprintToggle: bool
+        moveTarget: CActor
+        nonActorTarget: CGameplayEntity
+        tempLookAtTarget: CGameplayEntity
+        lockTargetSelectionHeading: float
+        rawLeftJoyRot: float
+        rawRightJoyRot: float
+        rawLeftJoyVec: Vector
+        rawRightJoyVec: Vector
+        prevRawLeftJoyVec: Vector
+        prevRawRightJoyVec: Vector
+        lastValidLeftJoyVec: Vector
+        lastValidRightJoyVec: Vector
+        allowStopRunCheck: bool
+        moveTargetDampValue: float
+        interiorCamera: bool
+        movementLockType: EPlayerMovementLockType
+        scriptedCombatCamera: bool
+        modifyPlayerSpeed: bool
+        autoCameraCenterToggle: bool
+        inv: CInventoryComponent
+        equipmentSlotHistory: array<SItemUniqueId>
+        currentTrackedQuestSystemObjectives: array<SJournalQuestObjectiveData>
+        currentTrackedQuestObjectives: array<SJournalQuestObjectiveData>
+        currentTrackedQuestGUID: CGUID
+        HAXNewObjTable: array<CGUID>
+        handAimPitch: float
+        vehicleCachedSign: ESignType
+        softLockDist: float
+        softLockFrameSize: float
+        findMoveTargetDist: float
+        softLockDistVehicle: float
+        bBIsLockedToTarget: bool
+        bActorIsLockedToTarget: bool
+        bIsHardLockedTotarget: bool
+        terrTypeOne: ETerrainType
+        terrTypeTwo: ETerrainType
+        terrModifier: float
+        prevTerrType: ETerrainType
+        currentlyUsedItem: W3UsableItem
+        currentlyEquipedItem: SItemUniqueId
+        currentlyUsedItemL: W3UsableItem
+        currentlyEquipedItemL: SItemUniqueId
+        isUsableItemBlocked: bool
+        isUsableItemLtransitionAllowed: bool
+        playerActionToRestore: EPlayerActionToRestore
+        teleportedOnBoatToOtherHUB: bool
+        isAdaptiveBalance: bool
+        inputHeadingReady: bool
+        lastAxisInputIsMovement: bool
+        bRAxisReleasedLastFrame: bool
+        selectTargetTime: float
+        swipeMouseTimeStamp: float
+        swipeMouseDir: Vector
+        swipeMouseDist: float
+        enableSwipeCheck: bool
+        lAxisReleasedAfterCounter: bool
+        lAxisReleaseCounterEnabled: bool
+        lAxisReleasedAfterCounterNoCA: bool
+        lAxisReleaseCounterEnabledNoCA: bool
+        sprintButtonPressedTimestamp: float
+        sprintingCamera: bool
+        runningCamera: bool
+        disableSprintingTimerEnabled: bool
+        illusionMedallion: array<SItemUniqueId>
+        csNormallyStoppedBuff: bool
+
+    CR4Player:
+      .adds:
+        pcGamePlayInitialized: bool
+        pcMode: bool
+        weaponHolster: WeaponHolster
+        rangedWeapon: Crossbow
+        crossbowDontPopStateHack: bool
+        hitReactTransScale: float
+        bIsCombatActionAllowed: bool
+        currentCombatAction: EBufferActionType
+        uninterruptedHitsCount: int
+        uninterruptedHitsCameraStarted: bool
+        uninterruptedHitsCurrentCameraEffect: name
+        counterTimestamps: array<EngineTime>
+        hitReactionEffect: bool
+        lookAtPosition: Vector
+        orientationTarget: EOrientationTarget
+        customOrientationTarget: EOrientationTarget
+        customOrientationStack: array<SCustomOrientationParams>
+        delayOrientationChange: bool
+        delayCameraOrientationChange: bool
+        actionType: int
+        customOrientationStackIndex: int
+        emptyMoveTargetTimer: float
+        onlyOneEnemyLeft: bool
+        isInFinisher: bool
+        finisherTarget: CGameplayEntity
+        combatStance: EPlayerCombatStance
+        approachAttack: int
+        specialAttackCamera: bool
+        specialAttackTimeRatio: float
+        itemsPerLevel: array<name>
+        itemsPerLevelGiven: array<bool>
+        playerTickTimerPhase: int
+        evadeHeading: float
+        vehicleCbtMgrAiming: bool
+        specialHeavyChargeDuration: float
+        specialHeavyStartEngineTime: EngineTime
+        playedSpecialAttackMissingResourceSound: bool
+        counterCollisionGroupNames: array<name>
+        lastInstantKillTime: GameTime
+        noSaveLockCombatActionName: string
+        noSaveLockCombatAction: int
+        deathNoSaveLock: int
+        noSaveLock: int
+        newGamePlusInitialized: bool
+        BufferAllSteps: bool
+        BufferCombatAction: EBufferActionType
+        BufferButtonStage: EButtonStage
+        keepRequestingCriticalAnimStart: bool
+        currentCustomAction: EPlayerExplorationAction
+        substateManager: CExplorationStateManager
+        isOnBoat: bool
+        isInShallowWater: bool
+        medallion: W3MedallionFX
+        lastMedallionEffect: float
+        isInRunAnimation: bool
+        interiorTracker: CPlayerInteriorTracker
+        m_SettlementBlockCanter: int
+        fistFightMinigameEnabled: bool
+        isFFMinigameToTheDeath: bool
+        FFMinigameEndsithBS: bool
+        fistFightTeleportNode: CNode
+        isStartingFistFightMinigame: bool
+        GeraltMaxHealth: float
+        fistsItems: array<SItemUniqueId>
+        gwintAiDifficulty: EGwintDifficultyMode
+        gwintAiAggression: EGwintAggressionMode
+        gwintMinigameState: EMinigameState
+        currentlyMountedHorse: CNewNPC
+        horseSummonTimeStamp: float
+        isHorseRacing: bool
+        horseCombatSlowMo: bool
+        HudMessages: array<string>
+        fShowToLowStaminaIndication: float
+        showTooLowAdrenaline: bool
+        HAXE3Container: W3Container
+        HAXE3bAutoLoot: bool
+        bShowHud: bool
+        dodgeFeedbackTarget: CActor
+        displayedQuestsGUID: array<CGUID>
+        rewardsMultiplier: array<SRewardMultiplier>
+        glossaryImageOverride: array<SGlossaryImageOverride>
+        prevRawLeftJoyRot: float
+        explorationInputContext: name
+        combatInputContext: name
+        combatFistsInputContext: name
+        isInsideInteraction: bool
+        isInsideHorseInteraction: bool
+        horseInteractionSource: CEntity
+        nearbyLockedContainersNoKey: array<W3LockableEntity>
+        bMoveTargetChangeAllowed: bool
+        moveAdj: CMovementAdjustor
+        defaultLocomotionController: CR4LocomotionPlayerControllerScript
+        canFollowNpc: bool
+        actorToFollow: CActor
+        terrainPitch: float
+        steepSlopeNormalPitch: float
+        disableSprintTerrainPitch: float
+        submergeDepth: float
+        m_useSelectedItemIfSpawned: bool
+        navQuery: CNavigationReachabilityQueryInterface
+        rememberedCustomHead: name
+        disableWeatherDisplay: bool
+        proudWalk: bool
+        etherealCount: int
+        injuredWalk: bool
+        tiedWalk: bool
+        insideDiveAttackArea: bool
+        diveAreaNumber: int
+        flyingBossCamera: bool
+        upscaledTooltipState: bool
+        phantomWeaponMgr: CPhantomWeaponManager
+        delayBetweenIllusionOneliners: float
+        battlecry_timeForNext: float
+        battlecry_delayMin: float
+        battlecry_delayMax: float
+        battlecry_lastTry: name
+        previousWeather: name
+        previousRainStrength: float
+        receivedDamageInCombat: bool
+        prevDayNightIsNight: bool
+        failedFundamentalsFirstAchievementCondition: bool
+        spawnedTime: float
+        currentMonsterHuntInvestigationArea: W3MonsterHuntInvestigationArea
+        isPerformingPhaseChangeAnimation: bool
+        playerMode: W3PlayerMode
+        selectedItemId: SItemUniqueId
+        blockedRadialSlots: array<SRadialSlotDef>
+        enemyCollectionDist: float
+        findMoveTargetDistMin: float
+        findMoveTargetDistMax: float
+        findMoveTargetScaledFrame: float
+        interactDist: float
+        bCanFindTarget: bool
+        bIsConfirmingEmptyTarget: bool
+        displayTarget: CGameplayEntity
+        isShootingFriendly: bool
+        currentSelectedTarget: CActor
+        selectedTargetToConfirm: CActor
+        bConfirmTargetTimerIsEnabled: bool
+        thrownEntityHandle: EntityHandle
+        isThrowingItemWithAim: bool
+        isThrowingItem: bool
+        isThrowHoldPressed: bool
+        isAimingCrossbow: bool
+        playerAiming: PlayerAiming
+        forceDismember: bool
+        forceDismemberName: name
+        forceDismemberChance: int
+        forceDismemberExplosion: bool
+        finisherVictim: CActor
+        forceFinisher: bool
+        forceFinisherAnimName: name
+        forceFinisherChance: int
+        forcedStance: bool
+        m_WeaponFXCollisionGroupNames: array<name>
+        m_CollisionEffect: CEntity
+        m_LastWeaponTipPos: Vector
+        m_CollisionFxTemplate: CEntityTemplate
+        m_RefreshWeaponFXType: bool
+        m_PlayWoodenFX: bool
+        m_activePoster: W3Poster
+        horseOnNavMesh: bool
+        testAdjustRequestedMovementDirection: bool
+        targeting: CR4PlayerTargeting
+        targetingPrecalcs: SR4PlayerTargetingPrecalcs
+        targetingIn: SR4PlayerTargetingIn
+        targetingOut: SR4PlayerTargetingOut
+        useNativeTargeting: bool
+        visibleActors: array<CActor>
+        visibleActorsTime: array<float>
+        parryTarget: CActor
+        ragdollTarget: CActor
+        playerActionEventListeners: array<CGameplayEntity>
+        playerActionEventBlockingListeners: array<CGameplayEntity>
+        playerActionSlotAnimName: name
+        isHoldingDeadlySword: bool
+        reevaluateCurrentWeapon: bool
+        disableActionBlend: bool
+        slideNPC: CNewNPC
+        minSlideDistance: float
+        maxSlideDistance: float
+        slideTicket: SMovementAdjustmentRequestTicket
+        gwintCardNumbersArray: array<int>
+        customCameraStack: array<SCustomCameraParams>
+        questCameraRequest: SQuestCameraRequest
+        cameraRequestTimeStamp: float
+        wasRunning: bool
+        vel: float
+        smoothTime: float
+        constDamper: ConstDamper
+        rotMultVel: float
+        wasBRAxisPushed: bool
+        fovVel: float
+        sprintOffset: Vector
+        previousOffset: bool
+        previousRotationVelocity: float
+        pivotRotationTimeStamp: float
+        disableManualCameraControlStack: array<name>
+        customOrientationInfoStack: array<SCustomOrientationInfo>
+        isSnappedToNavMesh: bool
+        snapToNavMeshCachedFlag: bool
+        navMeshSnapInfoStack: array<name>
+        beingWarnedBy: array<CActor>
+        hostileEnemies: array<CActor>
+        hostileMonsters: array<CActor>
+        canFindPathEnemiesList: array<CActor>
+        disablecanFindPathEnemiesListUpdate: bool
+        lastCanFindPathEnemy: CActor
+        cachedMoveTarget: CActor
+        reachabilityTestId: int
+        reachabilityTestId2: int
+        finishableEnemiesList: array<CActor>
+        hostileEnemyToRemove: CActor
+        moveTargets: array<CActor>
+        enableStrafe: bool
+        isInCombatReason: int
+        canFindPathToEnemy: bool
+        combatModeEnt: CEntity
+        navDist: float
+        directDist: float
+        reachableEnemyWasTooFar: bool
+        reachableEnemyWasTooFarTimeStamp: float
+        reachablilityFailed: bool
+        reachablilityFailedTimeStamp: float
+        isThreatened: bool
+        bConfirmDisplayTargetTimerEnabled: bool
+        displayTargetToConfirm: CGameplayEntity
+        currentSelectedDisplayTarget: CGameplayEntity
+        isDisplayTargetTargetable: bool
+        radialSlots: array<name>
+        combatModeColor: Color
+        confirmCombatStanceTimeStamp: float
+        isConfirmingCombatStance: bool
+        isInHolsterAnim: bool
+        dodgeTimerRunning: bool
+        forceCanAttackWhenNotInCombat: int
+        countDownToStart: int
+        inWaterTrigger: bool
+        isRotatingInPlace: bool
+        isInIdle: bool
+        isInGuardedState: bool
+        restoreUsableItem: bool
+        holsterUsableItem: bool
+        isInParryOrCounter: bool
+        finisherSaveLock: int
+        currentlyUsingItem: bool
+        MOUNT_DISTANCE_CBT: float
+        MOUNT_ANGLE_CBT: float
+        MOUNT_ANGLE_EXP: float
+        m_bossTag: name
+        m_usingCoatOfArms: bool
+        m_initialTimeOut: float
+        m_currentTimeOut: float
+        loopingCameraShakeAnimName: name
+        forcedFinisherVictim: CActor
+
+    CProjectileTrajectory:
+      .adds:
+        alarmRadius: float
+        victim: CGameplayEntity
+        yrdenAlternate: W3YrdenEntity
+
+    CR4TutorialSystem:
+      .adds:
+        currentlyShownTutorialIndex: int
+        queuedTutorials: array<STutorialMessage>
+        m_tutorialHintDataObj: W3TutorialPopupData
+        delayedQueuedTutorialShowTime: float
+        hasDelayedTutorial: bool
+        showNextHintInstantly: bool
+        enableMenuRestrictions: bool
+        allowedMenusList: array<name>
+        uiHandler: W3TutorialManagerUIHandler
+        seenTutorials: array<name>
+        attackProcessed: bool
+        testData: W3TutorialPopupData
+        hudMessage: name
+        invisibleTutorialHint: name
+        wereMessagesEnabled: bool
+        COMBAT_HINT_POS_X: float
+        COMBAT_HINT_POS_Y: float
+        DIALOG_HINT_POS_X: float
+        DIALOG_HINT_POS_Y: float
+        UI_HINT_POS_X: float
+        UI_HINT_POS_Y: float
+        HINT_SHOW_DELAY: float
+        HINT_DURATION_LONG: float
+        HINT_DURATION_SHORT: float
+
+    CStorySceneOutput:
+      .adds:
+        action: EStorySceneOutputAction
+
+    CStoryScenePlayer:
+      .adds:
+        m_isFinalboard: bool
+
+    CStorySceneSpawner:
+      .adds:
+        useSpawnerLocation: bool
+
+    CVehicleComponent:
+      .adds:
+        isCameraActivated: bool
+        isPlayingSyncAnimation: bool
+        slots: array<Vector>
+        mainStateName: name
+        passengerStateName: name
+        userCombatManager: W3VehicleCombatManager
+        canBoardTheBoat: bool
+        commandToMountActorToMount: CActor
+        commandToMountMountType: EMountType
+        commandToMountVehicleSlot: EVehicleSlot
+
+    W3Boat:
+      .adds:
+        canBeDestroyed: bool
+        needEnableInteractions: bool
+
+    CBoatComponent:
+      .adds:
+        effects: ParticleEffectNames
+        boatEntity: W3Boat
+        passenger: CActor
+        sailTilt: float
+        sailAnim: CAnimatedComponent
+        boatAnim: CAnimatedComponent
+        rudderDir: float
+        isChangingSteer: bool
+        steerSound: bool
+        enableCustomMastRotation: bool
+        IDLE_SPEED_THRESHOLD: float
+        MAST_PARTICLE_THRESHOLD: float
+        TILT_PARTICLE_THRESHOLD: float
+        DIVING_PARTICLE_THRESHOLD: float
+        WATER_THRESHOLD: float
+        MAST_ROTX_THRESHOLD: float
+        MAST_ROT_SAIL_VAL: float
+        fr: Vector
+        ba: Vector
+        ri: Vector
+        le: Vector
+        prevTurnFactorX: float
+        previousGear: int
+        prevMastPosZ: float
+        prevMastVelZ: float
+        prevFrontPosZ: float
+        prevFrontVelZ: float
+        prevRightPosZ: float
+        prevRightVelZ: float
+        prevLeftPosZ: float
+        prevLeftVelZ: float
+        prevBackPosZ: float
+        prevBackVelZ: float
+        prevFrontWaterPosZ: float
+        sphereSize: float
+        mastSlotTransform: Matrix
+        frontSlotTransform: Matrix
+        backSlotTransform: Matrix
+        rightSlotTransform: Matrix
+        leftSlotTransform: Matrix
+        wasSailFillSoundPlayed: bool
+        boatMastTrailLoopStarted: bool
+        dismountStateName: name
+        localSpaceCameraTurnPercent: float
+
+    CBoatDestructionComponent:
+      .adds:
+        boatComponent: CBoatComponent
+        collisionForceThreshold: float
+        partsConfig: array<SBoatPartsConfig>
+        attachedSirens: array<CActor>
+        freeSirenGrabSlots: array<name>
+        lockedSirenGrabSlots: array<name>
+
+    W3BoatSpawner:
+      .adds:
+        spawnedBoat: EntityHandle
+        respawnDistance: float
+        isAttemptingBoatSpawn: bool
+
+    W3HorseComponent:
+      .adds:
+        lastRider: CActor
+        originalAttitudeGroup: CName
+        canDismount: bool
+        inCanter: bool
+        inGallop: bool
+        inputApplied: bool
+        controllable: bool
+        physMAC: CMovingPhysicalAgentComponent
+        pitchDamp: SpringDamper
+        localSpaceControlls: bool
+        useSimpleStaminaManagement: bool
+        isInCustomSpot: bool
+        ignoreTestsCounter: int
+        manualControl: bool
+        canFollowNpc: bool
+        horseComponentToFollow: W3HorseComponent
+        potentiallyWild: bool
+        canTakeDamageFromFalling: bool
+        mountTestPlayerPos: Vector
+        mountTestHorsePos: Vector
+        mountTestEndPos: Vector
+        mountTestNormal: Vector
+        mountTestCollisionGroups: array<name>
+        hideHorse: bool
+        killHorse: bool
+        isMountableByPlayer: bool
+        horseMount: CComponent
+        cameraMode: int
+        inWater: bool
+        isInIdle: bool
+        isInHorseAction: bool
+        firstSpawn: bool
+        panicDamper: SpringDamper
+        panicMult: float
+        PANIC_RANGE: float
+        THREAT_MULT: float
+        staticPanic: int
+        frontHit: bool
+        backHit: bool
+        frontLeg: Vector
+        backLeg: Vector
+        currentPitch: float
+        horseActor: CActor
+        panicVibrate: bool
+        collidedActors: array<CollsionActorStruct>
+
