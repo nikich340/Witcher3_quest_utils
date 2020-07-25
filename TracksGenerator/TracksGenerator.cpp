@@ -78,6 +78,10 @@ double dist(const vec3& rhs, const vec3& lhs) {
     double diff = sq(rhs.x - lhs.x) + sq(rhs.y - lhs.y) + sq(rhs.z - lhs.z);
     return sqrt(diff);
 }
+double distXY(const vec3& rhs, const vec3& lhs) {
+    double diff = sq(rhs.x - lhs.x) + sq(rhs.y - lhs.y);
+    return sqrt(diff);
+}
 bool operator==(const vec3& rhs, const vec3& lhs) {
     return (std::abs(rhs.x - lhs.x) < eps) && (std::abs(rhs.y - lhs.y) < eps) && (std::abs(rhs.z - lhs.z) < eps);
 }
@@ -124,9 +128,16 @@ void loadTracks() {
         }
     }
 }
+string fillZeros(int a, int cnt) {
+    string s = to_string(a);
+    while (s.length() < cnt) {
+        s = "0" + s;
+    }
+    return s;
+}
 void print(int idx) {
     ++print_cnt;
-    out << "      " << name << print_cnt << ":\n";
+    out << "      " << name << fillZeros(print_cnt, 3) << ":\n";
     out << "        template: \"" << templatee << "\"\n";
     out << "        tags: [ ";
     upn(j, 0, (int) tags.size() - 1) {
@@ -148,13 +159,14 @@ int main()
     N = (int)poss.size();
 
     stepDist = 1.0;
-    name = "horse_tracks_gen_";
-    templatee = "W3MonsterClue:quests\\\\part_2\\\\quest_files\\\\q206_berserkers\\\\clues\\\\q206_arnvalds_horse_track.w2ent";
-    tags.pb("ntr_orianna_horse_tracks");
+    name = "orianna_footprints_gen_";
+    //templatee = "W3MonsterClue:quests\\\\part_2\\\\quest_files\\\\q206_berserkers\\\\clues\\\\q206_arnvalds_horse_track.w2ent";
+    templatee = "W3MonsterClue:dlc\\\\bob\\\\data\\\\quests\\\\main_quests\\\\quest_files\\\\q703_all_for_one\\\\entities\\\\q703_clue_dirt_footprints.w2ent";
+    tags.pb("ntr_orianna_footprints_to_house");
 
     print(0);
     upn(i, 1, N - 2) {
-        curDist = dist(poss[i], poss[i + 1]);
+        curDist = distXY(poss[i], poss[i + 1]);
         totalDist += curDist;
         if (totalDist >= stepDist) {
             print(i + 1);
