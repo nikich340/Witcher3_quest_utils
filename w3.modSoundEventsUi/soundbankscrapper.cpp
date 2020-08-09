@@ -68,20 +68,20 @@ string getCategory(string bnkName) {
         return "cutscenes";
     } else if ( strStartWith(bnkName, "animal") ) {
         return "animals";
-    } else if ( strStartWith(bnkName, "qu") || strStartWith(bnkName, "mq") || strStartWith(bnkName, "mh") || strStartWith(bnkName, "sq") ) {
+    } else if ( strStartWith(bnkName, "qu") || strStartWith(bnkName, "mq") || strStartWith(bnkName, "mh") || strStartWith(bnkName, "sq") || strStartWith(bnkName, "dlc") || strStartWith(bnkName, "ep2") ) {
         return "quests";
     } else if ( strStartWith(bnkName, "music") ) {
         return "music";
     } else if ( strStartWith(bnkName, "sign") ) {
         return "signs";
-    } else if ( strStartWith(bnkName, "fx") || strStartWith(bnkName, "magic") || strStartWith(bnkName, "physics") ) {
-        return "fx";
+    //} else if ( strStartWith(bnkName, "fx") || strStartWith(bnkName, "magic") || strStartWith(bnkName, "physics") || strStartWith(bnkName, "physics") ) {
+    //    return "fx";
     } else if ( strStartWith(bnkName, "work") || strStartWith(bnkName, "grunt") ) {
         return "work";
     } else if ( strStartWith(bnkName, "gui") ) {
         return "gui";
     } else {
-        return "uncategorized";
+        return "fx";
     }
 }
 void writeCsv() {

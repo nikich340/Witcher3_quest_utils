@@ -1,3 +1,14 @@
 ;meta[language=en]
 ; id      |key(hex)|key(str)| text
-2115070001|        |SoundUI_Started|SoundEvents UI started
+2115070000|        |SoundEventsUI_Started|SoundEvents UI started
+          |        |SoundEventsUI_Closed|SoundEvents UI closed
+          |        |SoundEventsUI_AlreadyOpened|SoundEvents UI already opened! If it was closed not in proper way, write in console "soundui(1)"
+          |        |SoundEventsUI_tHelpHotkey|SoundEvents UI - Hotkey Help
+          |        |SoundEventsUI_GeneralHelp|Select and listen for sound events available in game wwise banks
+		  |        |SoundEventsUI_ShowHelp|Show this help.
+		  |        |SoundEventsUi_Quit|Quit from UI.
+		  |        |SoundEventsUi_Reset|Reset all filters and opened groups.
+		  |        |SoundEventsUi_LogEvent|Write selected sound event and bank names in log.
+		  |        |SoundEventsUi_SetFilter|Set filter for names.
+		  |        |SoundEventsUi_ResetFilter|Reset filter for names.
+		  |        |SoundEventsUi_ListCategoryUp|Close last opened group list.
