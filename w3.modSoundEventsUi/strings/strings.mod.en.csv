@@ -7,6 +7,10 @@
           |        |SoundEventsUI_GeneralHelp|Select and listen for sound events available in game wwise banks
 		  |        |SoundEventsUI_ShowHelp|Show this help.
 		  |        |SoundEventsUi_Quit|Quit from UI.
+		  |        |SoundEventsUi_StopMusic|Stop playing music.
+		  |        |SoundEventsUi_GameplayMusic|Switch back to current area gameplay music.
+		  |        |SoundEventsUi_SwitchMuteMusic|Mute/unmute music.
+		  |        |SoundEventsUi_SwitchMuteSounds|Mute/unmute sounds.
 		  |        |SoundEventsUi_Reset|Reset all filters and opened groups.
 		  |        |SoundEventsUi_LogEvent|Write selected sound event and bank names in log.
 		  |        |SoundEventsUi_SetFilter|Set filter for names.
