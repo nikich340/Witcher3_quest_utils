@@ -1,0 +1,25 @@
+[[highlight]]
+keyword = "ERROR:"
+color = "Red"
+
+[[highlight]]
+keyword = "[ModBootstrap]"
+color = "Green"
+
+[[highlight]]
+keyword = "[EnvUi]"
+color = "Cyan"
+
+[[highlight]]
+keyword = "[RadUi]"
+color = "Cyan"
+
+[[highlight]]
+keyword = "[DEBUG]"
+color = "Cyan"
+
+[[redirect]]
+keyword = "[W3ENV]"
+file = "dumped.env.yml"
+replace.key = "[W3ENV] "
+replace.with = ""

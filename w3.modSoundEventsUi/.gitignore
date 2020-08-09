@@ -1,0 +1,6 @@
+*.sublime-project
+*.sublime-workspace
+*.bak
+_settings_.bat
+*.log
+strings/all.en.strings.csv
