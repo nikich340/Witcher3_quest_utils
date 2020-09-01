@@ -1,0 +1,4018 @@
+    CStaticCameraArea:
+      .extends: CEntity
+      .adds:
+        cameraTag: name
+        onlyForPlayer: bool
+        activatorTag: name
+
+    CSpawner:
+      .extends: CEntity
+      .adds:
+        entityTemplate: CEntityTemplate
+        count: int
+        immortalityMode: EActorImmortalityMode
+        attitudeOverride: bool
+        attitudeToPlayer: EAIAttitude
+        hostileSpawnerTag: name
+        spawnTags: array<name>
+        respawn: bool
+        respawnDelay: float
+        initialHealth: int
+        spawnAnimation: EExplorationMode
+        spawnedNPCs: array<CNewNPC>
+        respawnTime: array<EngineTime>
+        respawnNeeded: array<bool>
+
+    CTestTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        entryTime: float
+        timerInterval: float
+
+    W3KillTestTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        entered: Bool
+        actors: array<CActor>
+        entityTemplate: CEntityTemplate
+
+    W3DebugScriptBehaviorToolComponent:
+      .extends: CSpriteComponent
+
+    W3SlideToTargetComponent:
+      .extends: CSelfUpdatingComponent
+      .adds:
+        speed: float
+        stopDistance: float
+        targetOffset: Vector
+        fallBackSpeed: float
+        snapToGround: bool
+        normalSpeed: float
+        verticalSpeed: float
+        speedOscilation: SRangeF
+        normalSpeedOscilation: SRangeF
+        verticalOscilation: SRangeF
+        speedOscilationSpeed: float
+        normalSpeedOscilationSpeed: float
+        verticalOscilationSpeed: float
+        gameplayEventAtDestination: name
+        triggerGPEventOnTarget: bool
+        destroyDelayAtDestination: float
+        stopEffectAtDest: name
+        playEffectAtDest: name
+        stayAboveNavigableSpace: bool
+        considerSuccesAfterDelay: float
+        m_NodeTarget: CNode
+        m_VectorTarget: Vector
+        m_IsFallingBack: bool
+        m_Entity: CEntity
+        m_CanSendEvent: bool
+        m_TimeBeforeSuccess: float
+        m_speedTarget: float
+        m_normalSpeedTarget: float
+        m_verticalOffsetTarget: float
+        m_currentSpeedOsc: float
+        m_currentNormalSpeedOsc: float
+        m_currentVertOffest: float
+
+    W3SpawnEntityOnAnimEvent:
+      .extends: CScriptedComponent
+      .adds:
+        animEvent: name
+        entityName: name
+        entityTemplate: CEntityTemplate
+
+    W3SummonedEntityComponent:
+      .extends: CScriptedComponent
+      .adds:
+        m_Summoner: CActor
+        m_SummonedTime: float
+        shouldUseSummonerGuardArea: bool
+        killOnSummonersDeath: bool
+
+    W3SummonerComponent:
+      .extends: CScriptedComponent
+      .adds:
+        forgetDeadEntities: bool
+        m_SummonedEntities: array<CEntity>
+
+    W3TargetingManagementComponent:
+      .extends: CSelfUpdatingComponent
+      .adds:
+        aimVector: Vector
+        iconOffset: Vector
+        aimVectorSlot: name
+        iconOffsetSlot: name
+        updatePosition: bool
+        updateDelay: float
+        m_LastUpdate: float
+
+    W3ForceAttackArea:
+      .extends: CEntity
+      .adds:
+        forceAttackEvenWithDisplayTarget: bool
+
+    W3WindEffectOnGroundComponent:
+      .extends: CSelfUpdatingComponent
+      .adds:
+        maxDistanceFromGround: float
+        activeAtStart: bool
+        playOnAnimEvent: bool
+        activateOnAnimEvent: bool
+        animEvent: name
+        deactivateAnimEvent: name
+        delayBetweenEffects: float
+        effectTemplate: CEntityTemplate
+        m_isActive: bool
+        m_effectEntity: CEntity
+        m_collisionGroupNames: array<name>
+        m_delayUntilNextEffect: float
+
+    W3ApplyEffectPhantomComponent:
+      .extends: CPhantomComponent
+      .adds:
+        effectToApply: EEffectType
+        effectDuration: float
+        requiredAbilities: array<name>
+        onlyWhenAlive: bool
+        onlyToHostiles: bool
+        onlyToTag: name
+        ignoreIfHasEffect: bool
+        useCustomValue: bool
+        customValue: SAbilityAttributeValue
+        forcedDamage: float
+        minRelativeSpeed: float
+        decreasePlayerDmgBy: float
+        playFXonCollisionEnter: CName
+        stopFXonCollisionExit: bool
+        objectAttached: bool
+
+    W3ExplorationObject:
+      .extends: CEntity
+
+    W3LadderInteraction:
+      .extends: CGameplayEntity
+      .adds:
+        associatedDoorTag: name
+        associatedDoor: W3NewDoor
+
+    CExplorationStateAbstract:
+      .extends: CScriptedComponent
+      .adds:
+        m_StateNameN: name
+        m_StateTypeE: EExplorationStateType
+        m_UpdatesWhileInactiveB: bool
+        m_ExplorationO: CExplorationStateManager
+        m_LockedB: bool
+        m_ActiveB: bool
+        m_StateNextN: name
+        m_DefaultStateChangesArr: array<SDefaultStateTransition>
+        m_BehaviorNeedsConfirmB: bool
+        m_BehaviorEventB: bool
+        m_BehaviorEventEachFrameB: bool
+        m_BehaviorEventN: name
+        m_StateDefaultExitToN: name
+        m_CanReactToCriticalStateB: bool
+        m_ChangeCamerasB: bool
+        m_CameraKeepOldB: bool
+        m_CameraSetS: CCameraParametersSet
+        m_InputContextE: EGameplayContextInput
+        m_TurnAdjustTimeF: float
+        m_ActionsToBlockEArr: array<EInputActionBlock>
+        m_ActionsToBlockCountI: int
+        m_HolsterIsFastB: bool
+        m_CanSaveB: bool
+
+    CExplorationStateManager:
+      .extends: CSelfUpdatingComponent
+      .adds:
+        m_OwnerE: CGameplayEntity
+        m_OwnerMAC: CMovingPhysicalAgentComponent
+        m_InputO: CExplorationInput
+        m_MoverO: CExplorationMover
+        m_SharedDataO: CExplorationSharedData
+        m_CollisionManagerO: CExplorationCollisionManager
+        m_MovementCorrectorO: CExplorationMovementCorrector
+        m_SuperStateLastN: name
+        m_StatesSArr: array<CExplorationStateAbstract>
+        m_StatesUpdatedInactiveSArr: array<CExplorationStateAbstract>
+        m_StateNamesSArr: array<name>
+        m_StateTransitionsSArr: array<CExplorationStateTransitionAbstract>
+        m_StateLastN: name
+        m_StateLastI: int
+        m_StateCurN: name
+        m_StateCurI: int
+        m_StateTimeCurF: float
+        m_StateTimeLastF: float
+        m_StateGlobalQueuedN: name
+        m_StateDefaultN: name
+        c_InvalidStateN: name
+        c_InvalidStateI: int
+        m_StateChanged: bool
+        m_StateExitedFromBehN: name
+        m_StateEnteredFromBehN: name
+        m_BehaviorConfirmStateE: EBehGraphConfirmationState
+        m_StateBehCurReportedN: name
+        m_DefaultCameraSetS: CCameraParametersSet
+        m_IsOnGroundB: bool
+        m_TeleportedFallHackTime: float
+        m_TeleportedFallHackTimeTotalF: float
+        m_storedInteractionPri: EInteractionPriority
+        m_NoSaveLock: int
+        m_NoSaveLockStringS: String
+        m_ActiveB: bool
+        m_InitializedB: bool
+        m_IsDebugModeB: bool
+        m_DebugPointV: Vector
+        m_SmoothedVelocityV: Vector
+
+    CExplorationStateTransitionAbstract:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_TransitionOriginStateN: name
+        m_TransitionEndStateN: name
+
+    CExplorationStateAirCollision:
+      .extends: CExplorationStateAbstract
+      .adds:
+        enabled: bool
+        speedMinToCollide: float
+        heightMinToCollide: float
+        heightMaxToStop: float
+        dotToHardHit: float
+        collisionAngle: float
+        collisionSide: EAirCollisionSide
+        m_NormalMaxZToHitF: float
+        angleMinToCollide: float
+        angleMinToCollideFront: float
+        swipeDistance: float
+        swipeRadius: float
+        swipeHeightRequired: float
+        timeStopped: float
+        timeToRotate: float
+        timeToCheckClimb: float
+        timeToCheckLand: float
+        exitAngleLeft: float
+        exitAngleRight: float
+        exitAngleExtra: float
+        orientingSpeed: float
+        targetYaw: float
+        verticalSpeedConserveCoef: float
+        verticalMovementParams: SVerticalMovementParams
+        impulseForwardCenter: float
+        impulseDownCenter: float
+        impulseForwardSide: float
+        impulseDownSide: float
+        interactAlways: bool
+        interactionTimeMin: float
+        interactionMaxHeight: float
+        timeToHitToLand: float
+        behEventHitToLand: name
+        behVarSide: name
+        behVarHands: name
+        behAnimCanFall: name
+
+    CExplorationStateClimb:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_ClimbOracleO: CExplorationClimbOracle
+        enabled: bool
+        climbTypes: array<CClimbType>
+        climbCur: CClimbType
+        heightMaxToRun: float
+        platformHeightMinAir: float
+        platformHeightMin: float
+        climbPoint: Vector
+        wallNormal: Vector
+        heightTarget: float
+        vaultingFound: EClimbRequirementVault
+        platformFound: EClimbRequirementPlatform
+        curPlayerStateType: EClimbRequirementType
+        vaultEndsFalling: bool
+        ended: bool
+        canWalk: bool
+        canRun: bool
+        canFall: bool
+        animDurationLimit: float
+        slideDistMaxOnRun: float
+        autoClimb: bool
+        autoClimbOnAir: bool
+        inputAngleToEnter: float
+        inputAngleToRun: float
+        inputAttemptsTop: bool
+        inputDirection: Vector
+        inputAirHold: bool
+        inputAirTimeGap: bool
+        inputTimeGapCheck: float
+        characterRadius: float
+        adjustInitiallRotat: float
+        adjustRotation: float
+        adjustTranslation: Vector
+        adjustInitialRotDone: bool
+        adjustRotDone: bool
+        adjustTransDone: bool
+        adjustSpeedMax: float
+        adjustSpeedRequire: bool
+        adjustSpeedEndTime: float
+        adjust2Dduration: float
+        adjust2Speed: float
+        adjust2Translation: Vector
+        heightToAdd: float
+        pelvisTransMax: float
+        pelvisTransAllow: bool
+        pelvisTransState: EOutsideCapsuleState
+        pelvisTranslationN: name
+        pelvisTransCur: float
+        pelvisTransTarget: float
+        pelvisTransSpeed: float
+        pelvisTransSpeedOut: float
+        behAnimAdjustInitRot: name
+        behAnimAdjustRot: name
+        behAnimAdjustTrans: name
+        behAnimEnded: name
+        behAnimCanWalk: name
+        behAnimCanRun: name
+        behAnimCanFall: name
+        behEnableIK: name
+        behDisablePelvisTrans: name
+        behEnableHandsIK: name
+        behEnableHandLIK: name
+        behEnableHandRIK: name
+        behDisableHandsIK: name
+        behDisableHandLIK: name
+        behDisableHandRIK: name
+        behHeightTypeEnum: name
+        behVaultTypeEnum: name
+        behPlatformTypeEnum: name
+        behStateTypeEnum: name
+        behGoToRun: name
+        behGoToWalk: name
+        behToRun: name
+        behVarEnd: name
+        behAnimSpeed: name
+        continousHandIK: bool
+        handIKMinDistToEnable: float
+        handIKMaxDist: float
+        handIKForwardOffset: float
+        handIKHalfMaxHeight: float
+        handIKBlendSpeedIn: float
+        handIKBlendSpeedOut: float
+        handThickness: float
+        boneRightHand: name
+        boneLeftHand: name
+        boneIndexRightHand: int
+        boneIndexLeftHand: int
+        rightHandOffset: float
+        leftHandOffset: float
+        rightHandOffsetCur: float
+        leftHandOffsetCur: float
+        handIKEnabled: bool
+        handIKEnabledLeft: bool
+        handIKEnabledRight: bool
+        handIKqueuedL: bool
+        handIKqueuedR: bool
+        handIKLRayOrigin: Vector
+        handIKLRayEnd: Vector
+        handIKLRayCollision: Vector
+        handIKRRayOrigin: Vector
+        handIKRRayEnd: Vector
+        handIKRRayCollision: Vector
+        collisionObstaclesNames: array<name>
+        cameraSetVault: CCameraParametersSet
+        cameraSetJump: CCameraParametersSet
+        updateCameraManual: bool
+        updateCameraAnim: bool
+        camOriginalPosition: Vector
+        camOriginalRotation: EulerAngles
+        camCurRotation: EulerAngles
+        camOriginalOffset: Vector
+        camStart: bool
+        camFollowBoneID: int
+        camFollowBoneName: name
+        vectorUp: Vector
+        forceAirCollision: bool
+        forceJumpGrab: bool
+        noAdjustor: bool
+        noPelvisCorection: bool
+        restoreUsableItemLAtEnd: bool
+
+    CExplorationStateCombat:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_TimeToSlideNeededF: float
+        m_TimeToSlideCurF: float
+        m_FallHasToWaitForCombatAction: bool
+        m_SlideHasToWaitForCombatAction: bool
+        m_FallHorizontalImpulseCancelF: float
+        m_FallHorizontalImpulseF: float
+        m_FallExtraVerticalImpulseF: float
+        m_TurnAdjustTimeSprintF: float
+
+    CExplorationStateIdle:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_SubStateLasE: EPlayerIdleSubstate
+        m_SubStateE: EPlayerIdleSubstate
+        m_SpeedMaxConsideredSprintF: float
+        m_SpeedMaxConsideredRunF: float
+        m_SpeedMaxConsideredWalkF: float
+        m_FallSpeedCoefF: float
+        m_FallExtraVerticalImpulseF: float
+        m_FallHorizontalImpulseF: float
+        m_FallHorizontalImpulseCancelF: float
+        m_TimeToSlideNeededF: float
+        m_TimeToSlideCurF: float
+        m_CameraExtraOffsetF: float
+        m_CameraOffsetExtraVertLowF: float
+        m_CameraOffsetExtraVertHighF: float
+        m_CameraOffsetBlend: float
+        m_CameraOffsetVertF: float
+        m_CurentCameraAnimationN: name
+        m_CameraAnimIdleS: SCameraAnimationData
+        m_CameraAnimWalkS: SCameraAnimationData
+        m_CameraAnimRunS: SCameraAnimationData
+        m_CameraAnimSprintS: SCameraAnimationData
+
+    CExplorationStateIdleJump:
+      .extends: CExplorationStateTransitionAbstract
+      .adds:
+        behEnded: name
+        enabled: bool
+
+    CExplorationStateInteraction:
+      .extends: CExplorationStateAbstract
+      .adds:
+        explorationType: ExplorationInteractionType
+        autointeract: bool
+        safetyTimeToExit: float
+        useAutomaticExploration: bool
+        allowOnDiving: bool
+        timeBeforeExploring: float
+        ladderCheckSides: bool
+        ladderImpulseBack: float
+        ladderRangeFreeOfNPCs: float
+        cameraSetClimb: CCameraParametersSet
+        cameraOffsetBack: float
+        cameraOffsetUp: float
+        cameraPichInput: float
+        cameraBlendSpeedTrans: float
+        cameraBlendSpeedYaw: float
+        cameraBlendSpeedPitch: float
+        camPosOriginal: Vector
+        camInitialized: bool
+        cachedWeapon: EPlayerWeapon
+        restoreUsableItemLAtEnd: bool
+
+    CExplorationStateInvalid:
+      .extends: CExplorationStateAbstract
+
+    CExplorationStateJump:
+      .extends: CExplorationStateAbstract
+      .adds:
+        jumpEnabled: bool
+        m_SubstateE: EJumpSubState
+        m_OrientationInitialF: float
+        m_MaxHeightReachedF: float
+        m_SlopeAngleMaxToJump: float
+        m_UseGenericJumpB: bool
+        m_AllowSprintJumpB: bool
+        m_JumpParmsS: SJumpParams
+        m_JumpParmsGenericS: SJumpParams
+        m_JumpParmsIdleS: SJumpParams
+        m_JumpParmsIdleToWalkS: SJumpParams
+        m_JumpParmsWalkS: SJumpParams
+        m_JumpParmsWalkHighS: SJumpParams
+        m_JumpParmsRunS: SJumpParams
+        m_JumpParmsSprintS: SJumpParams
+        m_JumpParmsFallS: SJumpParams
+        m_JumpParmsHitS: SJumpParams
+        m_JumpParmsSlideS: SJumpParams
+        m_JumpParmsVaultS: SJumpParams
+        m_JumpParmsToWaterS: SJumpParams
+        m_JumpParmsKnockBackS: SJumpParams
+        m_JumpParmsKnockBackFallS: SJumpParams
+        m_JumpParmsSkateIdleS: SJumpParams
+        m_SprintJumpNeedsStaminaB: bool
+        m_SprintJumpTimeExtraF: float
+        m_SprintJumpTimeGapF: float
+        m_ConserveHorizontalCoefF: float
+        m_ConserveVertUpCoefF: float
+        m_ConserveVertDownCoefF: float
+        m_ConserveHorizontalMaxF: float
+        m_ConserveVertUpMaxF: float
+        m_ConserveVertDownMaxF: float
+        m_SpeedSqrMinToConserveF: float
+        m_ReactToHitCeilingB: bool
+        m_HitCeilingB: bool
+        m_BehEventPredictLandN: name
+        m_BehListenInertialJumpN: name
+        m_BehListenFinishTakeOffN: name
+        m_BehParamJumpTypeN: name
+        m_BehEventPredictingS: name
+        m_BehEventPredictTypeS: name
+        m_BehParamIsHandledByAnimS: name
+        m_BehParamWalkOrSprintS: name
+        m_BehParamNormalLandS: name
+        m_BehEventCeilingHit: name
+        m_InteractAlwaysB: bool
+        m_InteractTimeMinFallF: float
+        m_InteractTimeMinF: float
+        m_InteractTimeMinVaultF: float
+        m_InteractHeightFallMaxF: float
+        m_InteractTimeAdjustingF: float
+        m_InteractDistanceExtraF: float
+        m_InteractSpeedDiffAllowedF: float
+        m_InteractOwnerOffsetV: Vector
+        m_LockingJumpOnInteractionAreaB: bool
+        m_LockingJumpOnHorseAreaB: bool
+        m_AllowJumpInSlopesB: bool
+        m_FallDistToUseHelpF: float
+        m_FallRecoverMaxHeightUpF: float
+        m_FallRecoverMaxHeightDownF: float
+        m_FallRecoverMaxDistF: float
+        m_CanSetVelocityB: bool
+        m_ForceIdleJumpOnColliisonB: bool
+        m_ForceIdleJumpHeightFreeF: float
+        m_ForceIdleJumpDistFreeF: float
+        m_InteractionLastLockingF: float
+        m_LandPredictedB: bool
+        m_LandGroundPredictB: bool
+        m_LandWaterPredictB: bool
+        m_LandPredictTimeMin: float
+        m_LandPredictionTimeF: float
+        m_CollisionGroupsNamesNArr: array<name>
+        m_LandPredicedTypeE: ELandPredictionType
+        m_LandPredicedCoefF: float
+        m_LandPredicedBlendF: float
+        m_SlopedLandZF: float
+        m_JumpOriginalPositionV: Vector
+        m_CameraDebugB: bool
+        m_CameraStartB: bool
+        m_CameraPositionV: Vector
+        m_CameraRotationEA: EulerAngles
+        m_CameraTimeToEndF: float
+        cameraRoationName: name
+        cameraToFallHeightNeed: float
+        cameraFallIsSet: bool
+        m_CollideBehGraphSideNameS: name
+        m_CollidingSideE: ESideSelected
+        m_CooldownTotalF: float
+        m_CooldownCurF: float
+        useWalkJump: bool
+        useIdleWalkJump: bool
+        useHighJump: bool
+        jumpingOnIdleIsForward: bool
+        jumpIdleWhenObstructed: bool
+
+    CExplorationStateLand:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_BehLandRunS: name
+        m_LandRunInputAngleF: float
+        m_BehLandTypeS: name
+        m_BehLandCancelN: name
+        m_BehLandCanEndN: name
+        m_BehLandSkipToRunN: name
+        m_BehLandSkipToWalkN: name
+        m_BehLandSkipToIdleN: name
+        m_BehLandFallForwardN: name
+        m_HeightToLandCrouch: float
+        m_LandTypeE: ELandType
+        m_LandDataIdle: SLandData
+        m_LandDataWalk: SLandData
+        m_LandDataWalkHigh: SLandData
+        m_LandDataRun: SLandData
+        m_LandDataSprint: SLandData
+        m_LandDataHigher: SLandData
+        m_LandDataAirCollision: SLandData
+        m_LandDataCrouch: SLandData
+        m_LandDataFall: SLandData
+        m_LandDataDamage: SLandData
+        m_LandDataDeath: SLandData
+        m_LandDataKnockBack: SLandData
+        m_LandData: SLandData
+        m_UseBendAddOnLand: bool
+        m_AutoRollB: bool
+        m_AutoSlopeAngleB: float
+        m_AutoRollSlopeCoefF: float
+        m_DamageOverridesRollB: bool
+        m_RollingB: bool
+        m_RollIsSlopeB: bool
+        m_RollMinHeightF: float
+        m_RollTimeAfterF: float
+        m_RollMinJumpTotalF: float
+        m_SlidingB: bool
+        m_SlideCheckedSecondFrameB: bool
+        m_SlideSavingVelocityV: Vector
+        m_AllowHigherJumpB: bool
+        m_HighLandingHeightF: float
+        m_AllowSkipB: bool
+        m_RunCoefF: float
+        m_FallIsForwardB: bool
+        m_ToFallB: bool
+        m_ReadyToEndB: bool
+
+    CExplorationStatePrepareJump:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_JumpIsInstantB: bool
+        m_JumpTimeGapF: float
+        m_EndingTimeF: float
+        m_EndEventNameN: name
+        m_EndedEventNameN: name
+        m_TimeEndedB: bool
+
+    CExplorationStatePushed:
+      .extends: CExplorationStateAbstract
+      .adds:
+        enabled: bool
+        pushDirection: Vector
+        pushDirectionOther: Vector
+        pushSide: EPushSide
+        pushAngle: float
+        extraTurnAngle: float
+        behCanEnd: name
+        behSide: name
+        safetyEndTimeMax: float
+        safetyEndTimeCur: float
+        recheckTimeMin: float
+        recheckTimeCur: float
+        ticket: SMovementAdjustmentRequestTicket
+        rotatedToCollider: bool
+        movedLeft: bool
+
+    CExplorationStateRagdoll:
+      .extends: CExplorationStateAbstract
+      .adds:
+        lastPos: Vector
+
+    CExplorationStateRoll:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_TimeSafetyEndF: float
+        m_OrientationSpeedF: float
+        m_AutoRollB: bool
+        m_RollMinHeightF: float
+        m_RollTimeAfterF: float
+        m_ReadyToEndB: bool
+        m_ReadyToFallB: bool
+        m_BehLandRunS: name
+        m_BehLandCancelN: name
+        m_BehLandCanEndN: name
+        m_BehLandCanFallN: name
+        m_SlidingB: bool
+        m_SlideTimeToDecideF: float
+        m_ToFallB: bool
+        verticalMovementParams: SVerticalMovementParams
+        m_ToSlideB: bool
+        m_TimeBeforeChainJumpF: float
+
+    CExplorationStateSlide:
+      .extends: CExplorationStateAbstract
+      .adds:
+        subState: ESlidingSubState
+        enableWallSlide: bool
+        useSmothedCoefOnIdle: bool
+        angleMinDefault: float
+        anglefMax: float
+        coefExtraToStop: float
+        slideCoefRelatedToInput: bool
+        dotToStartForward: float
+        coefToStartBackward: float
+        coefToStartCenter: float
+        coefToStartForward: float
+        useWideTerrainCheckToEnter: bool
+        updateMaterials: bool
+        materialParams: array<SSlidingMaterialPresetParams>
+        materialNamesToPresets: array<SSlidingMaterialNamesToPresets>
+        materialParamsDefaultN: name
+        materialDefault: int
+        materialCurId: int
+        materialNameCur: name
+        minTimeToIdle: float
+        orientingInitial: float
+        initialImpulse: float
+        startedFromJump: bool
+        startedFromRoll: bool
+        orientingSpeedMin: float
+        orientingSpeedMax: float
+        orientingMaxSlope: float
+        timeToHardSlide: float
+        behGraphEventSlideHard: name
+        requireSpeedToExit: bool
+        speedToExitForward: float
+        speedToExitCenter: float
+        speedToExitBackward: float
+        exitingTimeMinSoft: float
+        exitingTimeCur: float
+        exitingTimeTotal: float
+        exitingTimeTotalInput: float
+        stoppingFriction: bool
+        cooldownMax: float
+        cooldownCur: float
+        landCoolingDown: bool
+        landCoolDownTime: float
+        fromJumpBehGraphEvent: name
+        fromRollBehGraphEvent: name
+        jumpAllowed: bool
+        jumpCoolDownTime: float
+        fallSpeedMaxConsidered: float
+        fallSpeedCoef: float
+        fallHorizImpulse: float
+        fallHorizImpulseCancel: float
+        fallExtraVertImpulse: float
+        slidingPhysicsSpeed: float
+        movementParams: SSlidingMovementParams
+        movementStoppingParams: SSlidingMovementParams
+        usePhysics: bool
+        slideDirectionDamped: Vector
+        smoothedDirBlendCoef: float
+        slideKills: bool
+        m_DeadB: bool
+        toFallEnabled: bool
+        toFallTimeCur: float
+        toConsiderFallTimeTotal: float
+        toFallTimeTotal: float
+        toFallSlopeCoefMin: float
+        toFallSlopeSpeedMin: float
+        toFallSlopeCoef: float
+        toFallSpeedCoef: float
+        toFallRecoverCoef: float
+        toFallCameraLevel: int
+        cameraShakeState: ESlideCameraShakeState
+        cameraAnimName: name
+        behTripToDeath: name
+        behHeightVar: name
+        behInclinationVar: name
+        behTurnVar: name
+        behAccelVar: name
+        behRightFootForwardVar: name
+        inclinationBlendSpeed: float
+        inclinationStart: float
+        turnInclinationMax: float
+        turnInclinationBlend: float
+        turnInclinationCur: float
+        inclinationEnterTimeMax: float
+        inclinationEnterTimeCur: float
+        inclination: float
+        behForwardVar: name
+        behSlideRestart: name
+        behSlideEnd: name
+        behSlideEndRun: name
+        behSlideEndIdle: name
+        boneToStickName: name
+        boneToStickId: int
+        animEventHardSliding: name
+        lockedOnHardSliding: bool
+        particlesEnabled: bool
+        particlesName: name
+        boneLeftFoot: name
+        boneRightFoot: name
+        timeToRespawnParticlesCur: float
+        timeToRespawnParticlesMax: float
+
+    CExplorationStateSprint:
+      .extends: CExplorationStateAbstract
+
+    CExplorationStateStartFalling:
+      .extends: CExplorationStateAbstract
+      .adds:
+        timeToJump: float
+        fallCancelled: bool
+        fallType: EFallType
+        behFallType: name
+        cameraFallIsSet: bool
+        q704_gravit_shift: bool
+
+    CExplorationStateStepLand:
+      .extends: CExplorationStateAbstract
+      .adds:
+        enabled: bool
+        fallCancelled: bool
+        ended: bool
+        timeSafetyEnd: float
+        directionToLand: float
+        timeToChainJump: float
+        behAnimEnded: name
+        behLandRunS: name
+        behAnimFall: name
+
+    CExplorationStateTest:
+      .extends: CExplorationStateAbstract
+      .adds:
+        m_TesMovementParamsS: SPlaneMovementParameters
+
+    CExplorationStateSwim:
+      .extends: CExplorationStateAbstract
+      .adds:
+        solveCollisionsForward: bool
+        smoothPenetration: bool
+        collisionUpOffset: float
+        collisionDistance: float
+        collisionRadius: float
+        collisionPenetrationMax: float
+        collisionPenetration: Vector
+        smoothSpeed: float
+        zeroVec: Vector
+
+    CExplorationStateWallSlide:
+      .extends: CExplorationStateSlide
+      .adds:
+        wallSlideGenericCoef: float
+
+    CxplorationTransitionPrepareToJump:
+      .extends: CExplorationStateTransitionAbstract
+
+    CxplorationTransitionSwimToInteract:
+      .extends: CExplorationStateTransitionAbstract
+      .adds:
+        enabled: bool
+        transitionReadyToEnd: bool
+        timeToTransition: float
+        requireAngle: bool
+        timeToStopTrying: float
+        locomotionSegment: CR4LocomotionSwimToStop
+        animEventToBeReady: name
+
+    CxplorationTransitionTurnToJump:
+      .extends: CExplorationStateTransitionAbstract
+      .adds:
+        timeToExit: float
+        angleToTrigger: float
+
+    CExplorationStateSkatingBackwards:
+      .extends: CExplorationStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        impulse: float
+        impulseSpeedMax: float
+        sharpTurn: bool
+        sharpTurnTime: float
+        sharpTurnSpeed: float
+        holdTurnSpeed: float
+        chainTimeToDrift: float
+        exiting: bool
+        timeEndingMax: float
+        timeEndingFlow: bool
+        timeEndingCur: float
+        behDriftRestart: name
+        behDriftEnd: name
+        behDriftLeftSide: name
+
+    CExplorationStateSkatingDash:
+      .extends: CExplorationStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        impulse: float
+        timeMax: float
+        timeToChainMin: float
+        sharpTurnSpeed: float
+        holdTurnSpeed: float
+        sharpTurn: bool
+        sharpTurnTime: float
+        behAttackEvent: name
+        behLeftFootParam: name
+        boneRightFoot: name
+        boneLeftFoot: name
+        boneIndexRightFoot: int
+        boneIndexLeftFoot: int
+        behEventEnd: name
+
+    CExplorationStateSkatingDashAttack:
+      .extends: CExplorationStateSkatingDash
+      .adds:
+        attacked: bool
+        afterAttackTime: float
+        timeToEndCur: float
+        behParamAttackName: name
+        afterAttackImpulse: float
+
+    CExplorationStateSkatingDrift:
+      .extends: CExplorationStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        impulse: float
+        impulseSpeedMax: float
+        sharpTurn: bool
+        sharpTurnTime: float
+        sharpTurnSpeed: float
+        holdTurnSpeed: float
+        chainTimeToDrift: float
+        exiting: bool
+        timeEndingMax: float
+        timeEndingFlow: bool
+        timeEndingCur: float
+        behDriftRestart: name
+        behDriftEnd: name
+        behDriftLeftSide: name
+        sideIsLeft: bool
+
+    CExplorationStateSkatingHitLateral:
+      .extends: CExplorationStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        behAnimEnd: name
+        timeMax: float
+        speedMinToEnter: float
+        speedReductionPerc: float
+        extraAngle: float
+
+    CExplorationStateSkatingIdle:
+      .extends: CExplorationStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        turnSpeed: float
+        turnStartTolerance: float
+        hackCiri: bool
+        behEventStart: name
+        behEventEnd: name
+
+    CExplorationStateSkateJump:
+      .extends: CExplorationStateJump
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        attacked: bool
+        attacktimeMin: float
+        attackVertSpeedMin: float
+        attackVertSpeedImpulse: float
+
+    CExplorationSkateLand:
+      .extends: CExplorationStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        behLandCancel: name
+        timePrevToChain: float
+        timeToChainJump: float
+        timeSafetyEnd: float
+        actionChained: bool
+
+    CExplorationStateSkatingRun:
+      .extends: CExplorationStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        m_Sprinting: bool
+
+    CExplorationStateSkateSlide:
+      .extends: CExplorationStateSkatingDrift
+      .adds:
+        inputRangeToEnter: float
+        height: float
+
+    CExplorationStateSkateStopFast:
+      .extends: CExplorationStateSkatingDrift
+      .adds:
+        inputRangeToEnter: float
+        duration: float
+        speedStopCurve: CCurve
+
+    CollisionTrajectory:
+      .extends: CGameplayEntity
+      .adds:
+        stateManager: CExplorationStateManager
+        collisionSegmentsArr: array<CollisionTrajectoryPart>
+        firstSegmentCollision: ECollisionTrajectoryPart
+        trajectoryStatusLastChecked: ECollisionTrajecoryStatus
+        trajecoryExpStatusLastChecked: ECollisionTrajecoryExplorationStatus
+        goingToWaterLastState: ECollisionTrajectoryToWaterState
+        computedCollisionState: bool
+        computedGoingToWater: bool
+
+    CollisionTrajectoryPart:
+      .extends: CPhantomComponent
+      .adds:
+        triggeredCollisions: int
+        waterCollisions: int
+        ownerTrajectory: CollisionTrajectory
+        part: ECollisionTrajectoryPart
+        waterUpPosCheckSlotName: name
+        waterDownPosCheckSlotName: name
+
+    CDoorMarking:
+      .extends: CScriptedComponent
+      .adds:
+        changeCamera: bool
+        calculated: bool
+        pointA: Vector
+        pointB: Vector
+        middlePoint: Vector
+        normal: Vector
+        checkState: EDoorMarkingState
+        initialized: bool
+
+    CDoorMarkingTester:
+      .extends: CGameplayEntity
+      .adds:
+        door: CDoorMarking
+
+    W3DurationObstacle:
+      .extends: CGameplayEntity
+      .adds:
+        lifeTimeDuration: SRangeF
+        disappearanceEffectDuration: float
+        disappearEffectName: name
+        simplyStopEffect: bool
+
+    W3Poster:
+      .extends: CGameplayEntity
+      .adds:
+        descriptionGenerated: bool
+        description: string
+        camera: CEntityTemplate
+        factOnRead: string
+        factOnInteraction: string
+        blendInTime: float
+        blendOutTime: float
+        fadeStartDuration: float
+        fadeEndDuration: float
+        focusModeHighlight: EFocusModeVisibility
+        alignLeft: bool
+        restoreUsableItemAtEnd: bool
+        spawnedCamera: CStaticCamera
+
+    W3SavedPoster:
+      .extends: W3Poster
+      .adds:
+        savedFocusModeHighlight: EFocusModeVisibility
+
+    W3SavedAppearanceEntity:
+      .extends: CGameplayEntity
+      .adds:
+        appearanceName: name
+
+    W3StallEntity:
+      .extends: CGameplayEntity
+
+    W3Bird:
+      .extends: CGameplayEntity
+      .adds:
+        flyingAppearanceName: name
+        destroyDistance: float
+        flyCurves: array<name>
+        manager: CBirdsManager
+
+    W3BirdQuest:
+      .extends: W3Bird
+      .adds:
+        m_focusSoundEffect: EFocusModeSoundEffectType
+
+    CBirdSpawnpoint:
+      .extends: CEntity
+
+    CBirdsManager:
+      .extends: CGameplayEntity
+      .adds:
+        birdsSpawnPointsTag: name
+        birdType: EBirdType
+        spawnRange: float
+        customBirdTemplate: CEntityTemplate
+        respawnDelay: float
+        respawnMinDistance: float
+        spawnOnlyInsideBirdsArea: bool
+        disableSnapToCollisions: bool
+        birdSpawnpoints: array<SBirdSpawnpoint>
+        shouldBirdsFly: bool
+        despawnTime: float
+        wasEverVisible: bool
+        birdArea: CTriggerAreaComponent
+        birdTemplate: CEntityTemplate
+
+    CBirdsArea:
+      .extends: CGameplayEntity
+      .adds:
+        birdsManagerTag: name
+
+    W3CurveFish:
+      .extends: CGameplayEntity
+      .adds:
+        destroyDistance: float
+        swimCurves: array<name>
+        speedUpChance: float
+        baseSpeedVariance: float
+        maxSpeed: float
+        randomizedAppearances: array<string>
+        manager: W3CurveFishManager
+        baseSpeed: float
+        selectedSwimCurve: name
+        currentSpeed: float
+        accelerate: bool
+
+    W3CurveFishSpawnpoint:
+      .extends: CEntity
+
+    W3CurveFishManager:
+      .extends: CGameplayEntity
+      .adds:
+        fishSpawnPointsTag: name
+        fishTemplate: array<CEntityTemplate>
+        randomFishRotation: bool
+        fishSpawnpoints: array<SFishSpawnpoint>
+        m_spawnDistance: float
+        m_despawnDistance: float
+        m_spawned: bool
+        m_firstTimeCollectSpawnpoints: bool
+        m_spawnedFish: array<W3CurveFish>
+
+    W3Whale:
+      .extends: CGameplayEntity
+      .adds:
+        whaleArea: W3WhaleArea
+        destroyTime: float
+        alwaysSpawned: bool
+        canBeDestroyed: bool
+        spawnPosition: Vector
+        spawnRotation: EulerAngles
+
+    W3WhaleArea:
+      .extends: CEntity
+      .adds:
+        whaleSpawnPointTag: name
+        whaleSpawnOffsetY: float
+        minSpawnDistance: float
+        maxSpawnDistance: float
+        spawnFrequencyMin: float
+        spawnFrequencyMax: float
+        movementPatern: EWhaleMovementPatern
+        whaleTemplate: CEntityTemplate
+
+    W3CookingPlace:
+      .extends: W3Container
+      .adds:
+        cookingTime: float
+        schematics: array<SCookingSchematic>
+        isActive: bool
+        cookingStarted: bool
+        cookingCompleted: bool
+
+    W3CampfirePlace:
+      .extends: W3CookingPlace
+      .adds:
+        victims: array<CActor>
+        bombs: array<SItemUniqueId>
+
+    W3DisplayMount:
+      .extends: W3Container
+      .adds:
+        ids: array<SItemUniqueId>
+        i: int
+
+    W3RefillableContainer:
+      .extends: W3Container
+      .adds:
+        isEmpty: bool
+        checkedForBonusHerbs: bool
+
+    W3treasureHuntContainer:
+      .extends: W3Container
+      .adds:
+        OnLootedEvents: array<W3SwitchEvent>
+
+    W3ElevatorMechanism:
+      .extends: CEntity
+      .adds:
+        radius: float
+        clockwiseRotation: bool
+        rotationSpeed: float
+        forwardDirection: bool
+        transformMatrix: Matrix
+        localRotation: EulerAngles
+
+    W3Elevator:
+      .extends: CGameplayEntity
+      .adds:
+        appearanceOnTop: string
+        appearanceOnGround: string
+        speed: float
+        currentHeight: float
+        targetNodeHeight: float
+        currentSpeed: float
+        initialSpeed: float
+        isOnTop: bool
+        movementStarted: bool
+        onTopPosChecked: bool
+        initialHeight: float
+        pos: Vector
+        onTopPos: Vector
+        heightDifference: float
+        goingUp: bool
+        playerOnElevator: bool
+        playerAttached: bool
+        deniedAreaCreated: bool
+        blockedActions: array<EInputActionBlock>
+        entityTemplate: CEntityTemplate
+        deniedArea1: CEntity
+        deniedArea2: CEntity
+        deniedArea3: CEntity
+
+    CGroupFXManager:
+      .extends: CGameplayEntity
+      .adds:
+        entityTag: name
+        randomDropMin: float
+        randomDropMax: float
+        effectName: name
+        ntities: array<CEntity>
+        randomDrop: float
+
+    W3AerondightFXComponent:
+      .extends: CScriptedComponent
+      .adds:
+        m_visualEffects: array<name>
+
+    CEncounterActivator:
+      .extends: CGameplayEntity
+      .adds:
+        encounterAreaTag: name
+        phaseToActivate: name
+        disableEncounterOnExit: bool
+        encounter: CEncounter
+        isPlayerInArea: bool
+
+    W3FastTravelEntity:
+      .extends: CR4FastTravelEntity
+      .adds:
+        onAreaExit: bool
+        warningTextStringKeyOverride: string
+        onelinerSceneOverride: CStoryScene
+        overrideSceneInput: name
+
+    W3TreasureHuntMappinEntity:
+      .extends: CR4MapPinEntity
+      .adds:
+        mappinSet: bool
+        isDisabled: bool
+        regionType: EEP2PoiType
+
+    W3ActorIdleTrigger:
+      .extends: CEntity
+      .adds:
+        affectedActor: CActor
+        affectedEntityTag: name
+
+    W3AirDrainArea:
+      .extends: CGameplayEntity
+      .adds:
+        customDrainPoints: float
+        customDrainPercents: float
+
+    W3GameZoneTrigger:
+      .extends: CEntity
+      .adds:
+        playerEntity: CPlayer
+        zoneName: name
+
+    W3GameplayTrigger:
+      .extends: CGameplayEntity
+
+    W3BirdAttackTrigger:
+      .extends: CEntity
+      .adds:
+        lair: CFlyingSwarmMasterLair
+        affectedEntityTag: name
+        attackRequestInterval: float
+        affectBirdsInRange: float
+
+    W3BlockGameplayActionsTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        blockedActions: array<EInputActionBlock>
+        sourceName: name
+        sheatheWeaponIfDrawn: bool
+
+    CCenserTrigger:
+      .extends: CGameplayEntity
+
+    W3ConditionalTrigger:
+      .extends: CEntity
+      .adds:
+        conditionClass: W3Condition
+        effectorClasses: array<IPerformableAction>
+        affectsPlayer: bool
+
+    W3WitcherHouse:
+      .extends: CR4MapPinEntity
+
+    W3EffectAreaTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        effect: EEffectType
+        useDefaultValuesFromXML: bool
+        effectDuration: float
+        customDamageValuePerSec: SAbilityAttributeValue
+        immunityFact: string
+        customParams: W3BuffCustomParams
+        entitiesInRange: array<CActor>
+
+    W3EffectImmunityAreaTrigger:
+      .extends: CEntity
+      .adds:
+        effectImmunity: EEffectType
+
+    CFairytaleWitchTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        areaNumber: int
+
+    W3FastTravel:
+      .extends: W3GameplayTrigger
+
+    W3FlammableAreaTrigger:
+      .extends: W3EffectAreaTrigger
+      .adds:
+        activeFor: float
+        fxOnExplosion: name
+        fxOnSustain: name
+        explosionRange: float
+        explosionDamage: SAbilityAttributeValue
+        igniteFlammableAreasAfter: float
+        isActive: bool
+        area: CTriggerAreaComponent
+
+    W3FocusAreaTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        rumbleIntensityModifier: float
+        isDisabled: bool
+        intensity: float
+        isActive: bool
+        linkedClues: array<EntityHandle>
+        linkedCluesTags: array<name>
+
+    W3ForestTrigger:
+      .extends: CEntity
+      .adds:
+        isPlayerInForest: bool
+
+    W3GenericSceneArea:
+      .extends: CGameplayEntity
+      .adds:
+        scenes: array<genericSceneDefinition>
+        forbiddenFact: string
+        requiredFact: string
+        npcSearchRange: float
+        ignoreReplacers: bool
+        includeEnemyNPCs: bool
+        includeQuestNPCs: bool
+        sceneDelay: float
+        firstPlaySceneDelay: float
+        currentSceneDelay: float
+
+    CHorseCorrectionTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        valueOnEnter: bool
+        valueOnExit: bool
+        horse: CGameplayEntity
+        horseComp: W3HorseComponent
+
+    CHorseJumpTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        lastActivation: float
+        triggerHeading: float
+        playerHeading: float
+        angleDist: float
+        horse: CGameplayEntity
+        horseComp: W3HorseComponent
+        lastArea: CTriggerAreaComponent
+
+    W3KillTrigger:
+      .extends: CEntity
+      .adds:
+        postponedTillOnGroundMPAC: array<CMovingPhysicalAgentComponent>
+        postponeTillOnGround: bool
+        postponeTillStoppedFalling: bool
+        postponeTillinWater: bool
+
+    W3LocationArea:
+      .extends: CGameplayEntity
+      .adds:
+        locationNameKey: name
+        rewardName: name
+        discovered: bool
+
+    W3MinimapZoomScaleTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        zoomScale: float
+        previousZoomScale: float
+
+    W3MusicBandActivatorArea:
+      .extends: CEntity
+      .adds:
+        musiciansTag: name
+        interiorSoundEmitter: CEntityTemplate
+        exteriorSoundEmitter: CEntityTemplate
+        exterior: bool
+        minimalNumberOfMusicions: int
+        activeSoundEmitter: CEntity
+        activeMusician: CEntity
+        activeMusicians: array<CEntity>
+        activeArea: CTriggerAreaComponent
+        jobTreeType: EJobTreeType
+
+    CArchesporeNoBulbArea:
+      .extends: CGameplayEntity
+
+    W3SafeModeTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        enable: bool
+
+    W3PlayerModeTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        isEnabled: bool
+        isActive: bool
+        isPlayerInside: bool
+        playerMode: EPlayerMode
+
+    W3ReplacerWarningArea:
+      .extends: CEntity
+      .adds:
+        messageKey: string
+        messageInterval: float
+        invertLogic: bool
+        isPlayerInArea: bool
+
+    W3DamageAreaTrigger:
+      .extends: CEntity
+      .adds:
+        onlyAffectsPlayer: bool
+        activateOnce: bool
+        checkTag: bool
+        isEnabled: bool
+        actorTag: name
+        excludedActorsTags: array<name>
+        damage: float
+        useDamageFromXML: name
+        damageFromFXDelay: float
+        areaRadius: float
+        attackInterval: float
+        preAttackDuration: float
+        externalFXEntityTag: name
+        externalFXName: name
+        attackFX: name
+        preAttackFX: name
+        attackFXEntity: CEntityTemplate
+        soundFX: string
+        immunityFact: string
+        damageType: ETriggeredDamageType
+        action: W3DamageAction
+        affectedEntity: CEntity
+        fxEntity: CEntity
+        activated: bool
+        dummyGameplayEntity: CGameplayEntity
+        victim: CActor
+        externalFXEntity: CEntity
+        pos: Vector
+
+    W3SettlementTrigger:
+      .extends: CR4JournalPlaceEntity
+      .adds:
+        bDisplaySettlementInfo: bool
+        settlementName: name
+        hubNameOverride: name
+        lockReenterDisplayTime: float
+        blockHorseTopSpeed: bool
+
+    W3ShowDisplayNameTrigger:
+      .extends: CGameplayEntity
+
+    W3TrapTrigger:
+      .extends: W3GameplayTrigger
+      .adds:
+        m_TrapsToActivateTag: name
+        m_MaxActivation: int
+        m_DeactivateOnExit: bool
+        m_Enabled: bool
+        m_playerOnly: bool
+        m_excludedEntitiesTags: array<name>
+        m_trapsToActivateByTag: array<CEntity>
+        m_Activations: int
+        m_EntitiesInside: int
+
+    W3UnlimitedDivingArea:
+      .extends: CEntity
+
+    CVFXTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        fxOnEnter: name
+
+    W3WitcherHouseArea:
+      .extends: CGameplayEntity
+      .adds:
+        isInner: bool
+
+    W3IllusionaryObstacle:
+      .extends: CGameplayEntity
+      .adds:
+        focusAreaIntensity: float
+        isEnabled: bool
+        m_disappearanceEffectDuration: float
+        m_addFactOnDispel: string
+        m_addFactOnDiscovery: string
+        discoveryOnelinerTag: string
+        m_discoveryOneliner: EIllusionDiscoveredOneliner
+        m_illusionDiscoveredEver: bool
+        m_illusionDiscoveredThisSession: bool
+        interactionComponent: CInteractionComponent
+        meshComponent: CMeshComponent
+        m_effectRange: float
+        m_wasDestroyed: bool
+        m_illusionSpawner: W3IllusionSpawner
+        isFocusAreaActive: bool
+        focusModeHighlight: EFocusModeVisibility
+        i: int
+        l_entitiesAround: array<CGameplayEntity>
+        l_illusion: W3IllusionaryObstacle
+        saveLockID: int
+
+    W3IllusionSpawner:
+      .extends: CGameplayEntity
+      .adds:
+        m_illusionTemplate: CEntityTemplate
+        m_factOnDispelOverride: string
+        l_illusion: CEntity
+        spawnedIllusion: W3IllusionaryObstacle
+        m_discoveryOneliner: EIllusionDiscoveredOneliner
+        m_factOnDiscoveryOverride: string
+        discoveryOnelinerTag: string
+        spawnedObstacleTags: array<name>
+        m_wasDestroyed: bool
+
+    W3AirDrainEntity:
+      .extends: CGameplayEntity
+      .adds:
+        customDrainPoints: float
+        customDrainPercents: float
+        factOnActivated: string
+        factOnDeactivated: string
+
+    W3AlchemyTable:
+      .extends: CR4MapPinEntity
+      .adds:
+        m_tableState: W3TableState
+
+    W3AnimationInteractionEntity:
+      .extends: CR4MapPinEntity
+      .adds:
+        animationForAllInteractions: bool
+        interactionName: string
+        holsterWeaponAtTheBeginning: bool
+        interactionAnim: EPlayerExplorationAction
+        slotAnimName: name
+        interactionAnimTime: float
+        desiredPlayerToEntityDistance: float
+        matchPlayerHeadingWithHeadingOfTheEntity: bool
+        attachThisObjectOnAnimEvent: bool
+        attachSlotName: name
+        attachAnimName: name
+        detachAnimName: name
+        isPlayingInteractionAnim: bool
+        objectAttached: bool
+        objectCachedPos: Vector
+        objectCachedRot: EulerAngles
+
+    W3BeeSwarm:
+      .extends: CGameplayEntity
+      .adds:
+        damageVal: SAbilityAttributeValue
+        destroyEntAfter: float
+        velocity: float
+        bIsEnabled: bool
+        AIReactionRange: float
+        ignoreNPCsFriendlyToPlayer: bool
+        maxChaseDistance: float
+        desiredTargetTag: name
+        excludedEntitiesTags: array<name>
+        factOnDestruction: string
+        originEntity: CGameplayEntity
+        originPoint: Vector
+        victims: array<SSwarmVictim>
+        buffParams: SCustomEffectParams
+        targets: array<CGameplayEntity>
+        activeDistanceSquared: float
+        PLAYER_PRESENCE_CHECK_DISTANCE: float
+        PRESENCE_CHECK_DT: float
+        TARGETS_CHECK_DT: float
+
+    CBoatRacingGateEntity:
+      .extends: CGameplayEntity
+      .adds:
+        nextGate: EntityHandle
+        factOnReaching: string
+        nextGateEntity: CBoatRacingGateEntity
+        isActive: bool
+        isReached: bool
+
+    W3Door:
+      .extends: W3LockableEntity
+      .adds:
+        rotDir: int
+        initiallyOpened: bool
+        factOnPlayerDoorOpen: name
+        isOpened: bool
+
+    EP1Chandelier:
+      .extends: CGameplayEntity
+      .adds:
+        m_fallSpeed: float
+        m_damagePercent: float
+        m_fallDelay: float
+        m_floorLevel: float
+        m_radius: float
+        m_height: float
+        m_falling: bool
+        m_currTime: float
+
+    CGateEntity:
+      .extends: W3LockableEntity
+      .adds:
+        currState: name
+        speedModifier: float
+        initiallyOpened: bool
+        startSound: name
+        stopSound: name
+        runTime: float
+
+    W3HouseDecorationBase:
+      .extends: W3Container
+      .adds:
+        m_popupData: W3ItemSelectionPopupData
+        m_itemSelectionTagList: array<name>
+        m_itemSelectionForbiddenTagList: array<name>
+        m_itemSelectionMode: EItemSelectionPopupMode
+        m_itemSelectionCategories: array<name>
+        m_acceptQuestItems: bool
+        m_decorationEnabled: bool
+        m_noItemMessageStringKey: name
+
+    W3HouseGenericDecoration:
+      .extends: W3HouseDecorationBase
+      .adds:
+        m_itemFilterTag: name
+        m_decorationItems: array<SHouseDecorationItemData>
+        m_currentApperance: name
+
+    W3IceWall:
+      .extends: CGameplayEntity
+
+    CMagicBombEntity:
+      .extends: CGameplayEntity
+      .adds:
+        damageRadius: float
+        damageVal: float
+        settlingTime: float
+        entitiesInRange: array<CGameplayEntity>
+        i: int
+        damage: W3DamageAction
+        victim: CActor
+
+    CPhilippaAttractorTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        actorTagToSendInfo: name
+        triggeredByPlayer: bool
+        triggeredByBolts: bool
+        triggeredByBombs: bool
+        actor: CActor
+        lastActivation: float
+
+    CMeteoriteStormEntity:
+      .extends: CGameplayEntity
+      .adds:
+        resourceName: name
+        timeBetweenSpawn: float
+        minDistFromTarget: float
+        maxDistFromTarget: float
+        minDistFromEachOther: float
+        victim: CActor
+        entityTemplate: CEntityTemplate
+
+    W3MutagenDismantlingTable:
+      .extends: W3AlchemyTable
+
+    W3NewDoor:
+      .extends: W3LockableEntity
+      .adds:
+        openAngle: float
+        initiallyOpened: bool
+        factOnPlayerDoorOpen: name
+        openedByHorse: bool
+        updateDuration: float
+        updateTimeLeft: float
+        playerInsideTrapdoorTrigger: bool
+        enableDeniedAreaInCombat: bool
+
+    W3ReactToBeingHitEntity:
+      .extends: CGameplayEntity
+      .adds:
+        reactsToSwords: bool
+        reactsToBolts: bool
+        deactivateOnHit: bool
+        dealDamage: bool
+        debuffType: EEffectType
+        debuffDuration: float
+        damageTypeName: name
+        killOnHpBelowPerc: float
+        setBehVarOnKill: name
+        behVarValue: float
+        gameplayEventOnAttacker: name
+        effectOnActivation: name
+        durationEffect: name
+        effectOnHit: name
+        effectOnHitVictim: name
+        activeDuration: float
+        active: bool
+        attributeName: name
+
+    W3ItemRepairObject:
+      .extends: CR4MapPinEntity
+      .adds:
+        repairSword: bool
+        repairArmor: bool
+        chargesArmor: int
+        chargesWeapon: int
+
+    W3OnSpawnPortal:
+      .extends: CEntity
+      .adds:
+        fxName: name
+        fxTimeout: float
+        creatureAppearAfter: float
+        spawnedActor: CActor
+
+    W3RootsEntrance:
+      .extends: CGameplayEntity
+      .adds:
+        isOpened: bool
+
+    CSkullPileEntity:
+      .extends: CGameplayEntity
+      .adds:
+        factName: string
+        tagToCollideWith: name
+        intact: bool
+        destructionComp: CDestructionSystemComponent
+
+    W3SmellyCheese:
+      .extends: W3AirDrainEntity
+      .adds:
+        deactivatedByAard: bool
+        smellEffectName: name
+        aardedEffectName: name
+        reactivateTimer: float
+        deactivated: bool
+
+    W3Stables:
+      .extends: CR4MapPinEntity
+
+    W3SwordStand:
+      .extends: W3HouseDecorationBase
+
+    W3LeaderboardCustom:
+      .extends: W3Poster
+      .adds:
+        m_competitors: array<SLeaderBoardData>
+        m_pointSymbolStringKey: string
+        m_displayPointsNumerically: bool
+        m_bottom_padding: int
+        m_left_padding: int
+
+    W3WeatherShrine:
+      .extends: CGameplayEntity
+      .adds:
+        weatherBlendTime: float
+        cooldown: float
+        prayerForSunAcceptedFX: name
+        prayerForStormAcceptedFX: name
+        price: int
+
+    W3WitcherBed:
+      .extends: W3AnimationInteractionEntity
+      .adds:
+        m_wasUsed: bool
+        m_wereItemsRefilled: bool
+        m_bedSaveLock: int
+        m_bedLevel: int
+        m_handsIkActive: bool
+
+    COilBarrelEntity:
+      .extends: CGameplayEntity
+      .adds:
+        fx_onInteraction: name
+        damageRadius: float
+        damageVal: float
+        explodeAfter: float
+        destroyEntAfter: float
+        randomizeTime: bool
+        onFireDamagePerSec: float
+        isSetOnFire: bool
+        isExploding: bool
+        onFireDamageArea: CTriggerAreaComponent
+        entitiesInOnFireArea: array<CGameplayEntity>
+
+    W3SmartObject:
+      .extends: CR4MapPinEntity
+      .adds:
+        startAnim: name
+        loopAnims: array<name>
+        stopAnim: name
+        canBeInterruptedByInput: bool
+        m_currentUser: CActor
+        m_saveLockID: int
+        possibleItemSlots: array<name>
+
+    W3EffectItem:
+      .extends: CItemEntity
+      .adds:
+        effectName: name
+
+    W3UsableItem:
+      .extends: CItemEntity
+      .adds:
+        itemType: EUsableItemType
+        blockedActions: array<EInputActionBlock>
+        wasOnHiddenCalled: bool
+
+    W3LightSource:
+      .extends: W3UsableItem
+      .adds:
+        worldName: String
+
+    W3ShieldUsableItem:
+      .extends: W3UsableItem
+      .adds:
+        factAddedOnUse: string
+        factValue: int
+        factTimeValid: int
+        removeFactOnHide: bool
+        i: int
+
+    W3QuestUsableItem:
+      .extends: W3UsableItem
+      .adds:
+        factAddedOnUse: string
+        factValue: int
+        factTimeValid: int
+        removeFactOnHide: bool
+
+    W3MeteorItem:
+      .extends: W3QuestUsableItem
+      .adds:
+        collisionGroups: array<name>
+        meteorResourceName: name
+        meteorEntityTemplate: CEntityTemplate
+
+    W3EyeOfLoki:
+      .extends: W3QuestUsableItem
+      .adds:
+        environment: name
+        effect: CName
+        activeWhenFact: CName
+        soundOnStart: name
+        soundOnStop: name
+        envID: int
+        active: bool
+
+    W3MagicOilLamp:
+      .extends: W3QuestUsableItem
+
+    W3Potestaquisitor:
+      .extends: W3QuestUsableItem
+      .adds:
+        detectableTag: name
+        detectableRange: float
+        closestRange: float
+        potestaquisitorFact: string
+        soundEffectType: EFocusModeSoundEffectType
+        effect: name
+        registeredAnomalies: array<CGameplayEntity>
+        previousClosestAnomaly: CGameplayEntity
+
+    W3HornvalHorn:
+      .extends: W3QuestUsableItem
+      .adds:
+        range: float
+        duration: float
+
+    W3FiendLure:
+      .extends: W3QuestUsableItem
+      .adds:
+        range: float
+        duration: float
+        cloudEntity: CEntityTemplate
+
+    W3BuffImmunityEntity:
+      .extends: CGameplayEntity
+      .adds:
+        immunities: array<EEffectType>
+        range: float
+        isActive: bool
+        actorsInRange: array<CActor>
+
+    W3MagicBubbleEntity:
+      .extends: W3BuffImmunityEntity
+      .adds:
+        activeFxName: name
+        damper: VectorSpringDamper
+
+    CInteractiveEntity:
+      .extends: CR4MapPinEntity
+      .adds:
+        bIsEnabled: bool
+        bIsActive: bool
+
+    CUsableEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        bCanBeUsed: bool
+
+    CScheduledUsableEntity:
+      .extends: CUsableEntity
+      .adds:
+        bUseSwitchingSchedule: bool
+        switchOnHour: int
+        switchOffHour: int
+
+    W3IrisPainting:
+      .extends: CGameplayEntity
+      .adds:
+        portalHP: int
+        m_PortalCurrentHP: int
+        m_IsOpen: bool
+        m_IsReady: bool
+        m_ChargingTotalDuration: float
+        m_ChargingStepDuration: float
+        m_LocktagsOn: bool
+
+    CLightEntitySimple:
+      .extends: CScheduledUsableEntity
+      .adds:
+        isOn: bool
+
+    CLightEntitySimpleWithEffectImmunity:
+      .extends: CLightEntitySimple
+      .adds:
+        effectImmunity: EEffectType
+        duration: float
+        areaComponent: CTriggerAreaComponent
+
+    W3LightEntityDamaging:
+      .extends: CLightEntitySimple
+      .adds:
+        hitReactionType: EHitReactionType
+        damagePerSec: float
+        appliesBurning: bool
+        area: CTriggerAreaComponent
+        entitiesInRange: array<CGameplayEntity>
+        entitiesInRangeEnterTime: array<EngineTime>
+        buffDamageVal: SAbilityAttributeValue
+        damageDealingEnabled: bool
+        buffParams: SCustomEffectParams
+        spawned: bool
+        FIRE_DAMAGE_FX: name
+
+    W3MonsterElementalArm:
+      .extends: CGameplayEntity
+      .adds:
+        physcialComponent: CComponent
+        victims: array<CActor>
+        victim: CActor
+        isActive: bool
+        action: W3DamageAction
+        owner: CActor
+
+    W3UsableEntity:
+      .extends: CGameplayEntity
+
+    W3DestroyableTerrain:
+      .extends: CInteractiveEntity
+      .adds:
+        m_destroyableElements: array<array<CScriptedDestroyableComponent>>
+        m_piecesIdToSplit: array<int>
+        m_player: CPlayer
+        m_activated: bool
+        m_componentName: string
+        m_randNumber: int
+        tickTime: float
+        tickInterval: float
+        currRandNumbId: int
+        currRandNumbTime: float
+        m_numOfPiecesToDestroy: int
+        m_timeBetweenRandomDestroyMin: int
+        m_timeBetweenRandomDestroyMax: int
+
+    Crossbow:
+      .extends: RangedWeapon
+      .adds:
+        shotCount: int
+        shotCountLimit: int
+        reloadAtStartComplete: bool
+
+    W3Blood:
+      .extends: CEntity
+      .adds:
+        lifetime: float
+
+    W3SignEntity:
+      .extends: CGameplayEntity
+      .adds:
+        owner: W3SignOwner
+        attachedTo: CEntity
+        boneIndex: int
+        fireMode: int
+        skillEnum: ESkill
+        signType: ESignType
+        actionBuffs: array<SEffectInfo>
+        friendlyCastEffect: name
+        cachedCost: float
+        usedFocus: bool
+
+    W3YrdenEntity:
+      .extends: W3SignEntity
+      .adds:
+        effects: array<SYrdenEffects>
+        projTemplate: CEntityTemplate
+        projDestroyFxEntTemplate: CEntityTemplate
+        runeTemplates: array<CEntityTemplate>
+        validTargetsInArea: array<CActor>
+        allActorsInArea: array<CActor>
+        flyersInArea: array<CNewNPC>
+        trapDuration: float
+        charges: int
+        isPlayerInside: bool
+        baseModeRange: float
+        notFromPlayerCast: bool
+        fxEntities: array<CEntity>
+
+    W3EnvironmentThrowable:
+      .extends: CGameplayEntity
+      .adds:
+        projectileTemplate: CEntityTemplate
+
+    W3POI_BanditCampEntity:
+      .extends: CR4MapPinEntity
+      .adds:
+        regionType: EEP2PoiType
+
+    W3POI_BanditCampfireEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_BossAndTreasureEntity:
+      .extends: CR4MapPinEntity
+      .adds:
+        regionType: EEP2PoiType
+
+    W3POI_ContrabandEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_ContrabandShipEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_DungeonCrawlEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_HideoutEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_KnightErrantEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_PlegmundEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_RescuingTownEntity:
+      .extends: CR4MapPinEntity
+      .adds:
+        regionType: EEP2PoiType
+
+    W3POI_SignalingStakeEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_SpoilsOfWarEntity:
+      .extends: CR4MapPinEntity
+
+    W3POI_WineContractEntity:
+      .extends: CR4MapPinEntity
+
+    W3PhysicalDamageMechanism:
+      .extends: CGameplayEntity
+      .adds:
+        dmgValue: float
+        hitReactionType: EHitReactionType
+        reactivationTimer: float
+        animName: name
+        shouldRewind: bool
+        isActive: bool
+        isMoving: bool
+
+    W3RiddleNode:
+      .extends: CGameplayEntity
+      .adds:
+        positions: array<SRiddleNodePositionDef>
+        riddleServerTag: name
+        factOnPositionValid: string
+        useFocusModeHelper: bool
+        currentPos: int
+        rewind: bool
+        currentPairedRiddleNodeID: int
+        currentPairedRiddleNodesIDS: array<int>
+        riddleServer: W3RiddleServer
+        wasAddedToServer: bool
+        lastPosID: int
+        isDisabled: bool
+        isEffectOn: bool
+        isOnValidPosition: bool
+        initializeServerCounter: int
+
+    W3RiddleServer:
+      .extends: CGameplayEntity
+      .adds:
+        OnGoodCombinationEvents: array<W3SwitchEvent>
+        pairedNodes: array<EntityHandle>
+        riddleNodesNumber: int
+        isDisabled: bool
+        nodesAtValidPosNumber: int
+
+    W3Switch:
+      .extends: CGameplayEntity
+      .adds:
+        isInitiallyEnabled: bool
+        isInitiallyLocked: bool
+        isInitiallyOn: bool
+        maxUseCount: int
+        skipEventsAtBeginning: bool
+        whenOnEvents: array<W3SwitchEvent>
+        whenOffEvents: array<W3SwitchEvent>
+        whenSwitchedEvents: array<W3SwitchEvent>
+        currentState: ESwitchState
+        enabled: bool
+        locked: bool
+        totalUseCount: int
+        skipEvents: bool
+        virtualSwitchesLinkedHandle: array<EntityHandle>
+        lastActivatorHandle: EntityHandle
+        restoreUsableItemL: bool
+        BEH_ON: float
+        BEH_OFF: float
+        BEH_ON_FROM_OFF: float
+        BEH_OFF_FROM_ON: float
+
+    W3PhysicalSwitch:
+      .extends: W3Switch
+      .adds:
+        switchOnAnimationType: PhysicalSwitchAnimationType
+        switchOffAnimationType: PhysicalSwitchAnimationType
+        showActorAnimation: bool
+
+    W3PressureSwitch:
+      .extends: W3PhysicalSwitch
+      .adds:
+        autoSwitchOnLeave: bool
+        entities: array<CEntity>
+        delayedTurnOffEntity: CEntity
+        delayedTurnOnEntity: CEntity
+
+    W3TripwireSwitch:
+      .extends: W3PhysicalSwitch
+      .adds:
+        autoSwitchOnLeave: bool
+        entities: array<CEntity>
+        delayedTurnOffEntity: CEntity
+        delayedTurnOnEntity: CEntity
+        connectedTrapClueTag: name
+
+    W3VirtualSwitch:
+      .extends: W3Switch
+      .adds:
+        requiredSwitches: array<SRequiredSwitch>
+
+    W3VirtualSwitch_Combination:
+      .extends: W3VirtualSwitch
+
+    W3VirtualSwitch_Sequence:
+      .extends: W3VirtualSwitch
+      .adds:
+        nextSwitchIndex: int
+
+    W3MedallionFX:
+      .extends: CEntity
+      .adds:
+        scaleVector: Vector
+        medallionScaleRate: float
+        effectDuration: float
+
+    W3CollectiblePlaces:
+      .extends: CGameplayEntity
+      .adds:
+        xpPoints: int
+        wasDiscovered: bool
+        allTags: array<name>
+
+    W3MicroQuestActivator:
+      .extends: CGameplayEntity
+      .adds:
+        microQuestEntries: array<EncounterEntryDetails>
+        selectedEntriesList: array<EncounterEntryDetails>
+        chosenMicroQuestTag: name
+        isPlayerInArea: bool
+
+    W3SummonedFlies:
+      .extends: CGameplayEntity
+      .adds:
+        fleeDuration: float
+        lookForTarget: bool
+        detectionDistance: float
+        pursueDistance: float
+        ignoreTag: name
+        m_Target: CNode
+        m_StartPos: Vector
+        m_SummonedCmp: W3SummonedEntityComponent
+        m_SlideCmp: W3SlideToTargetComponent
+
+    W3WitchesCage:
+      .extends: CEntity
+
+    W3MonsterHuntInvestigationArea:
+      .extends: CGameplayEntity
+      .adds:
+        enabled: bool
+        investigationMusicStartEvent: string
+        investigationMusicStopEvent: string
+        requiredTrackedQuest: name
+        active: bool
+
+    W3MonsterClue:
+      .extends: W3AnimationInteractionEntity
+      .adds:
+        isAvailable: bool
+        isInteractive: bool
+        isReusable: bool
+        isVisible: bool
+        isIgnoringFM: bool
+        playerVoiceset: EPlayerVoicesetType
+        clueEntries: array<string>
+        maxDetectionDistance: float
+        testLineOfSight: bool
+        medallionVibration: bool
+        medallionVibrationDistance: float
+        medallionVibrationBehavior: EFocusClueMedallionReaction
+        medallionVibratedEver: bool
+        medallionVibratedInSession: bool
+        accuracyTreshold: float
+        eventOnDetected: array<IPerformableAction>
+        detectionDelay: float
+        wasDetected: bool
+        wasSeen: bool
+        isVisibleAsClue: bool
+        linkedFocusArea: W3FocusAreaTrigger
+        dimmingStarted: bool
+        focusModeController: CFocusModeController
+        INTERACTION_COMPONENT_NAME: string
+
+    W3MonsterClueScent:
+      .extends: W3MonsterClue
+
+    W3MonsterClueAnimated:
+      .extends: W3MonsterClue
+      .adds:
+        animation: EMonsterClueAnim
+        witnessWholeAnimation: bool
+        animStartEvent: name
+        animEndEvent: name
+        useAccuracyTest: bool
+        accuracyError: float
+        stopAnimSoundEvent: name
+        activatedByFact: name
+        spawnPosWasSaved: bool
+        spawnPos: Vector
+        spawnRot: EulerAngles
+        animStarted: bool
+
+    W3ClueStash:
+      .extends: W3MonsterClue
+      .adds:
+        lootEntityTemplate: CEntityTemplate
+        setInvisibleAppearanceAfterLootingStash: bool
+        showLootPanelImmediately: bool
+        isStashDisabled: bool
+        stashOpenDelay: float
+        stashSpawnOffset: Vector
+        lootEntityTag: name
+        currentAppearance: name
+        lootEntity: W3Container
+        lootWasOfferedToPlayer: bool
+        stashWasLooted: bool
+
+    W3DisarmClue:
+      .extends: W3MonsterClue
+      .adds:
+        connectedTripwireTag: name
+        connectedTripwire: W3TripwireSwitch
+
+    W3SavedSoundClue:
+      .extends: CGameplayEntity
+      .adds:
+        savedFocusModeSoundEffectType: EFocusModeSoundEffectType
+
+    W3VisualFx:
+      .extends: CEntity
+      .adds:
+        effectName: name
+        destroyEffectTime: float
+        timedFxDestroyName: name
+        parentActorHandle: EntityHandle
+
+    W3SonarEnttity:
+      .extends: CEntity
+      .adds:
+        scaleVector: Vector
+        sonarScaleRate: float
+        effectDuration: float
+        speedModifier: float
+        stopHighlightAfter: float
+
+    W3DaoPillarObstacle:
+      .extends: W3DurationObstacle
+      .adds:
+        damageValue: float
+
+    W3EredinIceSpike:
+      .extends: W3DurationObstacle
+      .adds:
+        explodeAfter: float
+        damageRadius: float
+        damageVal: float
+        effectDuration: float
+        meshComp: CMeshComponent
+        destructionComp: CDestructionSystemComponent
+        entitiesInRange: array<CGameplayEntity>
+
+    W3FairytaleWitchFluid:
+      .extends: CGameplayEntity
+      .adds:
+        entitiesInRange: array<CGameplayEntity>
+        damageRadius: float
+        damageVal: float
+
+    W3IceSpike:
+      .extends: W3DurationObstacle
+      .adds:
+        damageValue: float
+        weaponSlot: name
+        canBeDestroyed: bool
+        destroyAfterTime: float
+        delayToDealDamage: float
+
+    W3SpawnMarker:
+      .extends: CGameplayEntity
+      .adds:
+        spawnDelay: float
+        destroyDelay: float
+        entitiesToSpawn: array<CEntityTemplate>
+        spawnOnGround: bool
+        m_summonedEntityCmp: W3SummonedEntityComponent
+
+    W3WitchBoilingWaterObstacle:
+      .extends: W3DurationObstacle
+      .adds:
+        applyDebuffType: EEffectType
+        debuffDuration: float
+        simpleDamageAction: bool
+        damageValue: float
+        allowDmgValueOverrideFromXML: bool
+        attackDelay: float
+        attackRadius: float
+        increaseRadiusDelta: float
+        ignoreVictimWithTag: name
+        preAttackEffectName: name
+        attackEffectName: name
+        hitReactionType: EHitReactionType
+        loopedAttack: bool
+        playAttackEffectOnlyWhenHit: bool
+        useSeperateAttackEffectEntity: CEntityTemplate
+        onAttackEffectCameraShakeStrength: float
+        onHitCameraShakeStrength: float
+        fxEntity: CEntity
+        summoner: CActor
+        params: SCustomEffectParams
+        effectComponent: CComponent
+
+    CFoodBoidPointOfInterest:
+      .extends: CBoidPointOfInterestComponentScript
+      .adds:
+        expirationTime: int
+        useCounter: float
+        entity: CEntity
+        poiDisp: W3POIDispenser
+        poi: W3PointOfInterestEntity
+
+    W3PointOfInterestEntity:
+      .extends: CGameplayEntity
+      .adds:
+        toDestroy: bool
+        assignedDispenser: W3POIDispenser
+
+    W3POIDispenser:
+      .extends: CGameplayEntity
+      .adds:
+        pointsTag: name
+        onExitDespawnAllAfter: int
+        shouldUseRandomRespawnTime: bool
+        respawnInterval: float
+        poiEntity: W3POIEntities
+        spawnedPOIs: array<W3PointOfInterestEntity>
+        activatorArea: CTriggerAreaComponent
+
+    W3Water:
+      .extends: CEntity
+
+    W3DestructSelfEntity:
+      .extends: CGameplayEntity
+      .adds:
+        destructAfterDelay: float
+        stopEffectDuration: float
+        effectToStop: name
+
+    CRandomFXEntity:
+      .extends: CEntity
+      .adds:
+        fxName: array<name>
+        intervalMin: float
+        intervalMax: float
+        fxTwiceInARow: bool
+        soundEvent: string
+        soundDelay: float
+        fxIndex: int
+        size: int
+        interval: float
+
+    W3NPCBackground:
+      .extends: CGameplayEntity
+      .adds:
+        work: EBackgroundNPCWork_Single
+        parentPairedBackgroundNPCEntity: W3NPCBackgroundPair
+        isWorkingSingle: bool
+
+    W3NPCBackgroundNew:
+      .extends: CEntity
+      .adds:
+        behaviorWorkNumber: int
+        randomized: bool
+        maxWorkNumber: int
+        excludeIdle: bool
+
+    W3NPCBackgroundPair:
+      .extends: CGameplayEntity
+      .adds:
+        work: EBackgroundNPCWork_Paired
+        entitiesToSpawn: array<SBackgroundPairSpawnedEntity>
+        spawnedEntities: array<CEntity>
+        currentAttachments: array<CEntity>
+        slave: W3NPCBackground
+        master: W3NPCBackground
+        mountEvents: array<SMountEvent>
+        masterAC: CAnimatedComponent
+        slaveAC: CAnimatedComponent
+
+    W3NPCBackgroundWoman:
+      .extends: CGameplayEntity
+      .adds:
+        work: EBackgroundNPCWomanWork
+
+    W3VehicleCombatManager:
+      .extends: CEntity
+      .adds:
+        rider: CR4Player
+        vehicle: CVehicleComponent
+        isInCombatAction: bool
+        wasBombReleased: bool
+
+    CBooksMinigameManager:
+      .extends: CGameplayEntity
+      .adds:
+        minigameWonFact: string
+        bookSlotTags: array<name>
+        bookTags: array<name>
+        bookSlots: array<CBookMinigameSlot>
+        books: array<CBookMinigameBook>
+
+    CBookMinigameSlot:
+      .extends: CGameplayEntity
+      .adds:
+        bookMinigameManagerTag: name
+        correctBookId: int
+        currentBook: CBookMinigameBook
+        bookMinigameManager: CBooksMinigameManager
+
+    CBookMinigameBook:
+      .extends: CGameplayEntity
+      .adds:
+        bookId: int
+
+    CFactAdderOnCollisionWithTag:
+      .extends: CGameplayEntity
+      .adds:
+        factName: string
+        tagToCollideWith: name
+
+    W3CiriPhantom:
+      .extends: CGameplayEntity
+      .adds:
+        owner: CActor
+        target: CActor
+        rotationDamper: EulerAnglesSpringDamper
+
+    W3ReplacerChanger:
+      .extends: W3GameplayTrigger
+      .adds:
+        replacerTemplate: String
+        recentlyChanged: bool
+
+    W3BackgroundAnimatedEntity:
+      .extends: CGameplayEntity
+      .adds:
+        backgroundEntityData: array<SBackgroundEntityData>
+        parentEntity: CEntityTemplate
+        maxSpeed: float
+        acceleration: float
+        maxAngleSpeed: float
+        waypointDistance: float
+        waypoints: array<EntityHandle>
+        loopMotion: bool
+        startAtSpawn: bool
+        maxAngleSpeedThreshold: float
+        angleAcceleration: float
+        stoppingDistance: float
+        endPositionError: float
+        angleSpeed: float
+        speedScale: float
+        previousAngleDistance: float
+        nodes: array<CNode>
+        i: int
+        size: int
+        currTargetIndex: int
+        canMove: bool
+        entity: CEntity
+        entityToAttach: CEntity
+        currTarget: CNode
+        position: Vector
+        targetPos: Vector
+        currPosition: Vector
+        direction: Vector
+        toTarget: Vector
+        angleDistancePlus: float
+        angleDistanceMinus: float
+        angleDistance: float
+        distanceToTarget: float
+        rotation: EulerAngles
+        desiredRotation: EulerAngles
+        speed: float
+        shouldStop: bool
+        maxCurrentAngleSpeed: float
+        maxCurrentSpeed: float
+
+    W3BackgroundAnimatedEntityTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        movingEntitySpawnerHandle: EntityHandle
+        movingEntitySpawner: W3BackgroundAnimatedEntity
+
+    W3ChangeCombatStageTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        npc: CNewNPC
+
+    W3ShepherdGreetingTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        greeted: bool
+        actors: array<CActor>
+
+    W3DestructionTrigger:
+      .extends: CGameplayEntity
+      .adds:
+        destructionEntityTag: name
+
+    W3FoodDispenser:
+      .extends: CGameplayEntity
+      .adds:
+        foodEntity: CEntityTemplate
+        maxSpawnedFood: int
+        spawnedFood: array<CEntity>
+
+    CBoatPassengerInteractionComponent:
+      .extends: CInteractionComponent
+
+    W3HorseManager:
+      .extends: CPeristentEntity
+      .adds:
+        horseAbilities: array<name>
+        itemSlots: array<SItemUniqueId>
+        wasSpawned: bool
+        horseMode: EHorseMode
+
+    W3Campfire:
+      .extends: CGameplayEntity
+      .adds:
+        dontCheckForNPCs: bool
+
+    W3FireSource:
+      .extends: CGameplayEntity
+      .adds:
+        glComponent: CGameplayLightComponent
+
+    W3ProjectileShooterTest:
+      .extends: CActor
+      .adds:
+        projectileTemplate: CEntityTemplate
+        targetTag: name
+        frequency: float
+
+    CCreatureDataComponent:
+      .extends: CScriptedComponent
+      .adds:
+        itemsUsedAgainstCreature: array<name>
+        skillsUsedAgainstCreature: array<name>
+        cameraDistance: float
+        cameraLookAtZ: float
+        cameraRotationYaw: float
+        cameraRotationPitch: float
+        environmentSunRotationYaw: float
+        environmentSunRotationPitch: float
+        appearance: name
+        position: Vector
+        scale: float
+        fov: float
+
+    W3MerchantComponent:
+      .extends: CScriptedComponent
+      .adds:
+        mapPinType: EMerchantMapPinType
+
+    W3PostFXOnGroundComponent:
+      .extends: CSelfUpdatingComponent
+      .adds:
+        fadeInTime: float
+        activeTime: float
+        fadeOutTime: float
+        range: float
+        type: int
+        updateDelay: float
+        stopAtDeath: bool
+        m_Actor: CActor
+        m_DelaySinceLastUpdate: float
+        m_DefaultFadeInTime: float
+        m_DefaultActiveTime: float
+        m_DefaultFadeOutTime: float
+        m_DefaultRange: float
+
+    CR4Component:
+      .extends: CScriptedComponent
+
+    CScriptedAnimEventsListenerComponent:
+      .extends: CScriptedComponent
+      .adds:
+        listeners: array<CComponent>
+
+    W3ScentComponent:
+      .extends: CR4Component
+      .adds:
+        foodGroup: EFoodGroup
+        attractionRange: float
+        deadAttractionRange: float
+        bleedingAttractionRange: float
+
+    W3FireAuraManagerComponent:
+      .extends: CR4Component
+      .adds:
+        fireAuraEffect: name
+        m_PostFxOnGroundCmp: W3PostFXOnGroundComponent
+
+    CExplorationInterceptorStateAbstract:
+      .extends: CExplorationStateTransitionAbstract
+      .adds:
+        m_InterceptStateN: name
+
+    CExplorationStateSkatingDashLocked:
+      .extends: CExplorationInterceptorStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        target: CEntity
+        isInFlow: bool
+        targetMaxAngle: float
+        targetMaxAngleFlow: float
+        reachSideDistance: float
+        targetSideDistance: float
+        inputAngleInfluence: float
+        speed: float
+        speedMinMax: float
+        impulseMax: float
+        impulseMaxFlow: float
+        aimSpeed: float
+        adjustorTicket: SMovementAdjustmentRequestTicket
+        attackDistGap: float
+        attackDistGapPerfect: float
+        toTargetDistanceInit: float
+        toTargetDistance: float
+        targetDirLast: Vector
+        attacked: bool
+        timeTotalMax: float
+        timeTotalMaxFlow: float
+        timeToChainMin: float
+        useTimeScale: bool
+        timeScaleSpeed: float
+        timeScaled: bool
+        afterAttackTime: float
+        timeToEndCur: float
+        behParamAttackName: name
+        afterAttackImpulse: float
+        isEnabled: bool
+
+    CExplorationStateSkatingHitFrontal:
+      .extends: CExplorationInterceptorStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        behAnimEnd: name
+        timeMax: float
+        dotCollToEnter: float
+
+    CExplorationStateSkatingPrepareJump:
+      .extends: CExplorationInterceptorStateAbstract
+      .adds:
+        skateGlobal: CExplorationSkatingGlobal
+        behAnimEnd: name
+        timeMax: float
+        flowImpulse: float
+
+    W3NoticeBoard:
+      .extends: CR4MapPinEntity
+      .adds:
+        visited: bool
+        addedNotes: array<ErrandDetailsList>
+        fluffNotices: array<string>
+        entitiesToBeShown: array<name>
+        questEntitiesToBeShown: array<name>
+        questNonActorEntitiesToBeShown: array<name>
+        InteractionSpawnDelayTime: float
+        backgroundOverride: string
+        factAddedOnDiscovery: name
+        noticeboardDisabled: bool
+        activeErrands: array<ErrandDetailsList>
+        updatingInteraction: bool
+        errandPositionName: string
+        MAX_DISPLAYED_ERRANDS: int
+        lastTimeInteracted: GameTime
+        hack_updateTriesLeft: int
+        hack_isTryingUpdate: bool
+        hack_started: bool
+        hack_fromAreaEnter: bool
+
+    W3EntranceEntity:
+      .extends: CR4MapPinEntity
+
+    W3PointOfInterestMappinEntity:
+      .extends: CR4MapPinEntity
+
+    W3Signboard:
+      .extends: W3Poster
+
+    W3AnimatedContainer:
+      .extends: W3Container
+      .adds:
+        animationForAllInteractions: bool
+        interactionName: string
+        holsterWeaponAtTheBeginning: bool
+        interactionAnim: EPlayerExplorationAction
+        slotAnimName: name
+        interactionAnimTime: float
+        desiredPlayerToEntityDistance: float
+        matchPlayerHeadingWithHeadingOfTheEntity: bool
+        attachThisObjectOnAnimEvent: bool
+        attachSlotName: name
+        attachAnimName: name
+        detachAnimName: name
+        objectAttached: bool
+        objectCachedPos: Vector
+        objectCachedRot: EulerAngles
+
+    W3Herb:
+      .extends: W3RefillableContainer
+      .adds:
+        isEmptyAppearance: bool
+
+    W3Stash:
+      .extends: CInteractiveEntity
+      .adds:
+        forceDiscoverable: bool
+
+    W3ElevatorInteractive:
+      .extends: W3Elevator
+      .adds:
+        initialPosOnTop: bool
+        targetObject: EntityHandle
+        maxHeight: float
+        mechanismEntityHandle: EntityHandle
+        activated: bool
+        explorationComponents: array<CComponent>
+        switches: array<W3ElevatorSwitch>
+        i: int
+        size: int
+        elevatorSaveLockInt: int
+
+    W3Trap:
+      .extends: W3MonsterClue
+      .adds:
+        ARM_INTERACTION_COMPONENT_NAME: string
+        DISARM_INTERACTION_COMPONENT_NAME: string
+        m_IsActive: bool
+        m_Targets: array<CNode>
+        m_isArmed: bool
+        m_wasSprung: bool
+        m_isPlayingAnimation: bool
+        activeByDefault: bool
+        factOnArm: SFactParameters
+        factOnDisarm: SFactParameters
+        factOnActivation: SFactParameters
+        factOnDeactivation: SFactParameters
+        deactivateAfterTime: float
+        appearanceActivated: string
+        appearanceDeactived: string
+        appearanceArmed: string
+        appearanceDisarmed: string
+        canBeArmed: bool
+        interactibleAfterSprung: bool
+        willActivateWhenHit: bool
+        soundOnArm: name
+        soundOnDisarm: name
+
+    W3TrapAlarm:
+      .extends: W3Trap
+      .adds:
+        alarmSoundString: string
+
+    W3TrapDestructSelf:
+      .extends: W3Trap
+      .adds:
+        playEffectOnDestruct: name
+        onlyDestructOnAreaEnter: bool
+        denyAreaAfterDestruction: bool
+        excludedActorsTags: array<name>
+        excludesblockDestruction: bool
+        m_actorsInTrigger: array<CActor>
+        m_isDestroyed: bool
+
+    W3TrapProjectileArea:
+      .extends: W3Trap
+      .adds:
+        projectile: CEntityTemplate
+        density: float
+        maxShots: int
+        reloadAtActivation: bool
+        projAtOnce: SRange
+        delay: SRangeF
+        targetPlayerDelay: SRangeF
+        height: SRangeF
+        velocity: SRangeF
+        projectileOriginOffsetX: SRangeF
+        projectileOriginOffsetY: SRangeF
+        shootOnlyWhenTargetInside: bool
+        deactivateAutomatically: bool
+        useAdvancedDistribution: bool
+        useGridPositioning: bool
+        excludedEntityTags: array<name>
+        magnetTags: array<name>
+        magnetRange: float
+        magnetOffset: Vector
+        maxDistanceFromPlayer: float
+        forbidingAreaRadius: float
+        m_AreaComponent: CTriggerAreaComponent
+        m_ProjectilePositionGrid: array<Vector>
+        m_UsedProjectilePosition: array<Vector>
+        m_AcceptablePos: array<Vector>
+        m_ForbiddenPos: array<Vector>
+        m_LastPlayerCheckedPos: Vector
+        m_LastQuantOfForbidAreas: int
+        m_GridSquareWidth: float
+        m_GridSquareLength: float
+        m_DelayUntilNextShoot: float
+        m_DelayUntilNextPlayerShoot: float
+        m_QuantityShotNext: int
+        m_PlayerIsInArea: bool
+        m_TargetsInArea: array<CEntity>
+        m_CreateEntityHelper: W3TrapProjectileArea_CreateEntityHelper
+        m_EntityCreated: int
+        m_WasCreatingLastFrame: bool
+        m_Shot: bool
+        m_DebugFloat: float
+        m_DebugIndex: int
+        m_TotalQuantityShot: int
+
+    W3TrapProjectileStatue:
+      .extends: W3Trap
+      .adds:
+        m_Projectile: CEntityTemplate
+        m_IsStatic: bool
+        m_RotationSpeed: float
+        m_FirstShootDelay: float
+        m_FireRate: float
+        m_MaxShots: float
+        m_MinAngleToStartShooting: float
+        m_MaxAimingPitchCorrection: float
+        m_TargetPositionPrediction: float
+        m_ProjectileIsCocked: Bool
+        m_ProjectileSpeed: float
+        m_ProjectileLifeSpan: float
+        m_ProjectileFollowTarget: bool
+        m_DelayUntilNextProjectile: float
+        m_ShotsLeft: float
+        m_CockedProjectile: W3AdvancedProjectile
+        m_DelayToNextSorting: float
+
+    W3TrapSpawnEntity:
+      .extends: W3Trap
+      .adds:
+        spawnOnlyOnAreaEnter: bool
+        maxSpawns: float
+        entityToSpawn: CEntityTemplate
+        offsetVector: Vector
+        excludedActorsTags: array<name>
+        appearanceAfterFirstSpawn: string
+        m_Spawns: int
+
+    W3TrapTripwire:
+      .extends: W3Trap
+      .adds:
+        eventOnTripped: array<IPerformableAction>
+        maxUseCount: int
+        excludedActorsTags: array<name>
+
+    W3TrapWolfPit:
+      .extends: W3Trap
+
+    CGhostComponent:
+      .extends: CR4Component
+      .adds:
+        isCastingShadows: bool
+        soundEffectType: EFocusModeSoundEffectType
+
+    W3IllusionaryAppearance:
+      .extends: W3IllusionaryObstacle
+      .adds:
+        realAppearance: string
+
+    W3ArmorStand:
+      .extends: W3HouseDecorationBase
+      .adds:
+        m_mountAllItems: bool
+
+    W3BeehiveStandingEntity:
+      .extends: W3AnimatedContainer
+      .adds:
+        damageVal: SAbilityAttributeValue
+        actorsInRange: array<CActor>
+        wasInteracted: bool
+
+    W3Bookshelf:
+      .extends: W3SmartObject
+      .adds:
+        m_booksRange: int
+        m_appearances: array<name>
+
+    W3CriticalStateTrap:
+      .extends: CInteractiveEntity
+      .adds:
+        effectOnSpawn: name
+        effectToPlayOnActivation: name
+        durationFrom: int
+        durationTo: int
+        areasActive: bool
+        movementAdjustorActive: bool
+        params: SCustomEffectParams
+        movementAdjustor: CMovementAdjustor
+        ticket: SMovementAdjustmentRequestTicket
+        ticketRot: SMovementAdjustmentRequestTicket
+        lifeTime: int
+        l_effectDuration: int
+        startTimestamp: float
+        enterTimestamp: float
+
+    W3FireSourceLifeRegen:
+      .extends: W3FireSource
+      .adds:
+        healthRegenOn: bool
+
+    W3InteractiveQuestEntity:
+      .extends: CInteractiveEntity
+
+    W3MagicLampEntity:
+      .extends: CInteractiveEntity
+
+    CMagicMineEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        tellTime: float
+        damageVal: float
+        boatDamageVal: float
+        damageRadius: float
+        mineTrigger: CTriggerAreaComponent
+
+    CMonsterNestEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        bombActivators: array<name>
+        lootOnNestDestroyed: CEntityTemplate
+        interactionOnly: bool
+        desiredPlayerToEntityDistance: float
+        matchPlayerHeadingWithHeadingOfTheEntity: bool
+        settingExplosivesTime: float
+        shouldPlayFXOnExplosion: bool
+        appearanceChangeDelayAfterExplosion: float
+        shouldDealDamageOnExplosion: bool
+        factSetAfterFindingNest: string
+        factSetAfterSuccessfulDestruction: string
+        linkingMode: bool
+        linkedEncounterHandle: EntityHandle
+        linkedEncounterTag: name
+        setDestructionFactImmediately: bool
+        expOnNestDestroyed: int
+        bonusExpOnBossKilled: int
+        addExpOnlyOnce: bool
+        nestUpdateDefintion: SMonsterNestUpdateDefinition
+        monsterNestType: ENestType
+        regionType: EEP2PoiType
+        entityType: EMonsterNestType
+        explodeAfter: float
+        nestBurnedAfter: float
+        playerInventory: CInventoryComponent
+        usedBomb: SItemUniqueId
+        encounter: CEncounter
+        nestFound: bool
+        messageTimestamp: float
+        bossKilled: bool
+        container: W3Container
+        bossKilledCounter: int
+        expWasAdded: bool
+        bombEntity: CEntity
+        bombEntityTemplate: CEntityTemplate
+        bombName: name
+        actionBlockingExceptions: array<EInputActionBlock>
+        saveLockIdx: int
+        voicesetTime: float
+        voicesetPlayed: bool
+        canPlayVset: bool
+        l_enginetime: float
+        airDmg: bool
+        wasExploded: bool
+
+    CMajorPlaceOfPowerEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        buffType: EShrineBuffs
+        buffUniqueName: string
+        fxOnIdle: name
+        fxOnChannel: name
+        fxOnSuccess: name
+        channelingTime: float
+        buffDuration: float
+        buffCooldown: GameTime
+        skillPointGranted: bool
+        isRecharging: bool
+        lastUsed: GameTime
+        isPlaceOfPowerInIdle: bool
+        voicesetTimestamp: GameTime
+        initialVoicesetPlayed: bool
+
+    CPopsGasEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        restorationTime: float
+        settlingTime: float
+        fxOnSpawn: name
+        immunityFact: string
+        i: int
+        settled: bool
+        victim: CActor
+        victims: array<CActor>
+        poisonArea: CTriggerAreaComponent
+        buffParams: SCustomEffectParams
+
+    CRiftEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        linkingMode: bool
+        controlledEncounter: EntityHandle
+        controlledEncounterTag: name
+        activationDelay: float
+        closeAfter: float
+        canBeDisabled: bool
+        damageVal: SAbilityAttributeValue
+        factSetAfterRiftWasDisabled: string
+        isIntact: bool
+        currState: name
+        encounter: CEncounter
+        coldArea: CTriggerAreaComponent
+        entitiesInRange: array<CActor>
+        isEncounterEnabled: bool
+        buffParams: SCustomEffectParams
+        spawnCounter: int
+        encounterSpawnLimit: int
+        collisionEntityTemplate: CEntityTemplate
+        collisionEntity: CEntity
+
+    CSignReactiveEntity:
+      .extends: W3MonsterClue
+      .adds:
+        factOnSignCast: string
+        igni: bool
+        aard: bool
+        clueActionWhenDestroyed: EClueOperation
+        igniteOnInteraction: bool
+        destroyingTimeout: float
+        destroyedEffectsTimeout: float
+        destroyingEffectName: name
+        destroyedEffectName: name
+        isDestroyed: bool
+        clueActionArray: array<EClueOperation>
+        currentAppearance: string
+        interactionComponents: array<CComponent>
+        i: int
+
+    W3SnowMound:
+      .extends: CInteractiveEntity
+      .adds:
+        TagRemovedAfterMelt: name
+        isMelted: bool
+
+    CTeleportEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        keyItemName: name
+        removeKeyOnUse: bool
+        linkingMode: bool
+        keepBlackscreen: bool
+        pairedTeleport: EntityHandle
+        pairedNodeTag: name
+        oneWayTeleport: bool
+        activationTime: float
+        factOnActivate: string
+        factOnTeleport: string
+        factOnActivateValidFor: int
+        factOnTeleportValidFor: int
+        isActivated: bool
+        destinationNode: CNode
+        currentlyTeleporting: bool
+
+    CToadAcidPool:
+      .extends: CInteractiveEntity
+      .adds:
+        poisonDamage: SAbilityAttributeValue
+        fxOnSpawn: name
+        immunityFact: string
+        despawnTimer: float
+        damageVal: float
+        explosionRange: float
+        destroyTimer: float
+        settled: bool
+        victim: CActor
+        victims: array<CActor>
+        poisonArea: CTriggerAreaComponent
+        buffParams: SCustomEffectParams
+        damage: W3DamageAction
+        entitiesInRange: array<CGameplayEntity>
+        targetEntity: CActor
+        fxStartTime: float
+        hasExploded: bool
+
+    W3AardObstacle:
+      .extends: CInteractiveEntity
+
+    W3CombatDamageEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        victims: array<CActor>
+        victim: CActor
+        isActive: bool
+
+    W3FlammableDamageEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        explosionEntity: CEntityTemplate
+        spawnedExplosion: CDamageAreaEntity
+        victim: CActor
+        pos: Vector
+
+    CDamageAreaEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        owner: CActor
+        buff: EEffectType
+        buffDuration: float
+        customDamageValuePerSec: SAbilityAttributeValue
+        effectOnSpawn: name
+        activeFor: float
+        stopSpawnEffectDelay: float
+        dealDamagePerc: int
+        range: float
+        isActive: bool
+        actorsInRange: array<CActor>
+        buffParams: SCustomEffectParams
+
+    W3Bridge:
+      .extends: W3DestroyableTerrain
+      .adds:
+        m_currentFxID: int
+        entryTime: float
+        timerInterval: float
+        rot: EulerAngles
+
+    W3EntitySpawner:
+      .extends: W3UsableEntity
+      .adds:
+        entityTemplate: CEntityTemplate
+        appearanceAfterSpawn: name
+        autoSpawn: bool
+        spawnDelay: float
+        numberOfUses: int
+        spawnNearPlayer: bool
+        avoidNodeWithTag: name
+
+    W3FloeEntity:
+      .extends: W3DestroyableTerrain
+      .adds:
+        m_currentFxID: int
+        entryTime: float
+        timerInterval: float
+        rot: EulerAngles
+
+    W3IgniObstacleEntity:
+      .extends: CInteractiveEntity
+      .adds:
+        staticIgniObstacle: CComponent
+        iceWallStage1: CDrawableComponent
+        iceWallStage2: CDrawableComponent
+        iceWallStage2Melted: CDrawableComponent
+        iceWallStage3: CDrawableComponent
+        iceWallStage3Melted: CDrawableComponent
+
+    W3DynamicBlood:
+      .extends: W3MonsterClue
+      .adds:
+        lifetime: float
+
+    W3AardEntity:
+      .extends: W3SignEntity
+      .adds:
+        aspects: array<SAardAspect>
+        effects: array<SAardEffects>
+        waterTestOffsetZ: float
+        waterTestDistancePerc: float
+        projectileCollision: array<name>
+        processThrow_alternateCast: bool
+
+    W3AxiiEntity:
+      .extends: W3SignEntity
+      .adds:
+        effects: array<SAxiiEffects>
+        projTemplate: CEntityTemplate
+        distance: float
+        projSpeed: float
+        targets: array<CActor>
+        orientationTarget: CActor
+
+    W3IgniEntity:
+      .extends: W3SignEntity
+      .adds:
+        collisionFxEntity: CEntity
+        rangeFxEntity: CEntity
+        channelBurnTestDT: array<SIgniChannelDT>
+        lastCollisionFxPos: Vector
+        CHANNELLING_BURN_TEST_FREQUENCY: float
+        aspects: array<SIgniAspect>
+        effects: array<SIgniEffects>
+        forestTrigger: W3ForestTrigger
+        projectileCollision: array<name>
+        hitEntities: array<CGameplayEntity>
+        lastFxSpawnTime: float
+
+    W3QuenEntity:
+      .extends: W3SignEntity
+      .adds:
+        effects: array<SQuenEffects>
+        hitEntityTemplate: CEntityTemplate
+        shieldDuration: float
+        shieldHealth: float
+        initialShieldHealth: float
+        dischargePercent: float
+        ownerBoneIndex: int
+        blockedAllDamage: bool
+        shieldStartTime: EngineTime
+        hitEntityTimestamps: array<EngineTime>
+        MIN_HIT_ENTITY_SPAWN_DELAY: float
+        hitDoTEntities: array<W3VisualFx>
+        showForceFinishedFX: bool
+        freeFromBearSetBonus: bool
+
+    CThrowable:
+      .extends: CProjectileTrajectory
+      .adds:
+        ownerHandle: EntityHandle
+        wasThrown: bool
+        itemId: SItemUniqueId
+        isFromAimThrow: bool
+
+    W3Petard:
+      .extends: CThrowable
+      .adds:
+        cameraShakeStrMin: float
+        cameraShakeStrMax: float
+        cameraShakeRange: float
+        hitReactionType: EHitReactionType
+        noLoopEffectIfHitWater: bool
+        dismemberOnKill: bool
+        componentsEnabledOnLoop: array<name>
+        friendlyFire: bool
+        impactParams: SPetardParams
+        loopParams: SPetardParams
+        dodgeable: bool
+        audioImpactName: name
+        ignoreBombSkills: bool
+        enableTrailFX: bool
+        alignToNormal: bool
+        FX_TRAIL: name
+        FX_CLUSTER: name
+        itemName: name
+        targetPos: Vector
+        isProximity: bool
+        isInWater: bool
+        isInDeepWater: bool
+        isStuck: bool
+        isCluster: bool
+        justPlayingFXs: array<name>
+        loopDuration: float
+        snapCollisionGroupNames: array<name>
+        stopCollisions: bool
+        previousTargets: array<CGameplayEntity>
+        targetsSinceLastCheck: array<CGameplayEntity>
+        wasInTutorialTrigger: bool
+        decalRemainingTimes: array<SPetardShownDecals>
+        impactNormal: Vector
+        hasImpactFireDamage: bool
+        hasImpactFrostDamage: bool
+        hasLoopFireDamage: bool
+        hasLoopFrostDamage: bool
+
+    W3Samum:
+      .extends: W3Petard
+
+    W3WhiteFrost:
+      .extends: W3Petard
+      .adds:
+        waveProjectileTemplate: CEntityTemplate
+        freezeNPCFadeInTime: float
+        waveSpeedModifier: float
+        HAX_waveRadius: float
+        collisionMask: array<name>
+        shaderSpeed: float
+        totalTime: float
+        collidedEntities: array<CGameplayEntity>
+        waveProjectile: W3WhiteFrostWaveProjectile
+
+    W3WhiteFrostWaveProjectile:
+      .extends: CProjectileTrajectory
+      .adds:
+        frostEntity: W3WhiteFrost
+
+    W3MagicalThing:
+      .extends: CProjectileTrajectory
+      .adds:
+        dmg: float
+
+    W3PhysicalThing:
+      .extends: CProjectileTrajectory
+      .adds:
+        dmg: float
+        big: bool
+
+    W3InteractionSwitch:
+      .extends: W3PhysicalSwitch
+      .adds:
+        isActivatedByPlayer: bool
+        focusModeHighlight: EFocusModeVisibility
+        interactionActiveInState: ESwitchState
+
+    W3ArachasEggCustom:
+      .extends: W3MonsterClue
+      .adds:
+        morphTimeIgni: float
+        morphTimeAard: float
+        burnoutTime: float
+        destroyed: bool
+        igniReactionEffect: name
+        aardReactionEffect: name
+        onDestroyedFact: array<name>
+        morphManager: CMorphedMeshManagerComponent
+        morphTime: float
+        allowFactAdding: bool
+        APPEARANCE_INTACT: name
+        APPEARANCE_DESTROYED: name
+
+    W3ClueCorpse:
+      .extends: W3MonsterClue
+      .adds:
+        woundName: name
+
+    W3DestroyableClue:
+      .extends: W3MonsterClue
+      .adds:
+        destroyable: bool
+        reactsToAard: bool
+        reactsToIgni: bool
+        reactsToSwords: bool
+        reactsToBolts: bool
+        reactsToBombs: bool
+        defaultEffect: name
+        effectOnReaction: name
+        effectOnBurning: name
+        effectInstant: bool
+        reactionDelay: float
+        onDestroyedFact: array<string>
+        performDestructionSystemCheck: bool
+        isBurning: bool
+        destroyed: bool
+
+    W3LeshyRootProjectile:
+      .extends: CProjectileTrajectory
+      .adds:
+        fxEntityTemplate: CEntityTemplate
+        fxEntity: CEntity
+        action: W3DamageAction
+        owner: CActor
+        projPos: Vector
+        projRot: EulerAngles
+        projExpired: bool
+        collisions: int
+
+    W3LeshyBirdProjectile:
+      .extends: CProjectileTrajectory
+      .adds:
+        fxEntityTemplate: CEntityTemplate
+        fxEntity: CEntity
+        action: W3DamageAction
+        owner: CActor
+        projPos: Vector
+        projRot: EulerAngles
+        projExpired: bool
+
+    W3SignProjectile:
+      .extends: CProjectileTrajectory
+      .adds:
+        projData: SSignProjectile
+        owner: W3SignOwner
+        action: W3DamageAction
+        signSkill: ESkill
+        wantedTarget: CGameplayEntity
+        signEntity: W3SignEntity
+        hitEntities: array<CGameplayEntity>
+        attackRange: CAIAttackRange
+        isReusable: bool
+
+    W3AardProjectile:
+      .extends: W3SignProjectile
+      .adds:
+        staminaDrainPerc: float
+
+    W3AxiiProjectile:
+      .extends: W3SignProjectile
+
+    W3IgniProjectile:
+      .extends: W3SignProjectile
+      .adds:
+        channelCollided: bool
+        dt: float
+        isUsed: bool
+
+    CAnimal:
+      .extends: CNewNPC
+      .adds:
+        animalType: EAnimalType
+
+    CDettlaffColumn:
+      .extends: CNewNPC
+      .adds:
+        numberOfHits: int
+        destroyCalled: bool
+        foundEntity: CEntity
+        construct: CActor
+        summonedComp: W3SummonedEntityComponent
+        percLife: float
+        chunkLife: float
+        lastHitTimestamp: float
+        testedHitTimestamp: float
+        requiredHits: int
+        timeBetweenHits: float
+        timeBetweenFireDamage: float
+        effectOnTakeDamage: name
+        timeToDestroy: float
+
+    CDettlaffConstruct:
+      .extends: CNewNPC
+      .adds:
+        numberOfHits: int
+        destroyCalled: bool
+        percLife: float
+        chunkLife: float
+        healthBarPerc: float
+        lastHitTimestamp: float
+        testedHitTimestamp: float
+        l_temp: float
+        timeBetweenHits: float
+        timeBetweenFireDamage: float
+        baseStat: EBaseCharacterStats
+        requiredHits: int
+        effectOnTakeDamage: name
+        timeToDestroy: float
+
+    W3FlyingWhale:
+      .extends: CActor
+      .adds:
+        forcedAppearance: string
+
+    CHitBasedNPC:
+      .extends: CNewNPC
+      .adds:
+        hitsToDeath: int
+        minTimeBetweenHits: float
+        baseStat: EBaseCharacterStats
+        chunkValue: float
+        hitsTaken: int
+        lastHitTimestamp: float
+        wasInitialized: bool
+
+    W3NightWraithIris:
+      .extends: CNewNPC
+      .adds:
+        m_CurrentHealthSection: int
+        m_ClosestPainting: CNode
+        m_TargetPainting: W3IrisPainting
+        m_Paintings: array<CNode>
+        m_WaitingForSpawnEnd: bool
+
+    W3Rat:
+      .extends: CNewNPC
+      .adds:
+        hasCollision: bool
+
+    W3HorseCombatManager:
+      .extends: W3VehicleCombatManager
+
+    W3AdvancedProjectile:
+      .extends: CThrowable
+      .adds:
+        projSpeed: float
+        projAngle: float
+        projDMG: float
+        projSilverDMG: float
+        ignoreArmor: bool
+        projEfect: EEffectType
+        persistFxAfterCollision: bool
+        dealDamageEvenIfDodging: bool
+        ignore: bool
+        isActive: bool
+        collidedEntities: array<CGameplayEntity>
+        lifeSpan: float
+
+    W3BoulderProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        onCollisionFxName: name
+        spawnEntityTemplate: CEntityTemplate
+        onCollisionAppearanceName: name
+        projectileHitGround: bool
+
+    W3TraceGroundProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        samplingFreq: float
+        effectName: name
+        onRangedReachedDestroyAfter: float
+        deactivateOnCollisionWithVictim: bool
+        comp: CEffectDummyComponent
+
+    W3SpawnEntityProjectile:
+      .extends: W3TraceGroundProjectile
+      .adds:
+        entityTemplate: CEntityTemplate
+        entity: CEntity
+
+    W3ElementalIfrytProjectile:
+      .extends: W3TraceGroundProjectile
+      .adds:
+        action: W3DamageAction
+
+    W3EredinFrostProjectile:
+      .extends: W3TraceGroundProjectile
+      .adds:
+        action: W3DamageAction
+
+    W3ElementalDaoProjectile:
+      .extends: W3TraceGroundProjectile
+      .adds:
+        action: W3DamageAction
+
+    W3StoneProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        onCollisionFxName: name
+        stoneTemplate: CEntityTemplate
+        action: W3DamageAction
+
+    W3EnvironmentProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        stopFxOnDeactivate: name
+        onCollisionFxName: name
+        ignoreVictimsWithTag: name
+        action: W3DamageAction
+
+    BeamProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        beamFx: name
+        pullEffectDuration: float
+
+    FakeProjectile:
+      .extends: W3AdvancedProjectile
+
+    PoisonProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        onCollisionFxName: name
+        spawnEntityOnGround: bool
+        spawnEntityTemplate: CEntityTemplate
+        projectileHitGround: bool
+
+    SpawnMultipleEntitiesPoisonProjectile:
+      .extends: PoisonProjectile
+      .adds:
+        numberOfSpawns: int
+        minDistFromTarget: int
+        maxDistFromTarget: int
+
+    DebuffProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        debuffType: EEffectType
+        hitReactionType: EHitReactionType
+        damageTypeName: name
+        destroyQuen: bool
+        customDuration: float
+        initFxName: name
+        onCollisionFxName: name
+        specialFxOnVictimName: name
+        applyDebuffIfNoDmgWasDealt: bool
+        bounceOnVictimHit: bool
+        signalDamageInstigatedEvent: bool
+        destroyAfterFloat: float
+        stopProjectileAfterCollision: bool
+        sendGameplayEventToVicitm: name
+
+    W3FireballProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        onCollisionFxName: name
+        spawnEntityTemplate: CEntityTemplate
+        decreasePlayerDmgBy: float
+        projectileHitGround: bool
+
+    W3DracolizardFireball:
+      .extends: W3FireballProjectile
+      .adds:
+        range: float
+        burningDur: float
+        destroyAfter: float
+        surfaceFX: SFXSurfacePostParams
+
+    W3MeteorProjectile:
+      .extends: W3FireballProjectile
+      .adds:
+        explosionRadius: float
+        markerEntityTemplate: CEntityTemplate
+        destroyMarkerAfter: float
+        markerEntity: CEntity
+
+    W3IceMeteorProjectile:
+      .extends: W3MeteorProjectile
+
+    W3LightningStrikeProjectile:
+      .extends: W3MeteorProjectile
+
+    W3LightningBoltProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        onCollisionFxName: name
+        spawnEntityTemplate: CEntityTemplate
+        projectileHitGround: bool
+
+    W3IceSpearProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        onCollisionFxName: name
+        spawnEntityTemplate: CEntityTemplate
+        customDuration: float
+        onCollisionVictimFxName: name
+        immediatelyStopVictimFX: bool
+        projectileHitGround: bool
+
+    W3SpawnMeteor:
+      .extends: W3AdvancedProjectile
+      .adds:
+        initFxName: name
+        onCollisionFxName: name
+        onCollisionFxName2: name
+        startFxName: name
+        ent: CEntity
+        projectileHitGround: bool
+        playerPos: Vector
+        projPos: Vector
+        projSpawnPos: Vector
+
+    W3AirDrainProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        destructionEntity: CEntityTemplate
+        markerEntityTemplate: CEntityTemplate
+        AirToDrain: float
+        initFxName: name
+        onCollisionFxName: name
+        onCollisionFxName2: name
+        markerEntity: CEntity
+        projectileHitGround: bool
+
+    W3ArrowProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        defaultTrail: name
+        underwaterTrail: name
+        boneName: name
+        activeTrail: name
+        shouldBeAttachedToVictim: bool
+        isOnFire: bool
+        isUnderwater: bool
+        isBouncedArrow: bool
+        isScheduledForDestruction: bool
+
+    W3ObjectProjectile:
+      .extends: CProjectileTrajectory
+      .adds:
+        action: W3DamageAction
+        owner: CActor
+
+    W3BoltProjectile:
+      .extends: W3ArrowProjectile
+      .adds:
+        dismemberOnKill: bool
+        dodgeable: bool
+        projectiles: array<W3BoltProjectile>
+        targetPos: Vector
+        crossbowId: SItemUniqueId
+        collisionGroups: array<name>
+        hitVictims: array<CActor>
+        wasShotUnderWater: bool
+        visibility: bool
+
+    W3SnowballProjectile:
+      .extends: W3AdvancedProjectile
+      .adds:
+        damageTypeName: name
+        initFxName: name
+        onCollisionFxName: name
+        specialFxOnVictimName: name
+        applyDebuffIfNoDmgWasDealt: bool
+
+    W3Replacer:
+      .extends: CR4Player
+      .adds:
+        level: int
+
+    W3CraftsmanComponent:
+      .extends: W3MerchantComponent
+      .adds:
+        craftsmanData: array<SCraftsman>
+
+    W3FoodComponent:
+      .extends: W3ScentComponent
+      .adds:
+        maxEater: int
+        distanceToEat: float
+        startAngleToEat: float
+        arcWidthToEat: float
+        m_Eaters: array<CActor>
+        m_LockDistance: float
+        m_EatSlots: array<Vector>
+        m_LastTimeEaten: float
+
+    W3ActorRemains:
+      .extends: W3AnimatedContainer
+      .adds:
+        dismemberOnLoot: bool
+        dismembermentOnlyWhenLootingTrophy: bool
+        dismembermentType: EDismembermentWoundTypes
+        dismembermentName: name
+        manualTrophyTransfer: bool
+        owner: CActor
+        hasTrophy: bool
+        wasDismembered: bool
+        trophyItemNames: array<name>
+
+    W3ElevatorSwitch:
+      .extends: W3InteractionSwitch
+      .adds:
+        elevator: EntityHandle
+        switchType: EElevatorSwitchType
+        switchRegistered: bool
+
+    CGhost:
+      .extends: CNewNPC
+      .adds:
+        isCastingShadows: bool
+        soundEffectType: EFocusModeSoundEffectType
+
+    W3Dimeritium:
+      .extends: W3Petard
+      .adds:
+        affectedFX: name
+        affectedFXCluster: name
+        disableTimerCalled: bool
+        DISABLED_FX_CHECK_DELAY: float
+        disabledFxDT: float
+
+    W3DragonsDream:
+      .extends: W3Petard
+      .adds:
+        gasEntityTemplate: CEntityTemplate
+        gasEntity: W3ToxicCloud
+        burningChance: float
+
+    CHeartMiniboss:
+      .extends: CNewNPC
+      .adds:
+        phasesCount: int
+        currentPhase: int
+        essenceChunks: int
+        essenceChunkValue: float
+        canHit: bool
+        valuesInitialised: bool
+        factSetAfterDeath: string
+        factSetInOpenedPhase: string
+        factSetInArmoredPhase: string
+
+    W3ArchesporBulb:
+      .extends: CNewNPC
+      .adds:
+        parentEntity: CNewNPC
+        entitiesInRange: array<CGameplayEntity>
+        isDestroyed: bool
+        hitsTaken: int
+        lastHitTimestamp: float
+        hitCooldown: float
+        damageRadius: float
+        damageVal: float
+        hitsToDeath: int
+
+    W3MerchantNPC:
+      .extends: CNewNPC
+      .adds:
+        embeddedScenes: array<MerchantNPCEmbeddedScenes>
+        lastDayOfInteraction: int
+        questBonus: bool
+        cacheMerchantMappin: bool
+        craftingDisabled: bool
+        invComp: CInventoryComponent
+
+    W3MonsterHuntNPC:
+      .extends: CNewNPC
+      .adds:
+        MONSTER_HUNT_TARGET_TAG: name
+        bossBarOn: bool
+        musicOn: bool
+        displayBossBar: bool
+        switchMusic: bool
+        questFocusSoundOnSpawn: bool
+        dontTagForAchievement: bool
+        disableDismemberment: bool
+        combatMusicStartEvent: string
+        combatMusicStopEvent: string
+        associatedInvestigationAreasTag: name
+        investigationAreasProcessed: bool
+
+    W3PlayerWitcher:
+      .extends: CR4Player
+      .adds:
+        craftingSchematics: array<name>
+        expandedCraftingCategories: array<name>
+        craftingFilters: SCraftingFilters
+        alchemyRecipes: array<name>
+        expandedAlchemyCategories: array<name>
+        alchemyFilters: SCraftingFilters
+        expandedBestiaryCategories: array<name>
+        booksRead: array<name>
+        fastAttackCounter: int
+        heavyAttackCounter: int
+        isInFrenzy: bool
+        hasRecentlyCountered: bool
+        cannotUseUndyingSkill: bool
+        amountOfSetPiecesEquipped: array<int>
+        canSwitchFocusModeTarget: bool
+        switchFocusModeTargetAllowed: bool
+        signs: array<SWitcherSign>
+        equippedSign: ESignType
+        currentlyCastSign: ESignType
+        signOwner: W3SignOwnerPlayer
+        usedQuenInCombat: bool
+        yrdenEntities: array<W3YrdenEntity>
+        m_quenReappliedCount: int
+        bDispalyHeavyAttackIndicator: bool
+        bDisplayHeavyAttackFirstLevelTimer: bool
+        specialAttackHeavyAllowed: bool
+        companionNPCTag: name
+        companionNPCTag2: name
+        companionNPCIconPath: string
+        companionNPCIconPath2: string
+        itemSlots: array<SItemUniqueId>
+        remainingBombThrowDelaySlot1: float
+        remainingBombThrowDelaySlot2: float
+        previouslyUsedBolt: SItemUniqueId
+        questMarkedSelectedQuickslotItems: array<SSelectedQuickslotItem>
+        tempLearnedSignSkills: array<SSimpleSkill>
+        autoLevel: bool
+        skillBonusPotionEffect: CBaseGameplayEffect
+        levelManager: W3LevelManager
+        reputationManager: W3Reputation
+        medallionEntity: CEntityTemplate
+        medallionController: W3MedallionController
+        bShowRadialMenu: bool
+        _HoldBeforeOpenRadialMenuTime: float
+        MappinToHighlight: array<SHighlightMappin>
+        horseManagerHandle: EntityHandle
+        isInitialized: bool
+        timeForPerk21: float
+        invUpdateTransaction: bool
+        mutation12IsOnCooldown: bool
+        mutation11QuenEntity: W3QuenEntity
+        storedInteractionPriority: EInteractionPriority
+        selectedPotionSlotUpper: EEquipmentSlots
+        selectedPotionSlotLower: EEquipmentSlots
+        potionDoubleTapTimerRunning: bool
+        potionDoubleTapSlotIsUpper: bool
+        findActorTargetTimeStamp: float
+        pcModeChanneledSignTimeStamp: float
+        runewordInfusionType: ESignType
+        savedQuenHealth: float
+        savedQuenDuration: float
+        clockMenu: CR4MeditationClockMenu
+        waitTimeHour: int
+        runeword10TriggerredOnFinisher: bool
+        runeword12TriggerredOnFinisher: bool
+
+    WebLineProjectile:
+      .extends: PoisonProjectile
+
+    W3BaitProjectile:
+      .extends: W3BoltProjectile
+      .adds:
+        foodSourceToGenerate: CEntityTemplate
+        addScentToCollidedActors: bool
+        attractionDuration: float
+        m_BaitEntity: CEntity
+
+    W3ExplosiveBolt:
+      .extends: W3BoltProjectile
+      .adds:
+        explosionRange: float
+        insideToxicClouds: array<W3ToxicCloud>
+
+    W3ReplacerCiri:
+      .extends: W3Replacer
+      .adds:
+        isInitialized: bool
+        ciriPhantoms: array<W3CiriPhantom>
+        bloodExplode: CEntityTemplate
+        rageEffectEnabled: bool
+        tempIsCollisionDisabled: bool
+        collidedEnemies: array<CActor>
+        slidingToNewPosition: bool
+        cameraDesiredHeading: Vector
+
+    W3ReplacerCommoner:
+      .extends: W3Replacer
+

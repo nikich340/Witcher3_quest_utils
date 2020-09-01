@@ -23,8 +23,9 @@
 using namespace std;
 namespace fs = std::experimental::filesystem;
 ofstream logg;
-ofstream yml;
+ofstream yml, cs;
 int fileCnt;
+bool wasAdded;
 
 struct w3class {
     string className;
@@ -41,10 +42,11 @@ struct w3class {
         wasDumped = false;
     }
     void log() {
-        logg << "  Add class! name <" << className << ">, base <" << baseclassName << ">, isImported <" << isImported << ">, type <" << type << ">\n";
+        logg << "  Add class! name <" << className << ">, base <" << baseclassName << ">, isImported <" << isImported << ">\n";
     }
 };
 map<string, int> w3classIdxByName;
+set<string> allowedParents;
 vector<w3class> w3classes;
 
 fs::path workDir, vanillaDir, customDir;
@@ -147,14 +149,12 @@ scrapFile(fs::path p) {
                         }
                         newClass.isImported = isImport;
                         newClass.type = type;
-
                         newClass.log();
                         w3classes.pb(newClass);
                     }
                     waitName = false;
                     waitBase = false;
                     isImport = false;
-                    type = "";
                     names.clear();
                     basename = "";
                     somename = "";
@@ -163,7 +163,11 @@ scrapFile(fs::path p) {
                     /* level down */
                     waitName = false;
                     waitBase = false;
+                    if (type == "enum" && inClass && bracketLevel == 1) {
+                        w3classes[(int)w3classes.size() - 1].vars.pb({somename, "none"});
+                    }
                     somename = "";
+                    type = "";
                     --bracketLevel;
                     if (bracketLevel == 0)
                         inClass = false;
@@ -184,7 +188,14 @@ scrapFile(fs::path p) {
                         /* array< ILOVESPACES >; */
                         continue;
                     }
-                    if (cur == ';') {
+                    if (type == "enum" && cur != ',' && cur != '\n') {
+                        somename.pb(cur);
+                        continue;
+                    }
+                    if ((cur == ',' || cur == '\n') && type == "enum") {
+                        w3classes[(int)w3classes.size() - 1].vars.pb({somename, "none"});
+                        somename = "";
+                    } else if (cur == ';') {
                         if (waitBase && !somename.empty()) {
                             basename = somename;
                             somename = "";
@@ -237,8 +248,8 @@ scrapFile(fs::path p) {
                         waitBase = false;
                         //logg << "  line " << lineCnt << ": addbase!\n";
                     } else {
-                        if (!basename.empty())
-                            logg << "  line " << lineCnt << ": miss somename <" << somename << ">\n";
+                        //if (!basename.empty())
+                            //logg << "  line " << lineCnt << ": miss somename <" << somename << ">, sep: <" << cur << ">, type: <" << type << ">\n";
                     }
 
                     somename = "";
@@ -249,17 +260,32 @@ scrapFile(fs::path p) {
     }
     logg << "    [OK] " << lineCnt << " lines proceed\n";
 }
-void writeYml(int idx, string type, bool ifImported) {
+void writeYml(int idx, string type, bool ifImported, bool filterByParent) {
+    if (filterByParent && allowedParents.find(w3classes[idx].baseclassName) == allowedParents.end()) {
+        logg << "Skip writing class <" << w3classes[idx].className << "> (unknown parent)\n";
+        return;
+    }
+    if (w3classes[idx].type != type || w3classes[idx].wasDumped) {
+        /* filtered out */
+        return;
+    }
+
+
+    wasAdded = true;
+    allowedParents.insert(w3classes[idx].className);
+    w3classes[idx].wasDumped = true;
+
     if (w3classes[idx].isImported && w3classes[idx].vars.empty()) {
-        logg << "Skip writing imported class <" << w3classes[idx].className << ">\n";
+        logg << "Skip writing imported class <" << w3classes[idx].className << "> (nothing to add)\n";
         return;
     }
-    if (w3classes[idx].type != type || w3classes[idx].isImported != ifImported) {
+    if (w3classes[idx].isImported != ifImported) {
+        /* filtered out */
         return;
     }
-    if (w3classes[idx].type == "enum" && w3classes[idx].isImported) { cout << "wtf?" << w3classes[idx].baseclassName << el;}
+    //if (w3classes[idx].type == "enum" && w3classes[idx].isImported) { cout << "wtf?" << w3classes[idx].baseclassName << el;}
     yml << "    " << w3classes[idx].className << ":\n";
-    if (!w3classes[idx].isImported || w3classes[idx].type != "class") {
+    if (!w3classes[idx].isImported) {
         yml << "      .extends: " << w3classes[idx].baseclassName << "\n";
     }
     if (!w3classes[idx].vars.empty()) {
@@ -271,10 +297,45 @@ void writeYml(int idx, string type, bool ifImported) {
     yml << el;
 
 }
+void writeCs(int idx, string type, bool ifImported, bool filterByParent) {
+    if (filterByParent && allowedParents.find(w3classes[idx].baseclassName) == allowedParents.end()) {
+        logg << "Skip writing class <" << w3classes[idx].className << "> (unknown parent)\n";
+        return;
+    }
+    if (w3classes[idx].type != type || w3classes[idx].wasDumped) {
+        /* filtered out */
+        return;
+    }
+
+
+    wasAdded = true;
+    allowedParents.insert(w3classes[idx].className);
+    w3classes[idx].wasDumped = true;
+
+    if (w3classes[idx].isImported && w3classes[idx].vars.empty()) {
+        logg << "Skip writing imported class <" << w3classes[idx].className << "> (nothing to add)\n";
+        return;
+    }
+    if (w3classes[idx].isImported != ifImported) {
+        /* filtered out */
+        return;
+    }
+    //if (w3classes[idx].type == "enum" && w3classes[idx].isImported) { cout << "wtf?" << w3classes[idx].baseclassName << el;}
+    cs << "enum " << w3classes[idx].className << "\n{\n";
+    if (!w3classes[idx].vars.empty()) {
+        upn(j, 0, (int)w3classes[idx].vars.size() - 2) {
+            cs << "    " << w3classes[idx].vars[j].X << ",\n";
+        }
+        cs << "    " << w3classes[idx].vars[(int)w3classes[idx].vars.size() - 1].X << "\n";
+    }
+    cs << "};\n\n";
+
+}
 int main(int argv, char** argc)
 {
     logg.open("log.txt");
     yml.open("result.yml");
+    cs.open("result.cs");
     workDir = fs::current_path().u8string();
     //vanillaDir = workDir / "scripts";
     vanillaDir = workDir / "allscripts.v1.31.ws";
@@ -295,19 +356,22 @@ int main(int argv, char** argc)
     }*/
     scrapFile(vanillaDir);
     /*upn(i, 0, (int)w3classes.size() - 1) {
-        writeYml(i, "enum", false);
+        writeCs(i, "enum", false, 0);
+    }*/
+    upn(i, 0, (int)w3classes.size() - 1) {
+        writeYml(i, "struct", true, 0);
     }
     upn(i, 0, (int)w3classes.size() - 1) {
-        writeYml(i, "enum", true);
-    }*/
-    /*upn(i, 0, (int)w3classes.size() - 1) {
-        writeYml(i, "struct", true);
+        writeYml(i, "struct", false, 0);
     }
-    upn(i, 0, (int)w3classes.size() - 1) {
-        writeYml(i, "struct", false);
-    }*/
-    /*upn(i, 0, (int)w3classes.size() - 1) {
-        writeYml(i, "class", 0);
+    /*allowedParents.insert("CEntity");
+    allowedParents.insert("CComponent");
+    wasAdded = true;
+    while (wasAdded) {
+        wasAdded = false;
+        upn(i, 0, (int)w3classes.size() - 1) {
+            writeYml(i, "class", 0, true);
+        }
     }*/
     /*
     upn(i, 0, (int)w3classes.size() - 1) {
