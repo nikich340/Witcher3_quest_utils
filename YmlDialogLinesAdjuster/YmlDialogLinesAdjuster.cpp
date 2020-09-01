@@ -253,6 +253,9 @@ void tryAdjustLines(fs::path p) {
     }
     yml.close();
     out.close();
+    if (fs::exists(newPath)) {
+        fs::remove(newPath);
+    }
     fs::rename(p, newPath);
     fs::rename(oldPathNew, p);
 	setConsoleColor(3);
@@ -293,7 +296,7 @@ int main()
             tryAddDuration(curPath);
         }
     }
-    speechExtraDir = "D:/_w3.tools/_voicelines/enpc.w3speech-extracted";
+    speechExtraDir = "D:/_w3.tools/_voicelines/EN.w3speech";
     stringsVanillaFile = "D:/_w3.tools/_voicelines/w3string.en.all.csv";
     for (const auto& dirEntry : fs::recursive_directory_iterator(speechExtraDir)) {
         fs::path curPath = dirEntry.path();
