@@ -22,17 +22,26 @@
 
 using namespace std;
 namespace fs = std::experimental::filesystem;
+bool adjustId = false;
 
-string tmp;
+string tmp, modIdPrefix;
 fs::path workDir, speechDir, speechExtraDir, stringsDir, stringsVanillaFile, scenesDir;
 vector<string> sceneYmls;
 vector< pair<int, pair<string, string>> > adjustLines;
 /*           old     new      */
+vector<string> addToCustomCsv, missedSpeech;
+set<string> hasSpeech;
 map<string, string> durById;
 map<string, pair<string, string>> lineInfo, lineInfo2;
-map<string, string> idByStr;
 /*    id      duration    str      */
+map<string, string> idByStr;
 
+ofstream dbgout;
+
+enum consoleColor {
+    ccBLACK, ccDARKBLUE, ccDARKGREEN, ccDARKCYAN, ccDARKRED, ccDARKVIOLET, ccDARKYELLOW, ccDARKWHITE,
+    ccGRAY, ccBLUE, ccGREEN, ccCYAN, ccRED, ccVIOLET, ccYELLOW, ccWHITE
+};
 void setConsoleColor(int type) {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), type);
     // you can loop k higher to see more color choices
@@ -42,7 +51,7 @@ void setConsoleColor(int type) {
         cout << k << " have a nice day!\n";
     }*/
 }
-void loadMainCsv(fs::path p) {
+void loadMainCsv(fs::path p, bool forceAdjustIds = false) {
     ifstream csv(p.u8string());
     while (!csv.eof()) {
         getline(csv, tmp);
@@ -64,8 +73,12 @@ void loadMainCsv(fs::path p) {
             ++pos;
         }
         str = tmp.substr(pos, tmp.length() - pos);
+        //cout << ">> id: " << id << ", str: [" << str << "]\n";
         if (durById.count(id) > 0) {
             lineInfo[id] = {durById[id], str};
+            idByStr[str] = id;
+        } else if (forceAdjustIds) {
+            lineInfo[id] = {"-1", str};
             idByStr[str] = id;
         }
     }
@@ -110,6 +123,9 @@ void tryAddDuration(fs::path p) {
     //cout << "[OK] id = " << id << ", duration = " << duration << el;
     durById[id] = duration;
     lineInfo[id].X = duration;
+    //hasSpeech.insert(id);
+
+    //dbgout << id << el;
 }
 /*void removeWithoutDuration() {
     lineInfo2 = lineInfo;
@@ -134,7 +150,7 @@ string formatLine(string prefix, string suffix, string id, bool hadId) {
     if (lineInfo[id].X != "-1") {
         newLine += "[" + lineInfo[id].X + "]";
     }
-    if (hadId)
+    if (hadId || adjustId)
         newLine += id + "|";
     //cout << "str: " << lineInfo[id].Y << el;
     newLine += lineInfo[id].Y + suffix;
@@ -143,6 +159,8 @@ string formatLine(string prefix, string suffix, string id, bool hadId) {
 void tryAdjustLines(fs::path p) {
     ifstream yml(p.u8string());
     adjustLines.clear();
+    addToCustomCsv.clear();
+    //missedSpeech.clear();
     bool dialogscript = false;
     bool section = false;
     bool choice = false;
@@ -189,13 +207,45 @@ void tryAdjustLines(fs::path p) {
             ++pos;
         }
         if (!str.empty()) {
-            //cout << "Original: " << tmp << el << "pref: " << prefix << " str:" << str << " suff: " << suffix << el;
+            //cout << "Original: " << tmp << el << "pref: [" << prefix << "] str: [" << str << "] suff: [" << suffix << "]\n";
             if (idByStr.count(str) > 0) {
+                /// str
+                /*cout << "Process id: " << idByStr[str] << el;
+                if ( !hasSpeech.count(idByStr[str]) ) {
+                    missedSpeech.pb(idByStr[str] + "|" + str);
+                }*/
                 adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, idByStr[str], false)} });
+                addToCustomCsv.pb(idByStr[str] + "|" + str);
             } else if (str.length() > 10) {
                 string tryId = str.substr(0, 10);
                 if (lineInfo.count(tryId) > 0) {
-                    adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, tryId, true)} });
+                    /*if ( !hasSpeech.count(tryId) ) {
+                        missedSpeech.pb(tryId + "|" + lineInfo[tryId].Y);
+                    }
+                    cout << "Process id: " << tryId << el;*/
+
+                    if (lineInfo[tryId].X != "-1") {
+                        /// id|str
+                        adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, tryId, true)} });
+                        addToCustomCsv.pb(tryId + "|" + lineInfo[tryId].Y);
+                    }
+                } else {
+                    /// [dur]str
+                    int pos = str.find("]");
+                    if (pos != NF) {
+                        ++pos;
+                        str = str.substr(pos, str.length() - pos);
+                        if (idByStr.count(str) > 0) {
+                            /// str
+                            /*if ( !hasSpeech.count(str) ) {
+                                missedSpeech.pb(idByStr[str] + "|" + str);
+                            }
+                            cout << "Process id: " << idByStr[str] << el;*/
+
+                            adjustLines.pb({cntLine, {tmp, formatLine(prefix, suffix, idByStr[str], false)} });
+                            addToCustomCsv.pb(idByStr[str] + "|" + str);
+                        }
+                    }
                 }
             }
         }
@@ -260,10 +310,37 @@ void tryAdjustLines(fs::path p) {
     fs::rename(oldPathNew, p);
 	setConsoleColor(3);
     cout << "   Done! Backup old .yml as " << newPath.filename().u8string() << "\n";
-	setConsoleColor(7);
+
+    /*setConsoleColor(ccRED);
+    if (!missedSpeech.empty())
+        cout << "      MISSED SPEECH!\n";
+    for (auto it : missedSpeech) {
+        cout << it << el;
+    }*/
+
+	setConsoleColor(ccYELLOW);
+	if (!addToCustomCsv.empty())
+        cout << "      CHECK this in custom speech CSV file!\n";
+    for (auto it : addToCustomCsv) {
+        cout << it << el;
+    }
+
+    setConsoleColor(7);
+}
+void writeMissedSpeech() {
+    for (auto i : lineInfo) {
+        if (i.X.substr(0, 7) == modIdPrefix && i.X.substr(7, 3) > "200") {
+            if (i.Y.X == "-1") {
+                dbgout << i.X << "|" << i.Y.Y << el;
+            }
+        }
+    }
 }
 int main()
 {
+    dbgout.open("_string_info.txt");
+    modIdPrefix = "2114670";
+
     workDir = fs::current_path().u8string();
     speechDir = workDir / "speech" / "speech.en.wav";
     stringsDir = workDir / "strings";
@@ -298,15 +375,42 @@ int main()
     }
     speechExtraDir = "D:/_w3.tools/_voicelines/EN.w3speech";
     stringsVanillaFile = "D:/_w3.tools/_voicelines/w3string.en.all.csv";
-    for (const auto& dirEntry : fs::recursive_directory_iterator(speechExtraDir)) {
-        fs::path curPath = dirEntry.path();
-        if (curPath.extension() == ".ogg") {
-            tryAddDuration(curPath);
-            //cout << "tryAdd: " << curPath.filename().u8string() << el;
-        }
+
+    tmp = "";
+    while (tmp.empty()) {
+		setConsoleColor(10);
+        cout << "\nAdd vanilla lines? (y/n): ";
+        getline(cin, tmp);
     }
-    loadMainCsv(stringsDir / "all.en.strings.csv");
-    loadMainCsv(stringsVanillaFile);
+    if (tmp == "y") {
+        for (const auto& dirEntry : fs::recursive_directory_iterator(speechExtraDir)) {
+            fs::path curPath = dirEntry.path();
+            if (curPath.extension() == ".ogg") {
+                tryAddDuration(curPath);
+                //cout << "tryAdd: " << curPath.filename().u8string() << el;
+            }
+        }
+        loadMainCsv(stringsVanillaFile);
+    }
+    tmp = "";
+    while (tmp.empty()) {
+		setConsoleColor(10);
+        cout << "\nAdjust ids? (y/n): ";
+        getline(cin, tmp);
+    }
+    adjustId = (tmp == "1" || tmp == "y");
+
+    loadMainCsv(stringsDir / "all.en.strings.csv", adjustId);
+
+    tmp = "";
+    while (tmp.empty()) {
+		setConsoleColor(10);
+        cout << "\nWrite missed speech list? (y/n): ";
+        getline(cin, tmp);
+    }
+    if (tmp == "y") {
+        writeMissedSpeech();
+    }
     //removeWithoutDuration();
 
     for (const auto& dirEntry : fs::recursive_directory_iterator(scenesDir)) {
